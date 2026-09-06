@@ -2,6 +2,7 @@
 <html lang="it">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,13 +12,7 @@
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -26,11 +21,11 @@ html {
 }
 
 body {
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background: #f5f7f4;
     color: #202620;
 }
-
 
 /* =========================
    HERO
@@ -38,216 +33,202 @@ body {
 
 .hero {
     position: relative;
-    width: 100%;
     min-height: 720px;
-
     background-image:
         linear-gradient(
-            rgba(0,0,0,0.05),
-            rgba(0,0,0,0.05)
+            90deg,
+            rgba(0,0,0,0.55) 0%,
+            rgba(0,0,0,0.25) 50%,
+            rgba(0,0,0,0.15) 100%
         ),
         url("ChatGPT%20Image%206%20set%202026%2C%2019_54_25.png");
 
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    flex-direction: column;
+    background-position: center;
+    color: white;
+    overflow: hidden;
 }
 
-
 /* =========================
-   NAVIGAZIONE
+   HEADER
 ========================= */
 
-.navbar {
-    width: 100%;
+.hero-header {
+    position: relative;
+    z-index: 5;
 
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 
-    padding: 28px 6%;
-    
-    position: relative;
-    z-index: 10;
+    padding: 30px 6%;
 }
 
-
-/* Logo / nome */
-
-.brand {
-    text-decoration: none;
-    color: white;
-}
-
-.brand-name {
+.brand h1 {
+    margin: 0;
     font-size: 36px;
-    font-weight: 700;
     line-height: 1;
-    letter-spacing: -1px;
+    font-weight: 700;
 }
 
-.brand-subtitle {
-    margin-top: 8px;
-
+.brand p {
+    margin: 10px 0 0;
     font-size: 13px;
-    font-weight: 500;
-
     letter-spacing: 3px;
     text-transform: uppercase;
-
-    color: rgba(255,255,255,0.9);
+    opacity: 0.95;
 }
 
+/* =========================
+   NAVIGATION
+========================= */
 
-/* Menu */
-
-.menu {
+nav {
     display: flex;
     gap: 38px;
     align-items: center;
 }
 
-.menu a {
+nav a {
     color: white;
     text-decoration: none;
-
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 600;
-
-    position: relative;
-
-    transition: opacity 0.2s ease;
+    transition: 0.2s ease;
 }
 
-.menu a:hover {
-    opacity: 0.75;
+nav a:hover {
+    opacity: 0.7;
 }
 
+nav a.active {
+    border-bottom: 3px solid #d8f29a;
+    padding-bottom: 8px;
+}
 
 /* =========================
-   CONTENUTO HERO
+   HERO CONTENT
 ========================= */
 
 .hero-content {
     position: relative;
-    z-index: 5;
+    z-index: 4;
 
-    margin-top: auto;
+    max-width: 560px;
 
-    padding: 0 6% 55px;
-
-    max-width: 650px;
+    margin-left: 9%;
+    margin-top: 40px;
 }
 
+.quote-mark {
+    font-size: 90px;
+    line-height: 0.5;
+    color: #d8f29a;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
 
-/* Testo descrittivo */
+.quote {
+    margin: 0;
 
-.hero-description {
-    color: white;
+    font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 20px;
+    font-size: 54px;
+    line-height: 1.08;
+
+    font-style: italic;
+    font-weight: 400;
+}
+
+.quote strong {
+    color: #d8f29a;
+    font-weight: 700;
+}
+
+.divider {
+    width: 45px;
+    height: 2px;
+
+    background: #d8f29a;
+
+    margin: 35px 0 25px;
+}
+
+.intro {
+    margin: 0;
+
+    font-size: 21px;
     line-height: 1.5;
 
-    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
-
-    margin-bottom: 28px;
+    max-width: 500px;
 }
 
-
-/* Bottone */
-
-.hero-button {
+.cta {
     display: inline-flex;
-
     align-items: center;
-    justify-content: center;
+    gap: 25px;
 
-    gap: 20px;
+    margin-top: 30px;
 
     padding: 17px 28px;
 
-    background: #063f2d;
+    background: #063d2b;
+    border: 1px solid #9bc66a;
+    border-radius: 9px;
 
     color: white;
-
     text-decoration: none;
 
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 600;
 
-    border: 1px solid rgba(190,230,170,0.8);
-
-    border-radius: 10px;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+    transition: 0.25s ease;
 }
 
-.hero-button:hover {
-    background: #09553c;
+.cta:hover {
+    background: #09543b;
     transform: translateY(-2px);
 }
 
 .arrow {
-    font-size: 26px;
+    font-size: 28px;
     line-height: 1;
 }
 
-
 /* =========================
-   CONTENUTO
+   SIDE WORDS
 ========================= */
 
-main {
-    max-width: 1100px;
-    margin: 0 auto;
+.side-words {
+    position: absolute;
 
-    padding: 80px 25px;
+    right: 6%;
+    top: 34%;
+
+    z-index: 4;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+
+    font-size: 22px;
+    line-height: 1.8;
+
+    text-align: left;
 }
 
-.intro {
-    text-align: center;
+.side-words div {
+    margin-bottom: 4px;
 }
 
-.intro h2 {
-    color: #123d2b;
+.side-line {
+    width: 125px;
+    height: 2px;
 
-    font-size: 36px;
+    background: rgba(255,255,255,0.65);
 
-    margin-bottom: 18px;
+    margin-top: 12px;
+    transform: rotate(-8deg);
 }
-
-.intro p {
-    max-width: 700px;
-    margin: 0 auto;
-
-    color: #555;
-
-    font-size: 19px;
-    line-height: 1.7;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    text-align: center;
-
-    padding: 40px 20px;
-
-    background: #123d2b;
-
-    color: rgba(255,255,255,0.8);
-
-    font-size: 14px;
-}
-
 
 /* =========================
    MOBILE
@@ -256,52 +237,45 @@ footer {
 @media (max-width: 800px) {
 
     .hero {
-        min-height: 680px;
-
-        background-position: center center;
+        min-height: 800px;
+        background-position: 60% center;
     }
 
-    .navbar {
-        padding: 22px 5%;
-
+    .hero-header {
         flex-direction: column;
-        gap: 22px;
+        gap: 25px;
+        padding: 25px;
     }
 
-    .brand-name {
+    .brand h1 {
         font-size: 30px;
     }
 
-    .brand-subtitle {
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
-
-    .menu {
+    nav {
         gap: 20px;
         flex-wrap: wrap;
     }
 
-    .menu a {
-        font-size: 15px;
-    }
-
-    .hero-content {
-        padding: 0 5% 35px;
-    }
-
-    .hero-description {
-        font-size: 17px;
-    }
-
-    .hero-button {
+    nav a {
         font-size: 16px;
     }
 
-    .intro h2 {
-        font-size: 30px;
+    .hero-content {
+        margin: 40px 25px 0;
+        max-width: 90%;
     }
 
+    .quote {
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 18px;
+    }
+
+    .side-words {
+        display: none;
+    }
 }
 
 </style>
@@ -318,24 +292,25 @@ footer {
 
 <header class="hero">
 
-    <nav class="navbar">
 
-        <a href="index.html" class="brand">
+    <!-- MENU -->
 
-            <div class="brand-name">
-                Marco Palmas
-            </div>
+    <div class="hero-header">
 
-            <div class="brand-subtitle">
+        <div class="brand">
+
+            <h1>Marco Palmas</h1>
+
+            <p>
                 Stress Management · Mindfulness · Sport · Vita reale
-            </div>
+            </p>
 
-        </a>
+        </div>
 
 
-        <div class="menu">
+        <nav>
 
-            <a href="index.html">
+            <a href="index.html" class="active">
                 Home
             </a>
 
@@ -351,27 +326,43 @@ footer {
                 Chi sono
             </a>
 
-        </div>
+        </nav>
 
-    </nav>
+    </div>
 
 
-    <!--
-        IMPORTANTE:
-        NON inseriamo qui la citazione.
-        La citazione è già presente nella fotografia.
-    -->
-
+    <!-- TESTO HERO -->
 
     <div class="hero-content">
 
-        <p class="hero-description">
-            Riflessioni, strumenti ed esperienze su stress,
-            mindfulness, sport, lavoro sanitario e vita reale.
+        <div class="quote-mark">
+            “
+        </div>
+
+
+        <p class="quote">
+
+            La vita è per il <strong>10%</strong>
+            cosa ti accade<br>
+
+            e per il <strong>90%</strong>
+            come reagisci.
+
         </p>
 
 
-        <a href="articoli.html" class="hero-button">
+        <div class="divider"></div>
+
+
+        <p class="intro">
+
+            Riflessioni, strumenti ed esperienze su stress,
+            mindfulness, sport, lavoro sanitario e vita reale.
+
+        </p>
+
+
+        <a class="cta" href="articoli.html">
 
             Scopri gli articoli
 
@@ -383,42 +374,23 @@ footer {
 
     </div>
 
+
+    <!-- PAROLE LATERALI -->
+
+    <div class="side-words">
+
+        <div>Più<br>Consapevolezza</div>
+
+        <div>Più<br>Equilibrio</div>
+
+        <div>Più<br>Vita Reale</div>
+
+        <div class="side-line"></div>
+
+    </div>
+
+
 </header>
-
-
-<!-- =========================
-     CONTENUTO
-========================= -->
-
-<main>
-
-    <section class="intro">
-
-        <h2>
-            Stress, consapevolezza e vita reale.
-        </h2>
-
-        <p>
-            Uno spazio per parlare di ciò che ci accade,
-            di come reagiamo e degli strumenti che possono
-            aiutarci a vivere con maggiore consapevolezza,
-            equilibrio e presenza.
-        </p>
-
-    </section>
-
-</main>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    © Marco Palmas · Stress Management
-
-</footer>
 
 
 </body>
