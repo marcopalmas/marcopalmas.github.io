@@ -6,7 +6,10 @@
 
 <title>Marco Palmas | Stress Management</title>
 
+<meta name="description" content="Marco Palmas | Stress Management, Mindfulness, sport, infermieristica e vita reale.">
+
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -20,7 +23,7 @@ body {
 }
 
 header {
-    background: #183b2b;
+    background: #174b38;
     color: white;
     padding: 70px 20px;
     text-align: center;
@@ -28,210 +31,250 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 48px;
-    letter-spacing: -1px;
+    font-size: 46px;
 }
 
 header p {
-    margin: 12px 0 0;
     font-size: 20px;
-    opacity: 0.9;
+    margin-top: 15px;
 }
 
 nav {
     background: white;
-    padding: 15px;
+    padding: 18px;
     text-align: center;
-    border-bottom: 1px solid #e1e5e1;
+    border-bottom: 1px solid #ddd;
 }
 
 nav a {
-    color: #183b2b;
+    color: #174b38;
     text-decoration: none;
-    margin: 0 12px;
     font-weight: 600;
+    margin: 0 18px;
 }
 
 .container {
-    max-width: 1050px;
+    max-width: 1100px;
     margin: auto;
-    padding: 55px 20px;
+    padding: 60px 20px;
 }
 
 .intro {
     text-align: center;
-    max-width: 750px;
-    margin: 0 auto 55px;
+    margin-bottom: 50px;
 }
 
 .intro h2 {
-    font-size: 32px;
-    margin-bottom: 12px;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
 }
 
 .categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 18px;
-    margin-bottom: 65px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.category {
+.card {
     background: white;
-    padding: 25px;
-    border-radius: 16px;
+    padding: 28px;
+    border-radius: 14px;
     border: 1px solid #e1e5e1;
 }
 
-.category h3 {
+.card h3 {
+    color: #174b38;
     margin-top: 0;
-    color: #183b2b;
 }
 
-.articles h2 {
-    font-size: 32px;
-    margin-bottom: 25px;
+.articles {
+    margin-top: 70px;
 }
 
 .article {
     background: white;
-    padding: 28px;
-    margin-bottom: 18px;
-    border-radius: 16px;
+    padding: 30px;
+    border-radius: 14px;
+    margin-bottom: 20px;
     border: 1px solid #e1e5e1;
 }
 
 .article h3 {
     margin-top: 0;
-    font-size: 23px;
-}
-
-.article a {
-    color: #183b2b;
-    font-weight: 700;
-    text-decoration: none;
+    color: #174b38;
 }
 
 footer {
-    background: #183b2b;
+    background: #174b38;
     color: white;
     text-align: center;
     padding: 35px 20px;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
-footer a {
-    color: white;
-    margin: 0 10px;
+@media (max-width: 800px) {
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    .categories {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
+
+@media (max-width: 500px) {
+
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Marco Palmas</h1>
-    <p>Stress Management · Mindfulness · Sport · Vita reale</p>
+
+<h1>Marco Palmas</h1>
+
+<p>Stress Management · Mindfulness · Sport · Vita reale</p>
+
 </header>
 
 <nav>
-    <a href="#articoli">Articoli</a>
-    <a href="#temi">Temi</a>
-    <a href="#chi-sono">Chi sono</a>
+
+<a href="#articoli">Articoli</a>
+<a href="#temi">Temi</a>
+<a href="#chi-sono">Chi sono</a>
+
 </nav>
 
 <main class="container">
 
-<section class="intro" id="chi-sono">
-    <h2>Parliamo di stress. Ma non solo.</h2>
-    <p>
-        Sono Marco: infermiere, MBSR Coach e appassionato di sport.
-        Qui raccolgo idee, esperienze e strumenti per affrontare meglio
-        lo stress, la pressione e tutto quello che ci mette alla prova.
-    </p>
+<section class="intro">
+
+<h2>Parliamo di stress. Ma non solo.</h2>
+
+<p>
+Sono Marco: infermiere, MBSR Coach e appassionato di sport.
+Qui raccolgo idee, esperienze e strumenti per affrontare meglio
+lo stress, la pressione e tutto quello che ci mette alla prova.
+</p>
+
 </section>
 
 <section id="temi">
 
-    <div class="categories">
+<div class="categories">
 
-        <div class="category">
-            <h3>🧠 Stress & Mindfulness</h3>
-            <p>
-                Stress, consapevolezza, equilibrio e strumenti pratici
-                per vivere con un po' meno rumore nella testa.
-            </p>
-        </div>
+<div class="card">
+<h3>🧠 Stress & Mindfulness</h3>
+<p>
+Stress, consapevolezza, equilibrio e strumenti pratici per vivere
+meglio senza complicarsi la vita.
+</p>
+</div>
 
-        <div class="category">
-            <h3>⚽ Sport & Performance</h3>
-            <p>
-                Pressione, prestazione, mentalità e quello che lo sport
-                può insegnarci anche fuori dal campo.
-            </p>
-        </div>
+<div class="card">
+<h3>⚽ Sport & Performance</h3>
+<p>
+Pressione, prestazione, mentalità e tutto quello che succede
+prima, durante e dopo una gara.
+</p>
+</div>
 
-        <div class="category">
-            <h3>🏥 Infermieristica</h3>
-            <p>
-                Il lavoro sanitario raccontato da chi lo vive ogni giorno,
-                tra stress, responsabilità e vita reale.
-            </p>
-        </div>
+<div class="card">
+<h3>🏥 Infermieristica</h3>
+<p>
+Il lavoro sanitario raccontato da chi lo vive ogni giorno,
+tra stress, responsabilità e vita reale.
+</p>
+</div>
 
-        <div class="category">
-            <h3>👨‍👩‍👧 Vita reale</h3>
-            <p>
-                Famiglia, ragazzi, tecnologia, passioni e tutte quelle
-                cose che non entrano in una singola categoria.
-            </p>
-        </div>
+<div class="card">
+<h3>👨‍👩‍👧‍👦 Vita reale</h3>
+<p>
+Famiglia, ragazzi, tecnologia, passioni e tutte quelle cose
+che non entrano in una singola categoria.
+</p>
+</div>
 
-    </div>
+</div>
 
 </section>
 
-<section class="articles" id="articoli">
+<section id="articoli" class="articles">
 
-    <h2>Dal blog</h2>
+<h2>Ultimi articoli</h2>
 
-    <article class="article">
-        <h3>Lo stress non è il problema. È il modo in cui ci resti dentro.</h3>
-        <p>
-            Una riflessione sullo stress e sul nostro rapporto con ciò
-            che accade ogni giorno.
-        </p>
-        <a href="#">Leggi l'articolo →</a>
-    </article>
+<div class="article">
 
-    <article class="article">
-        <h3>Quando tutto sembra urgente</h3>
-        <p>
-            Ansia, pressione e quella sensazione di dover risolvere
-            tutto subito.
-        </p>
-        <a href="#">Leggi l'articolo →</a>
-    </article>
+<h3>Il problema non è lo stress. È come lo affrontiamo.</h3>
 
-    <article class="article">
-        <h3>Il portiere e la paura di sbagliare</h3>
-        <p>
-            Cosa mi ha insegnato il calcio sulla gestione della pressione
-            e sulla prestazione.
-        </p>
-        <a href="#">Leggi l'articolo →</a>
-    </article>
+<p>
+Una riflessione sullo stress quotidiano e sul perché imparare
+a riconoscerlo sia il primo passo per gestirlo.
+</p>
+
+</div>
+
+<div class="article">
+
+<h3>Quando la prestazione diventa pressione</h3>
+
+<p>
+Sport, aspettative e quella sensazione di dover essere sempre
+all'altezza.
+</p>
+
+</div>
+
+<div class="article">
+
+<h3>Essere infermiere senza diventare solo il proprio lavoro</h3>
+
+<p>
+Stress, responsabilità e identità professionale nella vita
+di chi lavora nella sanità.
+</p>
+
+</div>
+
+</section>
+
+<section id="chi-sono" class="intro">
+
+<h2>Chi sono</h2>
+
+<p>
+Sono Marco Palmas, infermiere e MBSR Coach.
+Mi interessa tutto ciò che riguarda il rapporto tra stress,
+mente, corpo, sport e vita quotidiana.
+</p>
 
 </section>
 
 </main>
 
 <footer>
-    <p>Marco Palmas · Stress Management</p>
-    <p>
-        <a href="https://www.instagram.com/">Instagram</a>
-        <a href="https://www.youtube.com/@Mindlab_mindfulness">YouTube</a>
-    </p>
+
+<p>© Marco Palmas · Stress Management</p>
+
 </footer>
 
 </body>
