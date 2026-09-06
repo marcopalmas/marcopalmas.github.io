@@ -4,11 +4,12 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Marco Palmas | Stress Management</title>
 
-<meta name="description" content="Marco Palmas | Stress Management, Mindfulness, sport, infermieristica e vita reale.">
+<meta name="description" content="Marco Palmas | Stress Management, Mindfulness, Sport e Vita Reale.">
 
 <style>
 
@@ -16,85 +17,137 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
+html,
 body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #f5f7f4;
-    color: #202620;
 }
 
-/* =========================
+
+/* =========================================
    HERO
-========================= */
+========================================= */
 
 .hero {
     position: relative;
-    min-height: 720px;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+
     background-image:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.55) 0%,
-            rgba(0,0,0,0.25) 50%,
-            rgba(0,0,0,0.15) 100%
-        ),
         url("ChatGPT%20Image%206%20set%202026%2C%2019_54_25.png");
 
     background-size: cover;
-    background-position: center;
-    color: white;
+    background-position: center center;
+
     overflow: hidden;
 }
 
-/* =========================
-   HEADER
-========================= */
 
-.hero-header {
-    position: relative;
-    z-index: 5;
+/* =========================================
+   LEGGERO VELO SCURO
+========================================= */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.08);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   TESTATA
+========================================= */
+
+.header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 28px 6%;
 
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: space-between;
 
-    padding: 30px 6%;
+    z-index: 10;
+}
+
+
+/* =========================================
+   NOME
+========================================= */
+
+.brand {
+    color: white;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,0.45);
 }
 
 .brand h1 {
     margin: 0;
+
     font-size: 36px;
     line-height: 1;
+
     font-weight: 700;
 }
 
 .brand p {
-    margin: 10px 0 0;
+    margin: 9px 0 0;
+
     font-size: 13px;
+
     letter-spacing: 3px;
+
     text-transform: uppercase;
-    opacity: 0.95;
+
+    font-weight: 500;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+
+/* =========================================
+   MENU
+========================================= */
 
 nav {
     display: flex;
-    gap: 38px;
+
     align-items: center;
+
+    gap: 38px;
 }
 
 nav a {
     color: white;
+
     text-decoration: none;
+
     font-size: 19px;
+
     font-weight: 600;
-    transition: 0.2s ease;
+
+    padding: 8px 0;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,0.5);
+
+    transition:
+        opacity 0.2s ease,
+        border-color 0.2s ease;
 }
 
 nav a:hover {
@@ -103,156 +156,101 @@ nav a:hover {
 
 nav a.active {
     border-bottom: 3px solid #d8f29a;
-    padding-bottom: 8px;
 }
 
-/* =========================
-   HERO CONTENT
-========================= */
 
-.hero-content {
-    position: relative;
-    z-index: 4;
+/* =========================================
+   PULSANTE ARTICOLI
+   Posizionato nell'area libera dell'immagine
+========================================= */
 
-    max-width: 560px;
+.article-button {
+    position: absolute;
 
-    margin-left: 9%;
-    margin-top: 40px;
-}
+    left: 8.8%;
+    bottom: 7%;
 
-.quote-mark {
-    font-size: 90px;
-    line-height: 0.5;
-    color: #d8f29a;
-    font-weight: 700;
-    margin-bottom: 25px;
-}
+    z-index: 10;
 
-.quote {
-    margin: 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 54px;
-    line-height: 1.08;
-
-    font-style: italic;
-    font-weight: 400;
-}
-
-.quote strong {
-    color: #d8f29a;
-    font-weight: 700;
-}
-
-.divider {
-    width: 45px;
-    height: 2px;
-
-    background: #d8f29a;
-
-    margin: 35px 0 25px;
-}
-
-.intro {
-    margin: 0;
-
-    font-size: 21px;
-    line-height: 1.5;
-
-    max-width: 500px;
-}
-
-.cta {
     display: inline-flex;
+
     align-items: center;
-    gap: 25px;
+    justify-content: center;
 
-    margin-top: 30px;
+    gap: 24px;
 
-    padding: 17px 28px;
+    padding: 16px 28px;
 
-    background: #063d2b;
-    border: 1px solid #9bc66a;
+    min-width: 305px;
+
     border-radius: 9px;
 
+    background: rgba(0, 61, 43, 0.94);
+
+    border: 1px solid #a7d477;
+
     color: white;
+
     text-decoration: none;
 
     font-size: 19px;
+
     font-weight: 600;
 
-    transition: 0.25s ease;
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.25);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
 }
 
-.cta:hover {
-    background: #09543b;
+.article-button:hover {
+    background: rgba(4, 82, 57, 0.98);
+
     transform: translateY(-2px);
 }
 
-.arrow {
+.article-button span {
     font-size: 28px;
+
     line-height: 1;
 }
 
-/* =========================
-   SIDE WORDS
-========================= */
 
-.side-words {
-    position: absolute;
-
-    right: 6%;
-    top: 34%;
-
-    z-index: 4;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-style: italic;
-
-    font-size: 22px;
-    line-height: 1.8;
-
-    text-align: left;
-}
-
-.side-words div {
-    margin-bottom: 4px;
-}
-
-.side-line {
-    width: 125px;
-    height: 2px;
-
-    background: rgba(255,255,255,0.65);
-
-    margin-top: 12px;
-    transform: rotate(-8deg);
-}
-
-/* =========================
+/* =========================================
    MOBILE
-========================= */
+========================================= */
 
 @media (max-width: 800px) {
 
     .hero {
-        min-height: 800px;
+        min-height: 760px;
+
         background-position: 60% center;
     }
 
-    .hero-header {
+    .header {
+        padding: 22px 24px;
+
         flex-direction: column;
-        gap: 25px;
-        padding: 25px;
+
+        gap: 22px;
     }
 
     .brand h1 {
         font-size: 30px;
     }
 
+    .brand p {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
     nav {
         gap: 20px;
+
         flex-wrap: wrap;
     }
 
@@ -260,21 +258,14 @@ nav a.active {
         font-size: 16px;
     }
 
-    .hero-content {
-        margin: 40px 25px 0;
-        max-width: 90%;
-    }
+    .article-button {
+        left: 24px;
+        right: 24px;
+        bottom: 30px;
 
-    .quote {
-        font-size: 40px;
-    }
+        min-width: 0;
 
-    .intro {
-        font-size: 18px;
-    }
-
-    .side-words {
-        display: none;
+        width: calc(100% - 48px);
     }
 }
 
@@ -286,16 +277,17 @@ nav a.active {
 <body>
 
 
-<!-- =========================
+<!-- =========================================
      HERO
-========================= -->
+========================================= -->
 
-<header class="hero">
+<section class="hero">
 
 
-    <!-- MENU -->
+    <!-- TESTATA -->
 
-    <div class="hero-header">
+    <header class="header">
+
 
         <div class="brand">
 
@@ -307,6 +299,8 @@ nav a.active {
 
         </div>
 
+
+        <!-- MENU CLICCABILE -->
 
         <nav>
 
@@ -328,69 +322,25 @@ nav a.active {
 
         </nav>
 
-    </div>
+
+    </header>
 
 
-    <!-- TESTO HERO -->
+    <!-- PULSANTE CLICCABILE -->
 
-    <div class="hero-content">
+    <a
+        href="articoli.html"
+        class="article-button"
+    >
 
-        <div class="quote-mark">
-            “
-        </div>
+        Scopri gli articoli
 
+        <span>→</span>
 
-        <p class="quote">
-
-            La vita è per il <strong>10%</strong>
-            cosa ti accade<br>
-
-            e per il <strong>90%</strong>
-            come reagisci.
-
-        </p>
+    </a>
 
 
-        <div class="divider"></div>
-
-
-        <p class="intro">
-
-            Riflessioni, strumenti ed esperienze su stress,
-            mindfulness, sport, lavoro sanitario e vita reale.
-
-        </p>
-
-
-        <a class="cta" href="articoli.html">
-
-            Scopri gli articoli
-
-            <span class="arrow">
-                →
-            </span>
-
-        </a>
-
-    </div>
-
-
-    <!-- PAROLE LATERALI -->
-
-    <div class="side-words">
-
-        <div>Più<br>Consapevolezza</div>
-
-        <div>Più<br>Equilibrio</div>
-
-        <div>Più<br>Vita Reale</div>
-
-        <div class="side-line"></div>
-
-    </div>
-
-
-</header>
+</section>
 
 
 </body>
