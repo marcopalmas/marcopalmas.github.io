@@ -22,22 +22,60 @@ body {
     line-height: 1.6;
 }
 
-header {
-    background: #174b38;
-    color: white;
-    padding: 70px 20px;
+/* HERO */
+
+.hero {
+    min-height: 560px;
+    background-image: url("ChatGPT Image 6 set 2026, 19_54_25.png");
+    background-size: cover;
+    background-position: center 45%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    width: 100%;
+    min-height: 560px;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.12)
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
+    padding: 50px 25px;
+    color: white;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 46px;
+.hero-quote {
+    max-width: 850px;
+    margin: 0 0 25px;
+    font-size: 42px;
+    line-height: 1.25;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.35);
 }
 
-header p {
-    font-size: 20px;
-    margin-top: 15px;
+.hero-author {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 22px;
 }
+
+.hero-subtitle {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+/* NAVIGAZIONE */
 
 nav {
     background: white;
@@ -52,6 +90,12 @@ nav a {
     font-weight: 600;
     margin: 0 18px;
 }
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENUTO */
 
 .container {
     max-width: 1100px;
@@ -75,6 +119,8 @@ nav a {
     font-size: 18px;
 }
 
+/* CATEGORIE */
+
 .categories {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -93,8 +139,19 @@ nav a {
     margin-top: 0;
 }
 
+.card p {
+    color: #555;
+}
+
+/* ARTICOLI */
+
 .articles {
     margin-top: 70px;
+}
+
+.articles h2 {
+    text-align: center;
+    margin-bottom: 35px;
 }
 
 .article {
@@ -110,6 +167,8 @@ nav a {
     color: #174b38;
 }
 
+/* FOOTER */
+
 footer {
     background: #174b38;
     color: white;
@@ -118,19 +177,48 @@ footer {
     margin-top: 60px;
 }
 
+/* TABLET */
+
 @media (max-width: 800px) {
 
-    header h1 {
-        font-size: 36px;
+    .hero,
+    .hero-overlay {
+        min-height: 500px;
+    }
+
+    .hero-quote {
+        font-size: 34px;
     }
 
     .categories {
         grid-template-columns: 1fr 1fr;
     }
-
 }
 
+/* SMARTPHONE */
+
 @media (max-width: 500px) {
+
+    .hero,
+    .hero-overlay {
+        min-height: 500px;
+    }
+
+    .hero {
+        background-position: center center;
+    }
+
+    .hero-quote {
+        font-size: 29px;
+    }
+
+    .hero-author {
+        font-size: 16px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
 
     .categories {
         grid-template-columns: 1fr;
@@ -140,7 +228,6 @@ footer {
         display: inline-block;
         margin: 5px 10px;
     }
-
 }
 
 </style>
@@ -148,132 +235,190 @@ footer {
 
 <body>
 
-<header>
+<!-- HERO -->
 
-<h1>Marco Palmas</h1>
+<header class="hero">
 
-<p>Stress Management · Mindfulness · Sport · Vita reale</p>
+    <div class="hero-overlay">
+
+        <p class="hero-quote">
+            “La vita è per il 10% cosa ti accade
+            e per il 90% come reagisci.”
+        </p>
+
+        <div class="hero-author">
+            Marco Palmas
+        </div>
+
+        <div class="hero-subtitle">
+            Stress Management · Mindfulness · Sport · Vita reale
+        </div>
+
+    </div>
 
 </header>
 
+
+<!-- NAVIGAZIONE -->
+
 <nav>
 
-<a href="articoli.html">Articoli</a>
-<a href="temi.html">Temi</a>
-<a href="chi-sono.html">Chi sono</a>
+    <a href="index.html">Home</a>
+    <a href="articoli.html">Articoli</a>
+    <a href="temi.html">Temi</a>
+    <a href="chi-sono.html">Chi sono</a>
 
 </nav>
 
+
+<!-- CONTENUTO -->
+
 <main class="container">
 
-<section class="intro">
+    <section class="intro">
 
-<h2>Parliamo di stress. Ma non solo.</h2>
+        <h2>Parliamo di stress. Ma non solo.</h2>
 
-<p>
-Sono Marco: infermiere, MBSR Coach e appassionato di sport.
-Qui raccolgo idee, esperienze e strumenti per affrontare meglio
-lo stress, la pressione e tutto quello che ci mette alla prova.
-</p>
+        <p>
+            Sono Marco: infermiere, MBSR Coach e appassionato di sport.
+            Qui raccolgo idee, esperienze e strumenti per affrontare meglio
+            lo stress, la pressione e tutto quello che ci mette alla prova.
+        </p>
 
-</section>
+    </section>
 
-<section id="temi">
 
-<div class="categories">
+    <!-- TEMI -->
 
-<div class="card">
-<h3>🧠 Stress & Mindfulness</h3>
-<p>
-Stress, consapevolezza, equilibrio e strumenti pratici per vivere
-meglio senza complicarsi la vita.
-</p>
-</div>
+    <section id="temi">
 
-<div class="card">
-<h3>⚽ Sport & Performance</h3>
-<p>
-Pressione, prestazione, mentalità e tutto quello che succede
-prima, durante e dopo una gara.
-</p>
-</div>
+        <div class="categories">
 
-<div class="card">
-<h3>🏥 Infermieristica</h3>
-<p>
-Il lavoro sanitario raccontato da chi lo vive ogni giorno,
-tra stress, responsabilità e vita reale.
-</p>
-</div>
+            <div class="card">
 
-<div class="card">
-<h3>👨‍👩‍👧‍👦 Vita reale</h3>
-<p>
-Famiglia, ragazzi, tecnologia, passioni e tutte quelle cose
-che non entrano in una singola categoria.
-</p>
-</div>
+                <h3>🧠 Stress & Mindfulness</h3>
 
-</div>
+                <p>
+                    Stress, consapevolezza, equilibrio e strumenti pratici
+                    per vivere meglio senza complicarsi la vita.
+                </p>
 
-</section>
+            </div>
 
-<section id="articoli" class="articles">
 
-<h2>Ultimi articoli</h2>
+            <div class="card">
 
-<div class="article">
+                <h3>⚽ Sport & Performance</h3>
 
-<h3>Il problema non è lo stress. È come lo affrontiamo.</h3>
+                <p>
+                    Pressione, prestazione, mentalità e tutto quello che
+                    succede prima, durante e dopo una gara.
+                </p>
 
-<p>
-Una riflessione sullo stress quotidiano e sul perché imparare
-a riconoscerlo sia il primo passo per gestirlo.
-</p>
+            </div>
 
-</div>
 
-<div class="article">
+            <div class="card">
 
-<h3>Quando la prestazione diventa pressione</h3>
+                <h3>🏥 Infermieristica</h3>
 
-<p>
-Sport, aspettative e quella sensazione di dover essere sempre
-all'altezza.
-</p>
+                <p>
+                    Il lavoro sanitario raccontato da chi lo vive ogni giorno,
+                    tra stress, responsabilità e vita reale.
+                </p>
 
-</div>
+            </div>
 
-<div class="article">
 
-<h3>Essere infermiere senza diventare solo il proprio lavoro</h3>
+            <div class="card">
 
-<p>
-Stress, responsabilità e identità professionale nella vita
-di chi lavora nella sanità.
-</p>
+                <h3>👨‍👩‍👧‍👦 Vita reale</h3>
 
-</div>
+                <p>
+                    Famiglia, ragazzi, tecnologia, passioni e tutte quelle cose
+                    che non entrano in una singola categoria.
+                </p>
 
-</section>
+            </div>
 
-<section id="chi-sono" class="intro">
+        </div>
 
-<h2>Chi sono</h2>
+    </section>
 
-<p>
-Sono Marco Palmas, infermiere e MBSR Coach.
-Mi interessa tutto ciò che riguarda il rapporto tra stress,
-mente, corpo, sport e vita quotidiana.
-</p>
 
-</section>
+    <!-- ARTICOLI -->
+
+    <section id="articoli" class="articles">
+
+        <h2>Ultimi articoli</h2>
+
+
+        <div class="article">
+
+            <h3>
+                Il problema non è lo stress. È come lo affrontiamo.
+            </h3>
+
+            <p>
+                Una riflessione sullo stress quotidiano e sul perché imparare
+                a riconoscerlo sia il primo passo per gestirlo.
+            </p>
+
+        </div>
+
+
+        <div class="article">
+
+            <h3>
+                Quando la prestazione diventa pressione
+            </h3>
+
+            <p>
+                Sport, aspettative e quella sensazione di dover essere sempre
+                all'altezza.
+            </p>
+
+        </div>
+
+
+        <div class="article">
+
+            <h3>
+                Essere infermiere senza diventare solo il proprio lavoro
+            </h3>
+
+            <p>
+                Stress, responsabilità e identità professionale nella vita
+                di chi lavora nella sanità.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHI SONO -->
+
+    <section id="chi-sono" class="intro">
+
+        <h2>Chi sono</h2>
+
+        <p>
+            Sono Marco Palmas, infermiere e MBSR Coach.
+            Mi interessa tutto ciò che riguarda il rapporto tra stress,
+            mente, corpo, sport e vita quotidiana.
+        </p>
+
+    </section>
 
 </main>
 
+
 <footer>
 
-<p>© Marco Palmas · Stress Management</p>
+    <p>
+        © Marco Palmas · Stress Management
+    </p>
 
 </footer>
 
