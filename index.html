@@ -2,35 +2,33 @@
 <html lang="it">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Marco Palmas | Stress Management</title>
 
 <meta name="description" content="Marco Palmas | Stress Management, Mindfulness, sport, infermieristica e vita reale.">
 
-
 <style>
 
 /* =========================
-   BASE
+   RESET
 ========================= */
 
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f5f7f4;
-  color: #202620;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f7f4;
+    color: #202620;
 }
 
 
@@ -39,237 +37,164 @@ body {
 ========================= */
 
 .hero {
+    position: relative;
+    width: 100%;
+    min-height: 720px;
 
-  position: relative;
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.05)
+        ),
+        url("ChatGPT%20Image%206%20set%202026%2C%2019_54_25.png");
 
-  min-height: 720px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 
-  background-image:
-    linear-gradient(
-      rgba(0,0,0,0.12),
-      rgba(0,0,0,0.12)
-    ),
-    url("ChatGPT%20Image%206%20set%202026%2C%2019_54_25.png");
-
-  background-size: cover;
-
-  background-position: center;
-
-  color: white;
-
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 
 /* =========================
-   HEADER
+   NAVIGAZIONE
 ========================= */
 
-.hero-header {
+.navbar {
+    width: 100%;
 
-  position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
-  top: 0;
-  left: 0;
-
-  width: 100%;
-
-  padding: 28px 6%;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: flex-start;
-
-  z-index: 10;
+    padding: 28px 6%;
+    
+    position: relative;
+    z-index: 10;
 }
 
 
-/* =========================
-   NOME
-========================= */
+/* Logo / nome */
 
 .brand {
-
-  display: block;
-
-  color: white;
-
-  text-decoration: none;
+    text-decoration: none;
+    color: white;
 }
 
-.brand h1 {
-
-  margin: 0;
-
-  font-size: 36px;
-
-  font-weight: 750;
-
-  letter-spacing: -1px;
-
-  text-shadow:
-    0 2px 8px rgba(0,0,0,0.35);
+.brand-name {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1px;
 }
 
-.brand p {
+.brand-subtitle {
+    margin-top: 8px;
 
-  margin: 4px 0 0;
+    font-size: 13px;
+    font-weight: 500;
 
-  font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  opacity: 0.95;
-
-  text-shadow:
-    0 2px 8px rgba(0,0,0,0.35);
+    color: rgba(255,255,255,0.9);
 }
 
 
-/* =========================
-   MENU
-========================= */
+/* Menu */
 
-nav {
-
-  display: flex;
-
-  gap: 34px;
-
-  align-items: center;
+.menu {
+    display: flex;
+    gap: 38px;
+    align-items: center;
 }
 
-nav a {
+.menu a {
+    color: white;
+    text-decoration: none;
 
-  position: relative;
+    font-size: 18px;
+    font-weight: 600;
 
-  color: white;
+    position: relative;
 
-  text-decoration: none;
-
-  font-size: 18px;
-
-  font-weight: 600;
-
-  padding-bottom: 8px;
-
-  text-shadow:
-    0 2px 8px rgba(0,0,0,0.45);
-
-  transition:
-    opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
-nav a:hover {
-
-  opacity: 0.75;
-}
-
-nav a.active::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  right: 0;
-
-  bottom: 0;
-
-  height: 3px;
-
-  background: #c9e79b;
-
-  border-radius: 3px;
+.menu a:hover {
+    opacity: 0.75;
 }
 
 
 /* =========================
-   TESTO DESCRITTIVO
+   CONTENUTO HERO
 ========================= */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    margin-top: auto;
+
+    padding: 0 6% 55px;
+
+    max-width: 650px;
+}
+
+
+/* Testo descrittivo */
 
 .hero-description {
+    color: white;
 
-  position: absolute;
+    font-size: 20px;
+    line-height: 1.5;
 
-  left: 9%;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
 
-  bottom: 125px;
-
-  max-width: 520px;
-
-  margin: 0;
-
-  font-size: 19px;
-
-  line-height: 1.5;
-
-  color: rgba(255,255,255,0.95);
-
-  text-shadow:
-    0 2px 8px rgba(0,0,0,0.65);
-
-  z-index: 5;
+    margin-bottom: 28px;
 }
 
 
-/* =========================
-   BOTTONE ARTICOLI
-========================= */
+/* Bottone */
 
 .hero-button {
+    display: inline-flex;
 
-  position: absolute;
+    align-items: center;
+    justify-content: center;
 
-  left: 9%;
+    gap: 20px;
 
-  bottom: 45px;
+    padding: 17px 28px;
 
-  display: inline-flex;
+    background: #063f2d;
 
-  align-items: center;
+    color: white;
 
-  gap: 18px;
+    text-decoration: none;
 
-  padding: 17px 30px;
+    font-size: 18px;
+    font-weight: 600;
 
-  border: 1px solid rgba(201,231,155,0.9);
+    border: 1px solid rgba(190,230,170,0.8);
 
-  border-radius: 8px;
+    border-radius: 10px;
 
-  background: rgba(0,55,37,0.88);
-
-  color: white;
-
-  text-decoration: none;
-
-  font-size: 18px;
-
-  font-weight: 600;
-
-  z-index: 10;
-
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 .hero-button:hover {
-
-  background: #123d2b;
-
-  transform: translateY(-2px);
+    background: #09553c;
+    transform: translateY(-2px);
 }
 
-.hero-button span {
-
-  font-size: 25px;
-
-  line-height: 1;
+.arrow {
+    font-size: 26px;
+    line-height: 1;
 }
 
 
@@ -277,33 +202,33 @@ nav a.active::after {
    CONTENUTO
 ========================= */
 
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 80px 25px;
+}
+
 .intro {
-
-  max-width: 1000px;
-
-  margin: 70px auto;
-
-  padding: 0 25px;
-
-  text-align: center;
+    text-align: center;
 }
 
 .intro h2 {
+    color: #123d2b;
 
-  color: #123d2b;
+    font-size: 36px;
 
-  font-size: 34px;
-
-  margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .intro p {
+    max-width: 700px;
+    margin: 0 auto;
 
-  color: #555;
+    color: #555;
 
-  font-size: 18px;
-
-  line-height: 1.7;
+    font-size: 19px;
+    line-height: 1.7;
 }
 
 
@@ -312,132 +237,70 @@ nav a.active::after {
 ========================= */
 
 footer {
+    text-align: center;
 
-  background: #123d2b;
+    padding: 40px 20px;
 
-  color: rgba(255,255,255,0.8);
+    background: #123d2b;
 
-  text-align: center;
-
-  padding: 35px 20px;
-
-  font-size: 14px;
-}
-
-
-/* =========================
-   TABLET / MOBILE
-========================= */
-
-@media (max-width: 850px) {
-
-  .hero {
-
-    min-height: 800px;
-
-    background-position: center;
-  }
-
-  .hero-header {
-
-    padding: 22px 25px;
-
-    flex-direction: column;
-
-    gap: 22px;
-  }
-
-  .brand h1 {
-
-    font-size: 30px;
-  }
-
-  .brand p {
-
-    font-size: 10px;
-
-    letter-spacing: 1.5px;
-  }
-
-  nav {
-
-    width: 100%;
-
-    justify-content: space-between;
-
-    gap: 12px;
-  }
-
-  nav a {
-
-    font-size: 15px;
-  }
-
-  .hero-description {
-
-    left: 25px;
-
-    right: 25px;
-
-    bottom: 125px;
-
-    max-width: none;
-
-    font-size: 17px;
-  }
-
-  .hero-button {
-
-    left: 25px;
-
-    bottom: 45px;
-  }
-
-}
-
-
-/* =========================
-   SMARTPHONE
-========================= */
-
-@media (max-width: 520px) {
-
-  .hero {
-
-    min-height: 760px;
-
-    background-position: center;
-  }
-
-  nav {
-
-    flex-wrap: wrap;
-
-    justify-content: flex-start;
-
-    gap: 18px;
-  }
-
-  nav a {
+    color: rgba(255,255,255,0.8);
 
     font-size: 14px;
-  }
+}
 
-  .hero-description {
 
-    bottom: 120px;
+/* =========================
+   MOBILE
+========================= */
 
-    font-size: 16px;
-  }
+@media (max-width: 800px) {
 
-  .hero-button {
+    .hero {
+        min-height: 680px;
 
-    bottom: 40px;
+        background-position: center center;
+    }
 
-    font-size: 16px;
+    .navbar {
+        padding: 22px 5%;
 
-    padding: 15px 22px;
-  }
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .brand-name {
+        font-size: 30px;
+    }
+
+    .brand-subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .menu {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+
+    .hero-content {
+        padding: 0 5% 35px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+    .hero-button {
+        font-size: 16px;
+    }
+
+    .intro h2 {
+        font-size: 30px;
+    }
 
 }
 
@@ -455,109 +318,96 @@ footer {
 
 <header class="hero">
 
+    <nav class="navbar">
 
-  <!-- HEADER -->
+        <a href="index.html" class="brand">
 
-  <div class="hero-header">
+            <div class="brand-name">
+                Marco Palmas
+            </div>
 
+            <div class="brand-subtitle">
+                Stress Management · Mindfulness · Sport · Vita reale
+            </div>
 
-    <!-- NOME CLICCABILE -->
-
-    <a href="index.html" class="brand">
-
-      <h1>Marco Palmas</h1>
-
-      <p>
-        Stress Management · Mindfulness · Sport · Vita reale
-      </p>
-
-    </a>
+        </a>
 
 
-    <!-- MENU CLICCABILE -->
+        <div class="menu">
 
-    <nav aria-label="Navigazione principale">
+            <a href="index.html">
+                Home
+            </a>
 
+            <a href="articoli.html">
+                Articoli
+            </a>
 
-      <a href="index.html" class="active">
-        Home
-      </a>
+            <a href="temi.html">
+                Temi
+            </a>
 
+            <a href="chi-sono.html">
+                Chi sono
+            </a>
 
-      <a href="articoli.html">
-        Articoli
-      </a>
-
-
-      <a href="temi.html">
-        Temi
-      </a>
-
-
-      <a href="chi-sono.html">
-        Chi sono
-      </a>
-
+        </div>
 
     </nav>
 
 
-  </div>
+    <!--
+        IMPORTANTE:
+        NON inseriamo qui la citazione.
+        La citazione è già presente nella fotografia.
+    -->
 
 
+    <div class="hero-content">
 
-  <!-- DESCRIZIONE -->
-
-  <p class="hero-description">
-
-    Riflessioni, strumenti ed esperienze su stress,
-    mindfulness, sport, lavoro sanitario e vita reale.
-
-  </p>
+        <p class="hero-description">
+            Riflessioni, strumenti ed esperienze su stress,
+            mindfulness, sport, lavoro sanitario e vita reale.
+        </p>
 
 
+        <a href="articoli.html" class="hero-button">
 
-  <!-- BOTTONE CLICCABILE -->
+            Scopri gli articoli
 
-  <a
-    href="articoli.html"
-    class="hero-button"
-  >
+            <span class="arrow">
+                →
+            </span>
 
-    Scopri gli articoli
+        </a>
 
-    <span>→</span>
-
-  </a>
-
+    </div>
 
 </header>
 
 
-
 <!-- =========================
-     INTRO
+     CONTENUTO
 ========================= -->
 
 <main>
 
-  <section class="intro">
+    <section class="intro">
 
-    <h2>
-      Parliamo di stress. Ma non solo.
-    </h2>
+        <h2>
+            Stress, consapevolezza e vita reale.
+        </h2>
 
-    <p>
+        <p>
+            Uno spazio per parlare di ciò che ci accade,
+            di come reagiamo e degli strumenti che possono
+            aiutarci a vivere con maggiore consapevolezza,
+            equilibrio e presenza.
+        </p>
 
-      Esperienze, riflessioni e strumenti per affrontare
-      meglio la pressione, il lavoro, lo sport e la vita quotidiana.
-
-    </p>
-
-  </section>
+    </section>
 
 </main>
-
 
 
 <!-- =========================
@@ -566,7 +416,7 @@ footer {
 
 <footer>
 
-  © Marco Palmas · Stress Management
+    © Marco Palmas · Stress Management
 
 </footer>
 
