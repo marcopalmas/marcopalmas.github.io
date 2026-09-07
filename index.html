@@ -1,348 +1,568 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+  <title>Marco Palmas | Stress Management</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Marco Palmas — Stress Management, Mindfulness, Sport e Vita reale.">
 
-<title>Marco Palmas | Stress Management</title>
+  <style>
 
-<meta name="description" content="Marco Palmas | Stress Management, Mindfulness, Sport e Vita Reale.">
+    /* =========================
+       RESET
+       ========================= */
 
-<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-* {
-    box-sizing: border-box;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #071812;
+      color: white;
+    }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-/* =========================================
-   HERO
-========================================= */
 
-.hero {
-    position: relative;
-
-    width: 100%;
-    height: 100vh;
-    min-height: 650px;
-
-    background-image:
-        url("ChatGPT%20Image%206%20set%202026%2C%2019_54_25.png");
-
-    background-size: cover;
-    background-position: center center;
-
-    overflow: hidden;
-}
-
-
-/* =========================================
-   LEGGERO VELO SCURO
-========================================= */
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.08);
-
-    pointer-events: none;
-}
-
-
-/* =========================================
-   TESTATA
-========================================= */
-
-.header {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    padding: 28px 6%;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    z-index: 10;
-}
-
-
-/* =========================================
-   NOME
-========================================= */
-
-.brand {
-    color: white;
-
-    text-shadow:
-        0 2px 8px rgba(0,0,0,0.45);
-}
-
-.brand h1 {
-    margin: 0;
-
-    font-size: 36px;
-    line-height: 1;
-
-    font-weight: 700;
-}
-
-.brand p {
-    margin: 9px 0 0;
-
-    font-size: 13px;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
-
-    font-weight: 500;
-}
-
-
-/* =========================================
-   MENU
-========================================= */
-
-nav {
-    display: flex;
-
-    align-items: center;
-
-    gap: 38px;
-}
-
-nav a {
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 19px;
-
-    font-weight: 600;
-
-    padding: 8px 0;
-
-    text-shadow:
-        0 2px 8px rgba(0,0,0,0.5);
-
-    transition:
-        opacity 0.2s ease,
-        border-color 0.2s ease;
-}
-
-nav a:hover {
-    opacity: 0.7;
-}
-
-nav a.active {
-    border-bottom: 3px solid #d8f29a;
-}
-
-
-/* =========================================
-   PULSANTE ARTICOLI
-   Posizionato nell'area libera dell'immagine
-========================================= */
-
-.article-button {
-    position: absolute;
-
-    left: 8.8%;
-    bottom: 7%;
-
-    z-index: 10;
-
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 24px;
-
-    padding: 16px 28px;
-
-    min-width: 305px;
-
-    border-radius: 9px;
-
-    background: rgba(0, 61, 43, 0.94);
-
-    border: 1px solid #a7d477;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 19px;
-
-    font-weight: 600;
-
-    box-shadow:
-        0 5px 18px rgba(0,0,0,0.25);
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-}
-
-.article-button:hover {
-    background: rgba(4, 82, 57, 0.98);
-
-    transform: translateY(-2px);
-}
-
-.article-button span {
-    font-size: 28px;
-
-    line-height: 1;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 800px) {
+    /* =========================
+       HERO
+       ========================= */
 
     .hero {
-        min-height: 760px;
+      position: relative;
+      min-height: 100vh;
+      height: 100vh;
+      min-height: 720px;
 
-        background-position: 60% center;
+      overflow: hidden;
+
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.55) 0%,
+          rgba(0, 0, 0, 0.25) 45%,
+          rgba(0, 0, 0, 0.08) 100%
+        ),
+        url("hero.png");
+
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
+
+
+    /* =========================
+       HEADER
+       ========================= */
 
     .header {
-        padding: 22px 24px;
+      position: absolute;
 
-        flex-direction: column;
+      top: 0;
+      left: 0;
+      right: 0;
 
-        gap: 22px;
+      z-index: 20;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      padding: 34px 6%;
     }
 
-    .brand h1 {
-        font-size: 30px;
+
+    /* =========================
+       BRAND
+       ========================= */
+
+    .brand {
+      display: block;
     }
 
-    .brand p {
+    .brand-name {
+      font-size: clamp(32px, 3vw, 48px);
+      font-weight: 700;
+
+      line-height: 1;
+
+      letter-spacing: -1.5px;
+
+      text-shadow:
+        0 2px 12px rgba(0,0,0,0.35);
+    }
+
+    .brand-subtitle {
+      margin-top: 10px;
+
+      font-size: clamp(10px, 1vw, 15px);
+
+      font-weight: 600;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      white-space: nowrap;
+
+      text-shadow:
+        0 2px 10px rgba(0,0,0,0.4);
+    }
+
+
+    /* =========================
+       NAVIGATION
+       ========================= */
+
+    .navigation {
+      display: flex;
+
+      align-items: center;
+
+      gap: clamp(25px, 3vw, 48px);
+
+      padding-top: 5px;
+    }
+
+    .navigation a {
+      position: relative;
+
+      display: block;
+
+      padding: 8px 0 12px;
+
+      font-size: clamp(16px, 1.4vw, 22px);
+
+      font-weight: 600;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .navigation a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 3px;
+
+      background: #cbe98f;
+
+      transform: scaleX(0);
+
+      transition: transform 0.2s ease;
+    }
+
+    .navigation a:hover {
+      opacity: 0.85;
+
+      transform: translateY(-1px);
+    }
+
+    .navigation a:hover::after,
+    .navigation a.active::after {
+      transform: scaleX(1);
+    }
+
+
+    /* =========================
+       HERO CONTENT
+       ========================= */
+
+    .hero-content {
+      position: absolute;
+
+      z-index: 5;
+
+      left: 9%;
+
+      top: 50%;
+
+      transform: translateY(-42%);
+
+      width: min(610px, 45%);
+    }
+
+
+    /* =========================
+       QUOTE
+       ========================= */
+
+    .quote-mark {
+      color: #cbe98f;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 82px;
+
+      font-weight: 700;
+
+      line-height: 0.5;
+
+      margin-bottom: 30px;
+    }
+
+    .quote {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(38px, 4vw, 64px);
+
+      line-height: 1.08;
+
+      font-style: italic;
+
+      font-weight: 400;
+
+      text-shadow:
+        0 3px 15px rgba(0,0,0,0.35);
+    }
+
+    .quote strong {
+      color: #cbe98f;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       DIVIDER
+       ========================= */
+
+    .divider {
+      width: 45px;
+
+      height: 3px;
+
+      background: #cbe98f;
+
+      margin-top: 38px;
+
+      margin-bottom: 24px;
+    }
+
+
+    /* =========================
+       DESCRIPTION
+       ========================= */
+
+    .description {
+      max-width: 560px;
+
+      font-size: clamp(17px, 1.45vw, 23px);
+
+      line-height: 1.55;
+
+      text-shadow:
+        0 2px 10px rgba(0,0,0,0.45);
+    }
+
+
+    /* =========================
+       SIDE MESSAGE
+       ========================= */
+
+    .side-message {
+      position: absolute;
+
+      z-index: 5;
+
+      right: 6%;
+
+      top: 52%;
+
+      transform: translateY(-30%);
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(21px, 2vw, 32px);
+
+      font-style: italic;
+
+      line-height: 1.35;
+
+      text-shadow:
+        0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .side-message p {
+      margin-bottom: 20px;
+    }
+
+    .side-message strong {
+      color: #cbe98f;
+
+      font-weight: 400;
+    }
+
+    .side-line {
+      width: 125px;
+
+      height: 2px;
+
+      background: rgba(255,255,255,0.8);
+
+      margin-top: 5px;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 800px) {
+
+      .hero {
+        min-height: 850px;
+
+        height: auto;
+
+        background-position:
+          62% center;
+      }
+
+      .header {
+        display: block;
+
+        padding: 25px 7%;
+      }
+
+      .brand-name {
+        font-size: 34px;
+      }
+
+      .brand-subtitle {
+        white-space: normal;
+
         font-size: 10px;
 
         letter-spacing: 2px;
-    }
 
-    nav {
-        gap: 20px;
+        line-height: 1.5;
+      }
+
+      .navigation {
+        margin-top: 25px;
+
+        gap: 22px;
 
         flex-wrap: wrap;
-    }
+      }
 
-    nav a {
+      .navigation a {
         font-size: 16px;
+      }
+
+      .hero-content {
+        left: 7%;
+        right: 7%;
+
+        width: auto;
+
+        top: 55%;
+
+        transform: translateY(-35%);
+      }
+
+      .quote {
+        font-size: clamp(34px, 8vw, 48px);
+      }
+
+      .description {
+        font-size: 17px;
+      }
+
+      .side-message {
+        display: none;
+      }
     }
 
-    .article-button {
-        left: 24px;
-        right: 24px;
-        bottom: 30px;
-
-        min-width: 0;
-
-        width: calc(100% - 48px);
-    }
-}
-
-</style>
-
+  </style>
 </head>
 
 
 <body>
 
 
-<!-- =========================================
-     HERO
-========================================= -->
+  <!-- =========================================
+       HERO
+       ========================================= -->
 
-<section class="hero">
+  <section class="hero">
 
 
-    <!-- TESTATA -->
+    <!-- HEADER -->
 
     <header class="header">
 
 
-        <div class="brand">
+      <!-- MARCO PALMAS -->
 
-            <h1>Marco Palmas</h1>
+      <a href="index.html" class="brand">
 
-            <p>
-                Stress Management · Mindfulness · Sport · Vita reale
-            </p>
-
+        <div class="brand-name">
+          Marco Palmas
         </div>
 
+        <div class="brand-subtitle">
+          Stress Management · Mindfulness · Sport · Vita reale
+        </div>
 
-        <!-- MENU CLICCABILE -->
+      </a>
 
-        <nav>
 
-            <a href="index.html" class="active">
-                Home
-            </a>
+      <!-- MENU -->
 
-            <a href="articoli.html">
-                Articoli
-            </a>
+      <nav class="navigation">
 
-            <a href="temi.html">
-                Temi
-            </a>
+        <a href="index.html" class="active">
+          Home
+        </a>
 
-            <a href="chi-sono.html">
-                Chi sono
-            </a>
+        <a href="articoli.html">
+          Articoli
+        </a>
 
-        </nav>
+        <a href="temi.html">
+          Temi
+        </a>
 
+        <a href="chi-sono.html">
+          Chi sono
+        </a>
+
+      </nav>
 
     </header>
 
 
-    <!-- PULSANTE CLICCABILE -->
 
-    <a
-        href="articoli.html"
-        class="article-button"
+    <!-- =====================================
+         CONTENUTO PRINCIPALE
+         ===================================== -->
+
+    <div class="hero-content">
+
+
+      <div class="quote-mark">
+        “
+      </div>
+
+
+      <h1 class="quote">
+
+        La vita è per il
+        <strong>10%</strong><br>
+
+        cosa ti accade<br>
+
+        e per il
+        <strong>90%</strong><br>
+
+        <strong>come reagisci.</strong>
+
+      </h1>
+
+
+      <div class="divider"></div>
+
+
+      <p class="description">
+
+        Riflessioni, strumenti ed esperienze su stress,
+        mindfulness, sport, lavoro sanitario e vita reale.
+
+      </p>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         MESSAGGIO LATERALE
+         ===================================== -->
+
+    <div class="side-message">
+
+      <p>
+        Più<br>
+        <strong>Consapevolezza</strong>
+      </p>
+
+      <p>
+        Più<br>
+        <strong>Equilibrio</strong>
+      </p>
+
+      <p>
+        Più<br>
+        <strong>Vita Reale</strong>
+      </p>
+
+      <div class="side-line"></div>
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =========================================
+       SEZIONE INTRODUTTIVA
+       ========================================= -->
+
+  <section
+    style="
+      background:#f4f6f2;
+      color:#173c2e;
+      padding:80px 8%;
+      text-align:center;
+    "
+  >
+
+    <h2
+      style="
+        font-size:34px;
+        margin-bottom:15px;
+      "
     >
+      Benvenuto.
+    </h2>
 
-        Scopri gli articoli
+    <p
+      style="
+        max-width:700px;
+        margin:auto;
+        font-size:18px;
+        line-height:1.6;
+      "
+    >
+      Uno spazio per parlare di stress,
+      consapevolezza, sport, lavoro e vita reale
+      con un approccio concreto e umano.
+    </p>
 
-        <span>→</span>
-
-    </a>
-
-
-</section>
+  </section>
 
 
 </body>
-
 </html>
