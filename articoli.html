@@ -1,192 +1,973 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Articoli | Marco Palmas</title>
 
+<meta name="description"
+content="Articoli di Marco Palmas su stress, mindfulness, sport, infermieristica e vita reale.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+rel="stylesheet">
+
+
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f5f7f4;
-  color: #202620;
-  line-height: 1.6;
+    font-family: "DM Sans", sans-serif;
+    background: #f5f7f4;
+    color: #202620;
+    line-height: 1.6;
 }
 
-header {
-  background: #123d2d;
-  color: white;
-  text-align: center;
-  padding: 55px 20px;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 42px;
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    background: #06130f;
+    color: white;
+    padding: 28px 0 24px;
 }
 
-header p {
-  margin-top: 12px;
-  font-size: 20px;
+.header-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
 }
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+}
+
+.brand-subtitle {
+    margin-top: 9px;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* =========================
+   NAV
+========================= */
 
 nav {
-  background: white;
-  text-align: center;
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+
+    gap: 38px;
+
+    padding-top: 6px;
 }
 
 nav a {
-  color: #123d2d;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 15px;
+    position: relative;
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    padding-bottom: 8px;
+
+    transition: color 0.25s ease;
 }
 
-main {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 20px;
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #c9ed8b;
+
+    transition: width 0.25s ease;
 }
 
-h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
+nav a:hover {
+    color: #c9ed8b;
 }
 
-.intro {
-  font-size: 18px;
-  margin-bottom: 40px;
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
 }
 
-.article {
-  background: white;
-  padding: 30px;
-  margin-bottom: 25px;
-  border-radius: 16px;
-  border: 1px solid #e2e6e2;
+
+/* =========================
+   HERO PAGINA
+========================= */
+
+.page-intro {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+
+    padding: 75px 0 55px;
 }
 
-.article h3 {
-  color: #123d2d;
-  font-size: 25px;
-  margin-top: 0;
+.page-intro .eyebrow {
+    color: #123d2d;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
 }
 
-.article p {
-  color: #444;
+.page-intro h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -0.035em;
+
+    margin-bottom: 22px;
 }
 
-.article a {
-  color: #123d2d;
-  font-weight: 600;
-  text-decoration: none;
+.page-intro h1 span {
+    color: #123d2d;
 }
+
+.page-intro p {
+    max-width: 720px;
+
+    font-size: 1.2rem;
+
+    color: #555;
+
+    line-height: 1.65;
+}
+
+
+/* =========================
+   ARTICOLI
+========================= */
+
+.articles-section {
+    width: min(1200px, 90%);
+    margin: 0 auto 90px;
+}
+
+
+/* =========================
+   GRIGLIA
+========================= */
+
+.articles-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.35fr 0.85fr;
+
+    grid-template-rows: auto auto;
+
+    gap: 24px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.article-card {
+
+    position: relative;
+
+    background: white;
+
+    border: 1px solid #e0e5e1;
+
+    border-radius: 22px;
+
+    padding: 34px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.article-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   ARTICOLO PRINCIPALE
+========================= */
+
+.article-main {
+
+    grid-row: span 2;
+
+    min-height: 520px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background:
+        linear-gradient(
+            145deg,
+            #123d2d 0%,
+            #06130f 100%
+        );
+
+    color: white;
+}
+
+.article-main::before {
+
+    content: "10%";
+
+    position: absolute;
+
+    right: -20px;
+    top: -55px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 12rem;
+
+    line-height: 1;
+
+    color: rgba(201,237,139,0.08);
+
+    font-weight: 600;
+}
+
+.article-main .category {
+    color: #c9ed8b;
+}
+
+.article-main h2 {
+    max-width: 760px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.5rem, 4vw, 4.3rem);
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    letter-spacing: -0.035em;
+
+    margin: 15px 0 20px;
+}
+
+.article-main p {
+    max-width: 650px;
+
+    color: rgba(255,255,255,0.82);
+
+    font-size: 1.08rem;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   ARTICOLI SECONDARI
+========================= */
+
+.article-secondary {
+
+    min-height: 248px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.category {
+
+    color: #123d2d;
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.article-secondary h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(1.7rem, 2.5vw, 2.35rem);
+
+    line-height: 1.12;
+
+    font-weight: 500;
+
+    letter-spacing: -0.025em;
+
+    margin: 12px 0 14px;
+}
+
+.article-secondary p {
+
+    color: #555;
+
+    font-size: 0.98rem;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   LINK ARTICOLO
+========================= */
+
+.read-more {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    color: #123d2d;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    border-bottom: 2px solid #c9ed8b;
+
+    padding-bottom: 4px;
+
+    transition:
+        gap 0.25s ease,
+        color 0.25s ease;
+}
+
+.read-more:hover {
+
+    gap: 14px;
+
+    color: #315d47;
+}
+
+
+/* =========================
+   BOX NEWSLETTER
+========================= */
+
+.newsletter-box {
+
+    width: min(1200px, 90%);
+
+    margin: 0 auto 90px;
+
+    padding: 55px;
+
+    border-radius: 24px;
+
+    background: #e7eee8;
+
+    border: 1px solid #d8e0da;
+
+    text-align: center;
+}
+
+.newsletter-box .eyebrow {
+
+    color: #123d2d;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.newsletter-box h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+}
+
+.newsletter-box p {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #555;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-  text-align: center;
-  padding: 40px 20px;
-  margin-top: 60px;
-  background: #123d2d;
-  color: white;
+
+    background: #06130f;
+
+    color: white;
+
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+.footer-name {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 8px;
+}
+
+.footer-subtitle {
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 0.9rem;
+
+    margin-bottom: 22px;
+}
+
+.social {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    margin-bottom: 25px;
+}
+
+.social a {
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: color 0.25s ease;
+}
+
+.social a:hover {
+
+    color: #c9ed8b;
+}
+
+.copyright {
+
+    color: rgba(255,255,255,0.45);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .header-container {
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    nav {
+
+        gap: 25px;
+
+        flex-wrap: wrap;
+    }
+
+    .articles-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .article-main {
+
+        grid-row: auto;
+
+        min-height: 450px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .site-header {
+
+        padding: 24px 0;
+    }
+
+    .header-container {
+
+        width: 88%;
+    }
+
+    .brand-name {
+
+        font-size: 2rem;
+    }
+
+    .brand-subtitle {
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.12em;
+    }
+
+    nav {
+
+        gap: 18px;
+    }
+
+    nav a {
+
+        font-size: 0.86rem;
+    }
+
+    .page-intro {
+
+        width: 88%;
+
+        padding: 55px 0 40px;
+    }
+
+    .page-intro h1 {
+
+        font-size: 3rem;
+    }
+
+    .page-intro p {
+
+        font-size: 1.05rem;
+    }
+
+    .articles-section {
+
+        width: 88%;
+    }
+
+    .article-card {
+
+        padding: 28px;
+
+        border-radius: 18px;
+    }
+
+    .article-main {
+
+        min-height: 430px;
+    }
+
+    .article-main h2 {
+
+        font-size: 2.6rem;
+    }
+
+    .article-secondary {
+
+        min-height: 300px;
+    }
+
+    .newsletter-box {
+
+        width: 88%;
+
+        padding: 40px 25px;
+
+        margin-bottom: 65px;
+    }
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<header>
-  <h1>Marco Palmas</h1>
-  <p>Stress Management · Mindfulness · Sport · Vita reale</p>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-name">
+                Marco Palmas
+            </div>
+
+            <div class="brand-subtitle">
+                STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="articoli.html" class="active">
+                Articoli
+            </a>
+
+            <a href="temi.html">
+                Temi
+            </a>
+
+            <a href="chi-sono.html">
+                Chi sono
+            </a>
+
+        </nav>
+
+    </div>
+
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="articoli.html">Articoli</a>
-  <a href="#">Temi</a>
-  <a href="#">Chi sono</a>
-</nav>
 
-<main>
 
-<h2>Articoli</h2>
+<!-- =========================
+     INTRO
+========================= -->
 
-<p class="intro">
-Riflessioni, strumenti ed esperienze su stress, mindfulness,
-sport, lavoro sanitario e vita reale.
-</p>
+<section class="page-intro">
 
-<div class="article">
+    <div class="eyebrow">
+        Il blog
+    </div>
 
-  <h3>Quando tutto sembra urgente</h3>
+    <h1>
+        Pensieri.<br>
+        Esperienze.<br>
+        <span>Vita reale.</span>
+    </h1>
 
-  <p>
-  Viviamo spesso con la sensazione che tutto debba essere fatto subito.
-  Ma l'urgenza non è sempre reale: a volte è il modo in cui lo stress
-  interpreta quello che abbiamo davanti.
-  </p>
+    <p>
+        Riflessioni, strumenti ed esperienze su stress,
+        mindfulness, sport, lavoro sanitario e tutto ciò
+        che succede mentre cerchiamo semplicemente
+        di vivere meglio.
+    </p>
 
-  <a href="#">Leggi l'articolo →</a>
+</section>
 
-</div>
 
-<div class="article">
 
-  <h3>Stress: quando smette di essere un alleato</h3>
+<!-- =========================
+     ARTICOLI
+========================= -->
 
-  <p>
-  Lo stress non è necessariamente il nostro nemico.
-  Il problema nasce quando il sistema rimane continuamente acceso
-  e non riesce più a tornare alla calma.
-  </p>
+<section class="articles-section">
 
-  <a href="#">Leggi l'articolo →</a>
 
-</div>
+    <div class="articles-grid">
 
-<div class="article">
 
-  <h3>La pressione della prestazione</h3>
+        <!-- =====================
+             ARTICOLO PRINCIPALE
+        ====================== -->
 
-  <p>
-  Nello sport, nel lavoro e nella vita quotidiana possiamo trovarci
-  a dover fare bene proprio quando sentiamo di non poter sbagliare.
-  </p>
+        <article class="article-card article-main">
 
-  <a href="#">Leggi l'articolo →</a>
+            <div>
 
-</div>
+                <div class="category">
+                    Stress & Mindfulness
+                </div>
 
-<div class="article">
+                <h2>
+                    Quando tutto sembra urgente
+                </h2>
 
-  <h3>Mindfulness nella vita reale</h3>
+                <p>
+                    Viviamo spesso con la sensazione che tutto
+                    debba essere fatto subito. Ma l'urgenza non è
+                    sempre reale: a volte è il modo in cui lo stress
+                    interpreta quello che abbiamo davanti.
+                </p>
 
-  <p>
-  La mindfulness non serve a diventare persone perfettamente calme.
-  Può aiutarci, piuttosto, a riconoscere quello che sta succedendo
-  mentre sta succedendo.
-  </p>
+                <a href="#" class="read-more">
+                    Leggi l'articolo →
+                </a>
 
-  <a href="#">Leggi l'articolo →</a>
+            </div>
 
-</div>
+        </article>
 
-</main>
+
+
+        <!-- =====================
+             SPORT
+        ====================== -->
+
+        <article class="article-card article-secondary">
+
+            <div>
+
+                <div class="category">
+                    Sport & Performance
+                </div>
+
+                <h2>
+                    La pressione della prestazione
+                </h2>
+
+                <p>
+                    Nello sport, nel lavoro e nella vita quotidiana
+                    possiamo trovarci a dover fare bene proprio
+                    quando sentiamo di non poter sbagliare.
+                </p>
+
+            </div>
+
+            <a href="#" class="read-more">
+                Leggi l'articolo →
+            </a>
+
+        </article>
+
+
+
+        <!-- =====================
+             INFERMIERISTICA
+        ====================== -->
+
+        <article class="article-card article-secondary">
+
+            <div>
+
+                <div class="category">
+                    Infermieristica
+                </div>
+
+                <h2>
+                    Stress: quando smette di essere un alleato
+                </h2>
+
+                <p>
+                    Lo stress non è necessariamente il nostro nemico.
+                    Il problema nasce quando il sistema rimane
+                    continuamente acceso.
+                </p>
+
+            </div>
+
+            <a href="#" class="read-more">
+                Leggi l'articolo →
+            </a>
+
+        </article>
+
+
+
+        <!-- =====================
+             MINDFULNESS
+        ====================== -->
+
+        <article class="article-card article-secondary">
+
+            <div>
+
+                <div class="category">
+                    Mindfulness
+                </div>
+
+                <h2>
+                    Mindfulness nella vita reale
+                </h2>
+
+                <p>
+                    La mindfulness non serve a diventare persone
+                    perfettamente calme. Può aiutarci a riconoscere
+                    quello che sta succedendo mentre sta succedendo.
+                </p>
+
+            </div>
+
+            <a href="#" class="read-more">
+                Leggi l'articolo →
+            </a>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     NEWSLETTER — PREPARAZIONE
+========================= -->
+
+<section class="newsletter-box">
+
+    <div class="eyebrow">
+        Prossimamente
+    </div>
+
+    <h2>
+        Una mail ogni tanto.<br>
+        Ma che valga la pena leggere.
+    </h2>
+
+    <p>
+        Sto preparando uno spazio per raccogliere pensieri,
+        nuovi articoli, strumenti e percorsi dedicati a stress,
+        consapevolezza e vita reale.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-© Marco Palmas · Stress Management, Mindfulness, Sport e vita reale
+    <div class="footer-name">
+        Marco Palmas
+    </div>
+
+    <div class="footer-subtitle">
+        Stress Management · Mindfulness · Sport · Vita reale
+    </div>
+
+
+    <div class="social">
+
+        <!-- INSERIREMO I LINK REALI -->
+
+        <a href="#" aria-label="Instagram">
+            Instagram
+        </a>
+
+        <a href="#" aria-label="YouTube">
+            YouTube
+        </a>
+
+    </div>
+
+
+    <div class="copyright">
+        © Marco Palmas · Tutti i diritti riservati
+    </div>
 
 </footer>
+
 
 </body>
 </html>
