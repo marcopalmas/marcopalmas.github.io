@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quando tutto sembra urgente | Marco Palmas</title>
+
+<meta name="description"
+content="Perché viviamo spesso come se tutto fosse urgente? Smartphone, notifiche, camminate e guida: piccoli esempi di una vita vissuta in modalità fare.">
+
+<meta name="author" content="Marco Palmas">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f7f4;
+    color: #202620;
+    line-height: 1.75;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    background: #06130f;
+    color: white;
+    padding: 28px 0 24px;
+}
+
+.header-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.brand-subtitle {
+    margin-top: 9px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    padding-top: 6px;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #c9ed8b;
+    transition: width 0.25s ease;
+}
+
+nav a:hover {
+    color: #c9ed8b;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   ARTICLE HEADER
+========================= */
+
+.article-header {
+    width: min(900px, 88%);
+    margin: 0 auto;
+
+    padding: 80px 0 55px;
+}
+
+.category {
+    color: #123d2d;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+.article-header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -0.04em;
+
+    margin-bottom: 25px;
+}
+
+.article-header .subtitle {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+
+    color: #555;
+
+    max-width: 780px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================
+   ARTICLE
+========================= */
+
+.article-container {
+    width: min(760px, 88%);
+    margin: 0 auto 90px;
+}
+
+.article-content {
+    background: white;
+
+    border: 1px solid #e0e5e1;
+
+    border-radius: 24px;
+
+    padding: clamp(30px, 6vw, 65px);
+}
+
+.article-content p {
+    font-size: 1.12rem;
+
+    color: #303530;
+
+    margin-bottom: 25px;
+}
+
+.article-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #123d2d;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    margin: 55px 0 25px;
+}
+
+.article-content strong {
+    color: #123d2d;
+}
+
+.article-content em {
+    color: #555;
+}
+
+.article-content blockquote {
+    margin: 35px 0;
+
+    padding: 25px 30px;
+
+    border-left: 5px solid #c9ed8b;
+
+    background: #f5f7f4;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.3rem;
+
+    font-style: italic;
+
+    color: #123d2d;
+}
+
+
+/* =========================
+   FINALE
+========================= */
+
+.article-ending {
+    margin-top: 55px;
+
+    padding-top: 45px;
+
+    border-top: 1px solid #e0e5e1;
+}
+
+.article-ending .quote {
+    background: #123d2d;
+
+    color: white;
+
+    padding: 45px 35px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+
+    line-height: 1.35;
+
+    margin-bottom: 35px;
+}
+
+.article-ending .small-text {
+    font-size: 1.05rem;
+
+    color: #555;
+
+    text-align: center;
+}
+
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter-box {
+
+    width: min(1100px, 88%);
+
+    margin: 0 auto 90px;
+
+    padding: 55px 30px;
+
+    border-radius: 24px;
+
+    background: #e7eee8;
+
+    border: 1px solid #d8e0da;
+
+    text-align: center;
+}
+
+.newsletter-box .eyebrow {
+
+    color: #123d2d;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.newsletter-box h2 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+.newsletter-box p {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #555;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #06130f;
+
+    color: white;
+
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+.footer-name {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 8px;
+}
+
+.footer-subtitle {
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 0.9rem;
+
+    margin-bottom: 22px;
+}
+
+.social {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    margin-bottom: 25px;
+}
+
+.social a {
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: color 0.25s ease;
+}
+
+.social a:hover {
+
+    color: #c9ed8b;
+}
+
+.copyright {
+
+    color: rgba(255,255,255,0.45);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .header-container {
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    nav {
+
+        gap: 22px;
+
+        flex-wrap: wrap;
+    }
+
+    .article-header {
+
+        padding-top: 55px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .site-header {
+
+        padding: 24px 0;
+    }
+
+    .header-container {
+
+        width: 88%;
+    }
+
+    .brand-name {
+
+        font-size: 2rem;
+    }
+
+    .brand-subtitle {
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.12em;
+    }
+
+    nav a {
+
+        font-size: 0.86rem;
+    }
+
+    .article-header {
+
+        width: 88%;
+
+        padding: 50px 0 35px;
+    }
+
+    .article-header h1 {
+
+        font-size: 3rem;
+    }
+
+    .article-container {
+
+        width: 92%;
+    }
+
+    .article-content {
+
+        padding: 30px 24px;
+
+        border-radius: 18px;
+    }
+
+    .article-content p {
+
+        font-size: 1.05rem;
+    }
+
+    .article-content blockquote {
+
+        padding: 20px;
+
+        font-size: 1.15rem;
+    }
+
+    .newsletter-box {
+
+        width: 88%;
+
+        padding: 40px 22px;
+
+        margin-bottom: 65px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-name">
+                Marco Palmas
+            </div>
+
+            <div class="brand-subtitle">
+                STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="articoli.html">
+                Articoli
+            </a>
+
+            <a href="temi.html">
+                Temi
+            </a>
+
+            <a href="chi-sono.html">
+                Chi sono
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     TITOLO
+========================= -->
+
+<header class="article-header">
+
+    <div class="category">
+        Stress & Mindfulness
+    </div>
+
+    <h1>
+        Quando tutto sembra urgente
+    </h1>
+
+    <p class="subtitle">
+        L'ansia ti dice che tutto è urgente.
+        La consapevolezza prova a chiederti:
+        lo è davvero?
+    </p>
+
+</header>
+
+
+
+<!-- =========================
+     ARTICOLO
+========================= -->
+
+<main class="article-container">
+
+<section class="article-content">
+
+
+<p>
+Ci sono momenti in cui abbiamo davvero qualcosa di urgente da fare.
+</p>
+
+<p>
+Un'emergenza, una scadenza, qualcuno che ha bisogno di noi.
+</p>
+
+<p>
+E poi ci sono tutti gli altri momenti.
+</p>
+
+<p>
+Quelli in cui, senza quasi accorgercene,
+<strong>viviamo come se dovessimo correre continuamente dietro a qualcosa.</strong>
+</p>
+
+
+
+<h2>
+Il telefono che decide dove guardare
+</h2>
+
+
+<p>
+Uno degli esempi più evidenti sono le notifiche del nostro smartphone.
+</p>
+
+<p>
+Lo smartphone è senza dubbio una delle più grandi innovazioni tecnologiche
+che abbiamo avuto a disposizione. Ci permette di comunicare, lavorare,
+informarci, orientarci e fare in pochi secondi cose che fino a qualche
+decennio fa avrebbero richiesto tempo e strumenti completamente diversi.
+</p>
+
+<p>
+Ma c'è un piccolo particolare.
+</p>
+
+<p>
+<strong>Le notifiche sono diventate degli intrusi costanti nelle nostre vite.</strong>
+</p>
+
+<p>
+Social, email e soprattutto programmi di messaggistica hanno imparato
+a entrare continuamente nella nostra attenzione.
+</p>
+
+<p>
+Immagina questa scena.
+</p>
+
+<p>
+Stai parlando con tuo figlio.
+</p>
+
+<p>
+Oppure con il tuo partner.
+</p>
+
+<p>
+State parlando di qualcosa.
+</p>
+
+<p>
+Poi:
+</p>
+
+<p>
+<strong>bzz.</strong>
+</p>
+
+<p>
+Una notifica.
+</p>
+
+<p>
+Poi un'altra.
+</p>
+
+<p>
+<strong>bzz. bzz.</strong>
+</p>
+
+<p>
+Tre, quattro, cinque notifiche.
+</p>
+
+<p>
+E magari diventano sette. Dieci.
+</p>
+
+<p>
+All'improvviso la conversazione che stavi avendo è stata interrotta
+da qualcosa che ti spinge a portare la tua attenzione altrove.
+</p>
+
+<p>
+E la cosa incredibile è che spesso lo facciamo quasi automaticamente.
+</p>
+
+<p>
+È come una calamita.
+</p>
+
+<p>
+<em>Che sarà successo?</em>
+</p>
+
+<p>
+WhatsApp?
+</p>
+
+<p>
+Una mail?
+</p>
+
+<p>
+Instagram?
+</p>
+
+<p>
+Un gruppo?
+</p>
+
+<p>
+Qualcuno ha scritto qualcosa?
+</p>
+
+<p>
+Siamo diventati così abituati a questa modalità che ormai non ci sembra
+nemmeno più strano vedere persone che
+<strong>parlano e contemporaneamente leggono WhatsApp,
+rispondono a una mail, controllano Instagram o guardano cosa ha pubblicato qualcuno.</strong>
+</p>
+
+<p>
+E magari lo facciamo anche noi.
+</p>
+
+<p>
+<strong>Dimmi se non ti è mai capitato.</strong>
+</p>
+
+
+
+<h2>
+Ma è davvero urgente?
+</h2>
+
+
+<p>
+Questa è la domanda che mi interessa.
+</p>
+
+<p>
+Perché una notifica non significa necessariamente che
+<strong>qualcosa sia urgente.</strong>
+</p>
+
+<p>
+Significa soltanto che
+<strong>qualcosa ha richiesto la nostra attenzione.</strong>
+</p>
+
+<p>
+Sono due cose molto diverse.
+</p>
+
+<p>
+Eppure il nostro cervello sembra trattarle spesso allo stesso modo.
+</p>
+
+<p>
+Il telefono vibra e noi guardiamo.
+</p>
+
+<p>
+Non perché dobbiamo necessariamente farlo.
+</p>
+
+<p>
+Perché <strong>abbiamo imparato a farlo.</strong>
+</p>
+
+<p>
+E questo è interessante anche dal punto di vista della consapevolezza.
+</p>
+
+<p>
+Perché magari il problema non è eliminare lo smartphone.
+</p>
+
+<p>
+Il problema potrebbe essere iniziare ad accorgerci di
+<strong>quanto spesso lasciamo che sia qualcosa di esterno a decidere
+dove mettere la nostra attenzione.</strong>
+</p>
+
+
+
+<h2>
+E poi c'è il nostro corpo
+</h2>
+
+
+<p>
+Ma le notifiche sono soltanto un esempio.
+</p>
+
+<p>
+Ce n'è un altro molto più banale, e forse proprio per questo
+ancora più interessante.
+</p>
+
+<p>
+<strong>La nostra camminata.</strong>
+</p>
+
+<p>
+Prova a farci caso.
+</p>
+
+<p>
+Quante volte stai semplicemente andando da qualche parte e ti accorgi
+che stai camminando molto più velocemente del necessario?
+</p>
+
+<p>
+Stai andando in farmacia.
+</p>
+
+<p>
+Oppure a comprare il pane.
+</p>
+
+<p>
+Non devi prendere un aereo.
+</p>
+
+<p>
+Non sei in ritardo per salvare il mondo.
+</p>
+
+<p>
+Eppure cammini come se qualcuno ti stesse inseguendo.
+</p>
+
+<blockquote>
+"Oh, ma dove corri?! Non dovrai mica salvare il mondo ogni minuto!"
+</blockquote>
+
+<p>
+E magari hai ragione.
+</p>
+
+<p>
+Non c'è nessuna emergenza.
+</p>
+
+<p>
+Non devi arrivare prima.
+</p>
+
+<p>
+Non c'è niente che richieda quel ritmo.
+</p>
+
+<p>
+Eppure il corpo corre.
+</p>
+
+
+
+<h2>
+Anche al volante dobbiamo correre
+</h2>
+
+
+<p>
+Poi c'è un altro posto dove, molto spesso,
+<strong>voliamo.</strong>
+</p>
+
+<p>
+La macchina.
+</p>
+
+<p>
+Piede a tutto gas.
+</p>
+
+<p>
+E no, non è sempre perché siamo appassionati di guida sportiva
+o perché abbiamo dentro di noi un piccolo pilota di Formula 1.
+</p>
+
+<p>
+A volte sembra quasi una <strong>valvola di sfogo.</strong>
+</p>
+
+<p>
+Chissà perché, poi, molti di noi quando salgono in macchina
+diventano improvvisamente <strong>cani alfa.</strong>
+</p>
+
+<p>
+Vogliamo comandare.
+</p>
+
+<p>
+Vogliamo passare.
+</p>
+
+<p>
+Vogliamo arrivare prima.
+</p>
+
+<p>
+E saremmo quasi disposti a fare un giro dal carrozziere piuttosto
+che concedere la precedenza a quella vecchietta un po' impacciata
+che sta cercando di immettersi nella strada.
+</p>
+
+<p>
+O a lasciare attraversare un pedone.
+</p>
+
+<p>
+Tutto sembra diventare una gara.
+</p>
+
+<p>
+<strong>Fast & Furious.</strong>
+</p>
+
+<p>
+<strong>Fuori in 60 secondi.</strong>
+</p>
+
+<p>
+<em>Devo correre!</em>
+</p>
+
+<p>
+Ma chi lo dice?
+</p>
+
+<p>
+Chi ci sta inseguendo?
+</p>
+
+<p>
+Dove dobbiamo arrivare così velocemente?
+</p>
+
+<p>
+A volte, semplicemente, <strong>nessuno.</strong>
+</p>
+
+<p>
+È il nostro cervello in modalità <strong>"fare".</strong>
+</p>
+
+<p>
+Fare.
+</p>
+
+<p>
+Arrivare.
+</p>
+
+<p>
+Rispondere.
+</p>
+
+<p>
+Concludere.
+</p>
+
+<p>
+Andare.
+</p>
+
+<p>
+E quando siamo dentro quella modalità, sembra quasi che fermarsi
+un attimo sia una perdita di tempo.
+</p>
+
+
+
+<h2>
+Il corpo fa quello che il cervello gli chiede
+</h2>
+
+
+<p>
+Questi sono soltanto tre esempi apparentemente molto diversi.
+</p>
+
+<p>
+Una notifica che interrompe quello che stiamo facendo.
+</p>
+
+<p>
+Una camminata più veloce del necessario.
+</p>
+
+<p>
+Un viaggio in macchina trasformato in una gara.
+</p>
+
+<p>
+Ma tutti possono raccontarci qualcosa di interessante:
+</p>
+
+<p>
+<strong>il nostro corpo e i nostri comportamenti possono seguire richieste
+che arrivano dalla nostra mente anche senza che ce ne rendiamo
+pienamente conto.</strong>
+</p>
+
+<p>
+Non necessariamente perché qualcuno ci abbia ordinato di fare qualcosa.
+</p>
+
+<p>
+A volte semplicemente <strong>abbiamo interiorizzato un ritmo.</strong>
+</p>
+
+<p>
+Devo rispondere.
+</p>
+
+<p>
+Devo controllare.
+</p>
+
+<p>
+Devo arrivare.
+</p>
+
+<p>
+Devo fare.
+</p>
+
+<p>
+Devo essere produttivo.
+</p>
+
+<p>
+Devo essere sempre disponibile.
+</p>
+
+<p>
+Devo fare tutto subito.
+</p>
+
+<p>
+E così, piano piano, l'urgenza diventa una modalità con cui
+attraversiamo la giornata.
+</p>
+
+<p>
+<strong>
+Forse non siamo sempre sotto pressione perché abbiamo troppe cose da fare.
+A volte siamo sotto pressione perché abbiamo imparato ad affrontare
+anche le cose normali come se fossero urgenti.
+</strong>
+</p>
+
+
+
+<h2>
+Possiamo regolarci?
+</h2>
+
+
+<p>
+<strong>Sì.</strong>
+</p>
+
+<p>
+Certo che possiamo.
+</p>
+
+<p>
+Ma forse il primo passo non è cercare immediatamente di cambiare tutto.
+</p>
+
+<p>
+Il primo passo potrebbe essere molto più semplice:
+</p>
+
+<p>
+<strong>accorgersene.</strong>
+</p>
+
+<p>
+Accorgersi che il telefono ha vibrato e che la nostra mano è già
+partita verso lo schermo.
+</p>
+
+<p>
+Accorgersi che stiamo leggendo un messaggio mentre qualcuno ci sta parlando.
+</p>
+
+<p>
+Accorgersi che stiamo camminando velocemente senza avere realmente fretta.
+</p>
+
+<p>
+Accorgersi che stiamo guidando come se fossimo inseguiti.
+</p>
+
+<p>
+Accorgersi che siamo tesi.
+</p>
+
+<p>
+Accorgersi che stiamo facendo tre cose contemporaneamente.
+</p>
+
+<p>
+Accorgersi, semplicemente, di
+<strong>quello che sta accadendo mentre sta accadendo.</strong>
+</p>
+
+<p>
+Questa, per me, è già tanta roba.
+</p>
+
+<p>
+Perché tra ciò che accade e ciò che facciamo esiste uno spazio.
+</p>
+
+<p>
+A volte è piccolissimo.
+</p>
+
+<p>
+Ma c'è.
+</p>
+
+<p>
+E imparare a riconoscerlo significa iniziare a recuperare
+una cosa preziosa:
+</p>
+
+<p>
+<strong>la possibilità di scegliere.</strong>
+</p>
+
+
+
+<h2>
+Non dobbiamo salvare il mondo ogni minuto
+</h2>
+
+
+<p>
+Forse il punto non è diventare persone lente.
+</p>
+
+<p>
+Non dobbiamo eliminare le notifiche, camminare piano e meditare tutto il giorno.
+</p>
+
+<p>
+E nemmeno dobbiamo demonizzare la tecnologia.
+</p>
+
+<p>
+Il punto è un altro.
+</p>
+
+<p>
+<strong>
+Possiamo smettere, almeno ogni tanto, di vivere come se tutto fosse urgente.
+</strong>
+</p>
+
+<p>
+Possiamo rispondere a un messaggio più tardi.
+</p>
+
+<p>
+Possiamo ascoltare nostro figlio senza guardare il telefono.
+</p>
+
+<p>
+Possiamo camminare verso la farmacia senza correre.
+</p>
+
+<p>
+Possiamo guidare senza trasformare ogni incrocio in una sfida personale.
+</p>
+
+<p>
+Possiamo fare una cosa alla volta.
+</p>
+
+<p>
+E soprattutto possiamo iniziare a chiederci:
+</p>
+
+<blockquote>
+"Questa cosa è davvero urgente o io la sto vivendo come se lo fosse?"
+</blockquote>
+
+<p>
+Forse non cambierà il mondo.
+</p>
+
+<p>
+Ma potrebbe cambiare
+<strong>il modo in cui attraversiamo la nostra giornata.</strong>
+</p>
+
+
+
+<!-- =========================
+     FINALE
+========================= -->
+
+<div class="article-ending">
+
+    <div class="quote">
+
+        La vita è per il 10% cosa ti accade
+        e per il 90% come reagisci.
+
+    </div>
+
+    <p class="small-text">
+
+        Una notifica arriva.<br>
+        Una mail arriva.<br>
+        Qualcuno ci scrive.<br>
+        Abbiamo una cosa da fare.<br>
+        La giornata corre.
+
+        <br><br>
+
+        Queste cose accadono.
+
+        <br><br>
+
+        Non sempre possiamo decidere cosa ci accade.
+        Ma possiamo imparare ad accorgerci di come reagiamo.
+
+        <br><br>
+
+        E forse è proprio da lì che comincia la consapevolezza.
+
+        <br><br>
+
+        <strong>
+        Un respiro.<br>
+        Un passo più lento.<br>
+        Una notifica che può aspettare.
+        </strong>
+
+    </p>
+
+</div>
+
+
+</section>
+
+</main>
+
+
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section class="newsletter-box">
+
+    <div class="eyebrow">
+        Newsletter
+    </div>
+
+    <h2>
+        Una mail ogni tanto.<br>
+        Ma che valga la pena leggere.
+    </h2>
+
+    <p>
+        Pensieri, strumenti, nuovi articoli e riflessioni
+        su stress, consapevolezza, sport e vita reale.
+        Presto potrai riceverli direttamente nella tua email.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-name">
+        Marco Palmas
+    </div>
+
+    <div class="footer-subtitle">
+        Stress Management · Mindfulness · Sport · Vita reale
+    </div>
+
+    <div class="social">
+
+        <a href="#" aria-label="Instagram">
+            Instagram
+        </a>
+
+        <a href="#" aria-label="YouTube">
+            YouTube
+        </a>
+
+    </div>
+
+    <div class="copyright">
+        © Marco Palmas · Tutti i diritti riservati
+    </div>
+
+</footer>
+
+
+</body>
+</html>
