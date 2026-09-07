@@ -50,63 +50,84 @@
 
         .hero {
             position: relative;
+
+            width: 100%;
             min-height: 100vh;
             height: 100vh;
+
             overflow: hidden;
+
             isolation: isolate;
         }
 
 
-        /* FOTO PURA */
+        /* =========================
+           FOTO
+        ========================= */
 
         .hero-image {
             position: absolute;
+
             inset: 0;
+
             width: 100%;
             height: 100%;
 
             object-fit: cover;
             object-position: center center;
 
-            z-index: -3;
+            /* LA FOTO DEVE STARE SOPRA IL BACKGROUND */
+            z-index: 0;
+
+            display: block;
         }
 
 
-        /* VELO SCURO SOPRA LA FOTO */
+        /* =========================
+           VELO SCURO
+        ========================= */
 
         .hero-overlay {
             position: absolute;
+
             inset: 0;
 
             background:
                 linear-gradient(
                     90deg,
-                    rgba(0, 20, 14, 0.78) 0%,
-                    rgba(0, 20, 14, 0.48) 42%,
-                    rgba(0, 20, 14, 0.16) 72%,
-                    rgba(0, 20, 14, 0.38) 100%
+                    rgba(0, 20, 14, 0.72) 0%,
+                    rgba(0, 20, 14, 0.42) 40%,
+                    rgba(0, 20, 14, 0.12) 72%,
+                    rgba(0, 20, 14, 0.30) 100%
                 );
 
-            z-index: -2;
+            z-index: 1;
+
+            pointer-events: none;
         }
 
 
-        /* LEGGERO SCURO IN ALTO */
+        /* =========================
+           VELO SUPERIORE / INFERIORE
+        ========================= */
 
         .hero-top-overlay {
             position: absolute;
+
             inset: 0;
 
             background:
                 linear-gradient(
                     180deg,
                     rgba(0, 12, 8, 0.58) 0%,
-                    rgba(0, 12, 8, 0.05) 30%,
-                    rgba(0, 12, 8, 0.05) 70%,
-                    rgba(0, 12, 8, 0.40) 100%
+                    rgba(0, 12, 8, 0.04) 30%,
+                    rgba(0, 12, 8, 0.04) 70%,
+                    rgba(0, 12, 8, 0.34) 100%
                 );
 
-            z-index: -1;
+            z-index: 2;
+
+            pointer-events: none;
         }
 
 
@@ -115,12 +136,14 @@
         ========================= */
 
         .hero-container {
+            position: relative;
+
             width: min(1280px, 90%);
             height: 100%;
 
             margin: 0 auto;
 
-            position: relative;
+            z-index: 3;
         }
 
 
@@ -147,18 +170,24 @@
         }
 
 
-        /* BRAND */
+        /* =========================
+           BRAND
+        ========================= */
 
         .brand {
             display: flex;
             flex-direction: column;
+
+            cursor: pointer;
         }
 
         .brand-name {
             font-size: clamp(2rem, 3vw, 3rem);
+
             line-height: 1;
 
             font-weight: 700;
+
             letter-spacing: -0.04em;
         }
 
@@ -168,6 +197,7 @@
             font-size: clamp(0.65rem, 0.9vw, 0.85rem);
 
             font-weight: 600;
+
             letter-spacing: 0.22em;
 
             white-space: nowrap;
@@ -181,6 +211,7 @@
         nav {
             display: flex;
             align-items: center;
+
             gap: clamp(28px, 3vw, 52px);
 
             padding-top: 5px;
@@ -190,6 +221,7 @@
             position: relative;
 
             font-size: 1.05rem;
+
             font-weight: 600;
 
             padding-bottom: 10px;
@@ -238,6 +270,7 @@
             left: 0;
 
             top: 50%;
+
             transform: translateY(-43%);
 
             width: min(620px, 55%);
@@ -246,7 +279,9 @@
         }
 
 
-        /* VIRGOLETTE */
+        /* =========================
+           VIRGOLETTE
+        ========================= */
 
         .quote-mark {
             font-family: "Playfair Display", serif;
@@ -263,7 +298,9 @@
         }
 
 
-        /* CITAZIONE */
+        /* =========================
+           CITAZIONE
+        ========================= */
 
         .main-quote {
             font-family: "Playfair Display", serif;
@@ -281,12 +318,16 @@
 
         .main-quote .highlight {
             color: #c9ed8b;
+
             font-style: italic;
+
             font-weight: 600;
         }
 
 
-        /* LINEA */
+        /* =========================
+           LINEA
+        ========================= */
 
         .separator {
             width: 48px;
@@ -298,7 +339,9 @@
         }
 
 
-        /* DESCRIZIONE */
+        /* =========================
+           DESCRIZIONE
+        ========================= */
 
         .hero-description {
             max-width: 620px;
@@ -312,7 +355,7 @@
 
 
         /* =========================
-           FRASE DESTRA
+           MESSAGGIO LATERALE
         ========================= */
 
         .side-message {
@@ -320,7 +363,8 @@
 
             right: 0;
 
-            top: 50%;
+            top: 55%;
+
             transform: translateY(-35%);
 
             width: 220px;
@@ -363,7 +407,7 @@
 
 
         /* =========================
-           RESPONSIVE
+           RESPONSIVE TABLET
         ========================= */
 
         @media (max-width: 900px) {
@@ -386,11 +430,13 @@
                 height: auto;
 
                 flex-direction: column;
+
                 gap: 25px;
             }
 
             nav {
                 gap: 24px;
+
                 width: 100%;
             }
 
@@ -406,6 +452,7 @@
 
             .side-message {
                 right: 0;
+
                 top: 73%;
 
                 width: 180px;
@@ -413,10 +460,16 @@
         }
 
 
+        /* =========================
+           RESPONSIVE MOBILE
+        ========================= */
+
         @media (max-width: 650px) {
 
             .hero {
                 min-height: 100svh;
+
+                height: auto;
             }
 
             .hero-container {
@@ -439,16 +492,19 @@
 
             .brand-subtitle {
                 font-size: 0.58rem;
+
                 letter-spacing: 0.14em;
             }
 
             nav {
                 gap: 20px;
+
                 flex-wrap: wrap;
             }
 
             nav a {
                 font-size: 0.85rem;
+
                 padding-bottom: 7px;
             }
 
@@ -464,6 +520,7 @@
 
             .quote-mark {
                 font-size: 4rem;
+
                 margin-bottom: 25px;
             }
 
@@ -490,152 +547,152 @@
 
 <body>
 
-    <main class="hero">
+<main class="hero">
 
-        <!-- FOTO -->
-        <img
-            class="hero-image"
-            src="./hero.jpg"
-            alt="Marco Palmas in meditazione nella natura"
-        >
+    <!-- FOTO PURA -->
+    <img
+        class="hero-image"
+        src="./hero.jpg"
+        alt="Marco Palmas in meditazione nella natura"
+    >
 
-        <!-- OVERLAY -->
-        <div class="hero-overlay"></div>
-        <div class="hero-top-overlay"></div>
+    <!-- LIVELLI SOPRA LA FOTO -->
+    <div class="hero-overlay"></div>
+    <div class="hero-top-overlay"></div>
 
 
-        <div class="hero-container">
+    <div class="hero-container">
 
-            <!-- =====================
-                 HEADER
-            ====================== -->
+        <!-- =====================
+             HEADER
+        ====================== -->
 
-            <header>
+        <header>
 
-                <a href="index.html" class="brand">
+            <a href="index.html" class="brand">
 
-                    <div class="brand-name">
-                        Marco Palmas
-                    </div>
+                <div class="brand-name">
+                    Marco Palmas
+                </div>
 
-                    <div class="brand-subtitle">
-                        STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE
-                    </div>
+                <div class="brand-subtitle">
+                    STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE
+                </div>
 
+            </a>
+
+
+            <!-- MENU -->
+
+            <nav>
+
+                <a href="index.html" class="active">
+                    Home
                 </a>
 
+                <a href="articoli.html">
+                    Articoli
+                </a>
 
-                <!-- MENU -->
+                <a href="temi.html">
+                    Temi
+                </a>
 
-                <nav>
+                <a href="chi-sono.html">
+                    Chi sono
+                </a>
 
-                    <a href="index.html" class="active">
-                        Home
-                    </a>
+            </nav>
 
-                    <a href="articoli.html">
-                        Articoli
-                    </a>
-
-                    <a href="temi.html">
-                        Temi
-                    </a>
-
-                    <a href="chi-sono.html">
-                        Chi sono
-                    </a>
-
-                </nav>
-
-            </header>
+        </header>
 
 
-            <!-- =====================
-                 CONTENUTO
-            ====================== -->
+        <!-- =====================
+             CONTENUTO
+        ====================== -->
 
-            <section class="hero-content">
+        <section class="hero-content">
 
-                <div class="quote-mark">
-                    “
-                </div>
+            <div class="quote-mark">
+                “
+            </div>
 
-                <h1 class="main-quote">
+            <h1 class="main-quote">
 
-                    La vita è per il
-                    <span class="highlight">10%</span><br>
+                La vita è per il
+                <span class="highlight">10%</span><br>
 
-                    cosa ti accade<br>
+                cosa ti accade<br>
 
-                    e per il
-                    <span class="highlight">90%</span><br>
+                e per il
+                <span class="highlight">90%</span><br>
 
-                    <span class="highlight">
-                        come reagisci.
-                    </span>
+                <span class="highlight">
+                    come reagisci.
+                </span>
 
-                </h1>
-
-
-                <div class="separator"></div>
+            </h1>
 
 
-                <p class="hero-description">
-
-                    Riflessioni, strumenti ed esperienze su stress,
-                    mindfulness, sport, lavoro sanitario e vita reale.
-
-                </p>
-
-            </section>
+            <div class="separator"></div>
 
 
-            <!-- =====================
-                 MESSAGGIO LATERALE
-            ====================== -->
+            <p class="hero-description">
 
-            <aside class="side-message">
+                Riflessioni, strumenti ed esperienze su stress,
+                mindfulness, sport, lavoro sanitario e vita reale.
 
-                <div class="side-line">
+            </p>
 
-                    <span>Più</span>
-
-                    <span class="green">
-                        Consapevolezza
-                    </span>
-
-                </div>
+        </section>
 
 
-                <div class="side-line">
+        <!-- =====================
+             MESSAGGIO LATERALE
+        ====================== -->
 
-                    <span>Più</span>
+        <aside class="side-message">
 
-                    <span class="green">
-                        Equilibrio
-                    </span>
+            <div class="side-line">
 
-                </div>
+                <span>Più</span>
 
+                <span class="green">
+                    Consapevolezza
+                </span>
 
-                <div class="side-line">
-
-                    <span>Più</span>
-
-                    <span class="green">
-                        Vita Reale
-                    </span>
-
-                </div>
+            </div>
 
 
-                <div class="side-divider"></div>
+            <div class="side-line">
 
-            </aside>
+                <span>Più</span>
 
-        </div>
+                <span class="green">
+                    Equilibrio
+                </span>
 
-    </main>
+            </div>
+
+
+            <div class="side-line">
+
+                <span>Più</span>
+
+                <span class="green">
+                    Vita Reale
+                </span>
+
+            </div>
+
+
+            <div class="side-divider"></div>
+
+        </aside>
+
+    </div>
+
+</main>
 
 </body>
 </html>
