@@ -1,568 +1,641 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Marco Palmas | Stress Management</title>
+    <title>Marco Palmas | Stress Management, Mindfulness, Sport e Vita Reale</title>
 
-  <meta name="description"
-        content="Marco Palmas — Stress Management, Mindfulness, Sport e Vita reale.">
+    <meta name="description"
+          content="Marco Palmas: riflessioni, strumenti ed esperienze su stress, mindfulness, sport, lavoro sanitario e vita reale.">
 
-  <style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    /* =========================
-       RESET
-       ========================= */
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+          rel="stylesheet">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+        /* =========================
+           RESET
+        ========================= */
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #071812;
-      color: white;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #06130f;
+            color: #ffffff;
+        }
 
-    /* =========================
-       HERO
-       ========================= */
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      height: 100vh;
-      min-height: 720px;
 
-      overflow: hidden;
+        /* =========================
+           HERO
+        ========================= */
 
-      background-image:
-        linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0.55) 0%,
-          rgba(0, 0, 0, 0.25) 45%,
-          rgba(0, 0, 0, 0.08) 100%
-        ),
-        url("hero.jpg");
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            height: 100vh;
+            overflow: hidden;
+            isolation: isolate;
+        }
 
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
 
+        /* FOTO PURA */
 
-    /* =========================
-       HEADER
-       ========================= */
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
 
-    .header {
-      position: absolute;
+            object-fit: cover;
+            object-position: center center;
 
-      top: 0;
-      left: 0;
-      right: 0;
+            z-index: -3;
+        }
 
-      z-index: 20;
 
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+        /* VELO SCURO SOPRA LA FOTO */
 
-      padding: 34px 6%;
-    }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
 
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 20, 14, 0.78) 0%,
+                    rgba(0, 20, 14, 0.48) 42%,
+                    rgba(0, 20, 14, 0.16) 72%,
+                    rgba(0, 20, 14, 0.38) 100%
+                );
 
-    /* =========================
-       BRAND
-       ========================= */
+            z-index: -2;
+        }
 
-    .brand {
-      display: block;
-    }
 
-    .brand-name {
-      font-size: clamp(32px, 3vw, 48px);
-      font-weight: 700;
+        /* LEGGERO SCURO IN ALTO */
 
-      line-height: 1;
+        .hero-top-overlay {
+            position: absolute;
+            inset: 0;
 
-      letter-spacing: -1.5px;
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(0, 12, 8, 0.58) 0%,
+                    rgba(0, 12, 8, 0.05) 30%,
+                    rgba(0, 12, 8, 0.05) 70%,
+                    rgba(0, 12, 8, 0.40) 100%
+                );
 
-      text-shadow:
-        0 2px 12px rgba(0,0,0,0.35);
-    }
+            z-index: -1;
+        }
 
-    .brand-subtitle {
-      margin-top: 10px;
 
-      font-size: clamp(10px, 1vw, 15px);
+        /* =========================
+           CONTENITORE
+        ========================= */
 
-      font-weight: 600;
+        .hero-container {
+            width: min(1280px, 90%);
+            height: 100%;
 
-      letter-spacing: 3px;
+            margin: 0 auto;
 
-      text-transform: uppercase;
+            position: relative;
+        }
 
-      white-space: nowrap;
 
-      text-shadow:
-        0 2px 10px rgba(0,0,0,0.4);
-    }
+        /* =========================
+           HEADER
+        ========================= */
 
+        header {
+            position: absolute;
 
-    /* =========================
-       NAVIGATION
-       ========================= */
+            top: 0;
+            left: 0;
+            right: 0;
 
-    .navigation {
-      display: flex;
+            height: 120px;
 
-      align-items: center;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
 
-      gap: clamp(25px, 3vw, 48px);
+            padding-top: 28px;
 
-      padding-top: 5px;
-    }
+            z-index: 10;
+        }
 
-    .navigation a {
-      position: relative;
 
-      display: block;
+        /* BRAND */
 
-      padding: 8px 0 12px;
+        .brand {
+            display: flex;
+            flex-direction: column;
+        }
 
-      font-size: clamp(16px, 1.4vw, 22px);
+        .brand-name {
+            font-size: clamp(2rem, 3vw, 3rem);
+            line-height: 1;
 
-      font-weight: 600;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
 
-      transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
-    }
+        .brand-subtitle {
+            margin-top: 10px;
 
-    .navigation a::after {
-      content: "";
+            font-size: clamp(0.65rem, 0.9vw, 0.85rem);
 
-      position: absolute;
+            font-weight: 600;
+            letter-spacing: 0.22em;
 
-      left: 0;
-      right: 0;
-      bottom: 0;
+            white-space: nowrap;
+        }
 
-      height: 3px;
 
-      background: #cbe98f;
+        /* =========================
+           NAVIGAZIONE
+        ========================= */
 
-      transform: scaleX(0);
+        nav {
+            display: flex;
+            align-items: center;
+            gap: clamp(28px, 3vw, 52px);
 
-      transition: transform 0.2s ease;
-    }
+            padding-top: 5px;
+        }
 
-    .navigation a:hover {
-      opacity: 0.85;
+        nav a {
+            position: relative;
 
-      transform: translateY(-1px);
-    }
+            font-size: 1.05rem;
+            font-weight: 600;
 
-    .navigation a:hover::after,
-    .navigation a.active::after {
-      transform: scaleX(1);
-    }
+            padding-bottom: 10px;
 
+            transition:
+                color 0.25s ease,
+                opacity 0.25s ease;
+        }
 
-    /* =========================
-       HERO CONTENT
-       ========================= */
+        nav a::after {
+            content: "";
 
-    .hero-content {
-      position: absolute;
+            position: absolute;
 
-      z-index: 5;
+            left: 0;
+            bottom: 0;
 
-      left: 9%;
+            width: 0;
+            height: 3px;
 
-      top: 50%;
+            background: #c9ed8b;
 
-      transform: translateY(-42%);
+            transition: width 0.25s ease;
+        }
 
-      width: min(610px, 45%);
-    }
+        nav a:hover {
+            color: #c9ed8b;
+        }
 
+        nav a:hover::after {
+            width: 100%;
+        }
 
-    /* =========================
-       QUOTE
-       ========================= */
+        nav a.active::after {
+            width: 100%;
+        }
 
-    .quote-mark {
-      color: #cbe98f;
 
-      font-family: Georgia, "Times New Roman", serif;
+        /* =========================
+           CONTENUTO CENTRALE
+        ========================= */
 
-      font-size: 82px;
+        .hero-content {
+            position: absolute;
 
-      font-weight: 700;
+            left: 0;
 
-      line-height: 0.5;
+            top: 50%;
+            transform: translateY(-43%);
 
-      margin-bottom: 30px;
-    }
+            width: min(620px, 55%);
 
-    .quote {
-      font-family: Georgia, "Times New Roman", serif;
+            z-index: 5;
+        }
 
-      font-size: clamp(38px, 4vw, 64px);
 
-      line-height: 1.08;
+        /* VIRGOLETTE */
 
-      font-style: italic;
+        .quote-mark {
+            font-family: "Playfair Display", serif;
 
-      font-weight: 400;
+            color: #c9ed8b;
 
-      text-shadow:
-        0 3px 15px rgba(0,0,0,0.35);
-    }
+            font-size: 5rem;
 
-    .quote strong {
-      color: #cbe98f;
+            line-height: 0.6;
 
-      font-weight: 700;
-    }
+            margin-bottom: 40px;
 
+            font-weight: 500;
+        }
 
-    /* =========================
-       DIVIDER
-       ========================= */
 
-    .divider {
-      width: 45px;
+        /* CITAZIONE */
 
-      height: 3px;
+        .main-quote {
+            font-family: "Playfair Display", serif;
 
-      background: #cbe98f;
+            font-size: clamp(2.8rem, 4.5vw, 5rem);
 
-      margin-top: 38px;
+            line-height: 1.08;
 
-      margin-bottom: 24px;
-    }
+            font-weight: 500;
 
+            letter-spacing: -0.035em;
 
-    /* =========================
-       DESCRIPTION
-       ========================= */
+            max-width: 650px;
+        }
 
-    .description {
-      max-width: 560px;
+        .main-quote .highlight {
+            color: #c9ed8b;
+            font-style: italic;
+            font-weight: 600;
+        }
 
-      font-size: clamp(17px, 1.45vw, 23px);
 
-      line-height: 1.55;
+        /* LINEA */
 
-      text-shadow:
-        0 2px 10px rgba(0,0,0,0.45);
-    }
+        .separator {
+            width: 48px;
+            height: 3px;
 
+            background: #c9ed8b;
 
-    /* =========================
-       SIDE MESSAGE
-       ========================= */
+            margin: 42px 0 26px;
+        }
 
-    .side-message {
-      position: absolute;
 
-      z-index: 5;
+        /* DESCRIZIONE */
 
-      right: 6%;
+        .hero-description {
+            max-width: 620px;
 
-      top: 52%;
+            font-size: clamp(1rem, 1.35vw, 1.25rem);
 
-      transform: translateY(-30%);
+            line-height: 1.55;
 
-      font-family: Georgia, "Times New Roman", serif;
+            font-weight: 400;
+        }
 
-      font-size: clamp(21px, 2vw, 32px);
 
-      font-style: italic;
+        /* =========================
+           FRASE DESTRA
+        ========================= */
 
-      line-height: 1.35;
+        .side-message {
+            position: absolute;
 
-      text-shadow:
-        0 2px 10px rgba(0,0,0,0.4);
-    }
+            right: 0;
 
-    .side-message p {
-      margin-bottom: 20px;
-    }
+            top: 50%;
+            transform: translateY(-35%);
 
-    .side-message strong {
-      color: #cbe98f;
+            width: 220px;
 
-      font-weight: 400;
-    }
+            z-index: 5;
+        }
 
-    .side-line {
-      width: 125px;
+        .side-line {
+            margin-bottom: 28px;
+        }
 
-      height: 2px;
+        .side-line span {
+            display: block;
 
-      background: rgba(255,255,255,0.8);
+            font-family: "Playfair Display", serif;
 
-      margin-top: 5px;
-    }
+            font-size: clamp(1.4rem, 2vw, 2rem);
 
+            line-height: 1.1;
 
-    /* =========================
-       MOBILE
-       ========================= */
+            font-style: italic;
+        }
 
-    @media (max-width: 800px) {
+        .side-line .green {
+            color: #c9ed8b;
 
-      .hero {
-        min-height: 850px;
+            margin-top: 5px;
 
-        height: auto;
+            font-weight: 500;
+        }
 
-        background-position:
-          62% center;
-      }
+        .side-divider {
+            width: 135px;
+            height: 2px;
 
-      .header {
-        display: block;
+            background: rgba(255,255,255,0.75);
 
-        padding: 25px 7%;
-      }
+            margin-top: 5px;
+        }
 
-      .brand-name {
-        font-size: 34px;
-      }
 
-      .brand-subtitle {
-        white-space: normal;
+        /* =========================
+           RESPONSIVE
+        ========================= */
 
-        font-size: 10px;
+        @media (max-width: 900px) {
 
-        letter-spacing: 2px;
+            .hero {
+                min-height: 900px;
+                height: auto;
+            }
 
-        line-height: 1.5;
-      }
+            .hero-image {
+                object-position: 57% center;
+            }
 
-      .navigation {
-        margin-top: 25px;
+            .hero-container {
+                width: 88%;
+                min-height: 900px;
+            }
 
-        gap: 22px;
+            header {
+                height: auto;
 
-        flex-wrap: wrap;
-      }
+                flex-direction: column;
+                gap: 25px;
+            }
 
-      .navigation a {
-        font-size: 16px;
-      }
+            nav {
+                gap: 24px;
+                width: 100%;
+            }
 
-      .hero-content {
-        left: 7%;
-        right: 7%;
+            nav a {
+                font-size: 0.95rem;
+            }
 
-        width: auto;
+            .hero-content {
+                top: 46%;
 
-        top: 55%;
+                width: 75%;
+            }
 
-        transform: translateY(-35%);
-      }
+            .side-message {
+                right: 0;
+                top: 73%;
 
-      .quote {
-        font-size: clamp(34px, 8vw, 48px);
-      }
+                width: 180px;
+            }
+        }
 
-      .description {
-        font-size: 17px;
-      }
 
-      .side-message {
-        display: none;
-      }
-    }
+        @media (max-width: 650px) {
 
-  </style>
+            .hero {
+                min-height: 100svh;
+            }
+
+            .hero-container {
+                min-height: 100svh;
+            }
+
+            .hero-image {
+                object-position: 56% center;
+            }
+
+            header {
+                position: relative;
+
+                padding-top: 25px;
+            }
+
+            .brand-name {
+                font-size: 2rem;
+            }
+
+            .brand-subtitle {
+                font-size: 0.58rem;
+                letter-spacing: 0.14em;
+            }
+
+            nav {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+                padding-bottom: 7px;
+            }
+
+            .hero-content {
+                position: absolute;
+
+                top: 52%;
+
+                transform: translateY(-35%);
+
+                width: 92%;
+            }
+
+            .quote-mark {
+                font-size: 4rem;
+                margin-bottom: 25px;
+            }
+
+            .main-quote {
+                font-size: clamp(2.25rem, 10vw, 3.5rem);
+            }
+
+            .separator {
+                margin: 30px 0 20px;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .side-message {
+                display: none;
+            }
+        }
+
+    </style>
 </head>
 
 
 <body>
 
+    <main class="hero">
 
-  <!-- =========================================
-       HERO
-       ========================================= -->
+        <!-- FOTO -->
+        <img
+            class="hero-image"
+            src="./hero.jpg"
+            alt="Marco Palmas in meditazione nella natura"
+        >
 
-  <section class="hero">
+        <!-- OVERLAY -->
+        <div class="hero-overlay"></div>
+        <div class="hero-top-overlay"></div>
 
 
-    <!-- HEADER -->
+        <div class="hero-container">
 
-    <header class="header">
+            <!-- =====================
+                 HEADER
+            ====================== -->
+
+            <header>
+
+                <a href="index.html" class="brand">
+
+                    <div class="brand-name">
+                        Marco Palmas
+                    </div>
+
+                    <div class="brand-subtitle">
+                        STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE
+                    </div>
+
+                </a>
 
 
-      <!-- MARCO PALMAS -->
+                <!-- MENU -->
 
-      <a href="index.html" class="brand">
+                <nav>
 
-        <div class="brand-name">
-          Marco Palmas
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+
+                    <a href="articoli.html">
+                        Articoli
+                    </a>
+
+                    <a href="temi.html">
+                        Temi
+                    </a>
+
+                    <a href="chi-sono.html">
+                        Chi sono
+                    </a>
+
+                </nav>
+
+            </header>
+
+
+            <!-- =====================
+                 CONTENUTO
+            ====================== -->
+
+            <section class="hero-content">
+
+                <div class="quote-mark">
+                    “
+                </div>
+
+                <h1 class="main-quote">
+
+                    La vita è per il
+                    <span class="highlight">10%</span><br>
+
+                    cosa ti accade<br>
+
+                    e per il
+                    <span class="highlight">90%</span><br>
+
+                    <span class="highlight">
+                        come reagisci.
+                    </span>
+
+                </h1>
+
+
+                <div class="separator"></div>
+
+
+                <p class="hero-description">
+
+                    Riflessioni, strumenti ed esperienze su stress,
+                    mindfulness, sport, lavoro sanitario e vita reale.
+
+                </p>
+
+            </section>
+
+
+            <!-- =====================
+                 MESSAGGIO LATERALE
+            ====================== -->
+
+            <aside class="side-message">
+
+                <div class="side-line">
+
+                    <span>Più</span>
+
+                    <span class="green">
+                        Consapevolezza
+                    </span>
+
+                </div>
+
+
+                <div class="side-line">
+
+                    <span>Più</span>
+
+                    <span class="green">
+                        Equilibrio
+                    </span>
+
+                </div>
+
+
+                <div class="side-line">
+
+                    <span>Più</span>
+
+                    <span class="green">
+                        Vita Reale
+                    </span>
+
+                </div>
+
+
+                <div class="side-divider"></div>
+
+            </aside>
+
         </div>
 
-        <div class="brand-subtitle">
-          Stress Management · Mindfulness · Sport · Vita reale
-        </div>
-
-      </a>
-
-
-      <!-- MENU -->
-
-      <nav class="navigation">
-
-        <a href="index.html" class="active">
-          Home
-        </a>
-
-        <a href="articoli.html">
-          Articoli
-        </a>
-
-        <a href="temi.html">
-          Temi
-        </a>
-
-        <a href="chi-sono.html">
-          Chi sono
-        </a>
-
-      </nav>
-
-    </header>
-
-
-
-    <!-- =====================================
-         CONTENUTO PRINCIPALE
-         ===================================== -->
-
-    <div class="hero-content">
-
-
-      <div class="quote-mark">
-        “
-      </div>
-
-
-      <h1 class="quote">
-
-        La vita è per il
-        <strong>10%</strong><br>
-
-        cosa ti accade<br>
-
-        e per il
-        <strong>90%</strong><br>
-
-        <strong>come reagisci.</strong>
-
-      </h1>
-
-
-      <div class="divider"></div>
-
-
-      <p class="description">
-
-        Riflessioni, strumenti ed esperienze su stress,
-        mindfulness, sport, lavoro sanitario e vita reale.
-
-      </p>
-
-
-    </div>
-
-
-
-    <!-- =====================================
-         MESSAGGIO LATERALE
-         ===================================== -->
-
-    <div class="side-message">
-
-      <p>
-        Più<br>
-        <strong>Consapevolezza</strong>
-      </p>
-
-      <p>
-        Più<br>
-        <strong>Equilibrio</strong>
-      </p>
-
-      <p>
-        Più<br>
-        <strong>Vita Reale</strong>
-      </p>
-
-      <div class="side-line"></div>
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- =========================================
-       SEZIONE INTRODUTTIVA
-       ========================================= -->
-
-  <section
-    style="
-      background:#f4f6f2;
-      color:#173c2e;
-      padding:80px 8%;
-      text-align:center;
-    "
-  >
-
-    <h2
-      style="
-        font-size:34px;
-        margin-bottom:15px;
-      "
-    >
-      Benvenuto.
-    </h2>
-
-    <p
-      style="
-        max-width:700px;
-        margin:auto;
-        font-size:18px;
-        line-height:1.6;
-      "
-    >
-      Uno spazio per parlare di stress,
-      consapevolezza, sport, lavoro e vita reale
-      con un approccio concreto e umano.
-    </p>
-
-  </section>
-
+    </main>
 
 </body>
 </html>
