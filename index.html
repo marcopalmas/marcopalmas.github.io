@@ -50,14 +50,11 @@
 
         .hero {
             position: relative;
-
-            width: 100%;
             min-height: 100vh;
             height: 100vh;
-
             overflow: hidden;
-
             isolation: isolate;
+            background: #06130f;
         }
 
 
@@ -67,7 +64,6 @@
 
         .hero-image {
             position: absolute;
-
             inset: 0;
 
             width: 100%;
@@ -76,7 +72,6 @@
             object-fit: cover;
             object-position: center center;
 
-            /* LA FOTO DEVE STARE SOPRA IL BACKGROUND */
             z-index: 0;
 
             display: block;
@@ -84,21 +79,20 @@
 
 
         /* =========================
-           VELO SCURO
+           VELO ORIZZONTALE
         ========================= */
 
         .hero-overlay {
             position: absolute;
-
             inset: 0;
 
             background:
                 linear-gradient(
                     90deg,
-                    rgba(0, 20, 14, 0.72) 0%,
-                    rgba(0, 20, 14, 0.42) 40%,
-                    rgba(0, 20, 14, 0.12) 72%,
-                    rgba(0, 20, 14, 0.30) 100%
+                    rgba(0, 20, 14, 0.78) 0%,
+                    rgba(0, 20, 14, 0.48) 42%,
+                    rgba(0, 20, 14, 0.16) 72%,
+                    rgba(0, 20, 14, 0.38) 100%
                 );
 
             z-index: 1;
@@ -108,21 +102,20 @@
 
 
         /* =========================
-           VELO SUPERIORE / INFERIORE
+           VELO VERTICALE
         ========================= */
 
         .hero-top-overlay {
             position: absolute;
-
             inset: 0;
 
             background:
                 linear-gradient(
                     180deg,
                     rgba(0, 12, 8, 0.58) 0%,
-                    rgba(0, 12, 8, 0.04) 30%,
-                    rgba(0, 12, 8, 0.04) 70%,
-                    rgba(0, 12, 8, 0.34) 100%
+                    rgba(0, 12, 8, 0.05) 30%,
+                    rgba(0, 12, 8, 0.05) 70%,
+                    rgba(0, 12, 8, 0.40) 100%
                 );
 
             z-index: 2;
@@ -136,12 +129,12 @@
         ========================= */
 
         .hero-container {
-            position: relative;
-
             width: min(1280px, 90%);
             height: 100%;
 
             margin: 0 auto;
+
+            position: relative;
 
             z-index: 3;
         }
@@ -177,8 +170,6 @@
         .brand {
             display: flex;
             flex-direction: column;
-
-            cursor: pointer;
         }
 
         .brand-name {
@@ -210,6 +201,7 @@
 
         nav {
             display: flex;
+
             align-items: center;
 
             gap: clamp(28px, 3vw, 52px);
@@ -331,6 +323,7 @@
 
         .separator {
             width: 48px;
+
             height: 3px;
 
             background: #c9ed8b;
@@ -355,7 +348,7 @@
 
 
         /* =========================
-           MESSAGGIO LATERALE
+           FRASE DESTRA
         ========================= */
 
         .side-message {
@@ -363,7 +356,7 @@
 
             right: 0;
 
-            top: 55%;
+            top: 50%;
 
             transform: translateY(-35%);
 
@@ -398,6 +391,7 @@
 
         .side-divider {
             width: 135px;
+
             height: 2px;
 
             background: rgba(255,255,255,0.75);
@@ -407,7 +401,7 @@
 
 
         /* =========================
-           RESPONSIVE TABLET
+           TABLET
         ========================= */
 
         @media (max-width: 900px) {
@@ -461,7 +455,7 @@
 
 
         /* =========================
-           RESPONSIVE MOBILE
+           MOBILE
         ========================= */
 
         @media (max-width: 650px) {
@@ -547,152 +541,186 @@
 
 <body>
 
-<main class="hero">
+    <main class="hero">
 
-    <!-- FOTO PURA -->
-    <img
-        class="hero-image"
-        src="./hero.jpg"
-        alt="Marco Palmas in meditazione nella natura"
-    >
-
-    <!-- LIVELLI SOPRA LA FOTO -->
-    <div class="hero-overlay"></div>
-    <div class="hero-top-overlay"></div>
-
-
-    <div class="hero-container">
 
         <!-- =====================
-             HEADER
+             FOTO PURA
         ====================== -->
 
-        <header>
+        <img
+            class="hero-image"
+            src="./hero.jpg"
+            alt="Marco Palmas in meditazione nella natura"
+        >
 
-            <a href="index.html" class="brand">
 
-                <div class="brand-name">
-                    Marco Palmas
+        <!-- =====================
+             LIVELLI SOPRA LA FOTO
+        ====================== -->
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-top-overlay"></div>
+
+
+        <div class="hero-container">
+
+
+            <!-- =====================
+                 HEADER
+            ====================== -->
+
+            <header>
+
+
+                <!-- BRAND -->
+
+                <a href="index.html" class="brand">
+
+                    <div class="brand-name">
+                        Marco Palmas
+                    </div>
+
+                    <div class="brand-subtitle">
+                        STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE
+                    </div>
+
+                </a>
+
+
+                <!-- =====================
+                     MENU
+                ====================== -->
+
+                <nav>
+
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+
+                    <a href="articoli.html">
+                        Articoli
+                    </a>
+
+                    <a href="temi.html">
+                        Temi
+                    </a>
+
+                    <a href="chi-sono.html">
+                        Chi sono
+                    </a>
+
+                </nav>
+
+            </header>
+
+
+            <!-- =====================
+                 CONTENUTO
+            ====================== -->
+
+            <section class="hero-content">
+
+
+                <!-- VIRGOLETTE -->
+
+                <div class="quote-mark">
+                    “
                 </div>
 
-                <div class="brand-subtitle">
-                    STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE
+
+                <!-- CITAZIONE -->
+
+                <h1 class="main-quote">
+
+                    La vita è per il
+                    <span class="highlight">10%</span><br>
+
+                    cosa ti accade<br>
+
+                    e per il
+                    <span class="highlight">90%</span><br>
+
+                    <span class="highlight">
+                        come reagisci.
+                    </span>
+
+                </h1>
+
+
+                <!-- LINEA -->
+
+                <div class="separator"></div>
+
+
+                <!-- DESCRIZIONE -->
+
+                <p class="hero-description">
+
+                    Riflessioni, strumenti ed esperienze su stress,
+                    mindfulness, sport, lavoro sanitario e vita reale.
+
+                </p>
+
+            </section>
+
+
+            <!-- =====================
+                 MESSAGGIO LATERALE
+            ====================== -->
+
+            <aside class="side-message">
+
+
+                <div class="side-line">
+
+                    <span>
+                        Più
+                    </span>
+
+                    <span class="green">
+                        Consapevolezza
+                    </span>
+
                 </div>
 
-            </a>
+
+                <div class="side-line">
+
+                    <span>
+                        Più
+                    </span>
+
+                    <span class="green">
+                        Equilibrio
+                    </span>
+
+                </div>
 
 
-            <!-- MENU -->
+                <div class="side-line">
 
-            <nav>
+                    <span>
+                        Più
+                    </span>
 
-                <a href="index.html" class="active">
-                    Home
-                </a>
+                    <span class="green">
+                        Vita Reale
+                    </span>
 
-                <a href="articoli.html">
-                    Articoli
-                </a>
-
-                <a href="temi.html">
-                    Temi
-                </a>
-
-                <a href="chi-sono.html">
-                    Chi sono
-                </a>
-
-            </nav>
-
-        </header>
+                </div>
 
 
-        <!-- =====================
-             CONTENUTO
-        ====================== -->
-
-        <section class="hero-content">
-
-            <div class="quote-mark">
-                “
-            </div>
-
-            <h1 class="main-quote">
-
-                La vita è per il
-                <span class="highlight">10%</span><br>
-
-                cosa ti accade<br>
-
-                e per il
-                <span class="highlight">90%</span><br>
-
-                <span class="highlight">
-                    come reagisci.
-                </span>
-
-            </h1>
+                <div class="side-divider"></div>
 
 
-            <div class="separator"></div>
+            </aside>
 
 
-            <p class="hero-description">
+        </div>
 
-                Riflessioni, strumenti ed esperienze su stress,
-                mindfulness, sport, lavoro sanitario e vita reale.
-
-            </p>
-
-        </section>
-
-
-        <!-- =====================
-             MESSAGGIO LATERALE
-        ====================== -->
-
-        <aside class="side-message">
-
-            <div class="side-line">
-
-                <span>Più</span>
-
-                <span class="green">
-                    Consapevolezza
-                </span>
-
-            </div>
-
-
-            <div class="side-line">
-
-                <span>Più</span>
-
-                <span class="green">
-                    Equilibrio
-                </span>
-
-            </div>
-
-
-            <div class="side-line">
-
-                <span>Più</span>
-
-                <span class="green">
-                    Vita Reale
-                </span>
-
-            </div>
-
-
-            <div class="side-divider"></div>
-
-        </aside>
-
-    </div>
-
-</main>
+    </main>
 
 </body>
 </html>
