@@ -19,22 +19,17 @@ body {
   line-height: 1.7;
 }
 
+/* HEADER GRAFICO */
+
 header {
-  background: #123d2b;
-  color: white;
-  text-align: center;
-  padding: 70px 20px;
+  min-height: 430px;
+  background-image: url("./header-chi-sono.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 48px;
-}
-
-header p {
-  font-size: 21px;
-  margin-top: 15px;
-}
+/* NAVIGAZIONE */
 
 nav {
   background: white;
@@ -48,7 +43,14 @@ nav a {
   text-decoration: none;
   font-weight: 600;
   margin: 0 18px;
+  transition: opacity 0.2s ease;
 }
+
+nav a:hover {
+  opacity: 0.6;
+}
+
+/* CONTENUTO */
 
 main {
   max-width: 850px;
@@ -70,20 +72,41 @@ h2 {
   margin-top: 0;
 }
 
+/* FOOTER */
+
 footer {
   text-align: center;
   padding: 40px 20px;
   color: #777;
+}
+
+/* VERSIONE MOBILE */
+
+@media (max-width: 700px) {
+  header {
+    min-height: 300px;
+    background-position: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+
+  section {
+    padding: 28px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Chi sono</h1>
-  <p>Esperienze, lavoro, sport e ricerca di equilibrio</p>
-</header>
+<header></header>
 
 <nav>
   <a href="index.html">Home</a>
@@ -129,21 +152,13 @@ footer {
 <section>
   <h2>Le mie passioni</h2>
 
-  <p>
-    🧠 Stress Management e Mindfulness
-  </p>
+  <p>🧠 Stress Management e Mindfulness</p>
 
-  <p>
-    ⚽ Sport e performance
-  </p>
+  <p>⚽ Sport e performance</p>
 
-  <p>
-    🏥 Infermieristica
-  </p>
+  <p>🏥 Infermieristica</p>
 
-  <p>
-    👨‍👩‍👧‍👦 Famiglia e vita quotidiana
-  </p>
+  <p>👨‍👩‍👧‍👦 Famiglia e vita quotidiana</p>
 </section>
 
 </main>
