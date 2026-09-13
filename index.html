@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,6 @@
     <meta name="description"
           content="Marco Palmas: riflessioni, strumenti ed esperienze su stress, mindfulness, sport, lavoro sanitario e vita reale.">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -17,10 +17,6 @@
           rel="stylesheet">
 
     <style>
-
-        /* =========================
-           RESET
-        ========================= */
 
         * {
             margin: 0;
@@ -43,7 +39,6 @@
             text-decoration: none;
         }
 
-
         /* =========================
            HERO
         ========================= */
@@ -57,35 +52,20 @@
             background: #06130f;
         }
 
-
-        /* =========================
-           FOTO
-        ========================= */
-
         .hero-image {
             position: absolute;
             inset: 0;
-
             width: 100%;
             height: 100%;
-
             object-fit: cover;
             object-position: center center;
-
             z-index: 0;
-
             display: block;
         }
-
-
-        /* =========================
-           VELO ORIZZONTALE
-        ========================= */
 
         .hero-overlay {
             position: absolute;
             inset: 0;
-
             background:
                 linear-gradient(
                     90deg,
@@ -94,21 +74,13 @@
                     rgba(0, 20, 14, 0.16) 72%,
                     rgba(0, 20, 14, 0.38) 100%
                 );
-
             z-index: 1;
-
             pointer-events: none;
         }
-
-
-        /* =========================
-           VELO VERTICALE
-        ========================= */
 
         .hero-top-overlay {
             position: absolute;
             inset: 0;
-
             background:
                 linear-gradient(
                     180deg,
@@ -117,28 +89,17 @@
                     rgba(0, 12, 8, 0.05) 70%,
                     rgba(0, 12, 8, 0.40) 100%
                 );
-
             z-index: 2;
-
             pointer-events: none;
         }
-
-
-        /* =========================
-           CONTENITORE
-        ========================= */
 
         .hero-container {
             width: min(1280px, 90%);
             height: 100%;
-
             margin: 0 auto;
-
             position: relative;
-
             z-index: 3;
         }
-
 
         /* =========================
            HEADER
@@ -146,26 +107,16 @@
 
         header {
             position: absolute;
-
             top: 0;
             left: 0;
             right: 0;
-
             height: 120px;
-
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-
             padding-top: 28px;
-
             z-index: 10;
         }
-
-
-        /* =========================
-           BRAND
-        ========================= */
 
         .brand {
             display: flex;
@@ -174,68 +125,42 @@
 
         .brand-name {
             font-size: clamp(2rem, 3vw, 3rem);
-
             line-height: 1;
-
             font-weight: 700;
-
             letter-spacing: -0.04em;
         }
 
         .brand-subtitle {
             margin-top: 10px;
-
             font-size: clamp(0.65rem, 0.9vw, 0.85rem);
-
             font-weight: 600;
-
             letter-spacing: 0.22em;
-
             white-space: nowrap;
         }
 
-
-        /* =========================
-           NAVIGAZIONE
-        ========================= */
-
         nav {
             display: flex;
-
             align-items: center;
-
             gap: clamp(28px, 3vw, 52px);
-
             padding-top: 5px;
         }
 
         nav a {
             position: relative;
-
             font-size: 1.05rem;
-
             font-weight: 600;
-
             padding-bottom: 10px;
-
-            transition:
-                color 0.25s ease,
-                opacity 0.25s ease;
+            transition: color 0.25s ease, opacity 0.25s ease;
         }
 
         nav a::after {
             content: "";
-
             position: absolute;
-
             left: 0;
             bottom: 0;
-
             width: 0;
             height: 3px;
-
             background: #c9ed8b;
-
             transition: width 0.25s ease;
         }
 
@@ -243,14 +168,10 @@
             color: #c9ed8b;
         }
 
-        nav a:hover::after {
-            width: 100%;
-        }
-
+        nav a:hover::after,
         nav a.active::after {
             width: 100%;
         }
-
 
         /* =========================
            CONTENUTO CENTRALE
@@ -258,110 +179,61 @@
 
         .hero-content {
             position: absolute;
-
             left: 0;
-
             top: 50%;
-
             transform: translateY(-43%);
-
             width: min(620px, 55%);
-
             z-index: 5;
         }
 
-
-        /* =========================
-           VIRGOLETTE
-        ========================= */
-
         .quote-mark {
             font-family: "Playfair Display", serif;
-
             color: #c9ed8b;
-
             font-size: 5rem;
-
             line-height: 0.6;
-
             margin-bottom: 40px;
-
             font-weight: 500;
         }
 
-
-        /* =========================
-           CITAZIONE
-        ========================= */
-
         .main-quote {
             font-family: "Playfair Display", serif;
-
             font-size: clamp(2.8rem, 4.5vw, 5rem);
-
             line-height: 1.08;
-
             font-weight: 500;
-
             letter-spacing: -0.035em;
-
             max-width: 650px;
         }
 
         .main-quote .highlight {
             color: #c9ed8b;
-
             font-style: italic;
-
             font-weight: 600;
         }
 
-
-        /* =========================
-           LINEA
-        ========================= */
-
         .separator {
             width: 48px;
-
             height: 3px;
-
             background: #c9ed8b;
-
             margin: 42px 0 26px;
         }
 
-
-        /* =========================
-           DESCRIZIONE
-        ========================= */
-
         .hero-description {
             max-width: 620px;
-
             font-size: clamp(1rem, 1.35vw, 1.25rem);
-
             line-height: 1.55;
-
             font-weight: 400;
         }
 
-
         /* =========================
-           FRASE DESTRA
+           FRASE LATERALE
         ========================= */
 
         .side-message {
             position: absolute;
-
             right: 0;
-
             top: 50%;
-
             transform: translateY(-35%);
-
             width: 220px;
-
             z-index: 5;
         }
 
@@ -371,34 +243,79 @@
 
         .side-line span {
             display: block;
-
             font-family: "Playfair Display", serif;
-
             font-size: clamp(1.4rem, 2vw, 2rem);
-
             line-height: 1.1;
-
             font-style: italic;
         }
 
         .side-line .green {
             color: #c9ed8b;
-
             margin-top: 5px;
-
             font-weight: 500;
         }
 
         .side-divider {
             width: 135px;
-
             height: 2px;
-
             background: rgba(255,255,255,0.75);
-
             margin-top: 5px;
         }
 
+        /* =========================
+           NEWSLETTER
+        ========================= */
+
+        .newsletter-section {
+            background: #f2f0e8;
+            color: #123c2b;
+            padding: 90px 20px;
+        }
+
+        .newsletter-container {
+            width: min(900px, 100%);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-eyebrow {
+            color: #527b58;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            margin-bottom: 18px;
+        }
+
+        .newsletter-section h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .newsletter-description {
+            max-width: 650px;
+            margin: 0 auto 35px;
+            font-size: 1.08rem;
+            line-height: 1.6;
+        }
+
+        .newsletter-form {
+            width: 100%;
+            max-width: 580px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .newsletter-form iframe {
+            display: block;
+            width: 100%;
+            max-width: 540px;
+            min-height: 305px;
+            margin: 0 auto;
+            border: 0;
+        }
 
         /* =========================
            TABLET
@@ -422,15 +339,12 @@
 
             header {
                 height: auto;
-
                 flex-direction: column;
-
                 gap: 25px;
             }
 
             nav {
                 gap: 24px;
-
                 width: 100%;
             }
 
@@ -440,19 +354,15 @@
 
             .hero-content {
                 top: 46%;
-
                 width: 75%;
             }
 
             .side-message {
                 right: 0;
-
                 top: 73%;
-
                 width: 180px;
             }
         }
-
 
         /* =========================
            MOBILE
@@ -462,7 +372,6 @@
 
             .hero {
                 min-height: 100svh;
-
                 height: auto;
             }
 
@@ -476,7 +385,6 @@
 
             header {
                 position: relative;
-
                 padding-top: 25px;
             }
 
@@ -486,35 +394,28 @@
 
             .brand-subtitle {
                 font-size: 0.58rem;
-
                 letter-spacing: 0.14em;
             }
 
             nav {
                 gap: 20px;
-
                 flex-wrap: wrap;
             }
 
             nav a {
                 font-size: 0.85rem;
-
                 padding-bottom: 7px;
             }
 
             .hero-content {
                 position: absolute;
-
                 top: 52%;
-
                 transform: translateY(-35%);
-
                 width: 92%;
             }
 
             .quote-mark {
                 font-size: 4rem;
-
                 margin-bottom: 25px;
             }
 
@@ -533,20 +434,22 @@
             .side-message {
                 display: none;
             }
+
+            .newsletter-section {
+                padding: 65px 16px;
+            }
+
+            .newsletter-description {
+                font-size: 1rem;
+            }
         }
 
     </style>
 </head>
 
-
 <body>
 
     <main class="hero">
-
-
-        <!-- =====================
-             FOTO PURA
-        ====================== -->
 
         <img
             class="hero-image"
@@ -554,27 +457,12 @@
             alt="Marco Palmas in meditazione nella natura"
         >
 
-
-        <!-- =====================
-             LIVELLI SOPRA LA FOTO
-        ====================== -->
-
         <div class="hero-overlay"></div>
-
         <div class="hero-top-overlay"></div>
-
 
         <div class="hero-container">
 
-
-            <!-- =====================
-                 HEADER
-            ====================== -->
-
             <header>
-
-
-                <!-- BRAND -->
 
                 <a href="index.html" class="brand">
 
@@ -587,11 +475,6 @@
                     </div>
 
                 </a>
-
-
-                <!-- =====================
-                     MENU
-                ====================== -->
 
                 <nav>
 
@@ -615,22 +498,11 @@
 
             </header>
 
-
-            <!-- =====================
-                 CONTENUTO
-            ====================== -->
-
             <section class="hero-content">
-
-
-                <!-- VIRGOLETTE -->
 
                 <div class="quote-mark">
                     “
                 </div>
-
-
-                <!-- CITAZIONE -->
 
                 <h1 class="main-quote">
 
@@ -648,13 +520,7 @@
 
                 </h1>
 
-
-                <!-- LINEA -->
-
                 <div class="separator"></div>
-
-
-                <!-- DESCRIZIONE -->
 
                 <p class="hero-description">
 
@@ -665,62 +531,68 @@
 
             </section>
 
-
-            <!-- =====================
-                 MESSAGGIO LATERALE
-            ====================== -->
-
             <aside class="side-message">
 
-
                 <div class="side-line">
-
-                    <span>
-                        Più
-                    </span>
-
-                    <span class="green">
-                        Consapevolezza
-                    </span>
-
+                    <span>Più</span>
+                    <span class="green">Consapevolezza</span>
                 </div>
 
-
                 <div class="side-line">
-
-                    <span>
-                        Più
-                    </span>
-
-                    <span class="green">
-                        Equilibrio
-                    </span>
-
+                    <span>Più</span>
+                    <span class="green">Equilibrio</span>
                 </div>
 
-
                 <div class="side-line">
-
-                    <span>
-                        Più
-                    </span>
-
-                    <span class="green">
-                        Vita Reale
-                    </span>
-
+                    <span>Più</span>
+                    <span class="green">Vita Reale</span>
                 </div>
-
 
                 <div class="side-divider"></div>
 
-
             </aside>
-
 
         </div>
 
     </main>
+
+    <!-- =====================
+         NEWSLETTER
+    ====================== -->
+
+    <section class="newsletter-section" id="newsletter">
+
+        <div class="newsletter-container">
+
+            <p class="newsletter-eyebrow">
+                NEWSLETTER
+            </p>
+
+            <h2>
+                Una pausa, ogni tanto
+            </h2>
+
+            <p class="newsletter-description">
+                Riflessioni sullo stress, mindfulness, vita reale e nuove iniziative MindLab.
+                Una newsletter senza rumore, solo quando abbiamo qualcosa di utile da condividere.
+            </p>
+
+            <div class="newsletter-form">
+
+                <iframe
+                    width="540"
+                    height="305"
+                    src="https://710bdf31.sibforms.com/v2/serve/MUIFAKj0YsIGgR3-Z01i_aAHnIYEYhEUukffs-JJwioS-Wt4HT2KTcGnZGA45H4KrhHs4_PjJ-CZrnpvIdDtpi15lLirNGZSMAyLoP44uR-GrwdWTJruYkWnIZMIMEA5S7dVyFiW2Kg8P83wfQvNu0EYiZN4aLOcj57RKn1Sz44pdv6us5QT0YbbafmSnKXGjohSY0cgpbbxy_03Ew=="
+                    frameborder="0"
+                    scrolling="auto"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
 </html>
