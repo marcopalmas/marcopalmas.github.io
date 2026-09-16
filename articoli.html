@@ -153,7 +153,7 @@
         .articles-grid {
             display: grid;
             grid-template-columns: 1.35fr 0.85fr;
-            grid-template-rows: auto auto;
+            grid-template-rows: auto auto auto;
             gap: 24px;
         }
 
@@ -324,9 +324,10 @@
         }
 
         .newsletter-form {
+            margin: 32px auto 0;
             width: 100%;
             max-width: 560px;
-            margin: 0 auto;
+            min-height: 305px;
         }
 
         .newsletter-form iframe {
@@ -364,6 +365,7 @@
             justify-content: center;
             gap: 28px;
             margin-bottom: 25px;
+            flex-wrap: wrap;
         }
 
         .social a {
@@ -534,6 +536,8 @@
 
         <div class="articles-grid">
 
+            <!-- ARTICOLO PRINCIPALE -->
+
             <article class="article-card article-main">
 
                 <div>
@@ -560,6 +564,37 @@
                 </div>
 
             </article>
+
+            <!-- NUOVO ARTICOLO PUBBLICATO -->
+
+            <article class="article-card article-secondary">
+
+                <div>
+
+                    <div class="category">
+                        Stress & Mindfulness
+                    </div>
+
+                    <h2>
+                        Lasciare andare non significa arrendersi
+                    </h2>
+
+                    <p>
+                        Chiudere una pagina della nostra storia personale
+                        non significa cancellare ciò che è stato. A volte
+                        significa semplicemente riprendere il timone.
+                    </p>
+
+                    <a href="lasciare-andare-non-significa-arrendersi.html"
+                        class="read-more">
+                        Leggi l'articolo →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- ARTICOLI IN PREPARAZIONE -->
 
             <article class="article-card article-secondary">
 
