@@ -37,10 +37,7 @@ a {
     text-decoration: none;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 .site-header {
     background: #06130f;
@@ -51,7 +48,6 @@ a {
 .header-container {
     width: min(1200px, 90%);
     margin: 0 auto;
-
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -111,58 +107,40 @@ nav a:hover::after {
     width: 100%;
 }
 
-
-/* =========================
-   ARTICLE HEADER
-========================= */
+/* ARTICLE HEADER */
 
 .article-header {
     width: min(900px, 88%);
     margin: 0 auto;
-
     padding: 80px 0 55px;
 }
 
 .category {
     color: #123d2d;
-
     font-size: 0.78rem;
     font-weight: 700;
-
     letter-spacing: 0.15em;
     text-transform: uppercase;
-
     margin-bottom: 18px;
 }
 
 .article-header h1 {
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: clamp(3rem, 6vw, 5.5rem);
-
     line-height: 1.05;
-
     font-weight: 500;
-
     letter-spacing: -0.04em;
-
     margin-bottom: 25px;
 }
 
 .article-header .subtitle {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
-
     color: #555;
-
     max-width: 780px;
-
     line-height: 1.55;
 }
 
-
-/* =========================
-   ARTICLE
-========================= */
+/* ARTICLE */
 
 .article-container {
     width: min(760px, 88%);
@@ -171,33 +149,23 @@ nav a:hover::after {
 
 .article-content {
     background: white;
-
     border: 1px solid #e0e5e1;
-
     border-radius: 24px;
-
     padding: clamp(30px, 6vw, 65px);
 }
 
 .article-content p {
     font-size: 1.12rem;
-
     color: #303530;
-
     margin-bottom: 25px;
 }
 
 .article-content h2 {
     font-family: Georgia, "Times New Roman", serif;
-
     color: #123d2d;
-
     font-size: clamp(2rem, 4vw, 2.8rem);
-
     line-height: 1.15;
-
     font-weight: 500;
-
     margin: 55px 0 25px;
 }
 
@@ -211,213 +179,155 @@ nav a:hover::after {
 
 .article-content blockquote {
     margin: 35px 0;
-
     padding: 25px 30px;
-
     border-left: 5px solid #c9ed8b;
-
     background: #f5f7f4;
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: 1.3rem;
-
     font-style: italic;
-
     color: #123d2d;
 }
 
-
-/* =========================
-   FINALE
-========================= */
+/* FINALE */
 
 .article-ending {
     margin-top: 55px;
-
     padding-top: 45px;
-
     border-top: 1px solid #e0e5e1;
 }
 
 .article-ending .quote {
     background: #123d2d;
-
     color: white;
-
     padding: 45px 35px;
-
     border-radius: 20px;
-
     text-align: center;
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: clamp(1.7rem, 4vw, 2.5rem);
-
     line-height: 1.35;
-
     margin-bottom: 35px;
 }
 
 .article-ending .small-text {
     font-size: 1.05rem;
-
     color: #555;
-
     text-align: center;
 }
 
-
-/* =========================
-   NEWSLETTER
-========================= */
+/* NEWSLETTER */
 
 .newsletter-box {
-
     width: min(1100px, 88%);
-
     margin: 0 auto 90px;
-
     padding: 55px 30px;
-
     border-radius: 24px;
-
     background: #e7eee8;
-
     border: 1px solid #d8e0da;
-
     text-align: center;
 }
 
 .newsletter-box .eyebrow {
-
     color: #123d2d;
-
     font-size: 0.8rem;
-
     font-weight: 700;
-
     letter-spacing: 0.15em;
-
     text-transform: uppercase;
-
     margin-bottom: 12px;
 }
 
 .newsletter-box h2 {
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: clamp(2rem, 4vw, 3rem);
-
     font-weight: 500;
-
     line-height: 1.15;
-
     margin-bottom: 15px;
 }
 
 .newsletter-box p {
-
     max-width: 650px;
-
     margin: 0 auto;
-
     color: #555;
-
     font-size: 1.05rem;
 }
 
+/* MODULO NEWSLETTER BREVO */
 
-/* =========================
-   FOOTER
-========================= */
+.newsletter-form {
+    margin: 32px auto 0;
+    width: 100%;
+    max-width: 560px;
+    min-height: 305px;
+}
+
+.newsletter-form iframe {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    min-height: 305px;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+}
+
+/* FOOTER */
 
 footer {
-
     background: #06130f;
-
     color: white;
-
     padding: 45px 20px;
-
     text-align: center;
 }
 
 .footer-name {
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: 1.5rem;
-
     margin-bottom: 8px;
 }
 
 .footer-subtitle {
-
     color: rgba(255,255,255,0.65);
-
     font-size: 0.9rem;
-
     margin-bottom: 22px;
 }
 
 .social {
-
     display: flex;
-
     justify-content: center;
-
     gap: 28px;
-
     margin-bottom: 25px;
 }
 
 .social a {
-
     color: white;
-
     font-weight: 600;
-
     transition: color 0.25s ease;
 }
 
 .social a:hover {
-
     color: #c9ed8b;
 }
 
 .copyright {
-
     color: rgba(255,255,255,0.45);
-
     font-size: 0.8rem;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 800px) {
 
     .header-container {
-
         flex-direction: column;
-
         gap: 25px;
     }
 
     nav {
-
         gap: 22px;
-
         flex-wrap: wrap;
     }
 
     .article-header {
-
         padding-top: 55px;
     }
 
@@ -426,74 +336,56 @@ footer {
 @media (max-width: 600px) {
 
     .site-header {
-
         padding: 24px 0;
     }
 
     .header-container {
-
         width: 88%;
     }
 
     .brand-name {
-
         font-size: 2rem;
     }
 
     .brand-subtitle {
-
         font-size: 0.58rem;
-
         letter-spacing: 0.12em;
     }
 
     nav a {
-
         font-size: 0.86rem;
     }
 
     .article-header {
-
         width: 88%;
-
         padding: 50px 0 35px;
     }
 
     .article-header h1 {
-
         font-size: 3rem;
     }
 
     .article-container {
-
         width: 92%;
     }
 
     .article-content {
-
         padding: 30px 24px;
-
         border-radius: 18px;
     }
 
     .article-content p {
-
         font-size: 1.05rem;
     }
 
     .article-content blockquote {
-
         padding: 20px;
-
         font-size: 1.15rem;
     }
 
     .newsletter-box {
-
         width: 88%;
-
         padding: 40px 22px;
-
         margin-bottom: 65px;
     }
 
@@ -503,18 +395,11 @@ footer {
 
 </head>
 
-
 <body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header class="site-header">
 
     <div class="header-container">
-
 
         <a href="index.html" class="brand">
 
@@ -528,36 +413,18 @@ footer {
 
         </a>
 
-
         <nav>
 
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="articoli.html">
-                Articoli
-            </a>
-
-            <a href="temi.html">
-                Temi
-            </a>
-
-            <a href="chi-sono.html">
-                Chi sono
-            </a>
+            <a href="index.html">Home</a>
+            <a href="articoli.html">Articoli</a>
+            <a href="temi.html">Temi</a>
+            <a href="chi-sono.html">Chi sono</a>
 
         </nav>
 
     </div>
 
 </header>
-
-
-
-<!-- =========================
-     TITOLO
-========================= -->
 
 <header class="article-header">
 
@@ -577,16 +444,9 @@ footer {
 
 </header>
 
-
-
-<!-- =========================
-     ARTICOLO
-========================= -->
-
 <main class="article-container">
 
 <section class="article-content">
-
 
 <p>
 Ci sono momenti in cui abbiamo davvero qualcosa di urgente da fare.
@@ -605,12 +465,9 @@ Quelli in cui, senza quasi accorgercene,
 <strong>viviamo come se dovessimo correre continuamente dietro a qualcosa.</strong>
 </p>
 
-
-
 <h2>
 Il telefono che decide dove guardare
 </h2>
-
 
 <p>
 Uno degli esempi più evidenti sono le notifiche del nostro smartphone.
@@ -732,12 +589,9 @@ E magari lo facciamo anche noi.
 <strong>Dimmi se non ti è mai capitato.</strong>
 </p>
 
-
-
 <h2>
 Ma è davvero urgente?
 </h2>
-
 
 <p>
 Questa è la domanda che mi interessa.
@@ -787,12 +641,9 @@ Il problema potrebbe essere iniziare ad accorgerci di
 dove mettere la nostra attenzione.</strong>
 </p>
 
-
-
 <h2>
 E poi c'è il nostro corpo
 </h2>
-
 
 <p>
 Ma le notifiche sono soltanto un esempio.
@@ -860,12 +711,9 @@ Non c'è niente che richieda quel ritmo.
 Eppure il corpo corre.
 </p>
 
-
-
 <h2>
 Anche al volante dobbiamo correre
 </h2>
-
 
 <p>
 Poi c'è un altro posto dove, molto spesso,
@@ -977,12 +825,9 @@ E quando siamo dentro quella modalità, sembra quasi che fermarsi
 un attimo sia una perdita di tempo.
 </p>
 
-
-
 <h2>
 Il corpo fa quello che il cervello gli chiede
 </h2>
-
 
 <p>
 Questi sono soltanto tre esempi apparentemente molto diversi.
@@ -1059,12 +904,9 @@ anche le cose normali come se fossero urgenti.
 </strong>
 </p>
 
-
-
 <h2>
 Possiamo regolarci?
 </h2>
-
 
 <p>
 <strong>Sì.</strong>
@@ -1141,12 +983,9 @@ una cosa preziosa:
 <strong>la possibilità di scegliere.</strong>
 </p>
 
-
-
 <h2>
 Non dobbiamo salvare il mondo ogni minuto
 </h2>
-
 
 <p>
 Forse il punto non è diventare persone lente.
@@ -1207,19 +1046,11 @@ Ma potrebbe cambiare
 <strong>il modo in cui attraversiamo la nostra giornata.</strong>
 </p>
 
-
-
-<!-- =========================
-     FINALE
-========================= -->
-
 <div class="article-ending">
 
     <div class="quote">
-
         La vita è per il 10% cosa ti accade
         e per il 90% come reagisci.
-
     </div>
 
     <p class="small-text">
@@ -1255,16 +1086,9 @@ Ma potrebbe cambiare
 
 </div>
 
-
 </section>
 
 </main>
-
-
-
-<!-- =========================
-     NEWSLETTER
-========================= -->
 
 <section class="newsletter-box">
 
@@ -1273,23 +1097,30 @@ Ma potrebbe cambiare
     </div>
 
     <h2>
-        Una mail ogni tanto.<br>
-        Ma che valga la pena leggere.
+        Una pausa, ogni tanto.
     </h2>
 
     <p>
         Pensieri, strumenti, nuovi articoli e riflessioni
         su stress, consapevolezza, sport e vita reale.
-        Presto potrai riceverli direttamente nella tua email.
+        Una newsletter senza rumore, solo quando abbiamo
+        qualcosa di utile da condividere.
     </p>
 
+    <div class="newsletter-form">
+
+        <iframe
+            width="540"
+            height="305"
+            src="https://710bdf31.sibforms.com/v2/serve/MUIFAKj0YsIGgR3-Z01i_aAHnIYEYhEUukffs-JJwioS-Wt4HT2KTcGnZGA45H4KrhHs4_PjJ-CZrnpvIdDtpi15lLirNGZSMAyLoP44uR-GrwdWTJruYkWnIZMIMEA5S7dVyFiW2Kg8P83wfQvNu0EYiZN4aLOcj57RKn1Sz44pdv6us5QT0YbbafmSnKXGjohSY0cgpbbxy_03Ew=="
+            frameborder="0"
+            scrolling="auto"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
 </section>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -1318,7 +1149,6 @@ Ma potrebbe cambiare
     </div>
 
 </footer>
-
 
 </body>
 </html>
