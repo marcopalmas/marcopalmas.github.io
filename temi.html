@@ -1,185 +1,344 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Temi | Marco Palmas</title>
+    <title>Temi | Marco Palmas</title>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+    <meta name="description"
+        content="Scopri i temi del blog di Marco Palmas: stress, mindfulness, sport, infermieristica e vita reale.">
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f5f7f4;
-  color: #202620;
-  line-height: 1.6;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-/* HEADER GRAFICO */
+        html {
+            scroll-behavior: smooth;
+        }
 
-header {
-  min-height: 430px;
-  background-image: url("./header-temi.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f5f7f4;
+            color: #202620;
+            line-height: 1.6;
+        }
 
-/* NAVIGAZIONE */
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-nav {
-  background: white;
-  text-align: center;
-  padding: 22px 20px;
-  border-bottom: 1px solid #ddd;
-}
+        /* HEADER GRAFICO */
 
-nav a {
-  color: #123d2b;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 18px;
-  transition: opacity 0.2s ease;
-}
+        header {
+            min-height: 430px;
+            background-image: url("./header-temi.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
-nav a:hover {
-  opacity: 0.6;
-}
+        /* NAVIGAZIONE */
 
-/* CONTENUTO */
+        nav {
+            background: white;
+            text-align: center;
+            padding: 22px 20px;
+            border-bottom: 1px solid #ddd;
+        }
 
-main {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
+        nav a {
+            color: #123d2b;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 18px;
+            transition: opacity 0.2s ease;
+        }
 
-h2 {
-  text-align: center;
-  font-size: 36px;
-  margin: 0 0 45px;
-}
+        nav a:hover {
+            opacity: 0.6;
+        }
 
-/* CARDS */
+        /* CONTENUTO */
 
-.temi {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-}
+        main {
+            max-width: 1000px;
+            margin: 60px auto 90px;
+            padding: 0 20px;
+        }
 
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  border: 1px solid #e0e5e1;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+        h1 {
+            text-align: center;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.4rem, 5vw, 3.5rem);
+            font-weight: 500;
+            margin: 0 0 18px;
+            color: #202620;
+        }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(18, 61, 43, 0.08);
-}
+        .intro {
+            max-width: 700px;
+            margin: 0 auto 45px;
+            text-align: center;
+            color: #555;
+            font-size: 1.08rem;
+        }
 
-.card h3 {
-  color: #123d2b;
-  font-size: 22px;
-  margin-top: 0;
-}
+        /* GRIGLIA TEMI */
 
-.card p {
-  color: #555;
-}
+        .temi {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
 
-/* FOOTER */
+        .card {
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: white;
+            padding: 32px;
+            border-radius: 18px;
+            border: 1px solid #e0e5e1;
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+        }
 
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  color: #777;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(18, 61, 43, 0.12);
+            background: #fbfdf9;
+        }
 
-/* VERSIONE MOBILE */
+        .card-top {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
 
-@media (max-width: 700px) {
-  header {
-    min-height: 300px;
-    background-size: cover;
-    background-position: center;
-  }
+        .card-icon {
+            font-size: 2.4rem;
+            line-height: 1;
+        }
 
-  nav a {
-    display: inline-block;
-    margin: 5px 10px;
-  }
+        .card h2 {
+            color: #123d2b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.6rem, 3vw, 2.1rem);
+            font-weight: 500;
+            line-height: 1.15;
+            margin: 0;
+        }
 
-  h2 {
-    font-size: 30px;
-  }
-}
-</style>
+        .card p {
+            color: #555;
+            font-size: 0.98rem;
+            margin: 0;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            color: #123d2b;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-bottom: 2px solid #c9ed8b;
+            padding-bottom: 5px;
+            transition: gap 0.25s ease;
+        }
+
+        .card:hover .card-link {
+            gap: 14px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #06130f;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* VERSIONE MOBILE */
+
+        @media (max-width: 700px) {
+            header {
+                min-height: 300px;
+                background-size: cover;
+                background-position: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+
+            main {
+                margin-top: 45px;
+            }
+
+            .temi {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                aspect-ratio: auto;
+                min-height: 320px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header></header>
+    <header></header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="articoli.html">Articoli</a>
-  <a href="temi.html">Temi</a>
-  <a href="chi-sono.html">Chi sono</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="articoli.html">Articoli</a>
+        <a href="temi.html">Temi</a>
+        <a href="chi-sono.html">Chi sono</a>
+    </nav>
 
-<main>
+    <main>
 
-  <h2>Di cosa parliamo</h2>
+        <h1>Di cosa parliamo</h1>
 
-  <div class="temi">
+        <p class="intro">
+            Quattro aree per raccogliere pensieri, esperienze e strumenti
+            dedicati allo stress, alla consapevolezza, allo sport,
+            al lavoro sanitario e alla vita quotidiana.
+        </p>
 
-    <div class="card">
-      <h3>🧠 Stress & Mindfulness</h3>
-      <p>
-        Stress, consapevolezza, equilibrio e strumenti concreti
-        per affrontare meglio la vita quotidiana.
-      </p>
-    </div>
+        <section class="temi">
 
-    <div class="card">
-      <h3>⚽ Sport & Performance</h3>
-      <p>
-        Pressione, prestazione, mentalità e tutto ciò che lo sport
-        può insegnarci anche fuori dal campo.
-      </p>
-    </div>
+            <!-- STRESS & MINDFULNESS -->
 
-    <div class="card">
-      <h3>🏥 Infermieristica</h3>
-      <p>
-        Il lavoro sanitario raccontato da chi lo vive ogni giorno,
-        tra stress, responsabilità e vita reale.
-      </p>
-    </div>
+            <a href="tema-stress-mindfulness.html" class="card">
 
-    <div class="card">
-      <h3>👨‍👩‍👧‍👦 Vita reale</h3>
-      <p>
-        Famiglia, ragazzi, tecnologia, passioni e tutte quelle cose
-        che non entrano in una singola categoria.
-      </p>
-    </div>
+                <div class="card-top">
 
-  </div>
+                    <div class="card-icon">
+                        🧠
+                    </div>
 
-</main>
+                    <h2>
+                        Stress & Mindfulness
+                    </h2>
 
-<footer>
-  © Marco Palmas · Stress Management
-</footer>
+                    <p>
+                        Stress, consapevolezza, equilibrio e strumenti
+                        concreti per affrontare meglio la vita quotidiana.
+                    </p>
+
+                </div>
+
+                <span class="card-link">
+                    Esplora il tema →
+                </span>
+
+            </a>
+
+            <!-- SPORT & PERFORMANCE -->
+
+            <a href="tema-sport-performance.html" class="card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        ⚽
+                    </div>
+
+                    <h2>
+                        Sport & Performance
+                    </h2>
+
+                    <p>
+                        Pressione, prestazione, mentalità e tutto ciò
+                        che lo sport può insegnarci anche fuori dal campo.
+                    </p>
+
+                </div>
+
+                <span class="card-link">
+                    Esplora il tema →
+                </span>
+
+            </a>
+
+            <!-- INFERMIERISTICA -->
+
+            <a href="tema-infermieristica.html" class="card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        🏥
+                    </div>
+
+                    <h2>
+                        Infermieristica
+                    </h2>
+
+                    <p>
+                        Il lavoro sanitario raccontato da chi lo vive
+                        ogni giorno, tra stress, responsabilità e vita reale.
+                    </p>
+
+                </div>
+
+                <span class="card-link">
+                    Esplora il tema →
+                </span>
+
+            </a>
+
+            <!-- VITA REALE -->
+
+            <a href="tema-vita-reale.html" class="card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        👨‍👩‍👧‍👦
+                    </div>
+
+                    <h2>
+                        Vita reale
+                    </h2>
+
+                    <p>
+                        Famiglia, ragazzi, tecnologia, passioni e tutte
+                        quelle cose che non entrano in una singola categoria.
+                    </p>
+
+                </div>
+
+                <span class="card-link">
+                    Esplora il tema →
+                </span>
+
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © Marco Palmas · Stress Management
+    </footer>
 
 </body>
+
 </html>
