@@ -103,15 +103,10 @@
         /* CARD FOTOGRAFICHE */
 
         .card {
-            position: relative;
-            min-height: 410px;
-            display: flex;
-            align-items: flex-end;
+            display: block;
+            aspect-ratio: 1 / 1;
             overflow: hidden;
-            isolation: isolate;
-            padding: 34px;
             border-radius: 22px;
-            color: #ffffff;
             background-color: #123d2b;
             background-size: cover;
             background-position: center;
@@ -120,20 +115,6 @@
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(3, 25, 18, 0.95) 0%,
-                    rgba(3, 25, 18, 0.65) 45%,
-                    rgba(3, 25, 18, 0.08) 100%
-                );
         }
 
         .card:hover {
@@ -157,56 +138,6 @@
 
         .card-vita {
             background-image: url("./tema-vita-reale.jpg");
-        }
-
-        /* CONTENUTO CARD */
-
-        .card-content {
-            width: 100%;
-            position: relative;
-            z-index: 1;
-        }
-
-        .card-number {
-            display: block;
-            margin-bottom: 12px;
-            color: #d5ed91;
-            font-size: 0.82rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-        }
-
-        .card h2 {
-            margin: 0 0 14px;
-            color: #ffffff;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 500;
-            line-height: 1.05;
-        }
-
-        .card p {
-            max-width: 470px;
-            margin: 0 0 26px;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1rem;
-        }
-
-        .card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            width: fit-content;
-            padding-bottom: 6px;
-            color: #ffffff;
-            font-size: 0.96rem;
-            font-weight: 700;
-            border-bottom: 2px solid #d5ed91;
-            transition: gap 0.25s ease;
-        }
-
-        .card:hover .card-link {
-            gap: 20px;
         }
 
         /* FOOTER */
@@ -248,12 +179,8 @@
             }
 
             .card {
+                aspect-ratio: auto;
                 min-height: 360px;
-                padding: 28px;
-            }
-
-            .card h2 {
-                font-size: 2.2rem;
             }
         }
     </style>
@@ -282,80 +209,28 @@
 
         <section class="temi">
 
-            <a href="tema-stress-mindfulness.html" class="card card-stress">
-
-                <div class="card-content">
-                    <span class="card-number">01</span>
-
-                    <h2>Stress &amp; Mindfulness</h2>
-
-                    <p>
-                        Stress, consapevolezza, equilibrio e strumenti
-                        concreti per affrontare meglio la vita quotidiana.
-                    </p>
-
-                    <span class="card-link">
-                        Esplora il tema →
-                    </span>
-                </div>
-
+            <a
+                href="tema-stress-mindfulness.html"
+                class="card card-stress"
+                aria-label="Esplora il tema Stress e Mindfulness">
             </a>
 
-            <a href="tema-sport-performance.html" class="card card-sport">
-
-                <div class="card-content">
-                    <span class="card-number">02</span>
-
-                    <h2>Sport &amp; Performance</h2>
-
-                    <p>
-                        Pressione, prestazione, mentalità e tutto ciò
-                        che lo sport può insegnarci anche fuori dal campo.
-                    </p>
-
-                    <span class="card-link">
-                        Esplora il tema →
-                    </span>
-                </div>
-
+            <a
+                href="tema-sport-performance.html"
+                class="card card-sport"
+                aria-label="Esplora il tema Sport e Performance">
             </a>
 
-            <a href="tema-infermieristica.html" class="card card-infermieristica">
-
-                <div class="card-content">
-                    <span class="card-number">03</span>
-
-                    <h2>Infermieristica</h2>
-
-                    <p>
-                        Il lavoro sanitario raccontato da chi lo vive
-                        ogni giorno, tra stress, responsabilità e vita reale.
-                    </p>
-
-                    <span class="card-link">
-                        Esplora il tema →
-                    </span>
-                </div>
-
+            <a
+                href="tema-infermieristica.html"
+                class="card card-infermieristica"
+                aria-label="Esplora il tema Infermieristica">
             </a>
 
-            <a href="tema-vita-reale.html" class="card card-vita">
-
-                <div class="card-content">
-                    <span class="card-number">04</span>
-
-                    <h2>Vita reale</h2>
-
-                    <p>
-                        Famiglia, ragazzi, tecnologia, passioni e tutte
-                        quelle cose che non entrano in una singola categoria.
-                    </p>
-
-                    <span class="card-link">
-                        Esplora il tema →
-                    </span>
-                </div>
-
+            <a
+                href="tema-vita-reale.html"
+                class="card card-vita"
+                aria-label="Esplora il tema Vita reale">
             </a>
 
         </section>
