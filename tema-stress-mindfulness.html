@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stress & Mindfulness | Marco Palmas</title>
+
+    <meta name="description"
+        content="Articoli, riflessioni e strumenti di Marco Palmas dedicati allo stress, alla mindfulness e alla consapevolezza.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f3f5f1;
+            color: #202620;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            min-height: 430px;
+            background-image: url("./header-temi.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px 34px;
+            padding: 22px 20px;
+            background: #ffffff;
+            border-bottom: 1px solid #dfe5df;
+        }
+
+        nav a {
+            color: #123d2b;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #789d32;
+        }
+
+        main {
+            max-width: 1080px;
+            margin: 70px auto 90px;
+            padding: 0 24px;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            text-align: center;
+            color: #123d2b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 500;
+            line-height: 1.1;
+        }
+
+        .intro {
+            max-width: 720px;
+            margin: 0 auto 55px;
+            color: #5b625c;
+            text-align: center;
+            font-size: 1.08rem;
+        }
+
+        .articoli {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 26px;
+        }
+
+        .articolo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 330px;
+            padding: 34px;
+            background: #ffffff;
+            border: 1px solid #dfe5df;
+            border-radius: 22px;
+            box-shadow: 0 8px 24px rgba(18, 61, 43, 0.06);
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .articolo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 32px rgba(18, 61, 43, 0.13);
+        }
+
+        .categoria {
+            margin-bottom: 18px;
+            color: #789d32;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .articolo h2 {
+            margin: 0 0 16px;
+            color: #123d2b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 500;
+            line-height: 1.1;
+        }
+
+        .articolo p {
+            margin: 0 0 28px;
+            color: #5b625c;
+        }
+
+        .leggi {
+            display: inline-flex;
+            width: fit-content;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 6px;
+            color: #123d2b;
+            font-weight: 700;
+            border-bottom: 2px solid #c9ed8b;
+            transition: gap 0.2s ease;
+        }
+
+        .articolo:hover .leggi {
+            gap: 16px;
+        }
+
+        .newsletter {
+            margin: 65px auto 0;
+            padding: 38px 24px;
+            background: #e8eee5;
+            border-radius: 22px;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            margin: 0 0 12px;
+            color: #123d2b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            color: #5b625c;
+        }
+
+        .newsletter-form {
+            margin: 32px auto 0;
+            width: 100%;
+            max-width: 560px;
+            min-height: 305px;
+        }
+
+        .newsletter-form iframe {
+            display: block;
+            width: 100%;
+            max-width: 540px;
+            min-height: 305px;
+            margin: 0 auto;
+            border: 0;
+            border-radius: 12px;
+            background: transparent;
+        }
+
+        footer {
+            padding: 42px 20px;
+            background: #06130f;
+            color: rgba(255, 255, 255, 0.72);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                min-height: 300px;
+            }
+
+            nav {
+                gap: 10px 20px;
+                padding: 18px 16px;
+            }
+
+            main {
+                margin-top: 48px;
+                margin-bottom: 65px;
+                padding: 0 16px;
+            }
+
+            .articoli {
+                grid-template-columns: 1fr;
+            }
+
+            .articolo {
+                min-height: 300px;
+                padding: 28px;
+            }
+
+            .newsletter {
+                padding: 30px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header></header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="articoli.html">Articoli</a>
+        <a href="temi.html">Temi</a>
+        <a href="chi-sono.html">Chi sono</a>
+    </nav>
+
+    <main>
+
+        <h1>Stress &amp; Mindfulness</h1>
+
+        <p class="intro">
+            Riflessioni, strumenti e pratiche per comprendere lo stress,
+            ritrovare equilibrio e sviluppare una maggiore consapevolezza
+            nella vita quotidiana.
+        </p>
+
+        <section class="articoli">
+
+            <a href="quando-tutto-sembra-urgente.html" class="articolo">
+
+                <div>
+                    <div class="categoria">
+                        Stress &amp; Mindfulness
+                    </div>
+
+                    <h2>
+                        Quando tutto sembra urgente
+                    </h2>
+
+                    <p>
+                        Viviamo spesso con la sensazione che tutto debba
+                        essere fatto subito. Ma l'urgenza non è sempre reale:
+                        a volte è il modo in cui lo stress interpreta ciò
+                        che abbiamo davanti.
+                    </p>
+                </div>
+
+                <span class="leggi">
+                    Leggi l'articolo →
+                </span>
+
+            </a>
+
+            <a href="lasciare-andare-non-significa-arrendersi.html" class="articolo">
+
+                <div>
+                    <div class="categoria">
+                        Stress &amp; Mindfulness
+                    </div>
+
+                    <h2>
+                        Lasciare andare non significa arrendersi
+                    </h2>
+
+                    <p>
+                        Chiudere una pagina della nostra storia personale
+                        non significa cancellare ciò che è stato. A volte
+                        significa semplicemente riprendere il timone.
+                    </p>
+                </div>
+
+                <span class="leggi">
+                    Leggi l'articolo →
+                </span>
+
+            </a>
+
+        </section>
+
+        <section class="newsletter">
+
+            <h2>Resta aggiornato</h2>
+
+            <p>
+                Ricevi nuovi articoli, riflessioni e contenuti dedicati
+                allo stress, alla mindfulness e alla vita reale.
+            </p>
+
+            <div class="newsletter-form">
+
+                <iframe
+                    width="540"
+                    height="305"
+                    src="https://710bdf31.sibforms.com/v2/serve/MUIFAKj0YsIGgR3-Z01i_aAHnIYEYhEUukffs-JJwioS-Wt4HT2KTcGnZGA45H4KrhHs4_PjJ-CZrnpvIdDtpi15lLirNGZSMAyLoP44uR-GrwdWTJruYkWnIZMIMEA5S7dVyFiW2Kg8P83wfQvNu0EYiZN4aLOcj57RKn1Sz44pdv6us5QT0YbbafmSnKXGjohSY0cgpbbxy_03Ew=="
+                    frameborder="0"
+                    scrolling="auto"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © Marco Palmas · Stress Management
+    </footer>
+
+</body>
+
+</html>
