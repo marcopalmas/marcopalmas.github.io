@@ -695,8 +695,7 @@
             <div class="share-actions">
                 <button type="button" id="native-share">Condividi</button>
                 <a id="whatsapp-share" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                <a id="facebook-share" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a id="facebook-share" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarcopalmas.it%2Flasciare-andare-non-significa-arrendersi.html" target="_blank" rel="noopener noreferrer">Facebook</a>
                 <button type="button" id="copy-link">Copia link</button>
             </div>
             <p class="share-status" id="share-status" aria-live="polite"></p>
@@ -773,7 +772,6 @@
             const shareText = "Lasciare andare non significa arrendersi | Marco Palmas";
             const status = document.getElementById("share-status");
             document.getElementById("whatsapp-share").href = "https://wa.me/?text=" + encodeURIComponent(shareText + " " + articleUrl);
-            document.getElementById("facebook-share").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(articleUrl);
             document.getElementById("native-share").addEventListener("click", async () => {
                 if (navigator.share) { try { await navigator.share({title:shareText,text:shareText,url:articleUrl}); } catch (e) { if (e.name !== "AbortError") status.textContent="Condivisione non disponibile."; } }
                 else { try { await navigator.clipboard.writeText(articleUrl); status.textContent="Link copiato: puoi incollarlo nell'app che preferisci."; } catch { status.textContent="Usa Copia link per copiare l'indirizzo."; } }
