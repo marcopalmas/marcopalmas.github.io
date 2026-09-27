@@ -2,7 +2,6 @@
 <html lang="it">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,10 +16,13 @@
     <meta property="og:title" content="Quando tutto sembra urgente | Marco Palmas">
     <meta property="og:description"
         content="L'ansia ti dice che tutto è urgente. La consapevolezza prova a chiederti: lo è davvero?">
-    <meta property="og:url" content="https://marcopalmas.it/quando-tutto-sembra-urgente.html">
+    <meta property="og:url"
+        content="https://marcopalmas.it/quando-tutto-sembra-urgente.html">
+    <meta property="og:image" content="https://marcopalmas.it/hero.jpg">
+    <meta property="og:image:alt"
+        content="Marco Palmas — Quando tutto sembra urgente">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -358,7 +360,7 @@
         }
 
         .footer-subtitle {
-            color: rgba(255,255,255,0.65);
+            color: rgba(255, 255, 255, 0.65);
             font-size: 0.9rem;
             margin-bottom: 22px;
         }
@@ -381,14 +383,13 @@
         }
 
         .copyright {
-            color: rgba(255,255,255,0.45);
+            color: rgba(255, 255, 255, 0.45);
             font-size: 0.8rem;
         }
 
         /* MOBILE */
 
         @media (max-width: 800px) {
-
             .header-container {
                 flex-direction: column;
                 gap: 25px;
@@ -402,11 +403,9 @@
             .article-header {
                 padding-top: 55px;
             }
-
         }
 
         @media (max-width: 600px) {
-
             .site-header {
                 padding: 24px 0;
             }
@@ -472,21 +471,15 @@
             .share-button {
                 flex: 1 1 42%;
             }
-
         }
-
     </style>
-
 </head>
 
 <body>
 
     <header class="site-header">
-
         <div class="header-container">
-
             <a href="index.html" class="brand">
-
                 <div class="brand-name">
                     Marco Palmas
                 </div>
@@ -494,24 +487,18 @@
                 <div class="brand-subtitle">
                     STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE
                 </div>
-
             </a>
 
             <nav>
-
                 <a href="index.html">Home</a>
                 <a href="articoli.html">Articoli</a>
                 <a href="temi.html">Temi</a>
                 <a href="chi-sono.html">Chi sono</a>
-
             </nav>
-
         </div>
-
     </header>
 
     <header class="article-header">
-
         <div class="category">
             Stress &amp; Mindfulness
         </div>
@@ -525,7 +512,6 @@
             La consapevolezza prova a chiederti:
             lo è davvero?
         </p>
-
     </header>
 
     <main class="article-container">
@@ -1138,7 +1124,6 @@
                 </div>
 
                 <p class="small-text">
-
                     Una notifica arriva.<br>
                     Una mail arriva.<br>
                     Qualcuno ci scrive.<br>
@@ -1165,7 +1150,6 @@
                         Un passo più lento.<br>
                         Una notifica che può aspettare.
                     </strong>
-
                 </p>
 
             </div>
@@ -1279,7 +1263,9 @@
 
     <script>
         (function () {
-            const pageUrl = window.location.href.split("#")[0];
+            const pageUrl =
+                "https://marcopalmas.it/quando-tutto-sembra-urgente.html";
+
             const pageTitle = document.title;
             const shareText = pageTitle + " — " + pageUrl;
 
@@ -1321,10 +1307,13 @@
                     if (navigator.clipboard && window.isSecureContext) {
                         await navigator.clipboard.writeText(pageUrl);
                     } else {
-                        const temporaryInput = document.createElement("textarea");
+                        const temporaryInput =
+                            document.createElement("textarea");
+
                         temporaryInput.value = pageUrl;
                         temporaryInput.style.position = "fixed";
                         temporaryInput.style.opacity = "0";
+
                         document.body.appendChild(temporaryInput);
                         temporaryInput.select();
 
