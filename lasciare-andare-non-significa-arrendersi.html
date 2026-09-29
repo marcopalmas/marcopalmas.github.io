@@ -6,36 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Lasciare andare non significa arrendersi | Marco Palmas</title>
-
-    <meta name="description"
-        content="Lasciare andare non significa arrendersi: una riflessione sulla mindfulness, sull'attaccamento e sulla difficoltà di chiudere pagine della nostra storia personale.">
-
+    <meta name="description" content="Lasciare andare non significa arrendersi: una riflessione su controllo, accettazione e libertà interiore.">
     <meta name="author" content="Marco Palmas">
     <link rel="canonical" href="https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html">
-    <meta property="og:locale" content="it_IT">
+
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Marco Palmas">
     <meta property="og:title" content="Lasciare andare non significa arrendersi | Marco Palmas">
-    <meta property="og:description" content="Lasciare andare non significa arrendersi: una riflessione sulla mindfulness, sull'attaccamento e sulla difficoltà di chiudere pagine della nostra storia personale.">
+    <meta property="og:description" content="Una riflessione su controllo, accettazione e libertà interiore.">
     <meta property="og:url" content="https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html">
     <meta property="og:image" content="https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.jpg">
-    <meta property="og:image:secure_url" content="https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.jpg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1254">
-    <meta property="og:image:height" content="1254">
-    <meta property="og:image:alt" content="Una persona lascia andare pesi mentali al tramonto.">
-    <meta property="article:published_time" content="2026-09-27T00:00:00+02:00">
-    <meta property="article:modified_time" content="2026-09-27T00:00:00+02:00">
-    <meta property="article:section" content="Stress &amp; Mindfulness">
-    <meta property="article:author" content="Marco Palmas">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lasciare andare non significa arrendersi | Marco Palmas">
-    <meta name="twitter:description" content="Una riflessione sulla mindfulness, sull'attaccamento e sulla scelta consapevole di chiudere una pagina.">
-    <meta name="twitter:image" content="https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.jpg">
-    <meta name="twitter:image:alt" content="Una persona lascia andare pesi mentali davanti a un tramonto.">
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html"},"headline":"Lasciare andare non significa arrendersi","description":"Lasciare andare non significa arrendersi: una riflessione sulla mindfulness, sull'attaccamento e sulla difficoltà di chiudere pagine della nostra storia personale.","image":["https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.jpg"],"datePublished":"2026-09-27","dateModified":"2026-09-27","author":{"@type":"Person","name":"Marco Palmas","url":"https://marcopalmas.it/chi-sono.html"},"publisher":{"@type":"Person","name":"Marco Palmas","url":"https://marcopalmas.it/chi-sono.html"},"articleSection":"Stress & Mindfulness","inLanguage":"it-IT"}
-    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -49,7 +32,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: "DM Sans", sans-serif;
             background: #f5f7f4;
             color: #202620;
             line-height: 1.75;
@@ -57,7 +40,6 @@
 
         a {
             color: inherit;
-            text-decoration: none;
         }
 
         .site-header {
@@ -78,6 +60,8 @@
         .brand {
             display: flex;
             flex-direction: column;
+            color: white;
+            text-decoration: none;
         }
 
         .brand-name {
@@ -107,6 +91,7 @@
             font-size: 1rem;
             font-weight: 600;
             padding-bottom: 8px;
+            text-decoration: none;
         }
 
         nav a::after {
@@ -120,131 +105,113 @@
             transition: width 0.25s ease;
         }
 
-        nav a:hover {
+        nav a:hover,
+        nav a.active {
             color: #c9ed8b;
         }
 
-        nav a:hover::after {
+        nav a:hover::after,
+        nav a.active::after {
             width: 100%;
         }
 
-        .article-header {
+        .article-hero {
             width: min(900px, 88%);
             margin: 0 auto;
-            padding: 80px 0 55px;
+            padding: 76px 0 44px;
         }
 
-        .category {
+        .eyebrow {
             color: #123d2d;
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             font-weight: 700;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
-        .article-header h1 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(3rem, 6vw, 5.5rem);
-            line-height: 1.05;
+        .eyebrow a {
+            text-decoration: none;
+        }
+
+        .eyebrow a:hover {
+            text-decoration: underline;
+        }
+
+        h1,
+        h2 {
+            font-family: "Playfair Display", serif;
             font-weight: 500;
-            letter-spacing: -0.04em;
-            margin-bottom: 25px;
         }
 
-        .article-header .subtitle {
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
+        h1 {
+            font-size: clamp(2.7rem, 6vw, 5rem);
+            line-height: 1.08;
+            letter-spacing: -0.035em;
+            margin-bottom: 22px;
+        }
+
+        .dek {
+            max-width: 760px;
             color: #555;
-            max-width: 780px;
-            line-height: 1.55;
+            font-size: clamp(1.08rem, 2vw, 1.25rem);
+            line-height: 1.65;
         }
 
-        .article-meta { margin-top:24px; color:#626a63; font-size:.95rem; }
-        .article-meta span + span::before { content:"·"; margin:0 10px; }
-        .article-hero { display:block; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; border-radius:18px; margin:0 auto 36px; }
-        .share-box,.related-box { margin-top:34px; padding:28px; border:1px solid #e0e5e1; border-radius:18px; background:#f5f7f4; }
-        .share-box h2,.related-box h2 { margin:0 0 10px; font-family:Georgia,"Times New Roman",serif; color:#123d2d; font-size:1.6rem; }
-        .share-box p,.related-box p { margin:0 0 18px; font-size:1rem; }
-        .share-actions { display:flex; flex-wrap:wrap; gap:10px; }
-        .share-actions button,.share-actions a { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 15px; border:0; border-radius:999px; background:#123d2d; color:white; font:inherit; font-weight:650; cursor:pointer; }
-        .share-actions button:hover,.share-actions a:hover { background:#20583f; }
-        .share-status { min-height:1.5em; margin:12px 0 0!important; color:#123d2d!important; font-size:.9rem!important; }
-        .related-box a { color:#123d2d; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
-
-        .article-container {
-            width: min(760px, 88%);
-            margin: 0 auto 90px;
+        .byline {
+            margin-top: 24px;
+            color: #68736b;
+            font-size: 0.9rem;
         }
 
-        .article-content {
+        .article-layout {
+            width: min(900px, 88%);
+            margin: 0 auto 80px;
+        }
+
+        .article-body {
             background: white;
             border: 1px solid #e0e5e1;
-            border-radius: 24px;
-            padding: clamp(30px, 6vw, 65px);
+            border-radius: 22px;
+            padding: clamp(26px, 6vw, 64px);
         }
 
-        .article-content p {
-            font-size: 1.12rem;
-            color: #303530;
-            margin-bottom: 25px;
-        }
-
-        .article-content h2 {
-            font-family: Georgia, "Times New Roman", serif;
+        .article-body h2 {
             color: #123d2d;
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            line-height: 1.15;
-            font-weight: 500;
-            margin: 55px 0 25px;
+            font-size: clamp(1.8rem, 3.5vw, 2.45rem);
+            line-height: 1.2;
+            margin: 42px 0 16px;
         }
 
-        .article-content strong {
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body p {
+            color: #38413a;
+            margin: 0 0 19px;
+        }
+
+        .article-body ul {
+            margin: 0 0 22px 1.25rem;
+            color: #38413a;
+        }
+
+        .article-body li {
+            padding-left: 5px;
+            margin: 0 0 10px;
+        }
+
+        .article-body a {
             color: #123d2d;
-        }
-
-        .article-content em {
-            color: #555;
-        }
-
-        .article-content blockquote {
-            margin: 35px 0;
-            padding: 25px 30px;
-            border-left: 5px solid #c9ed8b;
-            background: #f5f7f4;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.3rem;
-            font-style: italic;
-            color: #123d2d;
-        }
-
-        .article-ending {
-            margin-top: 55px;
-            padding-top: 45px;
-            border-top: 1px solid #e0e5e1;
-        }
-
-        .article-ending .quote {
-            background: #123d2d;
-            color: white;
-            padding: 45px 35px;
-            border-radius: 20px;
-            text-align: center;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(1.7rem, 4vw, 2.5rem);
-            line-height: 1.35;
-            margin-bottom: 35px;
-        }
-
-        .article-ending .small-text {
-            font-size: 1.05rem;
-            color: #555;
-            text-align: center;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
         }
 
         .newsletter-box {
-            width: min(1100px, 88%);
-            margin: 0 auto 90px;
-            padding: 55px 30px;
+            width: min(1000px, 88%);
+            margin: 0 auto 80px;
+            padding: 50px clamp(22px, 5vw, 55px);
             border-radius: 24px;
             background: #e7eee8;
             border: 1px solid #d8e0da;
@@ -252,19 +219,12 @@
         }
 
         .newsletter-box .eyebrow {
-            color: #123d2d;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
             margin-bottom: 12px;
         }
 
         .newsletter-box h2 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 500;
-            line-height: 1.15;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.1;
             margin-bottom: 15px;
         }
 
@@ -286,7 +246,8 @@
             display: block;
             width: 100%;
             max-width: 540px;
-            min-height: 305px;
+            height: 390px;
+            min-height: 390px;
             margin: 0 auto;
             border: 0;
             border-radius: 12px;
@@ -301,53 +262,31 @@
         }
 
         .footer-name {
-            font-family: Georgia, "Times New Roman", serif;
+            font-family: "Playfair Display", serif;
             font-size: 1.5rem;
             margin-bottom: 8px;
         }
 
         .footer-subtitle {
-            color: rgba(255, 255, 255, 0.65);
+            color: rgba(255,255,255,0.65);
             font-size: 0.9rem;
-            margin-bottom: 22px;
-        }
-
-        .social {
-            display: flex;
-            justify-content: center;
-            gap: 28px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-
-        .social a {
-            color: white;
-            font-weight: 600;
-            transition: color 0.25s ease;
-        }
-
-        .social a:hover {
-            color: #c9ed8b;
         }
 
         .copyright {
-            color: rgba(255, 255, 255, 0.45);
+            color: rgba(255,255,255,0.45);
             font-size: 0.8rem;
+            margin-top: 22px;
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 850px) {
             .header-container {
                 flex-direction: column;
                 gap: 25px;
             }
 
             nav {
-                gap: 22px;
+                gap: 25px;
                 flex-wrap: wrap;
-            }
-
-            .article-header {
-                padding-top: 55px;
             }
         }
 
@@ -369,44 +308,23 @@
                 letter-spacing: 0.12em;
             }
 
+            nav {
+                gap: 18px;
+            }
+
             nav a {
                 font-size: 0.86rem;
             }
 
-            .article-header {
-                width: 88%;
-                padding: 50px 0 35px;
+            .article-hero {
+                padding: 55px 0 35px;
             }
 
-            .article-header h1 {
-                font-size: 3rem;
-            }
-
-            .article-container {
-                width: 92%;
-            }
-
-            .article-content {
-                padding: 30px 24px;
+            .article-body {
                 border-radius: 18px;
             }
 
-            .article-content p {
-                font-size: 1.05rem;
-            }
-
-            .article-content blockquote {
-                padding: 20px;
-                font-size: 1.15rem;
-            }
-
-            .article-hero { border-radius:12px; margin-bottom:26px; }
-            .share-box,.related-box { padding:22px 18px; }
-            .share-actions > * { flex:1 1 calc(50% - 10px); }
-
             .newsletter-box {
-                width: 88%;
-                padding: 40px 22px;
                 margin-bottom: 65px;
             }
         }
@@ -419,18 +337,13 @@
         <div class="header-container">
 
             <a href="index.html" class="brand">
-                <div class="brand-name">
-                    Marco Palmas
-                </div>
-
-                <div class="brand-subtitle">
-                    STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE
-                </div>
+                <span class="brand-name">Marco Palmas</span>
+                <span class="brand-subtitle">STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE</span>
             </a>
 
-            <nav>
+            <nav aria-label="Navigazione principale">
                 <a href="index.html">Home</a>
-                <a href="articoli.html">Articoli</a>
+                <a href="articoli.html" class="active">Articoli</a>
                 <a href="temi.html">Temi</a>
                 <a href="chi-sono.html">Chi sono</a>
             </nav>
@@ -438,351 +351,146 @@
         </div>
     </header>
 
-    <header class="article-header">
+    <main>
 
-        <div class="category">
-            Stress & Mindfulness
+        <section class="article-hero">
+            <p class="eyebrow"><a href="articoli.html">Articoli</a> / Mindfulness</p>
+
+            <h1>Lasciare andare non significa arrendersi</h1>
+
+            <p class="dek">
+                A volte continuiamo a stringere ciò che ci fa soffrire perché
+                temiamo che lasciarlo andare significhi perdere. Ma mollare la presa
+                può essere il primo passo per ritrovare spazio, lucidità e libertà.
+            </p>
+
+            <p class="byline">Di Marco Palmas · 27 settembre 2026</p>
+        </section>
+
+        <div class="article-layout">
+            <article class="article-body">
+
+                <p>
+                    Ci sono momenti in cui ci accorgiamo di essere stanchi non solo
+                    per quello che facciamo, ma per tutto ciò che cerchiamo di
+                    controllare. Una conversazione andata male, una scelta che non
+                    possiamo più cambiare, il bisogno che gli altri capiscano
+                    esattamente ciò che sentiamo.
+                </p>
+
+                <p>
+                    Restiamo aggrappati a questi pensieri come se ripeterli potesse
+                    modificare ciò che è successo. E intanto consumiamo energie che
+                    potremmo usare per prenderci cura di ciò che abbiamo davanti.
+                </p>
+
+                <h2>Il controllo dà sicurezza, ma ha un prezzo</h2>
+
+                <p>
+                    Cercare di prevedere ogni esito può sembrare un modo per
+                    proteggerci. Prepariamo risposte, ripassiamo mentalmente
+                    scenari, immaginiamo cosa potrebbe andare storto. Per un po’
+                    questa strategia riduce l’incertezza. Poi, però, la mente
+                    continua a lavorare anche quando non c’è più nulla da risolvere.
+                </p>
+
+                <p>
+                    Lasciare andare non vuol dire smettere di impegnarsi. Vuol dire
+                    riconoscere il confine tra ciò su cui possiamo agire e ciò che
+                    non dipende da noi. Possiamo scegliere come parlare, chiedere
+                    chiarimenti, fare un passo concreto. Non possiamo decidere al
+                    posto degli altri, né riscrivere il passato.
+                </p>
+
+                <h2>Accettare non significa approvare</h2>
+
+                <p>
+                    Accettare una situazione significa vederla per quella che è,
+                    senza aggiungere la lotta continua contro il fatto che sia
+                    accaduta. Non vuol dire considerarla giusta, né rinunciare a
+                    cambiarla quando è possibile.
+                </p>
+
+                <p>
+                    Possiamo riconoscere una delusione e, allo stesso tempo,
+                    decidere cosa fare adesso. Possiamo sentire rabbia senza
+                    lasciare che scelga ogni nostra risposta. Possiamo attraversare
+                    una fase difficile senza trasformarla in una definizione di chi
+                    siamo.
+                </p>
+
+                <h2>Una pratica semplice per fare spazio</h2>
+
+                <p>
+                    Quando senti che stai rimuginando, prova a fermarti per qualche
+                    istante e chiediti:
+                </p>
+
+                <ul>
+                    <li>Che cosa, in questa situazione, dipende davvero da me?</li>
+                    <li>Qual è un’azione piccola e concreta che posso fare?</li>
+                    <li>Che cosa sto cercando di controllare senza poterlo decidere?</li>
+                </ul>
+
+                <p>
+                    Poi torna al respiro e scegli un solo passo possibile. Non serve
+                    risolvere tutto in una volta. A volte basta smettere di
+                    alimentare per qualche minuto il pensiero che ti tiene fermo.
+                </p>
+
+                <h2>Lasciare andare è tornare a scegliere</h2>
+
+                <p>
+                    Lasciare andare non cancella ciò che è successo e non garantisce
+                    che tutto andrà come speriamo. Ci restituisce però una parte
+                    della nostra attenzione: quella che possiamo usare nel presente.
+                </p>
+
+                <p>
+                    Non è una resa. È la scelta di non spendere tutta la nostra
+                    energia nel tentativo di cambiare ciò che non è più nelle nostre
+                    mani, per poterla dedicare a ciò che possiamo ancora fare.
+                </p>
+
+                <p>
+                    <strong>
+                        A volte la libertà comincia proprio quando allentiamo la
+                        presa.
+                    </strong>
+                </p>
+
+            </article>
         </div>
 
-        <h1>
-            Lasciare andare non significa arrendersi
-        </h1>
+        <section class="newsletter-box" aria-labelledby="newsletter-title">
+            <p class="eyebrow">Newsletter</p>
 
-        <p class="subtitle">
-            Chiudere una pagina della nostra storia personale non significa
-            cancellare ciò che è stato. A volte significa semplicemente
-            riprendere il timone.
-        </p>
-
-        <p class="article-meta">
-            <span>Di <a href="chi-sono.html">Marco Palmas</a></span>
-            <span>Pubblicato il <time datetime="2026-09-27">27 settembre 2026</time></span>
-            <span>Aggiornato il <time datetime="2026-09-27">27 settembre 2026</time></span>
-        </p>
-
-    </header>
-
-    <main class="article-container">
-
-        <section class="article-content">
-
-            <img class="article-hero" src="lasciare-andare-non-significa-arrendersi.jpg" width="1254" height="1254" alt="Una persona seduta al tramonto lascia andare pietre che rappresentano pensieri inutili, giudizi, paure, controllo, aspettative e rimuginìni." fetchpriority="high">
+            <h2 id="newsletter-title">Una pausa, ogni tanto.</h2>
 
             <p>
-                Ci sono momenti nella vita in cui chiudere una pagina della
-                nostra storia personale sembra quasi un fallimento.
+                Riflessioni sullo stress, mindfulness, vita reale e nuove iniziative MindLab.
+                Una newsletter senza rumore, solo quando abbiamo qualcosa di utile da condividere.
             </p>
 
-            <p>
-                Pensiamo a tutto il tempo investito, alle energie spese, ai
-                progetti costruiti e alle aspettative che avevamo nutrito.
-                E allora ci diciamo:
-            </p>
-
-            <blockquote>
-                “Non posso mollare. Ci ho investito così tanto.”
-            </blockquote>
-
-            <p>
-                Ma siamo davvero sicuri che continuare sia sempre la scelta
-                giusta?
-            </p>
-
-            <h2>
-                Il valore di ciò che abbiamo vissuto
-            </h2>
-
-            <p>
-                In mindfulness, lasciare andare non significa essere deboli,
-                pigri o arrendersi alle prime difficoltà. Non significa
-                smettere di lottare per ciò che desideriamo o evitare ogni
-                ostacolo.
-            </p>
-
-            <p>
-                Significa, piuttosto, imparare a osservare con lucidità ciò
-                che sta accadendo.
-            </p>
-
-            <p>
-                A volte una difficoltà merita perseveranza. Altre volte,
-                invece, ci troviamo dentro situazioni che continuano a
-                sottrarci energia, tempo e presenza, senza permetterci più
-                di esprimere il meglio di noi.
-            </p>
-
-            <p>
-                Può accadere con un hobby, con una relazione, con un progetto
-                personale o persino con un obbligo lavorativo.
-            </p>
-
-            <p>
-                Il problema non è necessariamente ciò che stiamo facendo.
-                Il problema può essere il modo in cui lo stiamo vivendo.
-            </p>
-
-            <h2>
-                Quando non siamo più noi a governare la barca
-            </h2>
-
-            <p>
-                Penso a una mia esperienza personale: il mio profilo da
-                gamer.
-            </p>
-
-            <p>
-                Dopo sei anni di lavoro, oggi ho deciso di chiudere quella
-                pagina. Ma quei sei anni sono stati buttati?
-            </p>
-
-            <p>
-                <strong>No.</strong>
-            </p>
-
-            <p>
-                Mi hanno lasciato competenze, esperienze, relazioni, idee e
-                una parte importante della mia storia. Non devo cancellarli
-                soltanto perché oggi scelgo di non alimentare più quel
-                progetto.
-            </p>
-
-            <p>
-                A un certo punto, però, mi sono fermato a osservare ciò che
-                stava succedendo.
-            </p>
-
-            <p>
-                Mi sono reso conto che pretendevo troppo da me. I ritmi
-                dettati dai social erano diventati insostenibili.
-            </p>
-
-            <p>
-                Dovevo fare clip, condividere opinioni, rispondere ai
-                commenti, pubblicare, essere presente, non sparire.
-            </p>
-
-            <p>
-                E lentamente ho iniziato a percepire che non ero più io a
-                governare la barca.
-            </p>
-
-            <p>
-                A guidarmi era una sorta di “me” invisibile, costruito dalle
-                aspettative dei social, dagli algoritmi e dalla paura di
-                perdere visibilità.
-            </p>
-
-            <blockquote>
-                “Devi fare un’altra clip.<br>
-                Devi pubblicare qualcosa.<br>
-                Devi rispondere a quel commento.<br>
-                Devi esserci, altrimenti scompari.”
-            </blockquote>
-
-            <p>
-                Ma per cosa?
-            </p>
-
-            <p>
-                Per un pugno di like?
-            </p>
-
-            <h2>
-                Il costo dell’attaccamento
-            </h2>
-
-            <p>
-                Il punto non è che il gaming fosse sbagliato. Il punto è
-                che, a un certo momento, quel progetto aveva iniziato a
-                chiedermi più di quanto fossi disposto — e in grado — di
-                dare.
-            </p>
-
-            <p>
-                E qui entra in gioco una delle domande più importanti che
-                possiamo porci:
-            </p>
-
-            <blockquote>
-                “Sto ancora facendo questa cosa perché mi nutre, oppure
-                perché ho paura di smettere?”
-            </blockquote>
-
-            <p>
-                A volte restiamo ancorati a qualcosa non perché ci faccia
-                ancora bene, ma perché abbiamo paura che tutto il tempo
-                investito perda valore.
-            </p>
-
-            <p>
-                Eppure il tempo passato non viene recuperato continuando a
-                spendere altro tempo.
-            </p>
-
-            <p>
-                I sei anni che ho dedicato al mio profilo da gamer non
-                diventano inutili perché oggi scelgo di fermarmi.
-            </p>
-
-            <p>
-                Al contrario, acquistano un significato nuovo: mi hanno
-                condotto fino alla consapevolezza di ciò che oggi non voglio
-                più sostenere.
-            </p>
-
-            <h2>
-                Lasciare andare è una scelta consapevole
-            </h2>
-
-            <p>
-                La mindfulness ci invita a osservare l’attaccamento, la
-                paura, il senso di colpa e il bisogno di dare un significato
-                a ciò che abbiamo vissuto.
-            </p>
-
-            <p>
-                Non ci chiede di abbandonare tutto alla prima difficoltà.
-                Ci invita a distinguere tra la perseveranza autentica e
-                l’accanimento.
-            </p>
-
-            <p>
-                Perseverare significa continuare a camminare verso qualcosa
-                che sentiamo ancora nostro.
-            </p>
-
-            <p>
-                Accanirsi, invece, può significare restare fermi nello stesso
-                punto soltanto perché abbiamo paura di ammettere che qualcosa
-                è cambiato.
-            </p>
-
-            <p>
-                Chiudere una pagina non significa dire che quella pagina non
-                contava.
-            </p>
-
-            <p>
-                Significa riconoscere che ha avuto un valore, ma che non siamo
-                obbligati a sacrificare altri anni per dimostrarlo.
-            </p>
-
-            <div class="article-ending">
-
-                <div class="quote">
-                    Quei sei anni hanno avuto un valore.
-                    Ma non sono obbligato a sacrificarne altri sei
-                    per giustificarli.
-                </div>
-
-                <p class="small-text">
-                    Forse questa è una delle forme più concrete di mindfulness:
-                    non abbandonare la vita, ma smettere di alimentare ciò che
-                    ci allontana da noi stessi.
-                </p>
-
-                <p class="small-text">
-                    E, finalmente, riprendere il timone.
-                </p>
-
+            <div class="newsletter-form">
+                <iframe
+                    width="540"
+                    height="305"
+                    src="https://710bdf31.sibforms.com/v2/serve/MUIFAKj0YsIGgR3-Z01i_aAHnIYEYhEUukffs-JJwioS-Wt4HT2KTcGnZGA45H4KrhHs4_PjJ-CZrnpvIdDtpi15lLirNGZSMAyLoP44uR-GrwdWTJruYkWnIZMIMEA5S7dVyFiW2Kg8P83wfQvNu0EYiZN4aLOcj57RKn1Sz44pdv6us5QT0YbbafmSnKXGjohSY0cgpbbxy_03Ew=="
+                    frameborder="0"
+                    scrolling="auto"
+                    allowfullscreen>
+                </iframe>
             </div>
-
         </section>
-
-        <section class="share-box" aria-labelledby="share-title">
-            <h2 id="share-title">Condividi questo articolo</h2>
-            <p>Se ti è stato utile, puoi condividerlo o copiare il link.</p>
-            <div class="share-actions">
-                <button type="button" id="native-share">Condividi</button>
-                <a id="whatsapp-share" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                <a id="facebook-share" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarcopalmas.it%2Flasciare-andare-non-significa-arrendersi.html" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <button type="button" id="copy-link">Copia link</button>
-            </div>
-            <p class="share-status" id="share-status" aria-live="polite"></p>
-        </section>
-        <aside class="related-box">
-            <h2>Potrebbe interessarti anche</h2>
-            <p>Per approfondire il rapporto tra urgenza, consapevolezza e vita quotidiana, leggi <a href="quando-tutto-sembra-urgente.html">Quando tutto sembra urgente</a>.</p>
-            <p>Scopri gli altri <a href="temi.html">articoli su Stress &amp; Mindfulness</a> oppure <a href="chi-sono.html">conosci Marco</a>.</p>
-        </aside>
 
     </main>
 
-    <section class="newsletter-box">
-
-        <div class="eyebrow">
-            The Insider
-        </div>
-
-        <h2>
-            Ricevi nuovi articoli e riflessioni
-        </h2>
-
-        <p>
-            Una newsletter per fermarsi, osservare e ritrovare uno spazio
-            di consapevolezza nella vita quotidiana.
-        </p>
-
-        <div class="newsletter-form">
-            <iframe
-                width="540"
-                height="305"
-                src="https://710bdf31.sibforms.com/v2/serve/MUIFAKj0YsIGgR3-Z01i_aAHnIYEYhEUukffs-JJwioS-Wt4HT2KTcGnZGA45H4KrhHs4_PjJ-CZrnpvIdDtpi15lLirNGZSMAyLoP44uR-GrwdWTJruYkWnIZMIMEA5S7dVyFiW2Kg8P83wfQvNu0EYiZN4aLOcj57RKn1Sz44pdv6us5QT0YbbafmSnKXGjohSY0cgpbbxy_03Ew=="
-                frameborder="0"
-                scrolling="auto"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-    </section>
-
     <footer>
-
-        <div class="footer-name">
-            Marco Palmas
-        </div>
-
-        <div class="footer-subtitle">
-            Stress Management · Mindfulness · Sport · Vita reale
-        </div>
-
-        <div class="social">
-            <a href="https://www.instagram.com/marco_palmas_mindfulness/" target="_blank" rel="noopener noreferrer">
-                Instagram
-            </a>
-
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener">
-                Facebook
-            </a>
-
-            <a href="https://youtube.com/@mindlab_mindfulness" target="_blank" rel="noopener noreferrer">
-                YouTube
-            </a>
-        </div>
-
-        <div class="copyright">
-            © 2026 Marco Palmas. Tutti i diritti riservati.
-        </div>
-
+        <div class="footer-name">Marco Palmas</div>
+        <div class="footer-subtitle">Stress Management · Mindfulness · Sport · Vita Reale</div>
+        <div class="copyright">© 2026 Marco Palmas. Tutti i diritti riservati.</div>
     </footer>
 
-    <script>
-        (() => {
-            const articleUrl = "https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html";
-            const shareText = "Lasciare andare non significa arrendersi | Marco Palmas";
-            const status = document.getElementById("share-status");
-            document.getElementById("whatsapp-share").href = "https://wa.me/?text=" + encodeURIComponent(shareText + " " + articleUrl);
-            document.getElementById("native-share").addEventListener("click", async () => {
-                if (navigator.share) { try { await navigator.share({title:shareText,text:shareText,url:articleUrl}); } catch (e) { if (e.name !== "AbortError") status.textContent="Condivisione non disponibile."; } }
-                else { try { await navigator.clipboard.writeText(articleUrl); status.textContent="Link copiato: puoi incollarlo nell'app che preferisci."; } catch { status.textContent="Usa Copia link per copiare l'indirizzo."; } }
-            });
-            document.getElementById("copy-link").addEventListener("click", async () => {
-                try { await navigator.clipboard.writeText(articleUrl); }
-                catch { const f=document.createElement("textarea"); f.value=articleUrl; f.style.position="fixed"; f.style.opacity="0"; document.body.appendChild(f); f.select(); document.execCommand("copy"); f.remove(); }
-                status.textContent="Link copiato negli appunti.";
-            });
-        })();
-    </script>
 </body>
-
 </html>
