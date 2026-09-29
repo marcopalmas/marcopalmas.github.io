@@ -10,6 +10,27 @@
     <meta name="description"
           content="Marco Palmas: riflessioni, strumenti ed esperienze su stress, mindfulness, sport, lavoro sanitario e vita reale.">
 
+    <meta name="author" content="Marco Palmas">
+
+    <!-- =========================
+         OPEN GRAPH / SOCIAL
+    ========================== -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+          content="Marco Palmas | Stress Management, Mindfulness, Sport e Vita Reale">
+    <meta property="og:description"
+          content="Riflessioni, strumenti ed esperienze su stress, mindfulness, sport, lavoro sanitario e vita reale.">
+    <meta property="og:url" content="https://marcopalmas.it/">
+    <meta property="og:image" content="https://marcopalmas.it/hero.jpg">
+    <meta property="og:image:alt" content="Marco Palmas in meditazione nella natura">
+
+    <!-- =========================
+         CANONICAL
+    ========================== -->
+
+    <link rel="canonical" href="https://marcopalmas.it/">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -318,6 +339,40 @@
         }
 
         /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #06130f;
+            color: #ffffff;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 18px;
+        }
+
+        .footer-social a {
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.25s ease, opacity 0.25s ease;
+        }
+
+        .footer-social a:hover {
+            color: #c9ed8b;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            opacity: 0.65;
+        }
+
+        /* =========================
            TABLET
         ========================= */
 
@@ -442,6 +497,11 @@
             .newsletter-description {
                 font-size: 1rem;
             }
+
+            .footer-social {
+                gap: 24px;
+            }
+
         }
 
     </style>
@@ -593,6 +653,38 @@
         </div>
 
     </section>
+
+    <!-- =====================
+         FOOTER
+    ====================== -->
+
+    <footer>
+
+        <div class="footer-social">
+
+            <a
+                href="https://www.instagram.com/marco_palmas_mindfulness/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram Marco Palmas Mindfulness">
+                Instagram
+            </a>
+
+            <a
+                href="https://youtube.com/@mindlab_mindfulness"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube MindLab Mindfulness">
+                YouTube
+            </a>
+
+        </div>
+
+        <div class="footer-copy">
+            © 2026 Marco Palmas. Tutti i diritti riservati.
+        </div>
+
+    </footer>
 
 </body>
 </html>
