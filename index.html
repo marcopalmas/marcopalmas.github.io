@@ -22,8 +22,8 @@
     <meta property="og:description"
           content="Riflessioni, strumenti ed esperienze su stress, mindfulness, sport, lavoro sanitario e vita reale.">
     <meta property="og:url" content="https://marcopalmas.it/">
-    <meta property="og:image" content="https://marcopalmas.it/logo-mindlab.jpg">
-    <meta property="og:image:alt" content="Logo MindLab">
+    <meta property="og:image" content="https://marcopalmas.it/hero.jpg">
+    <meta property="og:image:alt" content="Marco Palmas in meditazione nella natura">
 
     <!-- =========================
          CANONICAL
@@ -51,13 +51,17 @@
 
         body {
             font-family: "DM Sans", sans-serif;
-            background: #06130f;
-            color: #ffffff;
+            background: #f2f0e8;
+            color: #123c2b;
         }
 
         a {
             color: inherit;
             text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
         }
 
         /* =========================
@@ -195,7 +199,7 @@
         }
 
         /* =========================
-           CONTENUTO CENTRALE
+           CONTENUTO HERO
         ========================= */
 
         .hero-content {
@@ -281,6 +285,280 @@
             height: 2px;
             background: rgba(255,255,255,0.75);
             margin-top: 5px;
+        }
+
+        /* =========================
+           CHI SONO / COSA FACCIO
+        ========================= */
+
+        .about-section {
+            background: #f2f0e8;
+            padding: 105px 20px 95px;
+        }
+
+        .about-container {
+            width: min(1120px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 1.05;
+            font-weight: 500;
+            margin-bottom: 28px;
+            color: #123c2b;
+        }
+
+        .about-content h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.55rem;
+            font-weight: 500;
+            margin: 34px 0 14px;
+            color: #527b58;
+        }
+
+        .about-content p {
+            max-width: 720px;
+            font-size: 1.08rem;
+            line-height: 1.75;
+            color: #234536;
+            margin-bottom: 18px;
+        }
+
+        .about-content strong {
+            color: #123c2b;
+        }
+
+        .about-photo-wrap {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            min-height: 390px;
+        }
+
+        .about-photo {
+            display: block;
+            width: min(100%, 410px);
+            max-height: 520px;
+            object-fit: contain;
+            object-position: bottom center;
+            filter: drop-shadow(0 18px 25px rgba(18,60,43,0.12));
+        }
+
+        /* =========================
+           AREE TEMATICHE
+        ========================= */
+
+        .themes-section {
+            background: #ffffff;
+            padding: 95px 20px 105px;
+        }
+
+        .themes-header {
+            width: min(1120px, 100%);
+            margin: 0 auto 42px;
+            text-align: center;
+        }
+
+        .section-eyebrow {
+            color: #527b58;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            margin-bottom: 16px;
+        }
+
+        .themes-header h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            line-height: 1.05;
+            font-weight: 500;
+            color: #123c2b;
+            margin-bottom: 16px;
+        }
+
+        .theme-list {
+            width: min(1180px, 100%);
+            margin: 0 auto;
+            display: grid;
+            gap: 28px;
+        }
+
+        .theme-panel {
+            position: relative;
+            display: flex;
+            min-height: 430px;
+            overflow: hidden;
+            border-radius: 24px;
+            background: #dfe5df;
+            isolation: isolate;
+            box-shadow: 0 12px 35px rgba(18,60,43,0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .theme-panel:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 42px rgba(18,60,43,0.13);
+        }
+
+        .theme-panel::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(247,243,231,0.78) 0%,
+                rgba(247,243,231,0.36) 42%,
+                rgba(247,243,231,0.03) 72%
+            );
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .theme-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 0;
+        }
+
+        .theme-content {
+            position: relative;
+            z-index: 2;
+            width: min(570px, 58%);
+            padding: 58px 52px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #123c2b;
+        }
+
+        .theme-number {
+            color: #527b58;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            margin-bottom: 12px;
+        }
+
+        .theme-content h3 {
+            font-family: "DM Sans", sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .theme-quote {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(1.8rem, 3vw, 3rem);
+            line-height: 1.18;
+            font-weight: 500;
+            letter-spacing: -0.025em;
+            max-width: 540px;
+        }
+
+        .theme-quote em {
+            font-style: italic;
+        }
+
+        .theme-author {
+            margin-top: 22px;
+            font-size: 0.98rem;
+            color: #527b58;
+            font-weight: 600;
+        }
+
+        /* =========================
+           ULTIMI ARTICOLI
+        ========================= */
+
+        .articles-section {
+            background: #f2f0e8;
+            padding: 100px 20px 105px;
+        }
+
+        .articles-container {
+            width: min(1120px, 100%);
+            margin: 0 auto;
+        }
+
+        .articles-header {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 42px;
+        }
+
+        .articles-header h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.05;
+            font-weight: 500;
+        }
+
+        .articles-link {
+            color: #527b58;
+            font-weight: 700;
+            border-bottom: 2px solid #527b58;
+            padding-bottom: 5px;
+            white-space: nowrap;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .article-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 36px;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 8px 28px rgba(18,60,43,0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 34px rgba(18,60,43,0.10);
+        }
+
+        .article-category {
+            color: #527b58;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .article-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(1.65rem, 3vw, 2.35rem);
+            line-height: 1.15;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .article-card .read-more {
+            color: #527b58;
+            font-weight: 700;
+            font-size: 0.92rem;
         }
 
         /* =========================
@@ -424,6 +702,33 @@
                 top: 73%;
                 width: 180px;
             }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-photo-wrap {
+                min-height: auto;
+                justify-content: center;
+            }
+
+            .about-photo {
+                width: min(65%, 380px);
+            }
+
+            .theme-panel {
+                min-height: 390px;
+            }
+
+            .theme-content {
+                width: 64%;
+                padding: 46px 40px;
+            }
+
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* =========================
@@ -497,6 +802,103 @@
                 display: none;
             }
 
+            .about-section {
+                padding: 72px 18px 70px;
+            }
+
+            .about-content h2 {
+                font-size: 2.7rem;
+            }
+
+            .about-content p {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+
+            .about-content h3 {
+                font-size: 1.35rem;
+            }
+
+            .about-photo {
+                width: min(82%, 360px);
+            }
+
+            .themes-section {
+                padding: 72px 14px 78px;
+            }
+
+            .themes-header {
+                margin-bottom: 28px;
+            }
+
+            .themes-header h2 {
+                font-size: 2.7rem;
+            }
+
+            .theme-list {
+                gap: 20px;
+            }
+
+            .theme-panel {
+                min-height: 520px;
+                border-radius: 18px;
+                align-items: flex-end;
+            }
+
+            .theme-panel::before {
+                background: linear-gradient(
+                    180deg,
+                    rgba(247,243,231,0.03) 20%,
+                    rgba(247,243,231,0.68) 58%,
+                    rgba(247,243,231,0.94) 100%
+                );
+            }
+
+            .theme-image {
+                object-position: center center;
+            }
+
+            .theme-content {
+                width: 100%;
+                padding: 34px 25px 30px;
+                justify-content: flex-end;
+            }
+
+            .theme-content h3 {
+                margin-bottom: 14px;
+            }
+
+            .theme-quote {
+                font-size: 1.9rem;
+            }
+
+            .theme-author {
+                margin-top: 14px;
+            }
+
+            .articles-section {
+                padding: 72px 18px 78px;
+            }
+
+            .articles-header {
+                display: block;
+                margin-bottom: 28px;
+            }
+
+            .articles-header h2 {
+                font-size: 2.7rem;
+                margin-bottom: 20px;
+            }
+
+            .article-grid {
+                gap: 18px;
+            }
+
+            .article-card {
+                padding: 28px 24px;
+                min-height: 220px;
+            }
+
             .newsletter-section {
                 padding: 65px 16px;
             }
@@ -525,6 +927,10 @@
 </head>
 
 <body>
+
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <main class="hero">
 
@@ -632,6 +1038,264 @@
         </div>
 
     </main>
+
+    <!-- =========================
+         CHI SONO / COSA FACCIO
+    ========================== -->
+
+    <section class="about-section" id="chi-sono">
+
+        <div class="about-container">
+
+            <div class="about-content">
+
+                <h2>CHI SONO</h2>
+
+                <p>
+                    Sono Marco Palmas. Sono un infermiere, pratico e insegno mindfulness secondo il protocollo MBSR.
+                </p>
+
+                <p>
+                    Da anni lavoro a contatto con le persone e con tutto quello che la vita quotidiana porta con sé:
+                    stress, responsabilità, pressione, cambiamenti, errori e momenti in cui sembra difficile tenere insieme tutto.
+                </p>
+
+                <p>
+                    Ho deciso di mettere queste esperienze dentro uno spazio personale, per parlare di
+                    <strong>stress, mindfulness, sport, lavoro e vita reale</strong> senza la pretesa di avere sempre la risposta in tasca.
+                </p>
+
+                <p>
+                    Sono qui per condividere strumenti, esperienze e domande che possono aiutarti a guardare le cose da un’altra prospettiva.
+                </p>
+
+                <h3>COSA FACCIO</h3>
+
+                <p>
+                    Attraverso questo blog e i progetti MindLab mi occupo soprattutto di
+                    <strong>stress management attraverso la mindfulness</strong>.
+                </p>
+
+            </div>
+
+            <div class="about-photo-wrap">
+
+                <img
+                    class="about-photo"
+                    src="./marco-palmas-chi-sono.png"
+                    alt="Marco Palmas"
+                    loading="lazy"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         AREE TEMATICHE
+    ========================== -->
+
+    <section class="themes-section" id="temi">
+
+        <div class="themes-header">
+
+            <p class="section-eyebrow">LE MIE AREE TEMATICHE</p>
+
+            <h2>Di cosa parlo.</h2>
+
+        </div>
+
+        <div class="theme-list">
+
+            <a class="theme-panel" href="tema-stress-mindfulness.html">
+
+                <img
+                    class="theme-image"
+                    src="./pannello-stress-mindfulness.png"
+                    alt="MIND medita accanto a una tavola da surf sul mare"
+                    loading="lazy"
+                >
+
+                <div class="theme-content">
+
+                    <div class="theme-number">01</div>
+
+                    <h3>Stress &amp; Mindfulness</h3>
+
+                    <p class="theme-quote">
+                        “Non puoi fermare le onde, ma puoi imparare a <em>SURFARE.</em>”
+                    </p>
+
+                    <p class="theme-author">
+                        — J. K. Zhin
+                    </p>
+
+                </div>
+
+            </a>
+
+            <a class="theme-panel" href="tema-sport-performance.html">
+
+                <img
+                    class="theme-image"
+                    src="./pannello-sport-performance.png"
+                    alt="Portiere con un pallone tra le mani in campo"
+                    loading="lazy"
+                >
+
+                <div class="theme-content">
+
+                    <div class="theme-number">02</div>
+
+                    <h3>Sport &amp; Performance</h3>
+
+                    <p class="theme-quote">
+                        “Il mio vero nemico è il pensiero.”
+                    </p>
+
+                    <p class="theme-author">
+                        — Mile Svilar
+                    </p>
+
+                </div>
+
+            </a>
+
+            <a class="theme-panel" href="tema-infermieristica.html">
+
+                <img
+                    class="theme-image"
+                    src="./pannello-infermieristica.png"
+                    alt="Fonendoscopio su una divisa sanitaria"
+                    loading="lazy"
+                >
+
+                <div class="theme-content">
+
+                    <div class="theme-number">03</div>
+
+                    <h3>Infermieristica</h3>
+
+                    <p class="theme-quote">
+                        “Il burnout è una sindrome derivante da stress cronico sul lavoro non gestito con successo.”
+                    </p>
+
+                    <p class="theme-author">
+                        — Organizzazione Mondiale della Sanità
+                    </p>
+
+                </div>
+
+            </a>
+
+            <a class="theme-panel" href="tema-vita-reale.html">
+
+                <img
+                    class="theme-image"
+                    src="./pannello-vita-reale.png"
+                    alt="Famiglia vista di spalle davanti al mare al tramonto"
+                    loading="lazy"
+                >
+
+                <div class="theme-content">
+
+                    <div class="theme-number">04</div>
+
+                    <h3>Vita reale</h3>
+
+                    <p class="theme-quote">
+                        “Mentre aspettiamo di vivere, la vita passa.”
+                    </p>
+
+                    <p class="theme-author">
+                        — Seneca
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         ULTIMI ARTICOLI
+    ========================== -->
+
+    <section class="articles-section" id="articoli">
+
+        <div class="articles-container">
+
+            <div class="articles-header">
+
+                <div>
+
+                    <p class="section-eyebrow">
+                        DAL BLOG
+                    </p>
+
+                    <h2>
+                        Ultimi articoli
+                    </h2>
+
+                </div>
+
+                <a class="articles-link" href="articoli.html">
+                    Vedi tutti gli articoli →
+                </a>
+
+            </div>
+
+            <div class="article-grid">
+
+                <a class="article-card" href="quando-tutto-sembra-urgente.html">
+
+                    <div>
+
+                        <p class="article-category">
+                            Stress &amp; Mindfulness
+                        </p>
+
+                        <h3>
+                            Quando tutto sembra urgente
+                        </h3>
+
+                    </div>
+
+                    <span class="read-more">
+                        Leggi l'articolo →
+                    </span>
+
+                </a>
+
+                <a class="article-card" href="lasciare-andare-non-significa-arrendersi.html">
+
+                    <div>
+
+                        <p class="article-category">
+                            Stress &amp; Mindfulness
+                        </p>
+
+                        <h3>
+                            Lasciare andare non significa arrendersi
+                        </h3>
+
+                    </div>
+
+                    <span class="read-more">
+                        Leggi l'articolo →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- =====================
          NEWSLETTER
