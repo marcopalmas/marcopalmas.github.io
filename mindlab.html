@@ -16,7 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: "DM Sans", sans-serif; background: #f5f7f4; color: #202620; line-height: 1.7; }
+        body { position: relative; isolation: isolate; font-family: "DM Sans", sans-serif; background: #f5f7f4; color: #202620; line-height: 1.7; }
+        body::before { content: ""; position: fixed; inset: 0; z-index: 0; background-image: url("logo-mindlab.jpg"); background-position: center 56%; background-repeat: no-repeat; background-size: min(68vw, 620px); opacity: 0.09; mix-blend-mode: multiply; pointer-events: none; }
+        .site-header, main, footer { position: relative; z-index: 1; }
         a { color: inherit; }
         .site-header { background: #06130f; color: #fff; padding: 28px 0 24px; }
         .header-container { width: min(1200px, 90%); margin: 0 auto; display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; }
@@ -41,6 +43,8 @@
         .course { padding: 26px; border-radius: 16px; background: #e7eee8; }
         .course h3 { margin-bottom: 10px; color: #123d2d; font-size: 1.55rem; line-height: 1.2; }
         .course p { color: #4c554e; }
+        .course .course-source { margin-top: 12px; font-size: 0.9rem; }
+        .course-source a { color: #315f45; font-weight: 600; text-underline-offset: 3px; }
         .course-label { margin-bottom: 8px; color: #567b39; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
         .consulting { margin-bottom: 76px; }
         .consulting-intro { max-width: 760px; margin-bottom: 24px; color: #4c554e; }
@@ -111,19 +115,20 @@
             <h2 class="section-heading" id="percorsi-title">Un primo passo, o un percorso da approfondire.</h2>
             <div class="course-list">
                 <article class="course">
+                    <p class="course-label">Sessione introduttiva · una giornata</p>
+                    <h3>Conoscere e provare la mindfulness</h3>
+                    <p>Una giornata propedeutica per fare esperienza delle pratiche e orientarsi prima di intraprendere un percorso più strutturato.</p>
+                </article>
+                <article class="course">
                     <p class="course-label">Corso introduttivo · 3 incontri</p>
                     <h3>Conoscere meditazione e mindfulness</h3>
                     <p>Tre incontri per avvicinarsi alla meditazione e alla mindfulness, conoscere le pratiche di base e capire da dove iniziare.</p>
                 </article>
                 <article class="course">
-                    <p class="course-label">Percorso MBSR · 8 settimane</p>
-                    <h3>Una formazione intensiva</h3>
-                    <p>Un percorso di otto settimane per conoscere e praticare gli strumenti del programma MBSR con continuità e gradualità.</p>
-                </article>
-                <article class="course">
-                    <p class="course-label">Sessione introduttiva · una giornata</p>
-                    <h3>Conoscere e provare la mindfulness</h3>
-                    <p>Una giornata propedeutica per fare esperienza delle pratiche e orientarsi prima di intraprendere un percorso più strutturato.</p>
+                    <p class="course-label">Protocollo MBSR · 8 settimane</p>
+                    <h3>Mindfulness-Based Stress Reduction</h3>
+                    <p>Il Protocollo MBSR (Mindfulness-Based Stress Reduction) è tra i programmi strutturati di mindfulness per la riduzione dello stress più noti e studiati a livello internazionale. La sua efficacia è stata esaminata in numerosi studi e revisioni sistematiche; il percorso MindLab si sviluppa in otto settimane di formazione intensiva e pratica continuativa.</p>
+                    <p class="course-source"><a href="https://onlinelibrary.wiley.com/doi/full/10.4073/csr.2012.3" target="_blank" rel="noopener noreferrer">Approfondisci una revisione sistematica sul protocollo MBSR</a></p>
                 </article>
             </div>
         </section>
