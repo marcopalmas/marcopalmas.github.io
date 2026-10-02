@@ -104,6 +104,7 @@
 
         .card {
             display: block;
+            position: relative;
             aspect-ratio: 1 / 1;
             overflow: hidden;
             border-radius: 22px;
@@ -117,6 +118,21 @@
                 box-shadow 0.3s ease;
         }
 
+        .card-title {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            max-width: calc(100% - 48px);
+            padding: 9px 13px;
+            border-radius: 6px;
+            background: rgba(243, 245, 241, 0.88);
+            color: #123d2b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.35rem, 2.7vw, 1.9rem);
+            font-weight: 600;
+            line-height: 1.15;
+        }
+
         .card:hover {
             transform: translateY(-6px);
             box-shadow: 0 18px 38px rgba(18, 61, 43, 0.2);
@@ -125,19 +141,19 @@
         /* IMMAGINI */
 
         .card-stress {
-            background-image: url("./tema-stress.jpg");
+            background-image: url("./pannello-stress-mindfulness.png");
         }
 
         .card-sport {
-            background-image: url("./tema-sport.jpg");
+            background-image: url("./pannello-sport-performance.png");
         }
 
         .card-infermieristica {
-            background-image: url("./tema-infermieristica.jpg");
+            background-image: url("./pannello-infermieristica.png");
         }
 
         .card-vita {
-            background-image: url("./tema-vita-reale.jpg");
+            background-image: url("./pannello-vita-reale.png");
         }
 
         /* FOOTER */
@@ -192,9 +208,9 @@
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="articoli.html">Articoli</a>
-        <a href="temi.html">Temi</a>
         <a href="chi-sono.html">Chi sono</a>
+        <a href="articoli.html">Articoli</a>
+        <a href="temi.html">Aree Tematiche</a>
     </nav>
 
     <main>
@@ -212,25 +228,29 @@
             <a
                 href="tema-stress-mindfulness.html"
                 class="card card-stress"
-                aria-label="Esplora il tema Stress e Mindfulness">
+                aria-label="Esplora l'area Stress e Mindfulness">
+                <span class="card-title">Stress &amp; Mindfulness</span>
             </a>
 
             <a
                 href="tema-sport-performance.html"
                 class="card card-sport"
-                aria-label="Esplora il tema Sport e Performance">
+                aria-label="Esplora l'area Sport e Performance">
+                <span class="card-title">Sport &amp; Performance</span>
             </a>
 
             <a
                 href="tema-infermieristica.html"
                 class="card card-infermieristica"
-                aria-label="Esplora il tema Infermieristica">
+                aria-label="Esplora l'area Infermieristica">
+                <span class="card-title">Infermieristica</span>
             </a>
 
             <a
                 href="tema-vita-reale.html"
                 class="card card-vita"
-                aria-label="Esplora il tema Vita reale">
+                aria-label="Esplora l'area Vita reale">
+                <span class="card-title">Vita reale</span>
             </a>
 
         </section>
