@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindLab | Percorsi e consulenze con Marco Palmas</title>
+    <meta name="description" content="Scopri i percorsi MindLab: corso introduttivo alla meditazione, percorso MBSR, sessioni di mindfulness, consulenze private, per club sportivi e aziende.">
+    <meta name="author" content="Marco Palmas">
+    <link rel="canonical" href="https://marcopalmas.it/mindlab.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MindLab | Marco Palmas">
+    <meta property="og:description" content="La parte del sito in cui la mia esperienza diventa mappa: percorsi, incontri ed esperienze di mindfulness.">
+    <meta property="og:url" content="https://marcopalmas.it/mindlab.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "DM Sans", sans-serif; background: #f5f7f4; color: #202620; line-height: 1.7; }
+        a { color: inherit; }
+        .site-header { background: #06130f; color: #fff; padding: 28px 0 24px; }
+        .header-container { width: min(1200px, 90%); margin: 0 auto; display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; }
+        .brand { display: flex; flex-direction: column; color: #fff; text-decoration: none; }
+        .brand-name { font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 700; line-height: 1; letter-spacing: -0.04em; }
+        .brand-subtitle { margin-top: 9px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; }
+        nav { display: flex; align-items: center; gap: 25px; padding-top: 6px; flex-wrap: wrap; }
+        nav a { position: relative; color: #fff; font-size: 0.98rem; font-weight: 600; padding-bottom: 8px; text-decoration: none; }
+        nav a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 3px; background: #c9ed8b; transition: width 0.25s ease; }
+        nav a:hover, nav a.active { color: #c9ed8b; }
+        nav a:hover::after, nav a.active::after { width: 100%; }
+        main { width: min(1040px, 88%); margin: 0 auto; }
+        .intro { padding: clamp(66px, 10vw, 120px) 0 65px; }
+        .eyebrow { color: #567b39; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 18px; }
+        h1, h2, h3 { font-family: "Playfair Display", serif; font-weight: 500; }
+        h1 { max-width: 900px; color: #123d2d; font-size: clamp(3rem, 7vw, 6rem); line-height: 1.03; letter-spacing: -0.04em; }
+        .lead { max-width: 760px; margin-top: 26px; color: #4c554e; font-size: clamp(1.12rem, 2.1vw, 1.35rem); }
+        .lead strong { color: #123d2d; }
+        .section-heading { margin: 0 0 25px; color: #123d2d; font-size: clamp(2.1rem, 4vw, 3rem); line-height: 1.15; }
+        .courses { padding: 48px; margin-bottom: 76px; border: 1px solid #e0e5e1; border-radius: 24px; background: #fff; }
+        .course-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+        .course { padding: 26px; border-radius: 16px; background: #e7eee8; }
+        .course h3 { margin-bottom: 10px; color: #123d2d; font-size: 1.55rem; line-height: 1.2; }
+        .course p { color: #4c554e; }
+        .course-label { margin-bottom: 8px; color: #567b39; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .consulting { margin-bottom: 76px; }
+        .consulting-intro { max-width: 760px; margin-bottom: 24px; color: #4c554e; }
+        .consulting-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .consulting-item { padding: 25px; border: 1px solid #e0e5e1; border-radius: 16px; background: #fff; }
+        .consulting-item h3 { margin-bottom: 8px; color: #123d2d; font-size: 1.45rem; }
+        .consulting-item p { color: #4c554e; }
+        .solidale { margin-bottom: 28px; padding: clamp(30px, 5vw, 50px); border-radius: 22px; background: #eeeade; }
+        .solidale h2 { margin-bottom: 16px; color: #123d2d; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; }
+        .solidale p { max-width: 800px; margin-bottom: 14px; color: #414a42; }
+        .solidale-note { font-size: 0.95rem; }
+        .healthcare { margin-bottom: 34px; padding: 28px 32px; border-left: 4px solid #789b55; background: #fff; }
+        .healthcare h2 { margin-bottom: 8px; color: #123d2d; font-size: 1.65rem; }
+        .healthcare p { color: #4c554e; }
+        .contact { margin: 0 0 90px; padding: 44px 30px; border-radius: 24px; background: #123d2d; color: #fff; text-align: center; }
+        .contact h2 { margin-bottom: 12px; font-size: clamp(2rem, 4vw, 2.8rem); }
+        .contact p { max-width: 680px; margin: 0 auto 22px; color: rgba(255,255,255,.86); }
+        .button { display: inline-block; padding: 13px 22px; border-radius: 999px; background: #c9ed8b; color: #123d2d; font-weight: 700; text-decoration: none; }
+        .button:hover { background: #d8f4a6; }
+        footer { background: #06130f; color: rgba(255,255,255,.7); padding: 36px 20px; text-align: center; font-size: .9rem; }
+        @media (max-width: 850px) {
+            .header-container { flex-direction: column; gap: 25px; }
+            nav { gap: 19px; }
+            .course-list, .consulting-list { grid-template-columns: 1fr; }
+            .courses { padding: 32px; }
+        }
+        @media (max-width: 600px) {
+            .site-header { padding: 24px 0; }
+            .header-container { width: 88%; }
+            .brand-name { font-size: 2rem; }
+            .brand-subtitle { font-size: .58rem; letter-spacing: .12em; }
+            nav { gap: 13px; }
+            nav a { font-size: .84rem; }
+            .courses { padding: 24px; border-radius: 18px; }
+            .course { padding: 23px; }
+            .solidale { border-radius: 18px; }
+            .healthcare { padding: 24px; }
+            .contact { padding: 38px 22px; margin-bottom: 65px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand">
+                <span class="brand-name">Marco Palmas</span>
+                <span class="brand-subtitle">STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE</span>
+            </a>
+            <nav aria-label="Navigazione principale">
+                <a href="index.html">Home</a>
+                <a href="chi-sono.html">Chi sono</a>
+                <a href="articoli.html">Articoli</a>
+                <a href="temi.html">Aree Tematiche</a>
+                <a href="mindlab.html" class="active" aria-current="page">MindLab</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p class="eyebrow">MINDLAB · ESPERIENZE E FORMAZIONE</p>
+            <h1>Benvenuto in MindLab.</h1>
+            <p class="lead"><strong>La parte del sito in cui la mia esperienza diventa mappa.</strong> Uno spazio per passare dalla curiosità alla pratica, con proposte diverse per avvicinarsi alla meditazione e alla mindfulness o per approfondirne l’esperienza.</p>
+        </section>
+
+        <section class="courses" aria-labelledby="percorsi-title">
+            <p class="eyebrow">I percorsi</p>
+            <h2 class="section-heading" id="percorsi-title">Un primo passo, o un percorso da approfondire.</h2>
+            <div class="course-list">
+                <article class="course">
+                    <p class="course-label">Corso introduttivo · 3 incontri</p>
+                    <h3>Conoscere meditazione e mindfulness</h3>
+                    <p>Tre incontri per avvicinarsi alla meditazione e alla mindfulness, conoscere le pratiche di base e capire da dove iniziare.</p>
+                </article>
+                <article class="course">
+                    <p class="course-label">Percorso MBSR · 8 settimane</p>
+                    <h3>Una formazione intensiva</h3>
+                    <p>Un percorso di otto settimane per conoscere e praticare gli strumenti del programma MBSR con continuità e gradualità.</p>
+                </article>
+                <article class="course">
+                    <p class="course-label">Sessione introduttiva · una giornata</p>
+                    <h3>Conoscere e provare la mindfulness</h3>
+                    <p>Una giornata propedeutica per fare esperienza delle pratiche e orientarsi prima di intraprendere un percorso più strutturato.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="consulting" aria-labelledby="consulenze-title">
+            <p class="eyebrow">Consulenze</p>
+            <h2 class="section-heading" id="consulenze-title">Proposte per persone, sport e organizzazioni.</h2>
+            <p class="consulting-intro">Accanto ai percorsi di gruppo, offro consulenze private e collaborazioni costruite in base alle esigenze della persona o della realtà che mi contatta.</p>
+            <div class="consulting-list">
+                <article class="consulting-item">
+                    <h3>Consulenze private</h3>
+                    <p>Incontri individuali per approfondire la mindfulness e definire un percorso adatto ai propri obiettivi.</p>
+                </article>
+                <article class="consulting-item">
+                    <h3>Club sportivi</h3>
+                    <p>Consulenze e proposte per atleti, staff e società sportive, da progettare insieme al club.</p>
+                </article>
+                <article class="consulting-item">
+                    <h3>Aziende</h3>
+                    <p>Interventi e consulenze per le organizzazioni, da definire in base al contesto e alle necessità.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="solidale" aria-labelledby="solidale-title">
+            <p class="eyebrow">MINDLAB SOLIDALE</p>
+            <h2 id="solidale-title">Un percorso può diventare un’opportunità per un’altra persona.</h2>
+            <p>Per ogni percorso MBSR completato, chi ha partecipato potrà regalare a un’altra persona un percorso MBSR con uno sconto del 100%.</p>
+            <p>L’iniziativa è rivolta a persone appartenenti alle categorie protette individuate dal progetto MindLab Solidale. L’elenco delle categorie e le modalità di accesso saranno pubblicati prossimamente.</p>
+        </section>
+
+        <section class="healthcare" aria-labelledby="healthcare-title">
+            <h2 id="healthcare-title">Una scontistica dedicata a chi lavora nella cura</h2>
+            <p>Medici, infermieri e operatori socio-sanitari (OSS) possono contattarmi per conoscere prezzi e agevolazioni riservate.</p>
+        </section>
+
+        <section class="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Parliamone.</h2>
+            <p>Per informazioni su contenuti, calendario, disponibilità, consulenze e scontistica, scrivimi: ti risponderò con tutti i dettagli.</p>
+            <a class="button" href="mailto:mindlab.mindfulness@gmail.com?subject=Informazioni%20MindLab">Contattami</a>
+        </section>
+    </main>
+
+    <footer>© 2026 Marco Palmas. Tutti i diritti riservati.</footer>
+</body>
+</html>
