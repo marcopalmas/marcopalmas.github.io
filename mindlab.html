@@ -47,6 +47,11 @@
         .course .course-source { margin-top: 12px; font-size: 0.9rem; }
         .course-source a { color: #315f45; font-weight: 600; text-underline-offset: 3px; }
         .course-label { margin-bottom: 8px; color: #567b39; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .course-mbsr { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); grid-template-areas: "label label" "title body" "title source"; gap: 10px 36px; align-items: start; }
+        .course-mbsr .course-label { grid-area: label; margin-bottom: 0; }
+        .course-mbsr h3 { grid-area: title; align-self: center; margin-bottom: 0; }
+        .course-mbsr > p:not(.course-source) { grid-area: body; }
+        .course-mbsr > .course-source { grid-area: source; margin-top: 0; }
         .consulting { margin-bottom: 76px; }
         .consulting-intro { max-width: 760px; margin-bottom: 24px; color: #4c554e; }
         .consulting-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
@@ -82,6 +87,7 @@
             nav { gap: 19px; }
             .course-list, .consulting-list { grid-template-columns: 1fr; }
             .courses { padding: 32px; }
+            .course-mbsr { grid-column: auto; grid-template-columns: 1fr; grid-template-areas: "label" "title" "body" "source"; gap: 0; }
         }
         @media (max-width: 600px) {
             .site-header { padding: 20px 0; }
@@ -138,7 +144,7 @@
                     <h3>Conoscere meditazione e mindfulness</h3>
                     <p>Tre incontri per avvicinarsi alla meditazione e alla mindfulness, conoscere le pratiche di base e capire da dove iniziare.</p>
                 </article>
-                <article class="course">
+                <article class="course course-mbsr">
                     <p class="course-label">Protocollo MBSR · 8 settimane</p>
                     <h3>Mindfulness-Based Stress Reduction</h3>
                     <p>Il Protocollo MBSR (Mindfulness-Based Stress Reduction) è tra i programmi strutturati di mindfulness per la riduzione dello stress più noti e studiati a livello internazionale. La sua efficacia è stata esaminata in numerosi studi e revisioni sistematiche; il percorso MindLab si sviluppa in otto settimane di formazione intensiva e pratica continuativa.</p>
