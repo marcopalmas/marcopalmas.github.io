@@ -17,19 +17,20 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { position: relative; isolation: isolate; font-family: "DM Sans", sans-serif; background: #f5f7f4; color: #202620; line-height: 1.7; }
-        body::before { content: ""; position: fixed; inset: 0; z-index: 0; background-image: url("logo-mindlab.jpg"); background-position: center 56%; background-repeat: no-repeat; background-size: min(68vw, 620px); opacity: 0.09; mix-blend-mode: multiply; pointer-events: none; }
+        body::before { content: ""; position: fixed; inset: 0; z-index: 0; background-image: url("logo-mindlab.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; opacity: 0.055; mix-blend-mode: multiply; pointer-events: none; }
         .site-header, main, footer { position: relative; z-index: 1; }
         a { color: inherit; }
-        .site-header { background: #06130f; color: #fff; padding: 28px 0 24px; }
-        .header-container { width: min(1200px, 90%); margin: 0 auto; display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; }
-        .brand { display: flex; flex-direction: column; color: #fff; text-decoration: none; }
+        .site-header { background: #06130f; color: #fff; padding: 24px 0; }
+        .header-container { width: min(1200px, 90%); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-areas: "brand nav logo"; align-items: center; gap: clamp(18px, 2vw, 30px); }
+        .brand { grid-area: brand; display: flex; flex-direction: column; color: #fff; text-decoration: none; }
         .brand-name { font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 700; line-height: 1; letter-spacing: -0.04em; }
-        .brand-subtitle { margin-top: 9px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; }
-        nav { display: flex; align-items: center; gap: 25px; padding-top: 6px; flex-wrap: wrap; }
-        nav a { position: relative; color: #fff; font-size: 0.98rem; font-weight: 600; padding-bottom: 8px; text-decoration: none; }
+        .brand-subtitle { margin-top: 9px; color: rgba(255,255,255,.9); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.15em; }
+        nav { grid-area: nav; display: flex; align-items: center; justify-content: flex-end; gap: 22px; flex-wrap: wrap; }
+        nav a { position: relative; color: #fff; font-size: 1.08rem; font-weight: 700; padding-bottom: 8px; text-decoration: none; }
         nav a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 3px; background: #c9ed8b; transition: width 0.25s ease; }
         nav a:hover, nav a.active { color: #c9ed8b; }
         nav a:hover::after, nav a.active::after { width: 100%; }
+        .mindlab-logo { grid-area: logo; display: block; width: 198px; height: 198px; object-fit: cover; align-self: center; border-radius: 50%; }
         main { width: min(1040px, 88%); margin: 0 auto; }
         .intro { padding: clamp(66px, 10vw, 120px) 0 65px; }
         .eyebrow { color: #567b39; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 18px; }
@@ -49,14 +50,20 @@
         .consulting { margin-bottom: 76px; }
         .consulting-intro { max-width: 760px; margin-bottom: 24px; color: #4c554e; }
         .consulting-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-        .consulting-item { padding: 25px; border: 1px solid #e0e5e1; border-radius: 16px; background: #fff; }
+        .consulting-item { position: relative; isolation: isolate; overflow: hidden; min-height: 230px; padding: 25px; border: 1px solid #e0e5e1; border-radius: 16px; background-color: #fff; background-position: center right; background-size: cover; }
+        .consulting-item::before { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 38%, rgba(255,255,255,.48) 100%); }
+        .consulting-private { background-image: url("consulenze-private-pastello.jpg"); }
+        .consulting-clubs { background-image: url("club-sportivi-pastello.jpg"); }
+        .consulting-business { background-image: url("aziende-pastello.jpg"); }
+        .consulting-item h3, .consulting-item p { position: relative; z-index: 1; }
         .consulting-item h3 { margin-bottom: 8px; color: #123d2d; font-size: 1.45rem; }
         .consulting-item p { color: #4c554e; }
-        .solidale { margin-bottom: 28px; padding: clamp(30px, 5vw, 50px); border-radius: 22px; background: #eeeade; }
+        .solidale { margin-bottom: 28px; padding: clamp(30px, 5vw, 50px); border: 2px solid #b65a50; border-radius: 22px; background: linear-gradient(135deg, #fffdfb, #f5e6e2); box-shadow: 0 0 0 5px rgba(182,90,80,.1), 0 12px 32px rgba(112,46,40,.12); }
+        .solidale .eyebrow { color: #a8443b; }
         .solidale h2 { margin-bottom: 16px; color: #123d2d; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; }
         .solidale p { max-width: 800px; margin-bottom: 14px; color: #414a42; }
         .solidale-note { font-size: 0.95rem; }
-        .healthcare { margin-bottom: 34px; padding: 28px 32px; border-left: 4px solid #789b55; background: #fff; }
+        .healthcare { margin-bottom: 34px; padding: 28px 32px; border: 2px solid #789b55; border-radius: 16px; background: #fff; }
         .healthcare h2 { margin-bottom: 8px; color: #123d2d; font-size: 1.65rem; }
         .healthcare p { color: #4c554e; }
         .contact { margin: 0 0 90px; padding: 44px 30px; border-radius: 24px; background: #123d2d; color: #fff; text-align: center; }
@@ -65,17 +72,23 @@
         .button { display: inline-block; padding: 13px 22px; border-radius: 999px; background: #c9ed8b; color: #123d2d; font-weight: 700; text-decoration: none; }
         .button:hover { background: #d8f4a6; }
         footer { background: #06130f; color: rgba(255,255,255,.7); padding: 36px 20px; text-align: center; font-size: .9rem; }
+        @media (max-width: 1120px) {
+            .header-container { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "brand logo" "nav nav"; row-gap: 18px; }
+            nav { justify-content: flex-start; }
+            .mindlab-logo { width: 162px; height: 162px; }
+        }
         @media (max-width: 850px) {
-            .header-container { flex-direction: column; gap: 25px; }
+            .header-container { gap: 18px 22px; }
             nav { gap: 19px; }
             .course-list, .consulting-list { grid-template-columns: 1fr; }
             .courses { padding: 32px; }
         }
         @media (max-width: 600px) {
-            .site-header { padding: 24px 0; }
+            .site-header { padding: 20px 0; }
             .header-container { width: 88%; }
             .brand-name { font-size: 2rem; }
-            .brand-subtitle { font-size: .58rem; letter-spacing: .12em; }
+            .brand-subtitle { font-size: .62rem; letter-spacing: .1em; }
+            .mindlab-logo { width: 123px; height: 123px; }
             nav { gap: 13px; }
             nav a { font-size: .84rem; }
             .courses { padding: 24px; border-radius: 18px; }
@@ -100,6 +113,7 @@
                 <a href="temi.html">Aree Tematiche</a>
                 <a href="mindlab.html" class="active" aria-current="page">MindLab</a>
             </nav>
+            <img class="mindlab-logo" src="logo-mindlab.jpg" alt="Logo ufficiale MindLab">
         </div>
     </header>
 
@@ -138,19 +152,24 @@
             <h2 class="section-heading" id="consulenze-title">Proposte per persone, sport e organizzazioni.</h2>
             <p class="consulting-intro">Accanto ai percorsi di gruppo, offro consulenze private e collaborazioni costruite in base alle esigenze della persona o della realtà che mi contatta.</p>
             <div class="consulting-list">
-                <article class="consulting-item">
+                <article class="consulting-item consulting-private">
                     <h3>Consulenze private</h3>
                     <p>Incontri individuali per approfondire la mindfulness e definire un percorso adatto ai propri obiettivi.</p>
                 </article>
-                <article class="consulting-item">
+                <article class="consulting-item consulting-clubs">
                     <h3>Club sportivi</h3>
                     <p>Consulenze e proposte per atleti, staff e società sportive, da progettare insieme al club.</p>
                 </article>
-                <article class="consulting-item">
+                <article class="consulting-item consulting-business">
                     <h3>Aziende</h3>
                     <p>Interventi e consulenze per le organizzazioni, da definire in base al contesto e alle necessità.</p>
                 </article>
             </div>
+        </section>
+
+        <section class="healthcare" aria-labelledby="healthcare-title">
+            <h2 id="healthcare-title">Una scontistica dedicata a chi lavora nella cura</h2>
+            <p>Medici, infermieri e operatori socio-sanitari (OSS) possono contattarmi per conoscere prezzi e agevolazioni riservate.</p>
         </section>
 
         <section class="solidale" aria-labelledby="solidale-title">
@@ -158,11 +177,6 @@
             <h2 id="solidale-title">Un percorso può diventare un’opportunità per un’altra persona.</h2>
             <p>Per ogni percorso MBSR completato, chi ha partecipato potrà regalare a un’altra persona un percorso MBSR con uno sconto del 100%.</p>
             <p>L’iniziativa è rivolta a persone appartenenti alle categorie protette individuate dal progetto MindLab Solidale. L’elenco delle categorie e le modalità di accesso saranno pubblicati prossimamente.</p>
-        </section>
-
-        <section class="healthcare" aria-labelledby="healthcare-title">
-            <h2 id="healthcare-title">Una scontistica dedicata a chi lavora nella cura</h2>
-            <p>Medici, infermieri e operatori socio-sanitari (OSS) possono contattarmi per conoscere prezzi e agevolazioni riservate.</p>
         </section>
 
         <section class="contact" aria-labelledby="contact-title">
