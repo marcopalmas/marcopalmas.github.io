@@ -50,7 +50,7 @@
         .course-mbsr { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); grid-template-areas: "label label" "title body" "title source"; gap: 10px 36px; align-items: start; }
         .course-mbsr .course-label { grid-area: label; margin-bottom: 0; }
         .course-mbsr h3 { grid-area: title; align-self: center; margin-bottom: 0; }
-        .course-mbsr > p:not(.course-source) { grid-area: body; }
+        .course-mbsr > p:not(.course-source):not(.course-label) { grid-area: body; }
         .course-mbsr > .course-source { grid-area: source; margin-top: 0; }
         .consulting { margin-bottom: 76px; }
         .consulting-intro { max-width: 760px; margin-bottom: 24px; color: #4c554e; }
