@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articoli di Marco Palmas</title>
+    <link>https://marcopalmas.it/articoli.html</link>
+    <description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
+    <language>it-IT</language>
+    <atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Oct 2026 10:00:00 +0200</lastBuildDate>
+    <item>
+      <title>Quando tutto sembra urgente</title>
+      <link>https://marcopalmas.it/quando-tutto-sembra-urgente.html</link>
+      <description>Quando tutto sembra urgente, ritrovare lucidità e scegliere una priorità alla volta può aiutare a ridurre stress e sovraccarico.</description>
+      <guid isPermaLink="true">https://marcopalmas.it/quando-tutto-sembra-urgente.html</guid>
+      <pubDate>Fri, 02 Oct 2026 12:42:31 +0000</pubDate>
+    </item>
+    <item>
+      <title>Lasciare andare non significa arrendersi</title>
+      <link>https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html</link>
+      <description>Lasciare andare non significa arrendersi: una riflessione su controllo, accettazione e libertà interiore.</description>
+      <guid isPermaLink="true">https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html</guid>
+      <pubDate>Fri, 02 Oct 2026 12:42:31 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
