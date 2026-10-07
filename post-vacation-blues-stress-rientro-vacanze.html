@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post-vacation blues: stress da rientro | Marco Palmas</title>
+    <meta name="description" content="Il post-vacation blues e lo stress da rientro: cosa sappiamo dalle ricerche e come ritrovare gradualmente spazio nella quotidianità.">
+    <meta name="author" content="Marco Palmas">
+    <link rel="canonical" href="https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Post-vacation blues: perché tornare dalle vacanze ci mette così in crisi? | Marco Palmas">
+    <meta property="og:description" content="Il post-vacation blues e lo stress da rientro: cosa sappiamo dalle ricerche e come ritrovare gradualmente spazio nella quotidianità.">
+    <meta property="og:url" content="https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html">
+    <meta property="og:image" content="https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.webp">
+    <meta property="og:image:alt" content="Post-vacation blues: il ritorno dalle vacanze e lo stress da rientro">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f5f7f4;
+            color: #202620;
+            line-height: 1.75;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .site-header {
+            background: #06130f;
+            color: white;
+            padding: 28px 0 24px;
+        }
+
+        .header-container {
+            width: min(1200px, 90%);
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            text-decoration: none;
+        }
+
+        .brand-name {
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .brand-subtitle {
+            margin-top: 9px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 38px;
+            padding-top: 6px;
+        }
+
+        nav a {
+            position: relative;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding-bottom: 8px;
+            text-decoration: none;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background: #c9ed8b;
+            transition: width 0.25s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #c9ed8b;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .article-hero {
+            width: min(900px, 88%);
+            margin: 0 auto;
+            padding: 76px 0 44px;
+        }
+
+        .eyebrow {
+            color: #123d2d;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .eyebrow a {
+            text-decoration: none;
+        }
+
+        .eyebrow a:hover {
+            text-decoration: underline;
+        }
+
+        h1,
+        h2 {
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: clamp(2.7rem, 6vw, 5rem);
+            line-height: 1.08;
+            letter-spacing: -0.035em;
+            margin-bottom: 22px;
+        }
+
+        .article-featured-image { margin: 30px 0 28px; }
+        .article-featured-image img { display: block; width: 100%; height: auto; border-radius: 18px; }
+
+        .dek {
+            max-width: 760px;
+            color: #555;
+            font-size: clamp(1.08rem, 2vw, 1.25rem);
+            line-height: 1.65;
+        }
+
+        .byline {
+            margin-top: 24px;
+            color: #68736b;
+            font-size: 0.9rem;
+        }
+
+        .article-layout {
+            width: min(900px, 88%);
+            margin: 0 auto 80px;
+        }
+
+        .article-body {
+            background: white;
+            border: 1px solid #e0e5e1;
+            border-radius: 22px;
+            padding: clamp(26px, 6vw, 64px);
+        }
+
+        .article-body h2 {
+            color: #123d2d;
+            font-size: clamp(1.8rem, 3.5vw, 2.45rem);
+            line-height: 1.2;
+            margin: 42px 0 16px;
+        }
+
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body p {
+            color: #38413a;
+            margin: 0 0 19px;
+        }
+
+        .article-body ul {
+            margin: 0 0 22px 1.25rem;
+            color: #38413a;
+        }
+
+        .article-body li {
+            padding-left: 5px;
+            margin: 0 0 10px;
+        }
+
+        .article-body a {
+            color: #123d2d;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+
+        .article-related { width: min(900px, 88%); margin: 0 auto 40px; padding: 24px clamp(26px, 6vw, 64px); border-left: 4px solid #c9ed8b; background: #eef2ed; border-radius: 0 14px 14px 0; }
+        .article-related .eyebrow { margin-bottom: 8px; }
+        .article-related p:last-child { margin: 0; }
+
+        .mindlab-invitation {
+            width: min(900px, 88%);
+            margin: 0 auto 40px;
+            padding: clamp(30px, 5vw, 52px);
+            border-radius: 22px;
+            background: #123d2d;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .mindlab-invitation .eyebrow {
+            color: #c9ed8b;
+            margin-bottom: 12px;
+        }
+
+        .mindlab-invitation h2 {
+            color: #ffffff;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 500;
+            line-height: 1.12;
+            margin-bottom: 14px;
+        }
+
+        .mindlab-invitation p {
+            max-width: 700px;
+            margin: 0 auto 16px;
+            color: rgba(255, 255, 255, 0.86);
+        }
+
+        .mindlab-invitation .mindlab-link {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 12px 20px;
+            border-radius: 999px;
+            background: #c9ed8b;
+            color: #123d2d;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .mindlab-invitation .mindlab-link:hover {
+            background: #d8f4a6;
+        }
+
+        .newsletter-box {
+            width: min(1000px, 88%);
+            margin: 0 auto 80px;
+            padding: 50px clamp(22px, 5vw, 55px);
+            border-radius: 24px;
+            background: #e7eee8;
+            border: 1px solid #d8e0da;
+            text-align: center;
+        }
+
+        .newsletter-box .eyebrow {
+            margin-bottom: 12px;
+        }
+
+        .newsletter-box h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-box p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .newsletter-form {
+            margin: 32px auto 0;
+            width: 100%;
+            max-width: 560px;
+            min-height: 305px;
+        }
+
+        .newsletter-form iframe {
+            display: block;
+            width: 100%;
+            max-width: 540px;
+            height: 390px;
+            min-height: 390px;
+            margin: 0 auto;
+            border: 0;
+            border-radius: 12px;
+            background: transparent;
+        }
+
+        footer {
+            background: #06130f;
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .footer-name {
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .footer-subtitle {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.8rem;
+            margin-top: 22px;
+        }
+
+        @media (max-width: 850px) {
+            .header-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            nav {
+                gap: 25px;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .site-header {
+                padding: 24px 0;
+            }
+
+            .header-container {
+                width: 88%;
+            }
+
+            .brand-name {
+                font-size: 2rem;
+            }
+
+            .brand-subtitle {
+                font-size: 0.58rem;
+                letter-spacing: 0.12em;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            nav a {
+                font-size: 0.86rem;
+            }
+
+            .article-hero {
+                padding: 55px 0 35px;
+            }
+
+            .article-body {
+                border-radius: 18px;
+            }
+
+            .newsletter-box {
+                margin-bottom: 65px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                <span class="brand-name">Marco Palmas</span>
+                <span class="brand-subtitle">STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE</span>
+            </a>
+
+            <nav aria-label="Navigazione principale">
+                <a href="index.html">Home</a>
+                <a href="chi-sono.html">Chi sono</a>
+                <a href="articoli.html" class="active" aria-current="page">Articoli</a>
+                <a href="temi.html">Aree Tematiche</a>
+                <a href="mindlab.html">MindLab</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="article-hero">
+            <p class="eyebrow"><a href="articoli.html">Articoli</a> / <a href="tema-stress-mindfulness.html">Stress &amp; Mindfulness</a></p>
+
+            <h1>Post-vacation blues: perché tornare dalle vacanze ci mette così in crisi?</h1>
+
+            <figure class="article-featured-image">
+                <img src="post-vacation-blues-stress-rientro-vacanze.webp" alt="Post-vacation blues: il ritorno dalle vacanze e lo stress da rientro" width="1402" height="1122" fetchpriority="high">
+            </figure>
+
+            <p class="byline">Di Marco Palmas · 7 ottobre 2026</p>
+        </section>
+
+        <div class="article-layout">
+            <article class="article-body">
+
+                <p>Le vacanze sono finite.</p>
+
+                <p>La sveglia ricomincia a suonare.</p>
+
+                <p>Il telefono torna a riempirsi di notifiche.</p>
+
+                <p>La necessità di controllare l'email torna.</p>
+
+                <p>E improvvisamente quella sensazione di leggerezza che avevi iniziato a provare qualche giorno prima sembra svanire in una bolla di sapone.</p>
+
+                <p>Sei operativo.</p>
+
+                <p>Devi tornare al tuo lavoro.</p>
+
+                <p>Ma la testa contrasta tutto questo e la sensazione che ne deriva è quella di un vuoto quasi incolmabile.</p>
+
+                <p>Benvenuto nel <strong>post-vacation blues</strong> o, come lo chiamiamo più semplicemente in Italia, <strong>stress da rientro</strong>.</p>
+
+                <p>E no, non significa che sei un depresso inguaribile.</p>
+
+                <p>Tranquillo.</p>
+
+                <h2>Ma esiste davvero la “depressione post-vacanze”?</h2>
+
+                <p>Partiamo da una cosa importante.</p>
+
+                <p>Espressioni come <em>post-vacation blues</em>, <em>post-holiday blues</em>, <em>sindrome da rientro</em> o <em>stress da rientro</em> vengono utilizzate per descrivere quella sensazione di malinconia, irritabilità, stanchezza o difficoltà di concentrazione che può comparire quando torniamo alla nostra normale quotidianità.</p>
+
+                <p>Ma <strong>non sono diagnosi mediche riconosciute</strong>.</p>
+
+                <p>Non esiste, cioè, una vera e propria “depressione post-vacanze” che compare automaticamente perché abbiamo rimesso piede al lavoro.</p>
+
+                <p>Anzi, chiamarla depressione può essere fuorviante.</p>
+
+                <p>Il <em>post-vacation blues</em> viene generalmente descritto come un disagio temporaneo associato al passaggio dalla pausa alla routine quotidiana, e non come una diagnosi clinica.</p>
+
+                <p>E questo è importante anche perché ci permette di non patologizzare ogni momento di fatica.</p>
+
+                <p>Essere stanchi al rientro non significa essere malati.</p>
+
+                <p>Essere nervosi il primo lunedì dopo le ferie non significa avere una depressione.</p>
+
+                <p>Ma quello che sentiamo può comunque dirci qualcosa.</p>
+
+                <h2>Perché dopo le vacanze stiamo peggio?</h2>
+
+                <p>La domanda interessante, secondo me, è:</p>
+
+                <p><strong>“Perché tornare alla mia vita normale mi pesa così tanto?”</strong></p>
+
+                <p>Perché le vacanze, soprattutto quando sono vere vacanze, modificano parecchie cose.</p>
+
+                <p>Cambiano i ritmi.</p>
+
+                <p>Diminuiscono gli obblighi.</p>
+
+                <p>Abbiamo più tempo.</p>
+
+                <p>Dormiamo magari un po' di più.</p>
+
+                <p>Facciamo attività piacevoli.</p>
+
+                <p>Stiamo con le persone che scegliamo.</p>
+
+                <p>E, soprattutto, per qualche giorno smettiamo di vivere continuamente con la sensazione di dover fare qualcosa.</p>
+
+                <p>Poi arriva il rientro.</p>
+
+                <p>E dobbiamo riattivare rapidamente la modalità precedente.</p>
+
+                <p>Sveglia.</p>
+
+                <p>Lavoro.</p>
+
+                <p>Traffico.</p>
+
+                <p>Figli.</p>
+
+                <p>Casa.</p>
+
+                <p>Telefonate.</p>
+
+                <p>Scadenze.</p>
+
+                <p>Turni.</p>
+
+                <p>Email.</p>
+
+                <p>Problemi.</p>
+
+                <p>E magari quella sensazione che avevamo dimenticato per qualche giorno torna immediatamente a galla:</p>
+
+                <p><strong>Ti parte il sistema operativo!!!</strong></p>
+
+                <p>E la risposta è:</p>
+
+                <p><strong>“Non ce la faccio.”</strong></p>
+
+                <h2>Le vacanze fanno davvero bene?</h2>
+
+                <p>La ricerca scientifica ci dice che, in generale, sì.</p>
+
+                <p>Una meta-analisi pubblicata sul <em>Journal of Occupational Health</em> ha analizzato gli effetti delle vacanze sulla salute e sul benessere, rilevando un effetto positivo complessivo. Lo studio evidenziava però anche che parte di questi benefici tendeva a ridursi dopo la ripresa del lavoro.</p>
+
+                <p>Un altro studio longitudinale di de Bloom e colleghi ha osservato miglioramenti durante le vacanze in aspetti come salute percepita, umore, tensione, energia e soddisfazione.</p>
+
+                <p>Nel primo periodo successivo al rientro, molti di questi indicatori tendevano a tornare verso i livelli precedenti alla vacanza.</p>
+
+                <p>Ma attenzione.</p>
+
+                <p>La ricerca più recente sta complicando un po' questo quadro.</p>
+
+                <p>Una meta-analisi pubblicata nel 2025, che ha preso in considerazione 32 studi e 256 effetti statistici, ha trovato che le vacanze hanno un effetto positivo significativo sul benessere e suggerisce che i benefici possano durare più a lungo di quanto indicato dalle prime ricerche.</p>
+
+                <p>Quindi il punto non è:</p>
+
+                <p><strong>“Le vacanze funzionano per qualche giorno e poi è tutto inutile.”</strong></p>
+
+                <p>Il punto è un altro.</p>
+
+                <p>La vacanza può davvero aiutarci a recuperare.</p>
+
+                <p>Ma quello che succede <strong>dopo</strong> dipende anche da quello a cui torniamo.</p>
+
+                <p>E qui, secondo me, arriva la parte interessante.</p>
+
+                <h2>Forse il problema è anche quello che ci aspettiamo dalle vacanze</h2>
+
+                <p>Perché forse abbiamo un'aspettativa enorme.</p>
+
+                <p>Arrivano le ferie e pensiamo:</p>
+
+                <p>“Adesso recupero.”</p>
+
+                <p>“Adesso dormo.”</p>
+
+                <p>“Adesso mi rilasso.”</p>
+
+                <p>“Adesso stacco completamente.”</p>
+
+                <p>“Adesso torno una persona nuova.”</p>
+
+                <p>E magari per qualche giorno funziona davvero.</p>
+
+                <p>Poi torniamo alla vita di tutti i giorni e ci accorgiamo che non siamo diventati una persona nuova.</p>
+
+                <p>Siamo sempre noi.</p>
+
+                <p>Con gli stessi problemi.</p>
+
+                <p>Gli stessi pensieri.</p>
+
+                <p>Gli stessi impegni.</p>
+
+                <p>Gli stessi ritmi.</p>
+
+                <p>E allora forse la domanda non è soltanto quanto siano durate le vacanze.</p>
+
+                <p>Forse dovremmo chiederci <strong>quanto stiamo chiedendo alle vacanze di risolvere al posto nostro</strong>.</p>
+
+                <h2>Un altro problema potrebbe essere quello a cui torniamo</h2>
+
+                <p>Proviamo a fare un esperimento mentale.</p>
+
+                <p>Immagina di essere stato quindici giorni in vacanza.</p>
+
+                <p>Hai dormito.</p>
+
+                <p>Hai mangiato bene.</p>
+
+                <p>Hai passeggiato.</p>
+
+                <p>Hai visto amici.</p>
+
+                <p>Hai passato tempo con la famiglia.</p>
+
+                <p>Hai fatto cose che ti piacevano.</p>
+
+                <p>Ti sei rilassato.</p>
+
+                <p>Poi torni.</p>
+
+                <p>E dopo 48 ore sei nuovamente distrutto.</p>
+
+                <p>Una domanda potrebbe essere:</p>
+
+                <p><strong>“Perché non riesco a conservare il beneficio delle vacanze?”</strong></p>
+
+                <p>Ma forse possiamo andare un pochino più a fondo.</p>
+
+                <p>Potremmo chiederci:</p>
+
+                <p><strong>“Che tipo di vita sto conducendo, se per stare bene ho bisogno di allontanarmene completamente per due settimane?”</strong></p>
+
+                <p>Questa domanda è molto più scomoda.</p>
+
+                <p>E forse proprio per questo è molto più interessante.</p>
+
+                <p>Perché le risposte potrebbero essere un po' più vere.</p>
+
+                <h2>E allora cosa possiamo fare?</h2>
+
+                <p>La prima cosa è probabilmente smettere di pretendere di tornare immediatamente al 100%.</p>
+
+                <p>Il primo giorno dopo le vacanze non devi necessariamente essere una macchina perfettamente funzionante.</p>
+
+                <p>Puoi essere semplicemente una persona che sta tornando alla propria routine.</p>
+
+                <p>Il recupero non è un interruttore.</p>
+
+                <p>Non funziona così:</p>
+
+                <p><strong>vacanza → benessere → rientro → tutto a posto.</strong></p>
+
+                <p>Abbiamo bisogno di un po' di tempo per riadattarci.</p>
+
+                <p>Per questo può essere utile, quando possibile, evitare di riempire immediatamente i primi giorni di rientro con mille impegni.</p>
+
+                <p>Riprendere gradualmente i ritmi.</p>
+
+                <p>Dormire.</p>
+
+                <p>Mangiare regolarmente.</p>
+
+                <p>Muoversi.</p>
+
+                <p>Mantenere qualche spazio piacevole anche durante la settimana.</p>
+
+                <p>E soprattutto cercare di non trasformare la fine delle vacanze nella fine di tutto ciò che ci faceva stare bene.</p>
+
+                <p>Perché se durante le vacanze abbiamo scoperto che ci fa bene camminare, stare con gli amici, leggere, mangiare con calma o semplicemente avere mezz'ora tutta per noi...</p>
+
+                <p>forse non dobbiamo aspettare l'anno prossimo per rifarlo.</p>
+
+                <h2>La mindfulness può aiutare?</h2>
+
+                <p>Sì.</p>
+
+                <p>Ma non nel modo in cui spesso viene raccontata.</p>
+
+                <p>La mindfulness non serve a diventare improvvisamente felici perché pratichiamo.</p>
+
+                <p>E non serve a convincerci che dobbiamo essere contenti di tornare al lavoro.</p>
+
+                <p>Può però aiutarci a <strong>fermarci e osservare cosa sta succedendo</strong>.</p>
+
+                <p>Sono stanco?</p>
+
+                <p>Sono preoccupato?</p>
+
+                <p>Sono irritabile?</p>
+
+                <p>Sto già pensando a tutto quello che devo fare domani?</p>
+
+                <p>Sto vivendo davvero questo momento oppure sono già proiettato nella prossima settimana?</p>
+
+                <p>Sono domande semplici.</p>
+
+                <p>Ma possono essere molto utili.</p>
+
+                <p>Perché spesso viviamo lo stress senza nemmeno accorgerci di come ci stiamo arrivando.</p>
+
+                <p>E magari il primo passo non è trovare subito una soluzione.</p>
+
+                <p>È semplicemente <strong>accorgersi di quello che sta succedendo</strong>.</p>
+
+                <h2>Non è depressione. Ma non ignoriamo quello che sentiamo</h2>
+
+                <p>Dire che il post-vacation blues non è una diagnosi non significa che dobbiamo ignorarlo.</p>
+
+                <p>Se dopo il rientro ci sentiamo semplicemente un po' giù, stanchi o irritabili, possiamo trovarci davanti a una normale difficoltà di riadattamento alla routine.</p>
+
+                <p>Ma se invece il malessere è molto intenso, persiste per settimane, interferisce significativamente con la vita quotidiana oppure compaiono sintomi importanti, allora è un'altra storia.</p>
+
+                <p>In quel caso non bisogna semplicemente aspettare che “passi”.</p>
+
+                <p>Può essere utile parlarne con un professionista della salute mentale. Humanitas, ad esempio, suggerisce di prestare particolare attenzione quando i sintomi sono intensi o persistenti e compromettono significativamente il funzionamento quotidiano.</p>
+
+                <p>Perché una cosa è avere qualche giornata difficile dopo le ferie.</p>
+
+                <p>Un'altra è vivere un disagio persistente.</p>
+
+                <h2>Forse la domanda giusta non è “quando arrivano le prossime vacanze?”</h2>
+
+                <p>E qui arriviamo alla parte che, personalmente, trovo più interessante.</p>
+
+                <p>Perché ogni anno facciamo più o meno la stessa cosa.</p>
+
+                <p>Aspettiamo le vacanze.</p>
+
+                <p>Le sogniamo.</p>
+
+                <p>Contiamo i giorni.</p>
+
+                <p>Arrivano.</p>
+
+                <p>Ci riposiamo.</p>
+
+                <p>Stiamo meglio.</p>
+
+                <p>Poi finiscono.</p>
+
+                <p>E ricominciamo ad aspettare le prossime.</p>
+
+                <p>A un certo punto forse dovremmo fermarci un secondo.</p>
+
+                <p>E chiederci:</p>
+
+                <p><strong>“Possibile che il mio benessere dipenda così tanto dal riuscire ad allontanarmi dalla mia vita?”</strong></p>
+
+                <p>Non significa necessariamente cambiare lavoro.</p>
+
+                <p>Non significa mollare tutto.</p>
+
+                <p>Non significa vivere perennemente in vacanza.</p>
+
+                <p>Significa provare a capire <strong>quali sono le cose della nostra quotidianità che ci consumano così tanto e che magari potremmo anche rimuovere</strong>, e quali, invece, possiamo modificare.</p>
+
+                <p>Anche poco.</p>
+
+                <p>Perché non tutto quello che ci stressa è inevitabile.</p>
+
+                <p>E questa, forse, è una delle cose più importanti da imparare quando iniziamo a parlare seriamente di stress.</p>
+
+                <h2>Le vacanze non dovrebbero essere l'unico momento in cui stiamo bene</h2>
+
+                <p>Forse questo è il punto.</p>
+
+                <p>Le vacanze servono.</p>
+
+                <p>Eccome se servono.</p>
+
+                <p>Abbiamo bisogno di fermarci.</p>
+
+                <p>Abbiamo bisogno di recuperare.</p>
+
+                <p>Abbiamo bisogno di cambiare ritmo.</p>
+
+                <p>Ma se ogni volta che torniamo alla nostra vita normale ci sentiamo completamente svuotati, forse vale la pena guardare con attenzione quella vita normale.</p>
+
+                <p>Non per giudicarla.</p>
+
+                <p>Non per sentirci in colpa.</p>
+
+                <p>Ma per capire cosa ci sta succedendo.</p>
+
+                <p>Perché magari il problema non è che <strong>le vacanze sono finite</strong>.</p>
+
+                <p>Magari il problema è <strong>quello a cui siamo tornati</strong>.</p>
+
+                <p>E questa è una domanda molto più difficile.</p>
+
+                <p>Ma anche molto più utile:</p>
+
+                <p><strong>“Come posso costruire una quotidianità dalla quale non sento il bisogno di scappare ogni volta che posso?”</strong></p>
+
+                <p>Forse è proprio da qui che può iniziare un lavoro serio sullo stress.</p>
+
+                <p>Non aspettando la prossima vacanza.</p>
+
+                <p>Ma imparando a costruire, giorno dopo giorno, una vita nella quale ci sia spazio anche per noi.</p>
+
+                <h2>Fonti e riferimenti</h2>
+                <p><strong>de Bloom J., Kompier M., Geurts S., de Weerth C., Taris T., Sonnentag S. (2009).</strong><br>
+                    <em><a href="https://pubmed.ncbi.nlm.nih.gov/19096200/">Do We Recover from Vacation? Meta-analysis of Vacation Effects on Health and Well-being.</a></em><br>
+                    Journal of Occupational Health, 51(1), 13–25. DOI: <a href="https://doi.org/10.1539/joh.K8004">10.1539/joh.K8004</a>.
+                </p>
+                <p><strong>de Bloom J., Geurts S., Taris T., Sonnentag S., de Weerth C., Kompier M. (2010).</strong><br>
+                    <em><a href="https://doi.org/10.1080/02678373.2010.493385">Effects of vacation from work on health and well-being: Lots of fun, quickly gone.</a></em><br>
+                    Work &amp; Stress, 24(2), 196–216. DOI: <a href="https://doi.org/10.1080/02678373.2010.493385">10.1080/02678373.2010.493385</a>.
+                </p>
+                <p><strong>de Bloom J. et al. (2011).</strong><br>
+                    <em><a href="https://pubmed.ncbi.nlm.nih.gov/21678165/">How does a vacation from work affect employee health and well-being?</a></em><br>
+                    Psychology &amp; Health, 26(12), 1606–1622. DOI: <a href="https://doi.org/10.1080/08870446.2010.546860">10.1080/08870446.2010.546860</a>.
+                </p>
+                <p><strong>Grant R. S., Buchanan B. E., Shockley K. M. (2025).</strong><br>
+                    <em><a href="https://pubmed.ncbi.nlm.nih.gov/39836131/">I need a vacation: A meta-analysis of vacation and employee well-being.</a></em><br>
+                    Journal of Applied Psychology, 110(7), 887–905. DOI: <a href="https://doi.org/10.1037/apl0001262">10.1037/apl0001262</a>. La meta-analisi ha analizzato 32 studi e 256 effect sizes.
+                </p>
+                <p><strong>Humanitas (2025).</strong><br>
+                    <em><a href="https://www.humanitas.it/news/ritorno-dalle-vacanze-i-sintomi-del-post-vacation-blues/">Ritorno dalle vacanze: i sintomi del post-vacation blues.</a></em> Contributo divulgativo con l’intervento di uno psicologo e psicoterapeuta di Humanitas Psico Care.
+                </p>
+                <p><strong>Istituto Superiore di Sanità (2024).</strong><br>
+                    <em><a href="https://www.iss.it/documents/20126/9340227/24-1%20web.pdf/e0304081-cf5a-e6af-a981-931cb9ec54c0?t=1714980456258">Rapporti ISTISAN 24/1. Indicazioni e stimoli di approfondimento per valutare lo stress cronico del personale sanitario.</a></em>
+                </p>
+
+            </article>
+        </div>
+
+        <aside class="article-related" aria-label="Articoli correlati">
+            <p class="eyebrow">Articoli correlati</p>
+            <p>Se stai riflettendo sul rapporto tra stress e quotidianità, leggi anche <a href="quando-tutto-sembra-urgente.html">Quando tutto sembra urgente</a>.</p>
+        </aside>
+
+        <section class="mindlab-invitation" aria-labelledby="mindlab-invitation-title">
+            <p class="eyebrow">MINDLAB · ESPERIENZE E FORMAZIONE</p>
+            <h2 id="mindlab-invitation-title">Benvenuto in MindLab.</h2>
+            <p><strong>La parte del sito in cui la mia esperienza diventa mappa.</strong></p>
+            <p>Tre incontri introduttivi, un percorso MBSR di otto settimane e consulenze per persone, club sportivi e aziende: scopri le proposte MindLab.</p>
+            <a class="mindlab-link" href="mindlab.html">Scopri MindLab →</a>
+        </section>
+
+        <section class="newsletter-box" aria-labelledby="newsletter-title">
+            <p class="eyebrow">Newsletter</p>
+
+            <h2 id="newsletter-title">Una pausa, ogni tanto.</h2>
+
+            <p>
+                Riflessioni sullo stress, mindfulness, vita reale e nuove iniziative MindLab.
+                Una newsletter senza rumore, solo quando abbiamo qualcosa di utile da condividere.
+            </p>
+
+            <div class="newsletter-form">
+                <iframe
+                    width="540"
+                    height="305"
+                    src="https://710bdf31.sibforms.com/v2/serve/MUIFAKj0YsIGgR3-Z01i_aAHnIYEYhEUukffs-JJwioS-Wt4HT2KTcGnZGA45H4KrhHs4_PjJ-CZrnpvIdDtpi15lLirNGZSMAyLoP44uR-GrwdWTJruYkWnIZMIMEA5S7dVyFiW2Kg8P83wfQvNu0EYiZN4aLOcj57RKn1Sz44pdv6us5QT0YbbafmSnKXGjohSY0cgpbbxy_03Ew=="
+                    frameborder="0"
+                    scrolling="auto"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-name">Marco Palmas</div>
+        <div class="footer-subtitle">Stress Management · Mindfulness · Sport · Vita Reale</div>
+        <div class="copyright">© 2026 Marco Palmas. Tutti i diritti riservati.</div>
+    </footer>
+
+</body>
+</html>
