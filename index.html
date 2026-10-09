@@ -547,7 +547,7 @@
 
         .consultation-section {
             background: linear-gradient(180deg, #f2f0e8 0%, #efe9da 100%);
-            padding: 100px 20px 90px;
+            padding: 120px 20px 120px;
         }
 
         .consultation-container {
@@ -561,42 +561,53 @@
         }
 
         .consultation-inner {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 28px;
-            padding: clamp(36px, 5vw, 72px);
+            display: flex;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: clamp(52px, 8vw, 90px);
+            gap: 42px;
+        }
+
+        .consultation-content {
+            width: 100%;
+            max-width: 700px;
         }
 
         .consultation-section .section-eyebrow {
             color: #c9ed8b;
+            display: inline-block;
+            margin-bottom: 24px;
         }
 
         .consultation-section h2 {
             font-family: "Playfair Display", serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(3rem, 6vw, 5rem);
             line-height: 1.05;
             font-weight: 500;
             color: #ffffff;
-            margin: 0 0 18px;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
         }
 
         .consultation-text {
-            font-size: 1.08rem;
+            font-size: 1.15rem;
             line-height: 1.75;
-            color: rgba(255,255,255,0.9);
-            max-width: 620px;
+            color: rgba(255,255,255,0.92);
+            margin-bottom: 28px;
         }
 
         .consultation-benefits {
             display: grid;
-            gap: 14px;
-            margin-top: 26px;
+            gap: 16px;
+            margin-bottom: 36px;
         }
 
         .benefit-item {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             font-weight: 600;
             color: #ebf4ee;
@@ -611,35 +622,50 @@
             flex-shrink: 0;
         }
 
-        .consultation-cta {
-            display: flex;
-            justify-content: center;
+        .whatsapp-badge {
+            display: inline-flex;
             align-items: center;
+            gap: 8px;
+            background: rgba(37, 211, 102, 0.15);
+            color: #c9ed8b;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-badge::before {
+            content: "💬";
+            font-size: 1.1rem;
         }
 
         .whatsapp-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 14px;
             background: #25d366;
             color: #06250f;
-            border-radius: 16px;
-            padding: 18px 26px;
+            border-radius: 18px;
+            padding: 22px 42px;
             font-weight: 800;
-            font-size: 1rem;
+            font-size: 1.12rem;
             letter-spacing: 0.04em;
-            box-shadow: 0 18px 28px rgba(37, 211, 102, 0.25);
+            box-shadow: 0 22px 35px rgba(37, 211, 102, 0.28);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .whatsapp-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 22px 36px rgba(37, 211, 102, 0.32);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 28px 45px rgba(37, 211, 102, 0.35);
         }
 
         .whatsapp-button .icon {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
         .newsletter-section {
@@ -818,7 +844,11 @@
             }
 
             .consultation-inner {
-                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .consultation-section h2 {
+                font-size: 3.5rem;
             }
         }
 
@@ -987,11 +1017,24 @@
             }
 
             .consultation-section {
-                padding: 72px 18px 70px;
+                padding: 90px 18px 90px;
             }
 
             .consultation-section h2 {
-                font-size: 2.7rem;
+                font-size: 2.8rem;
+            }
+
+            .consultation-text {
+                font-size: 1rem;
+            }
+
+            .whatsapp-button {
+                padding: 18px 32px;
+                font-size: 1rem;
+            }
+
+            .whatsapp-button .icon {
+                font-size: 1.5rem;
             }
 
             .newsletter-section {
@@ -1071,7 +1114,7 @@
             <section class="hero-content">
 
                 <div class="quote-mark">
-                    “
+                    "
                 </div>
 
                 <h1 class="main-quote">
@@ -1105,7 +1148,7 @@
                 <h2>Perché ho creato questo spazio</h2>
                 <p>
                     Ho costruito questo blog per condividere la mia esperienza e le mie riflessioni su <strong>stress, mindfulness, sport e vita reale</strong>.
-                    Il punto non è “essere perfetti”, ma imparare a riconoscere i segnali del corpo e della mente, fare spazio alla presenza e scegliere una vita più sostenibile.
+                    Il punto non è "essere perfetti", ma imparare a riconoscere i segnali del corpo e della mente, fare spazio alla presenza e scegliere una vita più sostenibile.
                 </p>
                 <p>
                     Qui trovi spunti concreti per vivere con meno tensione, più chiarezza e più energia, senza separare il benessere dal quotidiano.
@@ -1133,7 +1176,7 @@
                 <div class="theme-content">
                     <div class="theme-number">01</div>
                     <h3>Stress</h3>
-                    <div class="theme-quote">“Quando il corpo chiede attenzione, non è un segnale di debolezza: è una richiesta di ritorno a sé.”</div>
+                    <div class="theme-quote">"Quando il corpo chiede attenzione, non è un segnale di debolezza: è una richiesta di ritorno a sé."</div>
                     <div class="theme-author">Marco Palmas</div>
                 </div>
             </article>
@@ -1143,7 +1186,7 @@
                 <div class="theme-content">
                     <div class="theme-number">02</div>
                     <h3>Mindfulness</h3>
-                    <div class="theme-quote">“La calma non nasce da niente; nasce dal momento in cui smetti di correre contro te stesso.”</div>
+                    <div class="theme-quote">"La calma non nasce da niente; nasce dal momento in cui smetti di correre contro te stesso."</div>
                     <div class="theme-author">Marco Palmas</div>
                 </div>
             </article>
@@ -1153,7 +1196,7 @@
                 <div class="theme-content">
                     <div class="theme-number">03</div>
                     <h3>Sport</h3>
-                    <div class="theme-quote">“Il corpo è il primo alleato della nostra resilienza.”</div>
+                    <div class="theme-quote">"Il corpo è il primo alleato della nostra resilienza."</div>
                     <div class="theme-author">Marco Palmas</div>
                 </div>
             </article>
@@ -1190,23 +1233,21 @@
     <section class="consultation-section">
         <div class="consultation-container">
             <div class="consultation-inner">
-                <div>
-                    <div class="section-eyebrow">Consulenza</div>
-                    <h2>Parliamone direttamente</h2>
+                <div class="consultation-content">
+                    <div class="section-eyebrow">Modulo WhatsApp</div>
+                    <h2>Richiedi una consulenza telefonica</h2>
                     <p class="consultation-text">
-                        Se vuoi fare il primo passo verso una vita più equilibrata, puoi scrivermi su WhatsApp e concordare insieme una chiamata telefonica per capire come posso aiutarti.
+                        Scrivimi su WhatsApp e concordiamo insieme una chiamata telefonica. Voglio capire dove sei, cosa ti blocca, e come posso aiutarti a ritrovare equilibrio.
                     </p>
                     <div class="consultation-benefits">
-                        <div class="benefit-item"><span class="benefit-bullet"></span>Chiamata telefonica rapida e senza impegno</div>
-                        <div class="benefit-item"><span class="benefit-bullet"></span>Supporto personalizzato sulle tue esigenze</div>
-                        <div class="benefit-item"><span class="benefit-bullet"></span>Spazio per ascoltarti e orientarti</div>
+                        <div class="benefit-item"><span class="benefit-bullet"></span>Primo contatto veloce e diretto</div>
+                        <div class="benefit-item"><span class="benefit-bullet"></span>Ascolto personalizzato e senza fretta</div>
+                        <div class="benefit-item"><span class="benefit-bullet"></span>Linee guida concrete per avanzare</div>
                     </div>
-                </div>
-
-                <div class="consultation-cta">
+                    <div class="whatsapp-badge">Contattami su WhatsApp</div>
                     <a class="whatsapp-button" href="https://wa.me/393793670145?text=Ciao%20Marco%2C%20vorrei%20richiedere%20una%20consulenza%20telefonica.%20Possiamo%20parlarne%20in%20un%20primo%20momento%3F" target="_blank" rel="noopener noreferrer">
                         <span class="icon">💬</span>
-                        Richiedi una consulenza
+                        Apri WhatsApp
                     </a>
                 </div>
             </div>
