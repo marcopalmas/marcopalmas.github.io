@@ -13,6 +13,10 @@
     <meta name="author" content="Marco Palmas">
     <meta name="google-site-verification" content="HIHAElKtrUov_J4DLpPzcHEUHMZFkZq0Ta90OSNtCjA" />
 
+    <!-- =========================
+         OPEN GRAPH / SOCIAL
+    ========================== -->
+
     <meta property="og:type" content="website">
     <meta property="og:title"
           content="Marco Palmas | Stress Management, Mindfulness, Sport e Vita Reale">
@@ -21,6 +25,10 @@
     <meta property="og:url" content="https://marcopalmas.it/">
     <meta property="og:image" content="https://marcopalmas.it/hero.jpg">
     <meta property="og:image:alt" content="Marco Palmas in meditazione nella natura">
+
+    <!-- =========================
+         CANONICAL
+    ========================== -->
 
     <link rel="canonical" href="https://marcopalmas.it/">
 
@@ -56,6 +64,10 @@
         img {
             max-width: 100%;
         }
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             position: relative;
@@ -115,6 +127,10 @@
             position: relative;
             z-index: 3;
         }
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             position: absolute;
@@ -195,6 +211,10 @@
             width: 100%;
         }
 
+        /* =========================
+           CONTENUTO HERO
+        ========================= */
+
         .hero-content {
             position: absolute;
             left: 0;
@@ -246,6 +266,10 @@
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
         }
 
+        /* =========================
+           FRASE LATERALE
+        ========================= */
+
         .side-message {
             position: absolute;
             right: 0;
@@ -282,6 +306,10 @@
             background: rgba(255,255,255,0.75);
             margin-top: 5px;
         }
+
+        /* =========================
+           CHI SONO / COSA FACCIO
+        ========================= */
 
         .about-section {
             background: #f2f0e8;
@@ -341,6 +369,10 @@
             object-position: bottom center;
             filter: drop-shadow(0 18px 25px rgba(18,60,43,0.12));
         }
+
+        /* =========================
+           AREE TEMATICHE
+        ========================= */
 
         .themes-section {
             background: #ffffff;
@@ -466,6 +498,10 @@
             font-weight: 600;
         }
 
+        /* =========================
+           ULTIMI ARTICOLI
+        ========================= */
+
         .articles-section {
             background: #f2f0e8;
             padding: 100px 20px 105px;
@@ -545,128 +581,9 @@
             font-size: 0.92rem;
         }
 
-        .consultation-section {
-            background: linear-gradient(180deg, #f2f0e8 0%, #efe9da 100%);
-            padding: 120px 20px 120px;
-        }
-
-        .consultation-container {
-            width: min(1100px, 100%);
-            margin: 0 auto;
-            background: linear-gradient(135deg, #123c2b 0%, #1d4f3e 100%);
-            color: #ffffff;
-            border-radius: 28px;
-            overflow: hidden;
-            box-shadow: 0 22px 50px rgba(18,60,43,0.14);
-        }
-
-        .consultation-inner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: clamp(52px, 8vw, 90px);
-            gap: 42px;
-        }
-
-        .consultation-content {
-            width: 100%;
-            max-width: 700px;
-        }
-
-        .consultation-section .section-eyebrow {
-            color: #c9ed8b;
-            display: inline-block;
-            margin-bottom: 24px;
-        }
-
-        .consultation-section h2 {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(3rem, 6vw, 5rem);
-            line-height: 1.05;
-            font-weight: 500;
-            color: #ffffff;
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
-        }
-
-        .consultation-text {
-            font-size: 1.15rem;
-            line-height: 1.75;
-            color: rgba(255,255,255,0.92);
-            margin-bottom: 28px;
-        }
-
-        .consultation-benefits {
-            display: grid;
-            gap: 16px;
-            margin-bottom: 36px;
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            font-weight: 600;
-            color: #ebf4ee;
-        }
-
-        .benefit-bullet {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #c9ed8b;
-            box-shadow: 0 0 0 6px rgba(201, 237, 139, 0.15);
-            flex-shrink: 0;
-        }
-
-        .whatsapp-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(37, 211, 102, 0.15);
-            color: #c9ed8b;
-            padding: 10px 18px;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 32px;
-            border: 1px solid rgba(37, 211, 102, 0.3);
-        }
-
-        .whatsapp-badge::before {
-            content: "💬";
-            font-size: 1.1rem;
-        }
-
-        .whatsapp-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-            background: #25d366;
-            color: #06250f;
-            border-radius: 18px;
-            padding: 22px 42px;
-            font-weight: 800;
-            font-size: 1.12rem;
-            letter-spacing: 0.04em;
-            box-shadow: 0 22px 35px rgba(37, 211, 102, 0.28);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .whatsapp-button:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 28px 45px rgba(37, 211, 102, 0.35);
-        }
-
-        .whatsapp-button .icon {
-            font-size: 1.8rem;
-        }
+        /* =========================
+           NEWSLETTER
+        ========================= */
 
         .newsletter-section {
             background: #f2f0e8;
@@ -726,6 +643,10 @@
             border-radius: 10px;
         }
 
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             background: #06130f;
             color: #ffffff;
@@ -756,23 +677,9 @@
             opacity: 0.65;
         }
 
-        .whatsapp-float {
-            position: fixed;
-            right: 22px;
-            bottom: 22px;
-            z-index: 9999;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 18px;
-            background: #25d366;
-            color: #06250f;
-            border-radius: 999px;
-            box-shadow: 0 14px 30px rgba(37, 211, 102, 0.35);
-            font-weight: 800;
-            letter-spacing: 0.04em;
-        }
+        /* =========================
+           TABLET
+        ========================= */
 
         @media (max-width: 900px) {
 
@@ -842,15 +749,11 @@
             .article-grid {
                 grid-template-columns: 1fr;
             }
-
-            .consultation-inner {
-                gap: 32px;
-            }
-
-            .consultation-section h2 {
-                font-size: 3.5rem;
-            }
         }
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 650px) {
 
@@ -1016,27 +919,6 @@
                 min-height: 220px;
             }
 
-            .consultation-section {
-                padding: 90px 18px 90px;
-            }
-
-            .consultation-section h2 {
-                font-size: 2.8rem;
-            }
-
-            .consultation-text {
-                font-size: 1rem;
-            }
-
-            .whatsapp-button {
-                padding: 18px 32px;
-                font-size: 1rem;
-            }
-
-            .whatsapp-button .icon {
-                font-size: 1.5rem;
-            }
-
             .newsletter-section {
                 padding: 65px 16px;
             }
@@ -1059,12 +941,6 @@
                 gap: 24px;
             }
 
-            .whatsapp-float {
-                right: 14px;
-                bottom: 14px;
-                padding: 12px 16px;
-            }
-
         }
 
     </style>
@@ -1072,7 +948,9 @@
 
 <body>
 
-    <a class="whatsapp-float" href="https://wa.me/393793670145?text=Ciao%20Marco%2C%20vorrei%20richiedere%20una%20consulenza%20telefonica." target="_blank" rel="noopener noreferrer" aria-label="Contatta Marco su WhatsApp">WhatsApp</a>
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <main class="hero">
 
@@ -1226,30 +1104,6 @@
                     </div>
                     <div class="read-more">Leggi articolo →</div>
                 </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="consultation-section">
-        <div class="consultation-container">
-            <div class="consultation-inner">
-                <div class="consultation-content">
-                    <div class="section-eyebrow">Modulo WhatsApp</div>
-                    <h2>Richiedi una consulenza telefonica</h2>
-                    <p class="consultation-text">
-                        Scrivimi su WhatsApp e concordiamo insieme una chiamata telefonica. Voglio capire dove sei, cosa ti blocca, e come posso aiutarti a ritrovare equilibrio.
-                    </p>
-                    <div class="consultation-benefits">
-                        <div class="benefit-item"><span class="benefit-bullet"></span>Primo contatto veloce e diretto</div>
-                        <div class="benefit-item"><span class="benefit-bullet"></span>Ascolto personalizzato e senza fretta</div>
-                        <div class="benefit-item"><span class="benefit-bullet"></span>Linee guida concrete per avanzare</div>
-                    </div>
-                    <div class="whatsapp-badge">Contattami su WhatsApp</div>
-                    <a class="whatsapp-button" href="https://wa.me/393793670145?text=Ciao%20Marco%2C%20vorrei%20richiedere%20una%20consulenza%20telefonica.%20Possiamo%20parlarne%20in%20un%20primo%20momento%3F" target="_blank" rel="noopener noreferrer">
-                        <span class="icon">💬</span>
-                        Apri WhatsApp
-                    </a>
-                </div>
             </div>
         </div>
     </section>
