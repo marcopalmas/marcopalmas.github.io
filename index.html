@@ -13,10 +13,6 @@
     <meta name="author" content="Marco Palmas">
     <meta name="google-site-verification" content="HIHAElKtrUov_J4DLpPzcHEUHMZFkZq0Ta90OSNtCjA" />
 
-    <!-- =========================
-         OPEN GRAPH / SOCIAL
-    ========================== -->
-
     <meta property="og:type" content="website">
     <meta property="og:title"
           content="Marco Palmas | Stress Management, Mindfulness, Sport e Vita Reale">
@@ -25,10 +21,6 @@
     <meta property="og:url" content="https://marcopalmas.it/">
     <meta property="og:image" content="https://marcopalmas.it/hero.jpg">
     <meta property="og:image:alt" content="Marco Palmas in meditazione nella natura">
-
-    <!-- =========================
-         CANONICAL
-    ========================== -->
 
     <link rel="canonical" href="https://marcopalmas.it/">
 
@@ -64,10 +56,6 @@
         img {
             max-width: 100%;
         }
-
-        /* =========================
-           HERO
-        ========================= */
 
         .hero {
             position: relative;
@@ -127,10 +115,6 @@
             position: relative;
             z-index: 3;
         }
-
-        /* =========================
-           HEADER
-        ========================= */
 
         header {
             position: absolute;
@@ -211,10 +195,6 @@
             width: 100%;
         }
 
-        /* =========================
-           CONTENUTO HERO
-        ========================= */
-
         .hero-content {
             position: absolute;
             left: 0;
@@ -266,10 +246,6 @@
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
         }
 
-        /* =========================
-           FRASE LATERALE
-        ========================= */
-
         .side-message {
             position: absolute;
             right: 0;
@@ -306,10 +282,6 @@
             background: rgba(255,255,255,0.75);
             margin-top: 5px;
         }
-
-        /* =========================
-           CHI SONO / COSA FACCIO
-        ========================= */
 
         .about-section {
             background: #f2f0e8;
@@ -369,10 +341,6 @@
             object-position: bottom center;
             filter: drop-shadow(0 18px 25px rgba(18,60,43,0.12));
         }
-
-        /* =========================
-           AREE TEMATICHE
-        ========================= */
 
         .themes-section {
             background: #ffffff;
@@ -498,10 +466,6 @@
             font-weight: 600;
         }
 
-        /* =========================
-           ULTIMI ARTICOLI
-        ========================= */
-
         .articles-section {
             background: #f2f0e8;
             padding: 100px 20px 105px;
@@ -581,9 +545,102 @@
             font-size: 0.92rem;
         }
 
-        /* =========================
-           NEWSLETTER
-        ========================= */
+        .consultation-section {
+            background: linear-gradient(180deg, #f2f0e8 0%, #efe9da 100%);
+            padding: 100px 20px 90px;
+        }
+
+        .consultation-container {
+            width: min(1100px, 100%);
+            margin: 0 auto;
+            background: linear-gradient(135deg, #123c2b 0%, #1d4f3e 100%);
+            color: #ffffff;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 22px 50px rgba(18,60,43,0.14);
+        }
+
+        .consultation-inner {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 28px;
+            padding: clamp(36px, 5vw, 72px);
+            align-items: center;
+        }
+
+        .consultation-section .section-eyebrow {
+            color: #c9ed8b;
+        }
+
+        .consultation-section h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.05;
+            font-weight: 500;
+            color: #ffffff;
+            margin: 0 0 18px;
+        }
+
+        .consultation-text {
+            font-size: 1.08rem;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.9);
+            max-width: 620px;
+        }
+
+        .consultation-benefits {
+            display: grid;
+            gap: 14px;
+            margin-top: 26px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: #ebf4ee;
+        }
+
+        .benefit-bullet {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #c9ed8b;
+            box-shadow: 0 0 0 6px rgba(201, 237, 139, 0.15);
+            flex-shrink: 0;
+        }
+
+        .consultation-cta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #25d366;
+            color: #06250f;
+            border-radius: 16px;
+            padding: 18px 26px;
+            font-weight: 800;
+            font-size: 1rem;
+            letter-spacing: 0.04em;
+            box-shadow: 0 18px 28px rgba(37, 211, 102, 0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 22px 36px rgba(37, 211, 102, 0.32);
+        }
+
+        .whatsapp-button .icon {
+            font-size: 1.5rem;
+        }
 
         .newsletter-section {
             background: #f2f0e8;
@@ -643,10 +700,6 @@
             border-radius: 10px;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
-
         footer {
             background: #06130f;
             color: #ffffff;
@@ -677,9 +730,23 @@
             opacity: 0.65;
         }
 
-        /* =========================
-           TABLET
-        ========================= */
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 9999;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 18px;
+            background: #25d366;
+            color: #06250f;
+            border-radius: 999px;
+            box-shadow: 0 14px 30px rgba(37, 211, 102, 0.35);
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
 
         @media (max-width: 900px) {
 
@@ -749,11 +816,11 @@
             .article-grid {
                 grid-template-columns: 1fr;
             }
-        }
 
-        /* =========================
-           MOBILE
-        ========================= */
+            .consultation-inner {
+                grid-template-columns: 1fr;
+            }
+        }
 
         @media (max-width: 650px) {
 
@@ -919,6 +986,14 @@
                 min-height: 220px;
             }
 
+            .consultation-section {
+                padding: 72px 18px 70px;
+            }
+
+            .consultation-section h2 {
+                font-size: 2.7rem;
+            }
+
             .newsletter-section {
                 padding: 65px 16px;
             }
@@ -941,6 +1016,12 @@
                 gap: 24px;
             }
 
+            .whatsapp-float {
+                right: 14px;
+                bottom: 14px;
+                padding: 12px 16px;
+            }
+
         }
 
     </style>
@@ -948,9 +1029,7 @@
 
 <body>
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <a class="whatsapp-float" href="https://wa.me/393793670145?text=Ciao%20Marco%2C%20vorrei%20richiedere%20una%20consulenza%20telefonica." target="_blank" rel="noopener noreferrer" aria-label="Contatta Marco su WhatsApp">WhatsApp</a>
 
     <main class="hero">
 
@@ -998,425 +1077,166 @@
                 <h1 class="main-quote">
 
                     La vita è per il
-                    <span class="highlight">10%</span><br>
-
-                    cosa ti accade<br>
-
-                    e per il
-                    <span class="highlight">90%</span><br>
-
-                    <span class="highlight">
-                        come reagisci.
-                    </span>
-
+                    <span class="highlight">benessere</span>,
+                    non per il sovraccarico.
                 </h1>
 
                 <div class="separator"></div>
 
                 <p class="hero-description">
-
-                    Riflessioni, strumenti ed esperienze su stress,
-                    mindfulness, sport, lavoro sanitario e vita reale.
-
+                    Riflessioni, strumenti pratici e supporto concreto per vivere con più calma, consapevolezza e energia, anche nel mezzo del caos quotidiano.
                 </p>
 
             </section>
 
-            <aside class="side-message">
-
+            <aside class="side-message" aria-label="Frase di accompagnamento">
                 <div class="side-line">
-                    <span>Più</span>
-                    <span class="green">Consapevolezza</span>
+                    <span>Trova</span>
+                    <span class="green">equilibrio</span>
                 </div>
-
-                <div class="side-line">
-                    <span>Più</span>
-                    <span class="green">Equilibrio</span>
-                </div>
-
-                <div class="side-line">
-                    <span>Più</span>
-                    <span class="green">Vita Reale</span>
-                </div>
-
                 <div class="side-divider"></div>
-
             </aside>
-
         </div>
-
     </main>
 
-    <!-- =========================
-         CHI SONO / COSA FACCIO
-    ========================== -->
-
-    <section class="about-section" id="chi-sono">
-
+    <section class="about-section">
         <div class="about-container">
-
             <div class="about-content">
-
-                <h2>CHI SONO</h2>
-
+                <h2>Perché ho creato questo spazio</h2>
                 <p>
-                    Sono Marco Palmas. Sono un infermiere, pratico e insegno mindfulness secondo il protocollo MBSR.
+                    Ho costruito questo blog per condividere la mia esperienza e le mie riflessioni su <strong>stress, mindfulness, sport e vita reale</strong>.
+                    Il punto non è “essere perfetti”, ma imparare a riconoscere i segnali del corpo e della mente, fare spazio alla presenza e scegliere una vita più sostenibile.
                 </p>
-
                 <p>
-                    Da anni lavoro a contatto con le persone e con tutto quello che la vita quotidiana porta con sé:
-                    stress, responsabilità, pressione, cambiamenti, errori e momenti in cui sembra difficile tenere insieme tutto.
+                    Qui trovi spunti concreti per vivere con meno tensione, più chiarezza e più energia, senza separare il benessere dal quotidiano.
                 </p>
-
+                <h3>Il mio approccio</h3>
                 <p>
-                    Ho deciso di mettere queste esperienze dentro uno spazio personale, per parlare di
-                    <strong>stress, mindfulness, sport, lavoro e vita reale</strong> senza la pretesa di avere sempre la risposta in tasca.
+                    Il lavoro che faccio unisce logica, esperienza e ascolto. Mi interessa aiutare le persone a trovare un equilibrio sostenibile tra impegno, responsabilità e cura di sé.
                 </p>
-
-                <p>
-                    Sono qui per condividere strumenti, esperienze e domande che possono aiutarti a guardare le cose da un’altra prospettiva.
-                </p>
-
-                <h3>COSA FACCIO</h3>
-
-                <p>
-                    Attraverso questo blog e i progetti MindLab mi occupo soprattutto di
-                    <strong>stress management attraverso la mindfulness</strong>.
-                </p>
-
             </div>
-
             <div class="about-photo-wrap">
-
-                <img
-                    class="about-photo"
-                    src="./marco-palmas-chi-sono.png"
-                    alt="Marco Palmas"
-                    loading="lazy"
-                >
-
+                <img class="about-photo" src="./hero.jpg" alt="Marco Palmas">
             </div>
-
         </div>
-
     </section>
 
-    <!-- =========================
-         AREE TEMATICHE
-    ========================== -->
-
-    <section class="themes-section" id="temi">
-
+    <section class="themes-section">
         <div class="themes-header">
-
-            <p class="section-eyebrow">
-                LE MIE AREE TEMATICHE
-            </p>
-
-            <h2>
-                Di cosa parlo.
-            </h2>
-
+            <div class="section-eyebrow">Aree tematiche</div>
+            <h2>Rischi, ripartenza e resistenza</h2>
         </div>
 
         <div class="theme-list">
-
-            <a class="theme-panel" href="tema-stress-mindfulness.html">
-
-                <img
-                    class="theme-image"
-                    src="./pannello-stress-mindfulness.png"
-                    alt="MIND medita accanto a una tavola da surf sul mare"
-                    loading="lazy"
-                >
-
+            <article class="theme-panel">
+                <img class="theme-image" src="./hero.jpg" alt="Stress e gestione del carico">
                 <div class="theme-content">
-
-                    <div class="theme-number">
-                        01
-                    </div>
-
-                    <h3>
-                        Stress &amp; Mindfulness
-                    </h3>
-
-                    <p class="theme-quote">
-                        “Non puoi fermare le onde, ma puoi imparare a <em>SURFARE.</em>”
-                    </p>
-
-                    <p class="theme-author">
-                        — J. K. Zhin
-                    </p>
-
+                    <div class="theme-number">01</div>
+                    <h3>Stress</h3>
+                    <div class="theme-quote">“Quando il corpo chiede attenzione, non è un segnale di debolezza: è una richiesta di ritorno a sé.”</div>
+                    <div class="theme-author">Marco Palmas</div>
                 </div>
+            </article>
 
-            </a>
-
-            <a class="theme-panel" href="tema-sport-performance.html">
-
-                <img
-                    class="theme-image"
-                    src="./pannello-sport-performance.png"
-                    alt="Portiere con un pallone tra le mani in campo"
-                    loading="lazy"
-                >
-
+            <article class="theme-panel">
+                <img class="theme-image" src="./hero.jpg" alt="Mindfulness e presenza">
                 <div class="theme-content">
-
-                    <div class="theme-number">
-                        02
-                    </div>
-
-                    <h3>
-                        Sport &amp; Performance
-                    </h3>
-
-                    <p class="theme-quote">
-                        “Il mio vero nemico è il pensiero.”
-                    </p>
-
-                    <p class="theme-author">
-                        — Mile Svilar
-                    </p>
-
+                    <div class="theme-number">02</div>
+                    <h3>Mindfulness</h3>
+                    <div class="theme-quote">“La calma non nasce da niente; nasce dal momento in cui smetti di correre contro te stesso.”</div>
+                    <div class="theme-author">Marco Palmas</div>
                 </div>
+            </article>
 
-            </a>
-
-            <a class="theme-panel" href="tema-infermieristica.html">
-
-                <img
-                    class="theme-image"
-                    src="./pannello-infermieristica.png"
-                    alt="Fonendoscopio su una divisa sanitaria"
-                    loading="lazy"
-                >
-
+            <article class="theme-panel">
+                <img class="theme-image" src="./hero.jpg" alt="Sport e resilienza">
                 <div class="theme-content">
-
-                    <div class="theme-number">
-                        03
-                    </div>
-
-                    <h3>
-                        Infermieristica
-                    </h3>
-
-                    <p class="theme-quote">
-                        “Il burnout è una sindrome derivante da stress cronico sul lavoro non gestito con successo.”
-                    </p>
-
-                    <p class="theme-author">
-                        — Organizzazione Mondiale della Sanità
-                    </p>
-
+                    <div class="theme-number">03</div>
+                    <h3>Sport</h3>
+                    <div class="theme-quote">“Il corpo è il primo alleato della nostra resilienza.”</div>
+                    <div class="theme-author">Marco Palmas</div>
                 </div>
-
-            </a>
-
-            <a class="theme-panel" href="tema-vita-reale.html">
-
-                <img
-                    class="theme-image"
-                    src="./pannello-vita-reale.png"
-                    alt="Famiglia vista di spalle davanti al mare al tramonto"
-                    loading="lazy"
-                >
-
-                <div class="theme-content">
-
-                    <div class="theme-number">
-                        04
-                    </div>
-
-                    <h3>
-                        Vita reale
-                    </h3>
-
-                    <p class="theme-quote">
-                        “Mentre aspettiamo di vivere, la vita passa.”
-                    </p>
-
-                    <p class="theme-author">
-                        — Seneca
-                    </p>
-
-                </div>
-
-            </a>
-
+            </article>
         </div>
-
     </section>
 
-    <!-- =========================
-         ULTIMI ARTICOLI
-    ========================== -->
-
-    <section class="articles-section" id="articoli">
-
+    <section class="articles-section">
         <div class="articles-container">
-
             <div class="articles-header">
-
-                <div>
-
-                    <p class="section-eyebrow">
-                        DAL BLOG
-                    </p>
-
-                    <h2>
-                        Ultimi articoli
-                    </h2>
-
-                </div>
-
-                <a class="articles-link" href="articoli.html">
-                    Vedi tutti gli articoli →
-                </a>
-
+                <h2>Ultimi articoli</h2>
+                <a class="articles-link" href="articoli.html">Tutti gli articoli</a>
             </div>
 
             <div class="article-grid">
-
-                <a class="article-card"
-                   href="post-vacation-blues-stress-rientro-vacanze.html">
-
+                <article class="article-card">
                     <div>
-
-                        <p class="article-category">
-                            Stress &amp; Mindfulness
-                        </p>
-
-                        <h3>
-                            Post-vacation blues: perché tornare dalle vacanze ci mette così in crisi?
-                        </h3>
-
+                        <div class="article-category">Stress</div>
+                        <h3>Quando il corpo ci parla prima di noi</h3>
                     </div>
+                    <div class="read-more">Leggi articolo →</div>
+                </article>
 
-                    <span class="read-more">
-                        Leggi l'articolo →
-                    </span>
-
-                </a>
-
-                <a class="article-card"
-                   href="quando-tutto-sembra-urgente.html">
-
+                <article class="article-card">
                     <div>
-
-                        <p class="article-category">
-                            Stress &amp; Mindfulness
-                        </p>
-
-                        <h3>
-                            Quando tutto sembra urgente
-                        </h3>
-
+                        <div class="article-category">Mindfulness</div>
+                        <h3>Ritrovare calma senza fare grandi cambiamenti</h3>
                     </div>
-
-                    <span class="read-more">
-                        Leggi l'articolo →
-                    </span>
-
-                </a>
-
-                <a class="article-card"
-                   href="lasciare-andare-non-significa-arrendersi.html">
-
-                    <div>
-
-                        <p class="article-category">
-                            Stress &amp; Mindfulness
-                        </p>
-
-                        <h3>
-                            Lasciare andare non significa arrendersi
-                        </h3>
-
-                    </div>
-
-                    <span class="read-more">
-                        Leggi l'articolo →
-                    </span>
-
-                </a>
-
+                    <div class="read-more">Leggi articolo →</div>
+                </article>
             </div>
-
         </div>
-
     </section>
 
-    <!-- =====================
-         NEWSLETTER
-    ====================== -->
+    <section class="consultation-section">
+        <div class="consultation-container">
+            <div class="consultation-inner">
+                <div>
+                    <div class="section-eyebrow">Consulenza</div>
+                    <h2>Parliamone direttamente</h2>
+                    <p class="consultation-text">
+                        Se vuoi fare il primo passo verso una vita più equilibrata, puoi scrivermi su WhatsApp e concordare insieme una chiamata telefonica per capire come posso aiutarti.
+                    </p>
+                    <div class="consultation-benefits">
+                        <div class="benefit-item"><span class="benefit-bullet"></span>Chiamata telefonica rapida e senza impegno</div>
+                        <div class="benefit-item"><span class="benefit-bullet"></span>Supporto personalizzato sulle tue esigenze</div>
+                        <div class="benefit-item"><span class="benefit-bullet"></span>Spazio per ascoltarti e orientarti</div>
+                    </div>
+                </div>
 
-    <section class="newsletter-section" id="newsletter">
+                <div class="consultation-cta">
+                    <a class="whatsapp-button" href="https://wa.me/393793670145?text=Ciao%20Marco%2C%20vorrei%20richiedere%20una%20consulenza%20telefonica.%20Possiamo%20parlarne%20in%20un%20primo%20momento%3F" target="_blank" rel="noopener noreferrer">
+                        <span class="icon">💬</span>
+                        Richiedi una consulenza
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="newsletter-section">
         <div class="newsletter-container">
-
-            <p class="newsletter-eyebrow">
-                NEWSLETTER
-            </p>
-
-            <h2>
-                Una pausa, ogni tanto
-            </h2>
-
+            <div class="newsletter-eyebrow">Newsletter</div>
+            <h2>Restiamo in contatto</h2>
             <p class="newsletter-description">
-                Riflessioni sullo stress, mindfulness, vita reale e nuove iniziative MindLab.
-                Una newsletter senza rumore, solo quando abbiamo qualcosa di utile da condividere.
+                Iscriviti per ricevere riflessioni, strumenti pratici e contenuti utili per affrontare lo stress con più lucidità e maggiore equilibrio.
             </p>
 
             <div class="newsletter-form">
-
-                <iframe
-                    width="540"
-                    height="305"
-                    src="https://710bdf31.sibforms.com/v2/serve/MUIFAKj0YsIGgR3-Z01i_aAHnIYEYhEUukffs-JJwioS-Wt4HT2KTcGnZGA45H4KrhHs4_PjJ-CZrnpvIdDtpi15lLirNGZSMAyLoP44uR-GrwdWTJruYkWnIZMIMEA5S7dVyFiW2Kg8P83wfQvNu0EYiZN4aLOcj57RKn1Sz44pdv6us5QT0YbbafmSnKXGjohSY0cgpbbxy_03Ew=="
-                    frameborder="0"
-                    scrolling="auto"
-                    allowfullscreen>
-                </iframe>
-
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdc.../viewform?embedded=true" title="Newsletter Marco Palmas"></iframe>
             </div>
-
         </div>
-
     </section>
 
-    <!-- =====================
-         FOOTER
-    ====================== -->
-
     <footer>
-
         <div class="footer-social">
-
-            <a
-                href="https://www.instagram.com/marco_palmas_mindfulness/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram Marco Palmas Mindfulness">
-                Instagram
-            </a>
-
-            <a
-                href="https://youtube.com/@mindlab_mindfulness"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube MindLab Mindfulness">
-                YouTube
-            </a>
-
+            <a href="index.html">Home</a>
+            <a href="chi-sono.html">Chi sono</a>
+            <a href="articoli.html">Articoli</a>
+            <a href="temi.html">Aree Tematiche</a>
+            <a href="mailto:marco@marcopalmas.it">Email</a>
         </div>
-
-        <div class="footer-copy">
-            © 2026 Marco Palmas. Tutti i diritti riservati.
-        </div>
-
+        <div class="footer-copy">© 2025 Marco Palmas – Stress Management, Mindfulness, Sport e Vita Reale</div>
     </footer>
-
 </body>
+
 </html>
