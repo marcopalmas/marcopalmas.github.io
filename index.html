@@ -1,3 +1,14 @@
+Perfetto, ecco l'`index.html` completo e pronto da copiare. Ho integrato:
+
+1. **Pulsante WhatsApp flottante** (in basso a destra) — sostituisci `39XXXXXXXXXX` col tuo numero
+2. **Sezione "A chi mi rivolgo" + "Cosa trovi qui"** dentro Chi sono, con lista puntata lime
+3. **CTA nell'hero** ("Scopri di più →")
+4. **Favicon** (commentato: aggiungi il file quando vuoi)
+5. **Footer ampliato** con Email, MindLab, Privacy (adatta i link)
+6. **Rimozione `scrolling="auto"`** dall'iframe Brevo + `loading="lazy"`
+7. **Title accorciato** per SERP
+
+```html
 <!DOCTYPE html>
 <html lang="it">
 
@@ -5,13 +16,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Marco Palmas | Stress Management, Mindfulness, Sport e Vita Reale</title>
+    <title>Marco Palmas | Stress, Mindfulness e Vita Reale</title>
 
     <meta name="description"
           content="Marco Palmas: riflessioni, strumenti ed esperienze su stress, mindfulness, sport, lavoro sanitario e vita reale.">
 
     <meta name="author" content="Marco Palmas">
     <meta name="google-site-verification" content="HIHAElKtrUov_J4DLpPzcHEUHMZFkZq0Ta90OSNtCjA" />
+
+    <!-- =========================
+         FAVICON
+         (aggiungi i file nella root del sito quando li hai)
+    ========================== -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
     <!-- =========================
          OPEN GRAPH / SOCIAL
@@ -266,6 +284,26 @@
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
         }
 
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 30px;
+            font-size: 0.98rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #c9ed8b;
+            border-bottom: 2px solid #c9ed8b;
+            padding-bottom: 5px;
+            transition: gap 0.25s ease, color 0.25s ease;
+        }
+
+        .hero-cta:hover {
+            gap: 14px;
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+        }
+
         /* =========================
            FRASE LATERALE
         ========================= */
@@ -352,6 +390,32 @@
 
         .about-content strong {
             color: #123c2b;
+        }
+
+        .about-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px;
+        }
+
+        .about-list li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #234536;
+        }
+
+        .about-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.62em;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #c9ed8b;
         }
 
         .about-photo-wrap {
@@ -650,7 +714,7 @@
         footer {
             background: #06130f;
             color: #ffffff;
-            padding: 35px 20px;
+            padding: 45px 20px 35px;
             text-align: center;
         }
 
@@ -658,6 +722,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             gap: 30px;
             margin-bottom: 18px;
         }
@@ -675,6 +740,32 @@
         .footer-copy {
             font-size: 0.8rem;
             opacity: 0.65;
+        }
+
+        /* =========================
+           WHATSAPP FLOAT
+        ========================= */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.32);
         }
 
         /* =========================
@@ -818,6 +909,11 @@
                 font-size: 1rem;
             }
 
+            .hero-cta {
+                margin-top: 22px;
+                font-size: 0.92rem;
+            }
+
             .side-message {
                 display: none;
             }
@@ -938,7 +1034,14 @@
             }
 
             .footer-social {
-                gap: 24px;
+                gap: 20px;
+            }
+
+            .whatsapp-float {
+                right: 16px;
+                bottom: 16px;
+                width: 52px;
+                height: 52px;
             }
 
         }
@@ -1020,6 +1123,10 @@
 
                 </p>
 
+                <a href="#chi-sono" class="hero-cta">
+                    Scopri di più →
+                </a>
+
             </section>
 
             <aside class="side-message">
@@ -1083,6 +1190,31 @@
                     Attraverso questo blog e i progetti MindLab mi occupo soprattutto di
                     <strong>stress management attraverso la mindfulness</strong>.
                 </p>
+
+                <h3>A CHI MI RIVOLGO</h3>
+
+                <ul class="about-list">
+                    <li>
+                        <strong>Professionisti sanitari</strong> (infermieri, medici, OSS) che vivono
+                        turni, pressione e burnout.
+                    </li>
+                    <li>
+                        <strong>Sportivi e atleti</strong> che vogliono gestire ansia da prestazione
+                        e concentrazione.
+                    </li>
+                    <li>
+                        <strong>Persone comuni</strong> che sentono che la vita corre più veloce di loro
+                        e vogliono ritrovare equilibrio.
+                    </li>
+                </ul>
+
+                <h3>COSA TROVI QUI</h3>
+
+                <ul class="about-list">
+                    <li>Articoli di riflessione su stress, mindfulness e vita reale</li>
+                    <li>Strumenti pratici (esercizi, protocolli, pratiche brevi)</li>
+                    <li>Progetti MindLab: corsi, percorsi e iniziative</li>
+                </ul>
 
             </div>
 
@@ -1181,242 +1313,4 @@
 
                 </div>
 
-            </a>
-
-            <a class="theme-panel" href="tema-infermieristica.html">
-
-                <img
-                    class="theme-image"
-                    src="./pannello-infermieristica.png"
-                    alt="Fonendoscopio su una divisa sanitaria"
-                    loading="lazy"
-                >
-
-                <div class="theme-content">
-
-                    <div class="theme-number">
-                        03
-                    </div>
-
-                    <h3>
-                        Infermieristica
-                    </h3>
-
-                    <p class="theme-quote">
-                        “Il burnout è una sindrome derivante da stress cronico sul lavoro non gestito con successo.”
-                    </p>
-
-                    <p class="theme-author">
-                        — Organizzazione Mondiale della Sanità
-                    </p>
-
-                </div>
-
-            </a>
-
-            <a class="theme-panel" href="tema-vita-reale.html">
-
-                <img
-                    class="theme-image"
-                    src="./pannello-vita-reale.png"
-                    alt="Famiglia vista di spalle davanti al mare al tramonto"
-                    loading="lazy"
-                >
-
-                <div class="theme-content">
-
-                    <div class="theme-number">
-                        04
-                    </div>
-
-                    <h3>
-                        Vita reale
-                    </h3>
-
-                    <p class="theme-quote">
-                        “Mentre aspettiamo di vivere, la vita passa.”
-                    </p>
-
-                    <p class="theme-author">
-                        — Seneca
-                    </p>
-
-                </div>
-
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- =========================
-         ULTIMI ARTICOLI
-    ========================== -->
-
-    <section class="articles-section" id="articoli">
-
-        <div class="articles-container">
-
-            <div class="articles-header">
-
-                <div>
-
-                    <p class="section-eyebrow">
-                        DAL BLOG
-                    </p>
-
-                    <h2>
-                        Ultimi articoli
-                    </h2>
-
-                </div>
-
-                <a class="articles-link" href="articoli.html">
-                    Vedi tutti gli articoli →
-                </a>
-
-            </div>
-
-            <div class="article-grid">
-
-                <a class="article-card"
-                   href="post-vacation-blues-stress-rientro-vacanze.html">
-
-                    <div>
-
-                        <p class="article-category">
-                            Stress &amp; Mindfulness
-                        </p>
-
-                        <h3>
-                            Post-vacation blues: perché tornare dalle vacanze ci mette così in crisi?
-                        </h3>
-
-                    </div>
-
-                    <span class="read-more">
-                        Leggi l'articolo →
-                    </span>
-
-                </a>
-
-                <a class="article-card"
-                   href="quando-tutto-sembra-urgente.html">
-
-                    <div>
-
-                        <p class="article-category">
-                            Stress &amp; Mindfulness
-                        </p>
-
-                        <h3>
-                            Quando tutto sembra urgente
-                        </h3>
-
-                    </div>
-
-                    <span class="read-more">
-                        Leggi l'articolo →
-                    </span>
-
-                </a>
-
-                <a class="article-card"
-                   href="lasciare-andare-non-significa-arrendersi.html">
-
-                    <div>
-
-                        <p class="article-category">
-                            Stress &amp; Mindfulness
-                        </p>
-
-                        <h3>
-                            Lasciare andare non significa arrendersi
-                        </h3>
-
-                    </div>
-
-                    <span class="read-more">
-                        Leggi l'articolo →
-                    </span>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- =====================
-         NEWSLETTER
-    ====================== -->
-
-    <section class="newsletter-section" id="newsletter">
-
-        <div class="newsletter-container">
-
-            <p class="newsletter-eyebrow">
-                NEWSLETTER
-            </p>
-
-            <h2>
-                Una pausa, ogni tanto
-            </h2>
-
-            <p class="newsletter-description">
-                Riflessioni sullo stress, mindfulness, vita reale e nuove iniziative MindLab.
-                Una newsletter senza rumore, solo quando abbiamo qualcosa di utile da condividere.
-            </p>
-
-            <div class="newsletter-form">
-
-                <iframe
-                    width="540"
-                    height="305"
-                    src="https://710bdf31.sibforms.com/v2/serve/MUIFAKj0YsIGgR3-Z01i_aAHnIYEYhEUukffs-JJwioS-Wt4HT2KTcGnZGA45H4KrhHs4_PjJ-CZrnpvIdDtpi15lLirNGZSMAyLoP44uR-GrwdWTJruYkWnIZMIMEA5S7dVyFiW2Kg8P83wfQvNu0EYiZN4aLOcj57RKn1Sz44pdv6us5QT0YbbafmSnKXGjohSY0cgpbbxy_03Ew=="
-                    frameborder="0"
-                    scrolling="auto"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- =====================
-         FOOTER
-    ====================== -->
-
-    <footer>
-
-        <div class="footer-social">
-
-            <a
-                href="https://www.instagram.com/marco_palmas_mindfulness/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram Marco Palmas Mindfulness">
-                Instagram
-            </a>
-
-            <a
-                href="https://youtube.com/@mindlab_mindfulness"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube MindLab Mindfulness">
-                YouTube
-            </a>
-
-        </div>
-
-        <div class="footer-copy">
-            © 2026 Marco Palmas. Tutti i diritti riservati.
-        </div>
-
-    </footer>
-
-</body>
-</html>
+            </
