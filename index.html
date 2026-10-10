@@ -13,69 +13,37 @@
     <meta name="author" content="Marco Palmas">
     <meta name="google-site-verification" content="HIHAElKtrUov_J4DLpPzcHEUHMZFkZq0Ta90OSNtCjA" />
 
-    <!-- =========================
-         FAVICON
-         (aggiungi i file nella root del sito quando li hai)
-    ========================== -->
+    <!-- FAVICON (aggiungi i file nella root quando li hai) -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-    <!-- =========================
-         OPEN GRAPH / SOCIAL
-    ========================== -->
-
+    <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
-    <meta property="og:title"
-          content="Marco Palmas | Stress Management, Mindfulness, Sport e Vita Reale">
-    <meta property="og:description"
-          content="Riflessioni, strumenti ed esperienze su stress, mindfulness, sport, lavoro sanitario e vita reale.">
+    <meta property="og:title" content="Marco Palmas | Stress Management, Mindfulness, Sport e Vita Reale">
+    <meta property="og:description" content="Riflessioni, strumenti ed esperienze su stress, mindfulness, sport, lavoro sanitario e vita reale.">
     <meta property="og:url" content="https://marcopalmas.it/">
     <meta property="og:image" content="https://marcopalmas.it/hero.jpg">
     <meta property="og:image:alt" content="Marco Palmas in meditazione nella natura">
-
-    <!-- =========================
-         CANONICAL
-    ========================== -->
 
     <link rel="canonical" href="https://marcopalmas.it/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
     <style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: "DM Sans", sans-serif;
             background: #f2f0e8;
             color: #123c2b;
         }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
+        /* ============ HERO ============ */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -85,48 +53,30 @@
             background: #06130f;
             color: #ffffff;
         }
-
         .hero-image {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
-            z-index: 0;
-            display: block;
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover; object-position: center center;
+            z-index: 0; display: block;
         }
-
         .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0, 20, 14, 0.78) 0%,
-                    rgba(0, 20, 14, 0.48) 42%,
-                    rgba(0, 20, 14, 0.16) 72%,
-                    rgba(0, 20, 14, 0.38) 100%
-                );
-            z-index: 1;
-            pointer-events: none;
+            position: absolute; inset: 0;
+            background: linear-gradient(90deg,
+                rgba(0,20,14,0.78) 0%,
+                rgba(0,20,14,0.48) 42%,
+                rgba(0,20,14,0.16) 72%,
+                rgba(0,20,14,0.38) 100%);
+            z-index: 1; pointer-events: none;
         }
-
         .hero-top-overlay {
-            position: absolute;
-            inset: 0;
-            background:
-                linear-gradient(
-                    180deg,
-                    rgba(0, 12, 8, 0.58) 0%,
-                    rgba(0, 12, 8, 0.05) 30%,
-                    rgba(0, 12, 8, 0.05) 70%,
-                    rgba(0, 12, 8, 0.40) 100%
-                );
-            z-index: 2;
-            pointer-events: none;
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg,
+                rgba(0,12,8,0.58) 0%,
+                rgba(0,12,8,0.05) 30%,
+                rgba(0,12,8,0.05) 70%,
+                rgba(0,12,8,0.40) 100%);
+            z-index: 2; pointer-events: none;
         }
-
         .hero-container {
             width: min(1280px, 90%);
             height: 100%;
@@ -135,15 +85,10 @@
             z-index: 3;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
-
+        /* ============ HEADER ============ */
         header {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 120px;
             display: flex;
             align-items: flex-start;
@@ -152,18 +97,12 @@
             z-index: 10;
             color: #ffffff;
         }
-
-        header a {
-            color: #ffffff;
-        }
-
+        header a { color: #ffffff; }
         .brand {
-            display: flex;
-            flex-direction: column;
+            display: flex; flex-direction: column;
             color: #ffffff;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.45);
         }
-
         .brand-name {
             font-size: clamp(2rem, 3vw, 3rem);
             line-height: 1;
@@ -171,7 +110,6 @@
             letter-spacing: -0.04em;
             color: #ffffff;
         }
-
         .brand-subtitle {
             margin-top: 10px;
             font-size: clamp(0.65rem, 0.9vw, 0.85rem);
@@ -180,48 +118,34 @@
             white-space: nowrap;
             color: #ffffff;
         }
-
         nav {
             display: flex;
             align-items: center;
             gap: clamp(28px, 3vw, 52px);
             padding-top: 5px;
         }
-
         nav a {
             position: relative;
             font-size: 1.05rem;
             font-weight: 600;
             padding-bottom: 10px;
             color: #ffffff;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.45);
             transition: color 0.25s ease, opacity 0.25s ease;
         }
-
         nav a::after {
             content: "";
             position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 3px;
+            left: 0; bottom: 0;
+            width: 0; height: 3px;
             background: #c9ed8b;
             transition: width 0.25s ease;
         }
-
-        nav a:hover {
-            color: #c9ed8b;
-        }
-
+        nav a:hover { color: #c9ed8b; }
         nav a:hover::after,
-        nav a.active::after {
-            width: 100%;
-        }
+        nav a.active::after { width: 100%; }
 
-        /* =========================
-           CONTENUTO HERO
-        ========================= */
-
+        /* ============ CONTENUTO HERO ============ */
         .hero-content {
             position: absolute;
             left: 0;
@@ -231,7 +155,6 @@
             z-index: 5;
             color: #ffffff;
         }
-
         .quote-mark {
             font-family: "Playfair Display", serif;
             color: #c9ed8b;
@@ -240,7 +163,6 @@
             margin-bottom: 40px;
             font-weight: 500;
         }
-
         .main-quote {
             font-family: "Playfair Display", serif;
             font-size: clamp(2.8rem, 4.5vw, 5rem);
@@ -250,29 +172,24 @@
             max-width: 650px;
             color: #ffffff;
         }
-
         .main-quote .highlight {
             color: #c9ed8b;
             font-style: italic;
             font-weight: 600;
         }
-
         .separator {
-            width: 48px;
-            height: 3px;
+            width: 48px; height: 3px;
             background: #c9ed8b;
             margin: 42px 0 26px;
         }
-
         .hero-description {
             max-width: 620px;
             font-size: clamp(1rem, 1.35vw, 1.25rem);
             line-height: 1.55;
             font-weight: 400;
             color: #ffffff;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.45);
         }
-
         .hero-cta {
             display: inline-flex;
             align-items: center;
@@ -284,19 +201,15 @@
             color: #c9ed8b;
             border-bottom: 2px solid #c9ed8b;
             padding-bottom: 5px;
-            transition: gap 0.25s ease, color 0.25s ease;
+            transition: gap 0.25s ease, color 0.25s ease, border-color 0.25s ease;
         }
-
         .hero-cta:hover {
             gap: 14px;
             color: #ffffff;
             border-bottom-color: #ffffff;
         }
 
-        /* =========================
-           FRASE LATERALE
-        ========================= */
-
+        /* ============ FRASE LATERALE ============ */
         .side-message {
             position: absolute;
             right: 0;
@@ -306,11 +219,7 @@
             z-index: 5;
             color: #ffffff;
         }
-
-        .side-line {
-            margin-bottom: 28px;
-        }
-
+        .side-line { margin-bottom: 28px; }
         .side-line span {
             display: block;
             font-family: "Playfair Display", serif;
@@ -318,31 +227,24 @@
             line-height: 1.1;
             font-style: italic;
             color: #ffffff;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.45);
         }
-
         .side-line .green {
             color: #c9ed8b;
             margin-top: 5px;
             font-weight: 500;
         }
-
         .side-divider {
-            width: 135px;
-            height: 2px;
+            width: 135px; height: 2px;
             background: rgba(255,255,255,0.75);
             margin-top: 5px;
         }
 
-        /* =========================
-           CHI SONO / COSA FACCIO
-        ========================= */
-
+        /* ============ CHI SONO ============ */
         .about-section {
             background: #f2f0e8;
             padding: 105px 20px 95px;
         }
-
         .about-container {
             width: min(1120px, 100%);
             margin: 0 auto;
@@ -351,7 +253,6 @@
             gap: 70px;
             align-items: center;
         }
-
         .about-content h2 {
             font-family: "Playfair Display", serif;
             font-size: clamp(2.4rem, 5vw, 4rem);
@@ -360,7 +261,6 @@
             margin-bottom: 28px;
             color: #123c2b;
         }
-
         .about-content h3 {
             font-family: "Playfair Display", serif;
             font-size: 1.55rem;
@@ -368,7 +268,6 @@
             margin: 34px 0 14px;
             color: #527b58;
         }
-
         .about-content p {
             max-width: 720px;
             font-size: 1.08rem;
@@ -376,17 +275,13 @@
             color: #234536;
             margin-bottom: 18px;
         }
-
-        .about-content strong {
-            color: #123c2b;
-        }
+        .about-content strong { color: #123c2b; }
 
         .about-list {
             list-style: none;
             padding: 0;
             margin: 0 0 18px;
         }
-
         .about-list li {
             position: relative;
             padding-left: 26px;
@@ -395,14 +290,12 @@
             line-height: 1.6;
             color: #234536;
         }
-
         .about-list li::before {
             content: "";
             position: absolute;
             left: 0;
             top: 0.62em;
-            width: 10px;
-            height: 10px;
+            width: 10px; height: 10px;
             border-radius: 50%;
             background: #c9ed8b;
         }
@@ -413,7 +306,6 @@
             justify-content: center;
             min-height: 390px;
         }
-
         .about-photo {
             display: block;
             width: min(100%, 410px);
@@ -423,21 +315,16 @@
             filter: drop-shadow(0 18px 25px rgba(18,60,43,0.12));
         }
 
-        /* =========================
-           AREE TEMATICHE
-        ========================= */
-
+        /* ============ AREE TEMATICHE ============ */
         .themes-section {
             background: #ffffff;
             padding: 95px 20px 105px;
         }
-
         .themes-header {
             width: min(1120px, 100%);
             margin: 0 auto 42px;
             text-align: center;
         }
-
         .section-eyebrow {
             color: #527b58;
             font-size: 0.78rem;
@@ -445,7 +332,6 @@
             letter-spacing: 0.22em;
             margin-bottom: 16px;
         }
-
         .themes-header h2 {
             font-family: "Playfair Display", serif;
             font-size: clamp(2.5rem, 5vw, 4.2rem);
@@ -454,14 +340,12 @@
             color: #123c2b;
             margin-bottom: 16px;
         }
-
         .theme-list {
             width: min(1180px, 100%);
             margin: 0 auto;
             display: grid;
             gap: 28px;
         }
-
         .theme-panel {
             position: relative;
             display: flex;
@@ -473,36 +357,26 @@
             box-shadow: 0 12px 35px rgba(18,60,43,0.08);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
-
         .theme-panel:hover {
             transform: translateY(-3px);
             box-shadow: 0 18px 42px rgba(18,60,43,0.13);
         }
-
         .theme-panel::before {
             content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                90deg,
+            position: absolute; inset: 0;
+            background: linear-gradient(90deg,
                 rgba(247,243,231,0.78) 0%,
                 rgba(247,243,231,0.36) 42%,
-                rgba(247,243,231,0.03) 72%
-            );
+                rgba(247,243,231,0.03) 72%);
             z-index: 1;
             pointer-events: none;
         }
-
         .theme-image {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover; object-position: center;
             z-index: 0;
         }
-
         .theme-content {
             position: relative;
             z-index: 2;
@@ -513,7 +387,6 @@
             justify-content: center;
             color: #123c2b;
         }
-
         .theme-number {
             color: #527b58;
             font-size: 0.72rem;
@@ -521,7 +394,6 @@
             letter-spacing: 0.2em;
             margin-bottom: 12px;
         }
-
         .theme-content h3 {
             font-family: "DM Sans", sans-serif;
             font-size: 0.8rem;
@@ -530,7 +402,6 @@
             text-transform: uppercase;
             margin-bottom: 24px;
         }
-
         .theme-quote {
             font-family: "Playfair Display", serif;
             font-size: clamp(1.8rem, 3vw, 3rem);
@@ -539,11 +410,7 @@
             letter-spacing: -0.025em;
             max-width: 540px;
         }
-
-        .theme-quote em {
-            font-style: italic;
-        }
-
+        .theme-quote em { font-style: italic; }
         .theme-author {
             margin-top: 22px;
             font-size: 0.98rem;
@@ -551,20 +418,15 @@
             font-weight: 600;
         }
 
-        /* =========================
-           ULTIMI ARTICOLI
-        ========================= */
-
+        /* ============ ULTIMI ARTICOLI ============ */
         .articles-section {
             background: #f2f0e8;
             padding: 100px 20px 105px;
         }
-
         .articles-container {
             width: min(1120px, 100%);
             margin: 0 auto;
         }
-
         .articles-header {
             display: flex;
             align-items: end;
@@ -572,14 +434,12 @@
             gap: 30px;
             margin-bottom: 42px;
         }
-
         .articles-header h2 {
             font-family: "Playfair Display", serif;
             font-size: clamp(2.5rem, 5vw, 4rem);
             line-height: 1.05;
             font-weight: 500;
         }
-
         .articles-link {
             color: #527b58;
             font-weight: 700;
@@ -587,13 +447,11 @@
             padding-bottom: 5px;
             white-space: nowrap;
         }
-
         .article-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 28px;
         }
-
         .article-card {
             background: #ffffff;
             border-radius: 20px;
@@ -605,12 +463,10 @@
             box-shadow: 0 8px 28px rgba(18,60,43,0.06);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
-
         .article-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 14px 34px rgba(18,60,43,0.10);
         }
-
         .article-category {
             color: #527b58;
             font-size: 0.72rem;
@@ -619,7 +475,6 @@
             text-transform: uppercase;
             margin-bottom: 18px;
         }
-
         .article-card h3 {
             font-family: "Playfair Display", serif;
             font-size: clamp(1.65rem, 3vw, 2.35rem);
@@ -627,29 +482,23 @@
             font-weight: 500;
             margin-bottom: 24px;
         }
-
         .article-card .read-more {
             color: #527b58;
             font-weight: 700;
             font-size: 0.92rem;
         }
 
-        /* =========================
-           NEWSLETTER
-        ========================= */
-
+        /* ============ NEWSLETTER ============ */
         .newsletter-section {
             background: #f2f0e8;
             color: #123c2b;
             padding: 90px 20px;
         }
-
         .newsletter-container {
             width: min(900px, 100%);
             margin: 0 auto;
             text-align: center;
         }
-
         .newsletter-eyebrow {
             color: #527b58;
             font-size: 0.8rem;
@@ -657,7 +506,6 @@
             letter-spacing: 0.22em;
             margin-bottom: 18px;
         }
-
         .newsletter-section h2 {
             font-family: "Playfair Display", serif;
             font-size: clamp(2.4rem, 5vw, 4rem);
@@ -665,14 +513,12 @@
             line-height: 1.1;
             margin-bottom: 24px;
         }
-
         .newsletter-description {
             max-width: 650px;
             margin: 0 auto 35px;
             font-size: 1.08rem;
             line-height: 1.6;
         }
-
         .newsletter-form {
             width: 100%;
             max-width: 560px;
@@ -682,9 +528,8 @@
             border-radius: 18px;
             background: #ffffff;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(18, 60, 43, 0.08);
+            box-shadow: 0 8px 30px rgba(18,60,43,0.08);
         }
-
         .newsletter-form iframe {
             display: block;
             width: 100%;
@@ -696,17 +541,13 @@
             border-radius: 10px;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
-
+        /* ============ FOOTER ============ */
         footer {
             background: #06130f;
             color: #ffffff;
             padding: 45px 20px 35px;
             text-align: center;
         }
-
         .footer-social {
             display: flex;
             justify-content: center;
@@ -715,26 +556,18 @@
             gap: 30px;
             margin-bottom: 18px;
         }
-
         .footer-social a {
             font-size: 0.95rem;
             font-weight: 600;
             transition: color 0.25s ease, opacity 0.25s ease;
         }
-
-        .footer-social a:hover {
-            color: #c9ed8b;
-        }
-
+        .footer-social a:hover { color: #c9ed8b; }
         .footer-copy {
             font-size: 0.8rem;
             opacity: 0.65;
         }
 
-        /* =========================
-           WHATSAPP FLOAT
-        ========================= */
-
+        /* ============ WHATSAPP FLOAT ============ */
         .whatsapp-float {
             position: fixed;
             right: 22px;
@@ -751,288 +584,94 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.25);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-
         .whatsapp-float:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 12px 30px rgba(0,0,0,0.32);
         }
 
-        /* =========================
-           TABLET
-        ========================= */
-
+        /* ============ TABLET ============ */
         @media (max-width: 900px) {
-
-            .hero {
-                min-height: 900px;
-                height: auto;
-            }
-
-            .hero-image {
-                object-position: 57% center;
-            }
-
-            .hero-container {
-                width: 88%;
-                min-height: 900px;
-            }
-
-            header {
-                height: auto;
-                flex-direction: column;
-                gap: 25px;
-            }
-
-            nav {
-                gap: 24px;
-                width: 100%;
-            }
-
-            nav a {
-                font-size: 0.95rem;
-            }
-
-            .hero-content {
-                top: 46%;
-                width: 75%;
-            }
-
-            .side-message {
-                right: 0;
-                top: 73%;
-                width: 180px;
-            }
-
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-photo-wrap {
-                min-height: auto;
-                justify-content: center;
-            }
-
-            .about-photo {
-                width: min(65%, 380px);
-            }
-
-            .theme-panel {
-                min-height: 390px;
-            }
-
-            .theme-content {
-                width: 64%;
-                padding: 46px 40px;
-            }
-
-            .article-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero { min-height: 900px; height: auto; }
+            .hero-image { object-position: 57% center; }
+            .hero-container { width: 88%; min-height: 900px; }
+            header { height: auto; flex-direction: column; gap: 25px; }
+            nav { gap: 24px; width: 100%; }
+            nav a { font-size: 0.95rem; }
+            .hero-content { top: 46%; width: 75%; }
+            .side-message { right: 0; top: 73%; width: 180px; }
+            .about-container { grid-template-columns: 1fr; gap: 40px; }
+            .about-photo-wrap { min-height: auto; justify-content: center; }
+            .about-photo { width: min(65%, 380px); }
+            .theme-panel { min-height: 390px; }
+            .theme-content { width: 64%; padding: 46px 40px; }
+            .article-grid { grid-template-columns: 1fr; }
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
-
+        /* ============ MOBILE ============ */
         @media (max-width: 650px) {
-
-            .hero {
-                min-height: 100svh;
-                height: auto;
-            }
-
-            .hero-container {
-                min-height: 100svh;
-            }
-
-            .hero-image {
-                object-position: 56% center;
-            }
-
-            header {
-                position: relative;
-                padding-top: 25px;
-            }
-
-            .brand-name {
-                font-size: 2rem;
-            }
-
-            .brand-subtitle {
-                font-size: 0.58rem;
-                letter-spacing: 0.14em;
-            }
-
-            nav {
-                gap: 20px;
-                flex-wrap: wrap;
-            }
-
-            nav a {
-                font-size: 0.85rem;
-                padding-bottom: 7px;
-            }
-
+            .hero { min-height: 100svh; height: auto; }
+            .hero-container { min-height: 100svh; }
+            .hero-image { object-position: 56% center; }
+            header { position: relative; padding-top: 25px; }
+            .brand-name { font-size: 2rem; }
+            .brand-subtitle { font-size: 0.58rem; letter-spacing: 0.14em; }
+            nav { gap: 20px; flex-wrap: wrap; }
+            nav a { font-size: 0.85rem; padding-bottom: 7px; }
             .hero-content {
                 position: absolute;
                 top: 52%;
                 transform: translateY(-35%);
                 width: 92%;
             }
-
-            .quote-mark {
-                font-size: 4rem;
-                margin-bottom: 25px;
-            }
-
-            .main-quote {
-                font-size: clamp(2.25rem, 10vw, 3.5rem);
-            }
-
-            .separator {
-                margin: 30px 0 20px;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            .hero-cta {
-                margin-top: 22px;
-                font-size: 0.92rem;
-            }
-
-            .side-message {
-                display: none;
-            }
-
-            .about-section {
-                padding: 72px 18px 70px;
-            }
-
-            .about-content h2 {
-                font-size: 2.7rem;
-            }
-
-            .about-content p {
-                font-size: 1rem;
-                line-height: 1.7;
-            }
-
-            .about-content h3 {
-                font-size: 1.35rem;
-            }
-
-            .about-photo {
-                width: min(82%, 360px);
-            }
-
-            .themes-section {
-                padding: 72px 14px 78px;
-            }
-
-            .themes-header {
-                margin-bottom: 28px;
-            }
-
-            .themes-header h2 {
-                font-size: 2.7rem;
-            }
-
-            .theme-list {
-                gap: 20px;
-            }
-
+            .quote-mark { font-size: 4rem; margin-bottom: 25px; }
+            .main-quote { font-size: clamp(2.25rem, 10vw, 3.5rem); }
+            .separator { margin: 30px 0 20px; }
+            .hero-description { font-size: 1rem; }
+            .hero-cta { margin-top: 22px; font-size: 0.92rem; }
+            .side-message { display: none; }
+            .about-section { padding: 72px 18px 70px; }
+            .about-content h2 { font-size: 2.7rem; }
+            .about-content p { font-size: 1rem; line-height: 1.7; }
+            .about-content h3 { font-size: 1.35rem; }
+            .about-photo { width: min(82%, 360px); }
+            .themes-section { padding: 72px 14px 78px; }
+            .themes-header { margin-bottom: 28px; }
+            .themes-header h2 { font-size: 2.7rem; }
+            .theme-list { gap: 20px; }
             .theme-panel {
                 min-height: 520px;
                 border-radius: 18px;
                 align-items: flex-end;
             }
-
             .theme-panel::before {
-                background: linear-gradient(
-                    180deg,
+                background: linear-gradient(180deg,
                     rgba(247,243,231,0.03) 20%,
                     rgba(247,243,231,0.68) 58%,
-                    rgba(247,243,231,0.94) 100%
-                );
+                    rgba(247,243,231,0.94) 100%);
             }
-
-            .theme-image {
-                object-position: center center;
-            }
-
+            .theme-image { object-position: center center; }
             .theme-content {
                 width: 100%;
                 padding: 34px 25px 30px;
                 justify-content: flex-end;
             }
-
-            .theme-content h3 {
-                margin-bottom: 14px;
-            }
-
-            .theme-quote {
-                font-size: 1.9rem;
-            }
-
-            .theme-author {
-                margin-top: 14px;
-            }
-
-            .articles-section {
-                padding: 72px 18px 78px;
-            }
-
-            .articles-header {
-                display: block;
-                margin-bottom: 28px;
-            }
-
-            .articles-header h2 {
-                font-size: 2.7rem;
-                margin-bottom: 20px;
-            }
-
-            .article-grid {
-                gap: 18px;
-            }
-
-            .article-card {
-                padding: 28px 24px;
-                min-height: 220px;
-            }
-
-            .newsletter-section {
-                padding: 65px 16px;
-            }
-
-            .newsletter-description {
-                font-size: 1rem;
-            }
-
-            .newsletter-form {
-                padding: 10px;
-                border-radius: 16px;
-            }
-
-            .newsletter-form iframe {
-                height: 390px;
-                min-height: 390px;
-            }
-
-            .footer-social {
-                gap: 20px;
-            }
-
+            .theme-content h3 { margin-bottom: 14px; }
+            .theme-quote { font-size: 1.9rem; }
+            .theme-author { margin-top: 14px; }
+            .articles-section { padding: 72px 18px 78px; }
+            .articles-header { display: block; margin-bottom: 28px; }
+            .articles-header h2 { font-size: 2.7rem; margin-bottom: 20px; }
+            .article-grid { gap: 18px; }
+            .article-card { padding: 28px 24px; min-height: 220px; }
+            .newsletter-section { padding: 65px 16px; }
+            .newsletter-description { font-size: 1rem; }
+            .newsletter-form { padding: 10px; border-radius: 16px; }
+            .newsletter-form iframe { height: 390px; min-height: 390px; }
+            .footer-social { gap: 20px; }
             .whatsapp-float {
-                right: 16px;
-                bottom: 16px;
-                width: 52px;
-                height: 52px;
+                right: 16px; bottom: 16px;
+                width: 52px; height: 52px;
             }
-
         }
 
     </style>
@@ -1040,17 +679,12 @@
 
 <body>
 
-    <!-- =========================
-         HERO
-    ========================== -->
-
+    <!-- ============ HERO ============ -->
     <main class="hero">
 
-        <img
-            class="hero-image"
-            src="./hero.jpg"
-            alt="Marco Palmas in meditazione nella natura"
-        >
+        <img class="hero-image"
+             src="./hero.jpg"
+             alt="Marco Palmas in meditazione nella natura">
 
         <div class="hero-overlay"></div>
         <div class="hero-top-overlay"></div>
@@ -1058,17 +692,11 @@
         <div class="hero-container">
 
             <header>
-
                 <a href="index.html" class="brand">
-
-                    <div class="brand-name">
-                        Marco Palmas
-                    </div>
-
+                    <div class="brand-name">Marco Palmas</div>
                     <div class="brand-subtitle">
                         STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE
                     </div>
-
                 </a>
 
                 <nav>
@@ -1078,38 +706,26 @@
                     <a href="temi.html">Aree Tematiche</a>
                     <a href="mindlab.html">MindLab</a>
                 </nav>
-
             </header>
 
             <section class="hero-content">
 
-                <div class="quote-mark">
-                    “
-                </div>
+                <div class="quote-mark">“</div>
 
                 <h1 class="main-quote">
-
                     La vita è per il
                     <span class="highlight">10%</span><br>
-
                     cosa ti accade<br>
-
                     e per il
                     <span class="highlight">90%</span><br>
-
-                    <span class="highlight">
-                        come reagisci.
-                    </span>
-
+                    <span class="highlight">come reagisci.</span>
                 </h1>
 
                 <div class="separator"></div>
 
                 <p class="hero-description">
-
                     Riflessioni, strumenti ed esperienze su stress,
                     mindfulness, sport, lavoro sanitario e vita reale.
-
                 </p>
 
                 <a href="#chi-sono" class="hero-cta">
@@ -1119,34 +735,25 @@
             </section>
 
             <aside class="side-message">
-
                 <div class="side-line">
                     <span>Più</span>
                     <span class="green">Consapevolezza</span>
                 </div>
-
                 <div class="side-line">
                     <span>Più</span>
                     <span class="green">Equilibrio</span>
                 </div>
-
                 <div class="side-line">
                     <span>Più</span>
                     <span class="green">Vita Reale</span>
                 </div>
-
                 <div class="side-divider"></div>
-
             </aside>
 
         </div>
-
     </main>
 
-    <!-- =========================
-         CHI SONO / COSA FACCIO
-    ========================== -->
-
+    <!-- ============ CHI SONO ============ -->
     <section class="about-section" id="chi-sono">
 
         <div class="about-container">
@@ -1174,14 +781,12 @@
                 </p>
 
                 <h3>COSA FACCIO</h3>
-
                 <p>
                     Attraverso questo blog e i progetti MindLab mi occupo soprattutto di
                     <strong>stress management attraverso la mindfulness</strong>.
                 </p>
 
                 <h3>A CHI MI RIVOLGO</h3>
-
                 <ul class="about-list">
                     <li>
                         <strong>Professionisti sanitari</strong> (infermieri, medici, OSS) che vivono
@@ -1198,7 +803,6 @@
                 </ul>
 
                 <h3>COSA TROVI QUI</h3>
-
                 <ul class="about-list">
                     <li>Articoli di riflessione su stress, mindfulness e vita reale</li>
                     <li>Strumenti pratici (esercizi, protocolli, pratiche brevi)</li>
@@ -1208,13 +812,144 @@
             </div>
 
             <div class="about-photo-wrap">
+                <img class="about-photo"
+                     src="./marco-palmas-chi-sono.png"
+                     alt="Marco Palmas"
+                     loading="lazy">
+            </div>
 
-                <img
-                    class="about-photo"
-                    src="./marco-palmas-chi-sono.png"
-                    alt="Marco Palmas"
-                    loading="lazy"
-                >
+        </div>
+
+    </section>
+
+    <!-- ============ AREE TEMATICHE ============ -->
+    <section class="themes-section" id="temi">
+
+        <div class="themes-header">
+            <p class="section-eyebrow">LE MIE AREE TEMATICHE</p>
+            <h2>Di cosa parlo.</h2>
+        </div>
+
+        <div class="theme-list">
+
+            <a class="theme-panel" href="tema-stress-mindfulness.html">
+                <img class="theme-image"
+                     src="./pannello-stress-mindfulness.png"
+                     alt="MIND medita accanto a una tavola da surf sul mare"
+                     loading="lazy">
+                <div class="theme-content">
+                    <div class="theme-number">01</div>
+                    <h3>Stress &amp; Mindfulness</h3>
+                    <p class="theme-quote">
+                        “Non puoi fermare le onde, ma puoi imparare a <em>SURFARE.</em>”
+                    </p>
+                    <p class="theme-author">— J. K. Zhin</p>
+                </div>
+            </a>
+
+            <a class="theme-panel" href="tema-sport-performance.html">
+                <img class="theme-image"
+                     src="./pannello-sport-performance.png"
+                     alt="Portiere con un pallone tra le mani in campo"
+                     loading="lazy">
+                <div class="theme-content">
+                    <div class="theme-number">02</div>
+                    <h3>Sport &amp; Performance</h3>
+                    <p class="theme-quote">
+                        “Il mio vero nemico è il pensiero.”
+                    </p>
+                    <p class="theme-author">— Mile Svilar</p>
+                </div>
+            </a>
+
+            <a class="theme-panel" href="tema-infermieristica.html">
+                <img class="theme-image"
+                     src="./pannello-infermieristica.png"
+                     alt="Fonendoscopio su una divisa sanitaria"
+                     loading="lazy">
+                <div class="theme-content">
+                    <div class="theme-number">03</div>
+                    <h3>Infermieristica</h3>
+                    <p class="theme-quote">
+                        “Il burnout è una sindrome derivante da stress cronico sul lavoro non gestito con successo.”
+                    </p>
+                    <p class="theme-author">— Organizzazione Mondiale della Sanità</p>
+                </div>
+            </a>
+
+            <a class="theme-panel" href="tema-vita-reale.html">
+                <img class="theme-image"
+                     src="./pannello-vita-reale.png"
+                     alt="Famiglia vista di spalle davanti al mare al tramonto"
+                     loading="lazy">
+                <div class="theme-content">
+                    <div class="theme-number">04</div>
+                    <h3>Vita reale</h3>
+                    <p class="theme-quote">
+                        “Mentre aspettiamo di vivere, la vita passa.”
+                    </p>
+                    <p class="theme-author">— Seneca</p>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ============ ULTIMI ARTICOLI ============ -->
+    <section class="articles-section" id="articoli">
+
+        <div class="articles-container">
+
+            <div class="articles-header">
+                <div>
+                    <p class="section-eyebrow">DAL BLOG</p>
+                    <h2>Ultimi articoli</h2>
+                </div>
+                <a class="articles-link" href="articoli.html">
+                    Vedi tutti gli articoli →
+                </a>
+            </div>
+
+                        <div class="article-grid">
+
+                <a class="article-card"
+                   href="post-vacation-blues-stress-rientro-vacanze.html">
+
+                    <div>
+                        <p class="article-category">Stress &amp; Mindfulness</p>
+                        <h3>
+                            Post-vacation blues: perché tornare dalle vacanze ci mette così in crisi?
+                        </h3>
+                    </div>
+
+                    <span class="read-more">Leggi l'articolo →</span>
+
+                </a>
+
+                <a class="article-card"
+                   href="quando-tutto-sembra-urgente.html">
+
+                    <div>
+                        <p class="article-category">Stress &amp; Mindfulness</p>
+                        <h3>Quando tutto sembra urgente</h3>
+                    </div>
+
+                    <span class="read-more">Leggi l'articolo →</span>
+
+                </a>
+
+                <a class="article-card"
+                   href="lasciare-andare-non-significa-arrendersi.html">
+
+                    <div>
+                        <p class="article-category">Stress &amp; Mindfulness</p>
+                        <h3>Lasciare andare non significa arrendersi</h3>
+                    </div>
+
+                    <span class="read-more">Leggi l'articolo →</span>
+
+                </a>
 
             </div>
 
@@ -1222,84 +957,90 @@
 
     </section>
 
-    <!-- =========================
-         AREE TEMATICHE
-    ========================== -->
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="newsletter-section" id="newsletter">
 
-    <section class="themes-section" id="temi">
+        <div class="newsletter-container">
 
-        <div class="themes-header">
+            <p class="newsletter-eyebrow">NEWSLETTER</p>
 
-            <p class="section-eyebrow">
-                LE MIE AREE TEMATICHE
+            <h2>Una pausa, ogni tanto</h2>
+
+            <p class="newsletter-description">
+                Riflessioni sullo stress, mindfulness, vita reale e nuove iniziative MindLab.
+                Una newsletter senza rumore, solo quando abbiamo qualcosa di utile da condividere.
             </p>
 
-            <h2>
-                Di cosa parlo.
-            </h2>
+            <div class="newsletter-form">
+                <iframe
+                    width="540"
+                    height="305"
+                    src="https://710bdf31.sibforms.com/v2/serve/MUIFAKj0YsIGgR3-Z01i_aAHnIYEYhEUukffs-JJwioS-Wt4HT2KTcGnZGA45H4KrhHs4_PjJ-CZrnpvIdDtpi15lLirNGZSMAyLoP44uR-GrwdWTJruYkWnIZMIMEA5S7dVyFiW2Kg8P83wfQvNu0EYiZN4aLOcj57RKn1Sz44pdv6us5QT0YbbafmSnKXGjohSY0cgpbbxy_03Ew=="
+                    frameborder="0"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
 
         </div>
 
-        <div class="theme-list">
+    </section>
 
-            <a class="theme-panel" href="tema-stress-mindfulness.html">
+    <!-- ============ FOOTER ============ -->
+    <footer>
 
-                <img
-                    class="theme-image"
-                    src="./pannello-stress-mindfulness.png"
-                    alt="MIND medita accanto a una tavola da surf sul mare"
-                    loading="lazy"
-                >
-
-                <div class="theme-content">
-
-                    <div class="theme-number">
-                        01
-                    </div>
-
-                    <h3>
-                        Stress &amp; Mindfulness
-                    </h3>
-
-                    <p class="theme-quote">
-                        “Non puoi fermare le onde, ma puoi imparare a <em>SURFARE.</em>”
-                    </p>
-
-                    <p class="theme-author">
-                        — J. K. Zhin
-                    </p>
-
-                </div>
-
+        <div class="footer-social">
+            <a href="https://www.instagram.com/marco_palmas_mindfulness/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram Marco Palmas Mindfulness">
+                Instagram
             </a>
 
-            <a class="theme-panel" href="tema-sport-performance.html">
+            <a href="https://youtube.com/@mindlab_mindfulness"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="YouTube MindLab Mindfulness">
+                YouTube
+            </a>
 
-                <img
-                    class="theme-image"
-                    src="./pannello-sport-performance.png"
-                    alt="Portiere con un pallone tra le mani in campo"
-                    loading="lazy"
-                >
+            <!-- SOSTITUISCI con la tua email reale -->
+            <a href="mailto:info@marcopalmas.it"
+               aria-label="Scrivimi una email">
+                Email
+            </a>
 
-                <div class="theme-content">
+            <a href="mindlab.html"
+               aria-label="Progetti MindLab">
+                MindLab
+            </a>
 
-                    <div class="theme-number">
-                        02
-                    </div>
+            <a href="privacy.html"
+               aria-label="Informativa privacy">
+                Privacy
+            </a>
+        </div>
 
-                    <h3>
-                        Sport &amp; Performance
-                    </h3>
+        <div class="footer-copy">
+            © 2026 Marco Palmas. Tutti i diritti riservati.
+        </div>
 
-                    <p class="theme-quote">
-                        “Il mio vero nemico è il pensiero.”
-                    </p>
+    </footer>
 
-                    <p class="theme-author">
-                        — Mile Svilar
-                    </p>
+    <!-- ============ WHATSAPP FLOAT ============ -->
+    <!-- SOSTITUISCI 39XXXXXXXXXX con il tuo numero in formato internazionale,
+         senza +, spazi o trattini. Esempio: 393331234567 -->
+    <a
+        href="https://wa.me/39XXXXXXXXXX?text=Ciao%20Marco%2C%20ti%20scrivo%20dal%20sito%20marcopalmas.it"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Scrivimi su WhatsApp"
+    >
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
+            <path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.2c2.3 1.3 4.9 1.9 7.7 1.9 8.8 0 16-7.2 16-16S24.8 0 16 0zm0 29.3c-2.4 0-4.8-.6-6.8-1.9l-.5-.3-4.9 1.3 1.3-4.8-.3-.5C3.5 21 2.7 18.6 2.7 16 2.7 8.7 8.7 2.7 16 2.7S29.3 8.7 29.3 16 23.3 29.3 16 29.3zm7.3-10.1c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.7.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.2 2.7 4.2 6.6 5.9.9.4 1.6.6 2.2.8.9.3 1.8.3 2.4.2.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.2-.7-.4z"/>
+        </svg>
+    </a>
 
-                </div>
-
-            </
+</body>
+</html>
