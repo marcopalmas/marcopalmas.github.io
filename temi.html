@@ -10,6 +10,17 @@
     <meta name="description"
         content="Scopri i temi del blog di Marco Palmas: stress, mindfulness, sport, infermieristica e vita reale.">
 
+    <meta name="author" content="Marco Palmas">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://marcopalmas.it/temi.html">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Temi | Marco Palmas">
+    <meta property="og:description" content="Quattro aree per raccogliere pensieri, esperienze e strumenti: stress, sport, infermieristica e vita reale.">
+    <meta property="og:url" content="https://marcopalmas.it/temi.html">
+
     <style>
         * {
             box-sizing: border-box;
@@ -159,11 +170,58 @@
         /* FOOTER */
 
         footer {
-            padding: 42px 20px;
             background: #06130f;
-            color: rgba(255, 255, 255, 0.72);
+            color: #ffffff;
+            padding: 45px 20px 35px;
             text-align: center;
-            font-size: 0.9rem;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 18px;
+        }
+
+        .footer-social a {
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.25s ease;
+        }
+
+        .footer-social a:hover {
+            color: #c9ed8b;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            opacity: 0.65;
+        }
+
+        /* WHATSAPP FLOAT */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.32);
         }
 
         /* MOBILE */
@@ -198,6 +256,17 @@
                 aspect-ratio: auto;
                 min-height: 360px;
             }
+
+            .footer-social {
+                gap: 20px;
+            }
+
+            .whatsapp-float {
+                right: 16px;
+                bottom: 16px;
+                width: 52px;
+                height: 52px;
+            }
         }
     </style>
 </head>
@@ -209,7 +278,6 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="chi-sono.html">Chi sono</a>
-        <a href="articoli.html">Articoli</a>
         <a href="temi.html">Aree Tematiche</a>
         <a href="mindlab.html">MindLab</a>
     </nav>
@@ -259,8 +327,56 @@
     </main>
 
     <footer>
-        © Marco Palmas · Stress Management
+
+        <div class="footer-social">
+            <a href="https://www.instagram.com/marco_palmas_mindfulness/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram Marco Palmas Mindfulness">
+                Instagram
+            </a>
+
+            <a href="https://youtube.com/@mindlab_mindfulness"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="YouTube MindLab Mindfulness">
+                YouTube
+            </a>
+
+            <a href="mailto:mindlab.mindfulness@gmail.com"
+               aria-label="Scrivimi una email">
+                Email
+            </a>
+
+            <a href="mindlab.html"
+               aria-label="Progetti MindLab">
+                MindLab
+            </a>
+
+            <a href="privacy-policy.html"
+               aria-label="Informativa privacy">
+                Privacy
+            </a>
+        </div>
+
+        <div class="footer-copy">
+            © 2026 Marco Palmas · Stress Management
+        </div>
+
     </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a
+        href="https://wa.me/393793670145?text=Ciao%20Marco%2C%20ti%20scrivo%20dal%20sito%20marcopalmas.it"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Scrivimi su WhatsApp"
+    >
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
+            <path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.2c2.3 1.3 4.9 1.9 7.7 1.9 8.8 0 16-7.2 16-16S24.8 0 16 0zm0 29.3c-2.4 0-4.8-.6-6.8-1.9l-.5-.3-4.9 1.3 1.3-4.8-.3-.5C3.5 21 2.7 18.6 2.7 16 2.7 8.7 8.7 2.7 16 2.7S29.3 8.7 29.3 16 23.3 29.3 16 29.3zm7.3-10.1c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.7.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.2 2.7 4.2 6.6 5.9.9.4 1.6.6 2.2.8.9.3 1.8.3 2.4.2.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.2-.7-.4z"/>
+        </svg>
+    </a>
 
 </body>
 
