@@ -76,7 +76,13 @@
         .contact p { max-width: 680px; margin: 0 auto 22px; color: rgba(255,255,255,.86); }
         .button { display: inline-block; padding: 13px 22px; border-radius: 999px; background: #c9ed8b; color: #123d2d; font-weight: 700; text-decoration: none; }
         .button:hover { background: #d8f4a6; }
-        footer { background: #06130f; color: rgba(255,255,255,.7); padding: 36px 20px; text-align: center; font-size: .9rem; }
+
+        footer { background: #06130f; color: #ffffff; padding: 45px 20px 35px; text-align: center; }
+        .footer-social { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 30px; margin-bottom: 18px; }
+        .footer-social a { font-size: 0.95rem; font-weight: 600; transition: color 0.25s ease; }
+        .footer-social a:hover { color: #c9ed8b; }
+        .footer-copy { font-size: 0.8rem; opacity: 0.65; }
+
         .whatsapp-float { position: fixed; right: 22px; bottom: 22px; z-index: 999; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.25); transition: transform .2s ease, box-shadow .2s ease; }
         .whatsapp-float:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 12px 30px rgba(0,0,0,.32); }
         @media (max-width: 1120px) {
@@ -105,6 +111,7 @@
             .healthcare { padding: 24px; }
             .contact { padding: 38px 22px; margin-bottom: 65px; }
             .whatsapp-float { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+            .footer-social { gap: 20px; }
         }
     </style>
 </head>
@@ -118,7 +125,6 @@
             <nav aria-label="Navigazione principale">
                 <a href="index.html">Home</a>
                 <a href="chi-sono.html">Chi sono</a>
-                <a href="articoli.html">Articoli</a>
                 <a href="temi.html">Aree Tematiche</a>
                 <a href="mindlab.html" class="active" aria-current="page">MindLab</a>
             </nav>
@@ -195,7 +201,42 @@
         </section>
     </main>
 
-    <footer>© 2026 Marco Palmas. Tutti i diritti riservati.</footer>
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/marco_palmas_mindfulness/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram Marco Palmas Mindfulness">
+                Instagram
+            </a>
+
+            <a href="https://youtube.com/@mindlab_mindfulness"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="YouTube MindLab Mindfulness">
+                YouTube
+            </a>
+
+            <a href="mailto:mindlab.mindfulness@gmail.com"
+               aria-label="Scrivimi una email">
+                Email
+            </a>
+
+            <a href="mindlab.html"
+               aria-label="Progetti MindLab">
+                MindLab
+            </a>
+
+            <a href="privacy-policy.html"
+               aria-label="Informativa privacy">
+                Privacy
+            </a>
+        </div>
+
+        <div class="footer-copy">
+            © 2026 Marco Palmas. Tutti i diritti riservati.
+        </div>
+    </footer>
 
     <a href="https://wa.me/393793670145?text=Ciao%20Marco%2C%20ti%20scrivo%20dal%20sito%20marcopalmas.it" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Scrivimi su WhatsApp">
         <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
