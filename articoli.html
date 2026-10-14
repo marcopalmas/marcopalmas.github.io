@@ -171,19 +171,22 @@
 
         .article-card {
             position: relative;
-            background: white;
-            border: 1px solid #e0e5e1;
+            background: #fbfdf8;
+            border: 1px solid #c9ed8b;
             border-radius: 22px;
             padding: 34px;
             overflow: hidden;
+            box-shadow: 0 6px 20px rgba(18, 61, 43, 0.05);
             transition:
                 transform 0.25s ease,
-                box-shadow 0.25s ease;
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
         }
 
         .article-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border-color: #a8d264;
+            box-shadow: 0 15px 35px rgba(18, 61, 43, 0.12);
         }
 
         .article-main {
@@ -197,6 +200,7 @@
                 #123d2d 0%,
                 #06130f 100%
             );
+            border: 1px solid #123d2d;
             color: white;
         }
 
@@ -580,6 +584,34 @@
                 <div>
 
                     <div class="category">
+                        Sport &amp; Performance · La mente del portiere
+                    </div>
+
+                    <h2>
+                        Nella testa di un portiere: come ansia e paura possono bruciare un talento
+                    </h2>
+
+                    <p>
+                        Non è un problema di tecnica. È un problema di quello che
+                        succede dentro, nei minuti che precedono la giocata, nel
+                        silenzio prima del tiro, nel secondo dopo l'errore.
+                    </p>
+
+                    <a href="nella-testa-di-un-portiere.html" class="read-more">
+                        Leggi l'articolo →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- ARTICOLI RECENTI -->
+
+            <article class="article-card article-secondary">
+
+                <div>
+
+                    <div class="category">
                         Vita reale
                     </div>
 
@@ -600,14 +632,12 @@
 
             </article>
 
-            <!-- ARTICOLI RECENTI -->
-
             <article class="article-card article-secondary">
 
                 <div>
 
                     <div class="category">
-                        Stress & Mindfulness
+                        Stress &amp; Mindfulness
                     </div>
 
                     <h2>
@@ -629,14 +659,12 @@
 
             </article>
 
-            <!-- NUOVO ARTICOLO PUBBLICATO -->
-
             <article class="article-card article-secondary">
 
                 <div>
 
                     <div class="category">
-                        Stress & Mindfulness
+                        Stress &amp; Mindfulness
                     </div>
 
                     <h2>
@@ -665,7 +693,7 @@
                 <div>
 
                     <div class="category">
-                        Sport & Performance
+                        Sport &amp; Performance
                     </div>
 
                     <h2>
