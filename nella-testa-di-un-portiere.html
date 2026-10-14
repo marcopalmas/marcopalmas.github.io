@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nella testa di un portiere: come ansia e paura possono bruciare un talento | Marco Palmas</title>
+    <meta name="description" content="C'è un portiere che in allenamento para tutto. Poi arriva la partita e succede qualcosa. Non è un problema di tecnica: è un problema di quello che succede dentro.">
+    <meta name="author" content="Marco Palmas">
+    <link rel="canonical" href="https://marcopalmas.it/nella-testa-di-un-portiere.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Nella testa di un portiere: come ansia e paura possono bruciare un talento | Marco Palmas">
+    <meta property="og:description" content="Non è un problema di tecnica. È un problema di quello che succede dentro, nei minuti che precedono la giocata.">
+    <meta property="og:url" content="https://marcopalmas.it/nella-testa-di-un-portiere.html">
+    <meta property="og:image" content="https://marcopalmas.it/nella-testa-di-un-portiere.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f5f7f4;
+            color: #202620;
+            line-height: 1.75;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .site-header {
+            background: #06130f;
+            color: white;
+            padding: 28px 0 24px;
+        }
+
+        .header-container {
+            width: min(1200px, 90%);
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            text-decoration: none;
+        }
+
+        .brand-name {
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .brand-subtitle {
+            margin-top: 9px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 38px;
+            padding-top: 6px;
+        }
+
+        nav a {
+            position: relative;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding-bottom: 8px;
+            text-decoration: none;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background: #c9ed8b;
+            transition: width 0.25s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #c9ed8b;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .article-hero {
+            width: min(900px, 88%);
+            margin: 0 auto;
+            padding: 76px 0 44px;
+        }
+
+        .article-hero-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 22px;
+            margin-bottom: 32px;
+            display: block;
+        }
+
+        .eyebrow {
+            color: #123d2d;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .eyebrow a {
+            text-decoration: none;
+        }
+
+        .eyebrow a:hover {
+            text-decoration: underline;
+        }
+
+        h1,
+        h2 {
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: clamp(2.7rem, 6vw, 5rem);
+            line-height: 1.08;
+            letter-spacing: -0.035em;
+            margin-bottom: 22px;
+        }
+
+        .dek {
+            max-width: 760px;
+            color: #555;
+            font-size: clamp(1.08rem, 2vw, 1.25rem);
+            line-height: 1.65;
+        }
+
+        .byline {
+            margin-top: 24px;
+            color: #68736b;
+            font-size: 0.9rem;
+        }
+
+        .article-layout {
+            width: min(900px, 88%);
+            margin: 0 auto 80px;
+        }
+
+        .article-body {
+            background: white;
+            border: 1px solid #e0e5e1;
+            border-radius: 22px;
+            padding: clamp(26px, 6vw, 64px);
+        }
+
+        .article-body h2 {
+            color: #123d2d;
+            font-size: clamp(1.8rem, 3.5vw, 2.45rem);
+            line-height: 1.2;
+            margin: 42px 0 16px;
+        }
+
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body p {
+            color: #38413a;
+            margin: 0 0 19px;
+        }
+
+        .article-body ul {
+            margin: 0 0 22px 1.25rem;
+            color: #38413a;
+        }
+
+        .article-body li {
+            padding-left: 5px;
+            margin: 0 0 10px;
+        }
+
+        .article-body a {
+            color: #123d2d;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+
+        .mindlab-invitation {
+            width: min(900px, 88%);
+            margin: 0 auto 40px;
+            padding: clamp(30px, 5vw, 52px);
+            border-radius: 22px;
+            background: #123d2d;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .mindlab-invitation .eyebrow {
+            color: #c9ed8b;
+            margin-bottom: 12px;
+        }
+
+        .mindlab-invitation h2 {
+            color: #ffffff;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 500;
+            line-height: 1.12;
+            margin-bottom: 14px;
+        }
+
+        .mindlab-invitation p {
+            max-width: 700px;
+            margin: 0 auto 16px;
+            color: rgba(255, 255, 255, 0.86);
+        }
+
+        .mindlab-invitation .mindlab-link {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 12px 20px;
+            border-radius: 999px;
+            background: #c9ed8b;
+            color: #123d2d;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .mindlab-invitation .mindlab-link:hover {
+            background: #d8f4a6;
+        }
+
+        .newsletter-box {
+            width: min(1000px, 88%);
+            margin: 0 auto 80px;
+            padding: 50px clamp(22px, 5vw, 55px);
+            border-radius: 24px;
+            background: #e7eee8;
+            border: 1px solid #d8e0da;
+            text-align: center;
+        }
+
+        .newsletter-box .eyebrow {
+            margin-bottom: 12px;
+        }
+
+        .newsletter-box h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-box p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .newsletter-form {
+            margin: 32px auto 0;
+            width: 100%;
+            max-width: 560px;
+            min-height: 305px;
+        }
+
+        .newsletter-form iframe {
+            display: block;
+            width: 100%;
+            max-width: 540px;
+            height: 390px;
+            min-height: 390px;
+            margin: 0 auto;
+            border: 0;
+            border-radius: 12px;
+            background: transparent;
+        }
+
+        footer {
+            background: #06130f;
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .footer-name {
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .footer-subtitle {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.8rem;
+            margin-top: 22px;
+        }
+
+        @media (max-width: 850px) {
+            .header-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            nav {
+                gap: 25px;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .site-header {
+                padding: 24px 0;
+            }
+
+            .header-container {
+                width: 88%;
+            }
+
+            .brand-name {
+                font-size: 2rem;
+            }
+
+            .brand-subtitle {
+                font-size: 0.58rem;
+                letter-spacing: 0.12em;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            nav a {
+                font-size: 0.86rem;
+            }
+
+            .article-hero {
+                padding: 55px 0 35px;
+            }
+
+            .article-hero-image {
+                border-radius: 18px;
+                margin-bottom: 24px;
+            }
+
+            .article-body {
+                border-radius: 18px;
+            }
+
+            .newsletter-box {
+                margin-bottom: 65px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                <span class="brand-name">Marco Palmas</span>
+                <span class="brand-subtitle">STRESS MANAGEMENT · MINDFULNESS · SPORT · VITA REALE</span>
+            </a>
+
+            <nav aria-label="Navigazione principale">
+                <a href="index.html">Home</a>
+                <a href="chi-sono.html">Chi sono</a>
+                <a href="articoli.html" class="active" aria-current="page">Articoli</a>
+                <a href="temi.html">Aree Tematiche</a>
+                <a href="mindlab.html">MindLab</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="article-hero">
+
+            <img
+                class="article-hero-image"
+                src="nella-testa-di-un-portiere.jpg"
+                alt="Un portiere solo, in concentrazione, prima di una giocata">
+
+            <p class="eyebrow"><a href="articoli.html">Articoli</a> / Sport e Performance</p>
+
+            <h1>Nella testa di un portiere: come ansia e paura possono bruciare un talento</h1>
+
+            <p class="dek">
+                C'è un portiere che in allenamento para tutto. Poi arriva la partita
+                e succede qualcosa. Non è un problema di tecnica: è un problema di
+                quello che succede dentro, nei minuti che precedono la giocata.
+            </p>
+
+            <p class="byline">Di Marco Palmas · 14 ottobre 2026</p>
+        </section>
+
+        <div class="article-layout">
+            <article class="article-body">
+
+                <p>
+                    C'è un portiere che in allenamento para tutto. Sicuro, reattivo,
+                    presente. Poi arriva la partita e succede qualcosa. Le mani
+                    sembrano le stesse, il corpo anche. Ma la testa è altrove.
+                </p>
+
+                <p>
+                    Non è un problema di tecnica. È un problema di quello che succede
+                    dentro, nei minuti che precedono la giocata, nel silenzio prima
+                    del tiro, nel secondo dopo l'errore. Ed è una cosa che quasi
+                    nessun portiere racconta, perché sembra una debolezza. La realtà
+                    è che molti trascurano una preparazione mentale alla gara.
+                </p>
+
+                <h2>Il talento non basta se la testa è altrove</h2>
+
+                <p>
+                    Un portiere può avere riflessi eccezionali, una presa sicura, una
+                    lettura del gioco superiore. Ma se la mente è occupata a prevedere
+                    l'errore, a immaginare il giudizio, a ripassare la papera di
+                    domenica scorsa, quelle qualità non riescono a esprimersi.
+                </p>
+
+                <p>
+                    Il talento non scompare. Viene coperto. Come una mano che stringe
+                    troppo: la forza c'è, ma non arriva dove dovrebbe.
+                </p>
+
+                <h2>Ansia e paura non sono nemiche da eliminare</h2>
+
+                <p>
+                    La prima cosa da capire è che ansia e paura non sono difetti da
+                    cancellare. Sono segnali. Dicono che qualcosa conta, che c'è
+                    qualcosa da proteggere, che il portiere è umano.
+                </p>
+
+                <p>
+                    Il problema non è sentirle. Il problema è quando decidono al posto
+                    nostro. Quando la paura di sbagliare diventa la paura di provarci.
+                    Quando l'ansia del giudizio trasforma una parata in una prova da
+                    superare.
+                </p>
+
+                <p>
+                    La mindfulness non serve a farle sparire. Serve a riconoscerle
+                    mentre arrivano, senza essere automaticamente trascinati. È la
+                    differenza tra <em>"ho paura"</em> e <em>"la mia paura mi blocca"</em>.
+                </p>
+
+                <h2>Cosa succede davvero nella testa di un portiere</h2>
+
+                <p>
+                    Prima della partita: pensieri anticipatori.
+                    <em>"E se sbaglio? E se mi fanno gol sul primo tiro? E se
+                    l'allenatore pensa che non sono pronto?"</em>
+                </p>
+
+                <p>
+                    Durante la partita: attenzione che va e viene. Un rumore sugli
+                    spalti, un compagno che urla, un pensiero che entra e non se ne va.
+                </p>
+
+                <p>
+                    Dopo l'errore: il film mentale che continua. La giocata è finita,
+                    ma la testa la sta ancora giocando. E intanto arriva la giocata
+                    successiva, e non siamo lì.
+                </p>
+
+                <p>
+                    Dopo la partita: la ruminazione. Il replay degli errori, il
+                    giudizio su sé stessi, la sensazione che tutto dipenda da quel
+                    momento.
+                </p>
+
+                <p>
+                    Nessuno di questi è un difetto. Sono tutti meccanismi normali di
+                    una mente che lavora, in cerca di spiegazioni e riparo. Il punto
+                    è accorgersene, e tornare.
+                </p>
+
+                <h2>Una pratica semplice per riconoscere ciò che ti attraversa</h2>
+
+                <p>
+                    Quando senti che la testa sta andando altrove, prova a fermarti
+                    per qualche istante e tornare al respiro. Non serve risolvere
+                    tutto. A volte basta riconoscere che c'è un pensiero, e scegliere
+                    di non seguirlo più, lasciarlo andare così com'è arrivato, senza
+                    alimentarlo con ulteriore giudizio sul perché o sul come sia
+                    arrivato. È in quello spazio che torniamo presenti e ricominciamo
+                    a giocare.
+                </p>
+
+                <h2>Non si tratta di non avere paura. Si tratta di non lasciarle decidere al posto tuo.</h2>
+
+                <p>
+                    Il portiere non deve diventare una macchina senza emozioni. Non
+                    deve smettere di sentire la pressione, la rabbia, il dubbio.
+                    Quello che può imparare è riconoscerli senza lasciare che siano
+                    loro a scegliere per lui.
+                </p>
+
+                <p>
+                    Il talento di un portiere non si misura solo in quello che para.
+                    Si misura anche in quello che riesce a non lasciare che la paura
+                    decida al posto suo.
+                </p>
+
+                <p>
+                    <strong>
+                        E spesso, la prima parata importante non è quella che si vede
+                        in campo. È quella che si fa dentro, un secondo prima.
+                    </strong>
+                </p>
+
+            </article>
+        </div>
+
+        <section class="mindlab-invitation" aria-labelledby="mindlab-invitation-title">
+            <p class="eyebrow">marcopalmas.it · SPORT E PERFORMANCE · LA MENTE DEL PORTIERE</p>
+            <h2 id="mindlab-invitation-title">Imparare a gestire quello che succede nella testa quando sei l'ultimo uomo.</h2>
+            <p><strong>Questa è la prima tappa della serie MindLab dedicata ai portieri.</strong></p>
+            <p>Percorsi MBSR, incontri introduttivi e consulenze per portieri, club sportivi e squadre: scopri le proposte MindLab.</p>
+            <a class="mindlab-link" href="mindlab.html">Scopri MindLab →</a>
+        </section>
+
+        <section class="newsletter-box" aria-labelledby="newsletter-title">
+            <p class="eyebrow">Newsletter</p>
+
+            <h2 id="newsletter-title">Una pausa, ogni tanto.</h2>
+
+            <p>
+                Riflessioni sullo stress, mindfulness, vita reale e nuove iniziative MindLab.
+                Una newsletter senza rumore, solo quando abbiamo qualcosa di utile da condividere.
+            </p>
+
+            <div class="newsletter-form">
+                <iframe
+                    width="540"
+                    height="305"
+                    src="https://710bdf31.sibforms.com/v2/serve/MUIFAKj0YsIGgR3-Z01i_aAHnIYEYhEUukffs-JJwioS-Wt4HT2KTcGnZGA45H4KrhHs4_PjJ-CZrnpvIdDtpi15lLirNGZSMAyLoP44uR-GrwdWTJruYkWnIZMIMEA5S7dVyFiW2Kg8P83wfQvNu0EYiZN4aLOcj57RKn1Sz44pdv6us5QT0YbbafmSnKXGjohSY0cgpbbxy_03Ew=="
+                    frameborder="0"
+                    scrolling="auto"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-name">Marco Palmas</div>
+        <div class="footer-subtitle">Stress Management · Mindfulness · Sport · Vita Reale</div>
+        <div class="copyright">© 2026 Marco Palmas. Tutti i diritti riservati.</div>
+    </footer>
+
+</body>
+</html>
