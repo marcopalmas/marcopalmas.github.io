@@ -1,0 +1,56 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate sitemap.xml
+        run: |
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
+
+          # Home
+          echo "  <url>" >> sitemap.xml
+          echo "    <loc>https://marcopalmas.it/</loc>" >> sitemap.xml
+          echo "    <lastmod>$(date -u +%Y-%m-%d)</lastmod>" >> sitemap.xml
+          echo "    <changefreq>weekly</changefreq>" >> sitemap.xml
+          echo "    <priority>1.0</priority>" >> sitemap.xml
+          echo "  </url>" >> sitemap.xml
+
+          # Tutti gli altri file .html (esclusi index.html, 404.html, sitemap.html)
+          for file in *.html; do
+            if [ "$file" != "index.html" ] && [ "$file" != "404.html" ]; then
+              lastmod=$(git log -1 --format=%cd --date=short "$file" 2>/dev/null || date -u +%Y-%m-%d)
+              echo "  <url>" >> sitemap.xml
+              echo "    <loc>https://marcopalmas.it/$file</loc>" >> sitemap.xml
+              echo "    <lastmod>$lastmod</lastmod>" >> sitemap.xml
+              echo "    <changefreq>monthly</changefreq>" >> sitemap.xml
+              echo "    <priority>0.8</priority>" >> sitemap.xml
+              echo "  </url>" >> sitemap.xml
+            fi
+          done
+
+          echo '</urlset>' >> sitemap.xml
+
+      - name: Commit and push sitemap
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          if git diff --staged --quiet; then
+            echo "Nessuna modifica alla sitemap"
+          else
+            git commit -m "chore: aggiorna sitemap.xml [skip ci]"
+            git push
+          fi
