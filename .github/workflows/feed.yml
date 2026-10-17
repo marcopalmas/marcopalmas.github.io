@@ -1,0 +1,60 @@
+name: Generate RSS Feed
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate feed.xml
+        run: |
+          # Inizia il file XML
+          cat > feed.xml << 'EOF'
+          <?xml version="1.0" encoding="UTF-8" ?>
+          <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+          <channel>
+            <title>Marco Palmas | Blog</title>
+            <link>https://marcopalmas.it</link>
+            <description>Riflessioni su stress, mindfulness, sport e vita reale.</description>
+            <language>it-it</language>
+            <atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
+          EOF
+
+          # Aggiungi ogni articolo (modifica i nomi file se necessario)
+          for file in post-vacation-blues-stress-rientro-vacanze.html quando-tutto-sembra-urgente.html lasciare-andare-non-significa-arrendersi.html nella-testa-di-un-portiere.html; do
+            if [ -f "$file" ]; then
+              # Estrai il titolo dal tag <title> (rimuove " | Marco Palmas")
+              title=$(grep -o '<title>[^<]*</title>' "$file" | sed 's/<[^>]*>//g' | sed 's/ | Marco Palmas//')
+              # Estrai la descrizione
+              desc=$(grep -o '<meta name="description" content="[^"]*"' "$file" | sed 's/.*content="//;s/"//')
+              # Data ultima modifica dal git
+              date=$(git log -1 --format=%aD "$file" 2>/dev/null || date -R)
+              
+              echo "    <item>" >> feed.xml
+              echo "      <title><![CDATA[$title]]></title>" >> feed.xml
+              echo "      <link>https://marcopalmas.it/$file</link>" >> feed.xml
+              echo "      <description><![CDATA[$desc]]></description>" >> feed.xml
+              echo "      <pubDate>$date</pubDate>" >> feed.xml
+              echo "    </item>" >> feed.xml
+            fi
+          done
+
+          # Chiudi il file
+          echo "  </channel>" >> feed.xml
+          echo "</rss>" >> feed.xml
+
+      - name: Commit feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add feed.xml
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update feed.xml [skip ci]"
+          git push
