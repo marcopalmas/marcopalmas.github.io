@@ -1,18 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Articoli di Marco Palmas</title>
-    <link>https://marcopalmas.it/articoli.html</link>
-    <description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
-    <language>it-IT</language>
-    <atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 07 Oct 2026 23:28:09 +0200</lastBuildDate>
-    <item>
-      <title>Post-vacation blues</title>
-      <link>https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html</link>
-      <description>Le vacanze finiscono, la routine riparte e la leggerezza sembra svanire. Il post-vacation blues è un disagio temporaneo, ma può anche invitarci a guardare con più attenzione la vita a cui torniamo.</description>
-      <guid isPermaLink="true">https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html</guid>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0200</pubDate>
-    </item>
-  </channel>
+<channel>
+  <title>Articoli di Marco Palmas</title>
+  <link>https://marcopalmas.it/articoli.html</link>
+  <description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
+  <language>it-IT</language>
+  <atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Sat, 17 Oct 2026 15:00:00 +0200</lastBuildDate>
+
+  <!-- ARTICOLO PIÙ RECENTE -->
+  <item>
+    <title>Nella testa di un portiere</title>
+    <link>https://marcopalmas.it/nella-testa-di-un-portiere.html</link>
+    <description>Inserisci qui la descrizione breve dell'articolo (quella che appare sotto il titolo nella pagina).</description>
+    <guid isPermaLink="true">https://marcopalmas.it/nella-testa-di-un-portiere.html</guid>
+    <pubDate>Fri, 17 Oct 2026 12:00:00 +0200</pubDate>
+  </item>
+
+  <item>
+    <title>Lasciare andare non significa arrendersi</title>
+    <link>https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html</link>
+    <description>Chiudere una pagina della nostra storia personale non significa cancellare ciò che è stato.</description>
+    <guid isPermaLink="true">https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html</guid>
+    <pubDate>Wed, 14 Oct 2026 10:00:00 +0200</pubDate>
+  </item>
+
+  <item>
+    <title>Quando tutto sembra urgente</title>
+    <link>https://marcopalmas.it/quando-tutto-sembra-urgente.html</link>
+    <description>Viviamo spesso con la sensazione che tutto debba essere fatto subito. Ma l'urgenza non è sempre reale.</description>
+    <guid isPermaLink="true">https://marcopalmas.it/quando-tutto-sembra-urgente.html</guid>
+    <pubDate>Mon, 12 Oct 2026 09:00:00 +0200</pubDate>
+  </item>
+
+  <item>
+    <title>Post-vacation blues: perché tornare dalle vacanze ci mette così in crisi?</title>
+    <link>https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html</link>
+    <description>Le vacanze finiscono, la routine riparte e la leggerezza sembra svanire. Il post-vacation blues è un disagio temporaneo, ma può anche invitarci a guardare con più attenzione la vita a cui torniamo.</description>
+    <guid isPermaLink="true">https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html</guid>
+    <pubDate>Wed, 07 Oct 2026 00:00:00 +0200</pubDate>
+  </item>
+
+</channel>
 </rss>
