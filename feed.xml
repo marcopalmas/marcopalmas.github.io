@@ -1,39 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Articoli di Marco Palmas</title>
-    <link>https://marcopalmas.it/articoli.html</link>
-    <description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
-    <language>it-IT</language>
-    <atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>$(date -R)</lastBuildDate>
-    <item>
-      <title><![CDATA[Nella testa di un portiere: come ansia e paura possono bruciare un talento]]></title>
-      <link>https://marcopalmas.it/nella-testa-di-un-portiere.html</link>
-      <description><![CDATA[C'è un portiere che in allenamento para tutto. Poi arriva la partita e succede qualcosa. Non è un problema di tecnica: è un problema di quello che succede dentro.]]></description>
-      <guid isPermaLink="true">https://marcopalmas.it/nella-testa-di-un-portiere.html</guid>
-      <pubDate>Wed, 21 Oct 2026 12:42:10 +0200</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Lasciare andare non significa arrendersi]]></title>
-      <link>https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html</link>
-      <description><![CDATA[Lasciare andare non significa arrendersi: una riflessione su controllo, accettazione e libertà interiore.]]></description>
-      <guid isPermaLink="true">https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html</guid>
-      <pubDate>Wed, 21 Oct 2026 12:42:10 +0200</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Quando tutto sembra urgente]]></title>
-      <link>https://marcopalmas.it/quando-tutto-sembra-urgente.html</link>
-      <description><![CDATA[Quando tutto sembra urgente, ritrovare lucidità e scegliere una priorità alla volta può aiutare a ridurre stress e sovraccarico.]]></description>
-      <guid isPermaLink="true">https://marcopalmas.it/quando-tutto-sembra-urgente.html</guid>
-      <pubDate>Wed, 21 Oct 2026 12:42:10 +0200</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Post-vacation blues: perché tornare dalle vacanze ci mette così in crisi?]]></title>
-      <link>https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html</link>
-      <description><![CDATA[Perché il rientro dalle vacanze può pesare così tanto? Una riflessione sul post-vacation blues, il recupero e la vita quotidiana.]]></description>
-      <guid isPermaLink="true">https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html</guid>
-      <pubDate>Wed, 21 Oct 2026 12:42:10 +0200</pubDate>
-    </item>
-  </channel>
-</rss>
+name: Generate RSS Feed
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate feed.xml
+        run: |
+          cat > feed.xml << 'EOF'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+            <channel>
+              <title>Articoli di Marco Palmas</title>
+              <link>https://marcopalmas.it/articoli.html</link>
+              <description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
+              <language>it-IT</language>
+              <atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
+              <lastBuildDate>$(date -R)</lastBuildDate>
+          EOF
+
+          # Estrae i primi 5 link agli articoli dalla pagina articoli.html
+          # Esclude i link che non sono articoli (es. link a index, mindlab, ecc.)
+          grep -o 'href="[^"]*\.html"' articoli.html | sed 's/href="//;s/"//' | grep -v -E '^(index|chi-sono|temi|mindlab|privacy|categorie)' | head -n 5 > temp_links.txt
+
+          while read -r file; do
+            if [ -f "$file" ]; then
+              title=$(grep -o '<title>[^<]*</title>' "$file" | head -1 | sed 's/<[^>]*>//g' | sed 's/ | Marco Palmas//')
+              desc=$(grep -o '<meta name="description" content="[^"]*"' "$file" | head -1 | sed 's/.*content="//;s/"//')
+              date=$(git log -1 --format=%aD "$file" 2>/dev/null || date -R)
+              
+              echo "    <item>" >> feed.xml
+              echo "      <title><![CDATA[$title]]></title>" >> feed.xml
+              echo "      <link>https://marcopalmas.it/$file</link>" >> feed.xml
+              echo "      <description><![CDATA[$desc]]></description>" >> feed.xml
+              echo "      <guid isPermaLink=\"true\">https://marcopalmas.it/$file</guid>" >> feed.xml
+              echo "      <pubDate>$date</pubDate>" >> feed.xml
+              echo "    </item>" >> feed.xml
+            fi
+          done < temp_links.txt
+          
+          rm temp_links.txt
+
+          echo "  </channel>" >> feed.xml
+          echo "</rss>" >> feed.xml
+
+      - name: Commit feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add feed.xml
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update feed.xml [skip ci]"
+          git push
