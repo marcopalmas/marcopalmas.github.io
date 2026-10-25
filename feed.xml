@@ -1,64 +1,19 @@
-name: Generate RSS Feed
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Articoli di Marco Palmas</title>
+  <link>https://marcopalmas.it/articoli.html</link>
+  <description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
+  <language>it-IT</language>
+  <atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Sun, 25 Oct 2026 15:30:00 +0200</lastBuildDate>
 
-on:
-  push:
-    branches: [main]
-    paths:
-      - '**.html'
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Generate feed.xml
-        run: |
-          cat > feed.xml << 'EOF'
-          <?xml version="1.0" encoding="UTF-8"?>
-          <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-            <channel>
-              <title>Articoli di Marco Palmas</title>
-              <link>https://marcopalmas.it/articoli.html</link>
-              <description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
-              <language>it-IT</language>
-              <atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
-              <lastBuildDate>$(date -R)</lastBuildDate>
-          EOF
-
-          # Estrae i primi 5 link agli articoli dalla pagina articoli.html
-          # Esclude i link che non sono articoli (es. link a index, mindlab, ecc.)
-          grep -o 'href="[^"]*\.html"' articoli.html | sed 's/href="//;s/"//' | grep -v -E '^(index|chi-sono|temi|mindlab|privacy|categorie)' | head -n 5 > temp_links.txt
-
-          while read -r file; do
-            if [ -f "$file" ]; then
-              title=$(grep -o '<title>[^<]*</title>' "$file" | head -1 | sed 's/<[^>]*>//g' | sed 's/ | Marco Palmas//')
-              desc=$(grep -o '<meta name="description" content="[^"]*"' "$file" | head -1 | sed 's/.*content="//;s/"//')
-              date=$(git log -1 --format=%aD "$file" 2>/dev/null || date -R)
-              
-              echo "    <item>" >> feed.xml
-              echo "      <title><![CDATA[$title]]></title>" >> feed.xml
-              echo "      <link>https://marcopalmas.it/$file</link>" >> feed.xml
-              echo "      <description><![CDATA[$desc]]></description>" >> feed.xml
-              echo "      <guid isPermaLink=\"true\">https://marcopalmas.it/$file</guid>" >> feed.xml
-              echo "      <pubDate>$date</pubDate>" >> feed.xml
-              echo "    </item>" >> feed.xml
-            fi
-          done < temp_links.txt
-          
-          rm temp_links.txt
-
-          echo "  </channel>" >> feed.xml
-          echo "</rss>" >> feed.xml
-
-      - name: Commit feed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add feed.xml
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update feed.xml [skip ci]"
-          git push
+  <item>
+    <title>Cosa succede nella testa di un portiere</title>
+    <link>https://marcopalmas.it/cosa-succede-nella-testa-di-un-portiere.html</link>
+    <description>Inserisci qui la descrizione breve del tuo articolo.</description>
+    <guid isPermaLink="true">https://marcopalmas.it/cosa-succede-nella-testa-di-un-portiere.html</guid>
+    <pubDate>Sun, 25 Oct 2026 12:00:00 +0200</pubDate>
+  </item>
+</channel>
+</rss>
