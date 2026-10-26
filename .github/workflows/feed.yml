@@ -1,10 +1,10 @@
-name: Auto-Update Site (Articoli + Feed)
+name: Generate RSS Feed
 
 on:
   push:
     branches: [main]
     paths:
-      - '**.html'
+      - 'articoli.html'
   workflow_dispatch:
 
 permissions:
@@ -15,79 +15,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2 # Ci serve la cronologia per capire cos'è cambiato
 
-      - name: Aggiorna articoli.html e feed.xml
+      - name: Generate feed.xml
         run: |
-          # 1. Trova i file HTML modificati nell'ultimo commit (escludendo le pagine fisse)
-          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep '\.html$' | grep -v -E '^(index|chi-sono|temi|mindlab|privacy-policy|categorie-protette|articoli)\.html$')
+          # Intestazione pulita
+          printf '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n<title>Articoli di Marco Palmas</title>\n<link>https://marcopalmas.it/articoli.html</link>\n<description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>\n<language>it-IT</language>\n<atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />\n<lastBuildDate>'"$(date -R)"'</lastBuildDate>\n' > feed.xml
+
+          # Estrae i link dall'articoli.html
+          grep -o 'href="[^"]*\.html"' articoli.html | sed 's/href="//;s/"//' | grep -v -E '^(index|chi-sono|temi|mindlab|privacy|categorie)' | head -n 5 > temp_links.txt
+
+          while read -r file; do
+            if [ -f "$file" ]; then
+              title=$(grep -o '<title>[^<]*</title>' "$file" | head -1 | sed 's/<[^>]*>//g' | sed 's/ | Marco Palmas//' | sed 's/&/&amp;/g')
+              desc=$(grep -o '<meta name="description" content="[^"]*"' "$file" | head -1 | sed 's/.*content="//;s/"//' | sed 's/&/&amp;/g')
+              date=$(git log -1 --format=%aD "$file" 2>/dev/null || date -R)
+              
+              echo "    <item>" >> feed.xml
+              echo "      <title><![CDATA[$title]]></title>" >> feed.xml
+              echo "      <link>https://marcopalmas.it/$file</link>" >> feed.xml
+              echo "      <description><![CDATA[$desc]]></description>" >> feed.xml
+              echo "      <guid isPermaLink=\"true\">https://marcopalmas.it/$file</guid>" >> feed.xml
+              echo "      <pubDate>$date</pubDate>" >> feed.xml
+              echo "    </item>" >> feed.xml
+            fi
+          done < temp_links.txt
           
-          # Se non ci sono nuovi articoli, esci
-          if [ -z "$CHANGED_FILES" ]; then
-            echo "Nessun nuovo articolo rilevato."
-            exit 0
-          fi
+          rm temp_links.txt
+          printf '  </channel>\n</rss>\n' >> feed.xml
 
-          # 2. Prendi il primo file modificato (il più recente)
-          NEW_ARTICLE=$(echo "$CHANGED_FILES" | head -n 1)
-          echo "Nuovo articolo rilevato: $NEW_ARTICLE"
-
-          if [ -f "$NEW_ARTICLE" ]; then
-            # Estrai Titolo (pulisci il suffisso " | Marco Palmas")
-            TITLE=$(grep -o '<title>[^<]*</title>' "$NEW_ARTICLE" | head -1 | sed 's/<[^>]*>//g' | sed 's/ | Marco Palmas//' | sed 's/&/&amp;/g')
-            
-            # Estrai Descrizione
-            DESC=$(grep -o '<meta name="description" content="[^"]*"' "$NEW_ARTICLE" | head -1 | sed 's/.*content="//;s/"//' | sed 's/&/&amp;/g')
-            
-            # Estrai Categoria (se presente)
-            CATEGORY=$(grep -o '<div class="category">[^<]*</div>' "$NEW_ARTICLE" | head -1 | sed 's/<[^>]*>//g' | sed 's/^[ \t]*//' || echo "Vita reale")
-
-            # 3. Aggiorna ARTICOLI.HTML (inserisce la nuova card in cima)
-            # Creiamo il blocco HTML della nuova card
-            CARD_HTML="<!-- NUOVO ARTICOLO AGGIUNTO IN AUTOMATICO -->
-            <article class=\"article-card article-main\">
-                <div>
-                    <div class=\"category\">$CATEGORY</div>
-                    <h2>$TITLE</h2>
-                    <p>$DESC</p>
-                    <a href=\"$NEW_ARTICLE\" class=\"read-more\">Leggi l'articolo →</a>
-                </div>
-            </article>"
-
-            # Usiamo 'awk' per inserire la nuova card subito dopo il tag di apertura della griglia
-            awk -v card="$CARD_HTML" '/<div class="articles-grid">/ { print $0; print card; next } 1' articoli.html > articoli_new.html
-            mv articoli_new.html articoli.html
-            
-            # 4. Genera il nuovo FEED.XML (usando la stessa logica di prima, ma prendendo i link da articoli.html)
-            printf '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n<title>Articoli di Marco Palmas</title>\n<link>https://marcopalmas.it/articoli.html</link>\n<description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>\n<language>it-IT</language>\n<atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />\n<lastBuildDate>'"$(date -R)"'</lastBuildDate>\n' > feed.xml
-
-            grep -o 'href="[^"]*\.html"' articoli.html | sed 's/href="//;s/"//' | grep -v -E '^(index|chi-sono|temi|mindlab|privacy|categorie)' | head -n 5 > temp_links.txt
-
-            while read -r file; do
-              if [ -f "$file" ]; then
-                t=$(grep -o '<title>[^<]*</title>' "$file" | head -1 | sed 's/<[^>]*>//g' | sed 's/ | Marco Palmas//' | sed 's/&/&amp;/g')
-                d=$(grep -o '<meta name="description" content="[^"]*"' "$file" | head -1 | sed 's/.*content="//;s/"//' | sed 's/&/&amp;/g')
-                date=$(git log -1 --format=%aD "$file" 2>/dev/null || date -R)
-                
-                echo "    <item>" >> feed.xml
-                echo "      <title><![CDATA[$t]]></title>" >> feed.xml
-                echo "      <link>https://marcopalmas.it/$file</link>" >> feed.xml
-                echo "      <description><![CDATA[$d]]></description>" >> feed.xml
-                echo "      <guid isPermaLink=\"true\">https://marcopalmas.it/$file</guid>" >> feed.xml
-                echo "      <pubDate>$date</pubDate>" >> feed.xml
-                echo "    </item>" >> feed.xml
-              fi
-            done < temp_links.txt
-            
-            rm temp_links.txt
-            printf '  </channel>\n</rss>\n' >> feed.xml
-          fi
-
-      - name: Commit delle modifiche
+      - name: Commit feed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add articoli.html feed.xml
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: auto-update articoli.html e feed.xml [skip ci]"
+          git add feed.xml
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update feed.xml [skip ci]"
           git push
