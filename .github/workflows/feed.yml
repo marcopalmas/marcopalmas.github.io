@@ -3,8 +3,6 @@ name: Generate RSS Feed
 on:
   push:
     branches: [main]
-    paths:
-      - 'articoli.html'
   workflow_dispatch:
 
 permissions:
@@ -21,13 +19,17 @@ jobs:
           # Intestazione pulita
           printf '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n<title>Articoli di Marco Palmas</title>\n<link>https://marcopalmas.it/articoli.html</link>\n<description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>\n<language>it-IT</language>\n<atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />\n<lastBuildDate>'"$(date -R)"'</lastBuildDate>\n' > feed.xml
 
-          # Estrae i link dall'articoli.html
-          grep -o 'href="[^"]*\.html"' articoli.html | sed 's/href="//;s/"//' | grep -v -E '^(index|chi-sono|temi|mindlab|privacy|categorie)' | head -n 5 > temp_links.txt
+          # Lista dei file HTML (escludiamo le pagine del sito)
+          ls *.html | grep -v -E '^(index|chi-sono|temi|mindlab|privacy-policy|categorie-protette|articoli)\.html$' > temp_files.txt
 
+          # Per ogni file, estraiamo titolo e descrizione
           while read -r file; do
             if [ -f "$file" ]; then
+              # Estrai titolo (pulito)
               title=$(grep -o '<title>[^<]*</title>' "$file" | head -1 | sed 's/<[^>]*>//g' | sed 's/ | Marco Palmas//' | sed 's/&/&amp;/g')
+              # Estrai descrizione
               desc=$(grep -o '<meta name="description" content="[^"]*"' "$file" | head -1 | sed 's/.*content="//;s/"//' | sed 's/&/&amp;/g')
+              # Data di modifica
               date=$(git log -1 --format=%aD "$file" 2>/dev/null || date -R)
               
               echo "    <item>" >> feed.xml
@@ -38,9 +40,9 @@ jobs:
               echo "      <pubDate>$date</pubDate>" >> feed.xml
               echo "    </item>" >> feed.xml
             fi
-          done < temp_links.txt
+          done < temp_files.txt
           
-          rm temp_links.txt
+          rm temp_files.txt
           printf '  </channel>\n</rss>\n' >> feed.xml
 
       - name: Commit feed
