@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Articoli di Marco Palmas</title>
-  <link>https://marcopalmas.it/articoli.html</link>
-  <description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
-  <language>it-IT</language>
-  <atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Sun, 25 Oct 2026 15:30:00 +0200</lastBuildDate>
-
-  <item>
-    <title>Cosa succede nella testa di un portiere</title>
-    <link>https://marcopalmas.it/cosa-succede-nella-testa-di-un-portiere.html</link>
-    <description>Inserisci qui la descrizione breve del tuo articolo.</description>
-    <guid isPermaLink="true">https://marcopalmas.it/cosa-succede-nella-testa-di-un-portiere.html</guid>
-    <pubDate>Sun, 25 Oct 2026 12:00:00 +0200</pubDate>
-  </item>
-</channel>
+<title>Articoli di Marco Palmas</title>
+<link>https://marcopalmas.it/articoli.html</link>
+<description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
+<language>it-IT</language>
+<atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
+<lastBuildDate>Mon, 26 Oct 2026 13:43:20 +0000</lastBuildDate>
+    <item>
+      <title><![CDATA[Nella testa di un portiere: come ansia e paura possono bruciare un talento]]></title>
+      <link>https://marcopalmas.it/nella-testa-di-un-portiere.html</link>
+      <description><![CDATA[C'è un portiere che in allenamento para tutto. Poi arriva la partita e succede qualcosa. Non è un problema di tecnica: è un problema di quello che succede dentro.]]></description>
+      <guid isPermaLink="true">https://marcopalmas.it/nella-testa-di-un-portiere.html</guid>
+      <pubDate>Mon, 26 Oct 2026 14:39:19 +0100</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Nella testa di un portiere: come ansia e paura possono bruciare un talento]]></title>
+      <link>https://marcopalmas.it/nella-testa-di-un-portiere.html</link>
+      <description><![CDATA[C'è un portiere che in allenamento para tutto. Poi arriva la partita e succede qualcosa. Non è un problema di tecnica: è un problema di quello che succede dentro.]]></description>
+      <guid isPermaLink="true">https://marcopalmas.it/nella-testa-di-un-portiere.html</guid>
+      <pubDate>Mon, 26 Oct 2026 14:39:19 +0100</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Post-vacation blues: perché tornare dalle vacanze ci mette così in crisi?]]></title>
+      <link>https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html</link>
+      <description><![CDATA[Perché il rientro dalle vacanze può pesare così tanto? Una riflessione sul post-vacation blues, il recupero e la vita quotidiana.]]></description>
+      <guid isPermaLink="true">https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html</guid>
+      <pubDate>Mon, 26 Oct 2026 14:39:19 +0100</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Quando tutto sembra urgente]]></title>
+      <link>https://marcopalmas.it/quando-tutto-sembra-urgente.html</link>
+      <description><![CDATA[Quando tutto sembra urgente, ritrovare lucidità e scegliere una priorità alla volta può aiutare a ridurre stress e sovraccarico.]]></description>
+      <guid isPermaLink="true">https://marcopalmas.it/quando-tutto-sembra-urgente.html</guid>
+      <pubDate>Mon, 26 Oct 2026 14:39:19 +0100</pubDate>
+    </item>
+  </channel>
 </rss>
