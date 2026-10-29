@@ -52,13 +52,13 @@ def get_articles():
 
 def replace_cards(source, generated):
     pattern = re.compile(re.escape(START)+r".*?"+re.escape(END),re.S)
-    replacement = START+"\\n"+generated.rstrip()+"\\n                "+END
+    replacement = START+"\n"+generated.rstrip()+"\n                "+END
     updated, count = pattern.subn(lambda _:replacement,source,count=1)
     if count != 1: raise RuntimeError("Marker automatici mancanti o duplicati")
     return updated
 
 def home_cards(items):
-    return "\\n\\n".join(f'''                <a class="article-card" href="{escape(a["path"],quote=True)}">
+    return "\n\n".join(f'''                <a class="article-card" href="{escape(a["path"],quote=True)}">
                     <div>
                         <p class="article-category">{escape(a["category"])}</p>
                         <h3>{escape(a["title"])}</h3>
@@ -78,7 +78,7 @@ def listing_cards(items):
                     <a href="{escape(a["path"],quote=True)}" class="read-more">Leggi l'articolo →</a>
                 </div>
             </article>''')
-    return "\\n\\n".join(cards) if cards else "            <p>Gli articoli saranno disponibili a breve.</p>"
+    return "\n\n".join(cards) if cards else "            <p>Gli articoli saranno disponibili a breve.</p>"
 
 def main():
     items=get_articles()
