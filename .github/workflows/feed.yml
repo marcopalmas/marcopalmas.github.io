@@ -284,4 +284,19 @@ jobs:
           fi
 
           git commit -m "chore: update RSS feed [skip ci]"
-          git push
+
+          # Altri workflow possono aggiornare file diversi nello stesso momento.
+          # Integra i commit remoti e ritenta il push in caso di gara.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              echo "Feed RSS pubblicato correttamente."
+              exit 0
+            fi
+            echo "Push non riuscito (tentativo $attempt); riprovo."
+            sleep 2
+          done
+
+          echo "Impossibile pubblicare il feed RSS dopo 3 tentativi." >&2
+          exit 1
