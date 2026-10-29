@@ -1,81 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-<title>Articoli di Marco Palmas</title>
-<link>https://marcopalmas.it/articoli.html</link>
-<description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
-<language>it-IT</language>
-<atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>Thu, 29 Oct 2026 12:44:57 +0000</lastBuildDate>
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Articoli di Marco Palmas</title>
+    <link>https://marcopalmas.it/articoli.html</link>
+    <description>Nuovi articoli su stress, mindfulness, sport, infermieristica e vita reale.</description>
+    <language>it-IT</language>
+    <atom:link href="https://marcopalmas.it/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Oct 2026 12:57:04 GMT</lastBuildDate>
     <item>
-      <title><![CDATA[Burnout in sanità: quando si consuma chi cura]]></title>
+      <title>Burnout in sanità: quando si consuma chi cura</title>
       <link>https://marcopalmas.it/burnout-in-sanita.html</link>
-      <description><![CDATA[Dati e riflessioni sul burnout in sanità: cosa può fare la mindfulness e perché il benessere di chi cura richiede anche risposte organizzative.]]></description>
+      <description>Dati e riflessioni sul burnout in sanità: cosa può fare la mindfulness e perché il benessere di chi cura richiede anche risposte organizzative.</description>
       <guid isPermaLink="true">https://marcopalmas.it/burnout-in-sanita.html</guid>
-      <pubDate>Thu, 29 Oct 2026 13:44:48 +0100</pubDate>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title><![CDATA[Cosa succede nella testa del portiere dopo l'errore?]]></title>
+      <title>Cosa succede nella testa del portiere dopo l'errore?</title>
       <link>https://marcopalmas.it/cosa-succede-nella-testa-del-portiere-dopo-l-errore.html</link>
-      <description><![CDATA[La papera non finisce al fischio. Cosa succede nella testa del portiere dopo l'errore, perché il secondo errore è dietro l'angolo e come tornare al presente.]]></description>
+      <description>La papera non finisce al fischio. Cosa succede nella testa del portiere dopo l'errore, perché il secondo errore è dietro l'angolo e come tornare al presente.</description>
       <guid isPermaLink="true">https://marcopalmas.it/cosa-succede-nella-testa-del-portiere-dopo-l-errore.html</guid>
-      <pubDate>Thu, 29 Oct 2026 13:44:48 +0100</pubDate>
+      <pubDate>Wed, 21 Oct 2026 10:19:35 GMT</pubDate>
     </item>
     <item>
-      <title><![CDATA[Lasciare andare non significa arrendersi]]></title>
-      <link>https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html</link>
-      <description><![CDATA[Lasciare andare non significa arrendersi: una riflessione su controllo, accettazione e libertà interiore.]]></description>
-      <guid isPermaLink="true">https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html</guid>
-      <pubDate>Thu, 29 Oct 2026 13:44:48 +0100</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Nella testa di un portiere: come ansia e paura possono bruciare un talento]]></title>
+      <title>Nella testa di un portiere: come ansia e paura possono bruciare un talento</title>
       <link>https://marcopalmas.it/nella-testa-di-un-portiere.html</link>
-      <description><![CDATA[C'è un portiere che in allenamento para tutto. Poi arriva la partita e succede qualcosa. Non è un problema di tecnica: è un problema di quello che succede dentro.]]></description>
+      <description>C'è un portiere che in allenamento para tutto. Poi arriva la partita e succede qualcosa. Non è un problema di tecnica: è un problema di quello che succede dentro.</description>
       <guid isPermaLink="true">https://marcopalmas.it/nella-testa-di-un-portiere.html</guid>
-      <pubDate>Thu, 29 Oct 2026 13:44:48 +0100</pubDate>
+      <pubDate>Wed, 14 Oct 2026 14:46:32 GMT</pubDate>
     </item>
     <item>
-      <title><![CDATA[Post-vacation blues: perché tornare dalle vacanze ci mette così in crisi?]]></title>
-      <link>https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html</link>
-      <description><![CDATA[Perché il rientro dalle vacanze può pesare così tanto? Una riflessione sul post-vacation blues, il recupero e la vita quotidiana.]]></description>
-      <guid isPermaLink="true">https://marcopalmas.it/post-vacation-blues-stress-rientro-vacanze.html</guid>
-      <pubDate>Thu, 29 Oct 2026 13:44:48 +0100</pubDate>
+      <title>Post-vacation blues: perché tornare dalle vacanze ci mette così in crisi?</title>
+      <link>https://marcopalmas.it/post-vacation-blues.html</link>
+      <description>Perché il rientro dalle vacanze può pesare così tanto? Una riflessione sul post-vacation blues, il recupero e la vita quotidiana.</description>
+      <guid isPermaLink="true">https://marcopalmas.it/post-vacation-blues.html</guid>
+      <pubDate>Wed, 07 Oct 2026 10:43:23 GMT</pubDate>
     </item>
     <item>
-      <title><![CDATA[Quando tutto sembra urgente]]></title>
+      <title>Lasciare andare non significa arrendersi</title>
+      <link>https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html</link>
+      <description>Lasciare andare non significa arrendersi: una riflessione su controllo, accettazione e libertà interiore.</description>
+      <guid isPermaLink="true">https://marcopalmas.it/lasciare-andare-non-significa-arrendersi.html</guid>
+      <pubDate>Wed, 16 Sep 2026 16:32:49 GMT</pubDate>
+    </item>
+    <item>
+      <title>Quando tutto sembra urgente</title>
       <link>https://marcopalmas.it/quando-tutto-sembra-urgente.html</link>
-      <description><![CDATA[Quando tutto sembra urgente, ritrovare lucidità e scegliere una priorità alla volta può aiutare a ridurre stress e sovraccarico.]]></description>
+      <description>Quando tutto sembra urgente, ritrovare lucidità e scegliere una priorità alla volta può aiutare a ridurre stress e sovraccarico.</description>
       <guid isPermaLink="true">https://marcopalmas.it/quando-tutto-sembra-urgente.html</guid>
-      <pubDate>Thu, 29 Oct 2026 13:44:48 +0100</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Infermieristica]]></title>
-      <link>https://marcopalmas.it/tema-infermieristica.html</link>
-      <description><![CDATA[Articoli e riflessioni di Marco Palmas sul lavoro sanitario, la professione infermieristica, lo stress e il burnout.]]></description>
-      <guid isPermaLink="true">https://marcopalmas.it/tema-infermieristica.html</guid>
-      <pubDate>Thu, 29 Oct 2026 13:44:48 +0100</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Sport &amp;amp; Performance]]></title>
-      <link>https://marcopalmas.it/tema-sport-performance.html</link>
-      <description><![CDATA[]]></description>
-      <guid isPermaLink="true">https://marcopalmas.it/tema-sport-performance.html</guid>
-      <pubDate>Thu, 29 Oct 2026 13:44:48 +0100</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Stress &amp; Mindfulness]]></title>
-      <link>https://marcopalmas.it/tema-stress-mindfulness.html</link>
-      <description><![CDATA[]]></description>
-      <guid isPermaLink="true">https://marcopalmas.it/tema-stress-mindfulness.html</guid>
-      <pubDate>Thu, 29 Oct 2026 13:44:48 +0100</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[Vita reale]]></title>
-      <link>https://marcopalmas.it/tema-vita-reale.html</link>
-      <description><![CDATA[]]></description>
-      <guid isPermaLink="true">https://marcopalmas.it/tema-vita-reale.html</guid>
-      <pubDate>Thu, 29 Oct 2026 13:44:48 +0100</pubDate>
+      <pubDate>Mon, 07 Sep 2026 20:13:48 GMT</pubDate>
     </item>
   </channel>
 </rss>
