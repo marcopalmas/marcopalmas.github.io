@@ -1,0 +1,34 @@
+name: Update article listings
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "scripts/update_article_lists.py"
+      - ".github/workflows/update-article-lists.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-listings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Generate article listings
+        run: python3 scripts/update_article_lists.py
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html articoli.html
+          if git diff --cached --quiet; then
+            echo "Le liste articoli sono già aggiornate."
+            exit 0
+          fi
+          git commit -m "chore: aggiorna automaticamente le liste articoli [skip ci]"
+          git push
