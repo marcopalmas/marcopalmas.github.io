@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Generate sitemap.xml
         run: |
@@ -52,5 +54,23 @@ jobs:
             echo "Nessuna modifica alla sitemap"
           else
             git commit -m "chore: aggiorna sitemap.xml [skip ci]"
-            git push
+
+            # Ritenta se un altro workflow aggiorna main nello stesso momento.
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                echo "Rebase sitemap non riuscito: conflitto con un altro aggiornamento." >&2
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                echo "Sitemap pubblicata correttamente."
+                exit 0
+              fi
+              echo "Push sitemap non riuscito (tentativo $attempt); riprovo."
+              sleep 2
+            done
+
+            echo "Impossibile pubblicare la sitemap dopo 5 tentativi." >&2
+            exit 1
           fi

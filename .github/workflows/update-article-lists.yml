@@ -31,4 +31,22 @@ jobs:
             exit 0
           fi
           git commit -m "chore: aggiorna automaticamente le liste articoli [skip ci]"
-          git push
+
+          # Ritenta se un altro workflow aggiorna main nello stesso momento.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "Rebase delle liste non riuscito: conflitto con un altro aggiornamento." >&2
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              echo "Liste articoli pubblicate correttamente."
+              exit 0
+            fi
+            echo "Push delle liste non riuscito (tentativo $attempt); riprovo."
+            sleep 2
+          done
+
+          echo "Impossibile pubblicare le liste dopo 5 tentativi." >&2
+          exit 1
